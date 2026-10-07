@@ -119,6 +119,41 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-062",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.ekg-position-mismatch",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.ekg-slow-transition",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.ekg-stuck",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-current-imbalance",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-no-assemble",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-one-section-low",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.vl80s-ekg-section-desync",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -251,6 +286,31 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.protection-trip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-current-imbalance",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-intermittent",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-no-assemble",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-one-section-low",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -371,6 +431,26 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.rectifier-group-fault",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.rectifier-overheat",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-current-imbalance",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-one-section-low",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -513,6 +593,31 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-042",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.gv-no-close",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.oil-pump-failure",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.smoke-fire-flashover",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.transformer-oil-signs",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.transformer-protection",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -649,6 +754,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-RHEO-CONTROL-BURT125",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.motor-fan-failure",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.rheostatic-brake",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -789,6 +904,36 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-031",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.persistent-wheel-slip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-current-imbalance",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-motor-flashover",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-motor-overheat",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-no-assemble",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-one-section-low",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -906,6 +1051,21 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-031",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.mechanical-noise-heating",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.persistent-wheel-slip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-gear-noise",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -1020,6 +1180,16 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-062",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.reverser-no-confirm",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-no-assemble",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -1138,6 +1308,21 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-RHEO-POWER-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.motor-fan-failure",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.rheostatic-brake",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.rheostatic-resistor-overheat",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -1250,6 +1435,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.protection-trip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-current-imbalance",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -1339,6 +1534,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.ekg-slow-transition",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.ekg-stuck",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -1427,6 +1632,11 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.field-weakening-fault",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -1526,6 +1736,11 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-RHEO-POWER-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.rheostatic-brake",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -1636,6 +1851,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-RHEO-POWER-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.rheostatic-brake",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-no-assemble",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -1738,6 +1963,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-current-imbalance",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-current-surge",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {

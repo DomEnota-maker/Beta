@@ -1,0 +1,150 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.diagnostics.recommended.power-circuits",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "vl80s.diag.rectifier-group-fault"
+    ],
+    "requiresRuntime": "1.2.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-diagnostics",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "vl80s.diag.rectifier-group-fault",
+      "aliases": [
+        "rectifier-group-fault"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "STANDARD",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Подозрение на неисправность выпрямительной установки",
+      "summary": "Отсутствует ток одной группы, выражена асимметрия, срабатывает защита либо появляется ненормальный нагрев ВУ.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Силовые цепи"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Подозрение на неисправность выпрямительной установки",
+        "Отсутствует ток одной группы, выражена асимметрия, срабатывает защита либо появляется ненормальный нагрев ВУ.",
+        "Силовые цепи"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-003",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-current-imbalance",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-no-assemble",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.protection-trip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.motor-fan-failure",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-PROTECTION-BASE",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "RECOMMENDED",
+        "severity": "STOP_AND_REPORT",
+        "systemIds": [
+          "VL-SYS-TR"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-detail-rectifier-left",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-detail-rectifier-right",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-eq-rectifier",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [],
+          "viaEquipment": []
+        },
+        "electricalSchemes": {
+          "explicit": [
+            "VL-SCH-EL-PROTECTION-BASE",
+            "VL-SCH-EL-TRACTION-POWER-937-1260"
+          ],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 3,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "rectifier-group-fault",
+        "originLayer": "DiagnosticExpansion.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    }
+  ]
+}

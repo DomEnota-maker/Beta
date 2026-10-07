@@ -1,0 +1,754 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.diagnostics.extended.supplemental-operational.running-gear",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "vl80s.diag.external-object-impact",
+      "vl80s.diag.sand-nozzle-blocked",
+      "vl80s.diag.suspension-damage",
+      "vl80s.diag.traction-gear-noise",
+      "vl80s.diag.wheel-bearing-heat",
+      "vl80s.diag.wheel-flat-impact"
+    ],
+    "requiresRuntime": "1.2.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-diagnostics",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "vl80s.diag.external-object-impact",
+      "aliases": [
+        "external-object-impact"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "EXTENDED",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Удар постороннего предмета под локомотивом",
+      "summary": "После удара появились шум, утечка или изменение поведения ходовой части.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Ходовая часть"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Удар постороннего предмета под локомотивом",
+        "После удара появились шум, утечка или изменение поведения ходовой части.",
+        "Ходовая часть"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-002",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-011",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-015",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-020",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-021",
+          "role": "related-acceptance"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "EXTENDED",
+        "extendedClass": "SUPPLEMENTAL_OPERATIONAL",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-MC"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-eq-bogie",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": [
+            "test-1-q005",
+            "test-1-q006",
+            "test-1-q007",
+            "test-1-q008",
+            "test-1-q009",
+            "test-1-q015",
+            "test-1-q017",
+            "test-2-1-q011",
+            "test-2-1-q012",
+            "test-2-1-q014",
+            "test-2-1-q015",
+            "test-2-1-q016",
+            "test-2-1-q021",
+            "test-2-2-q062",
+            "test-2-3-q006",
+            "test-2-3-q007",
+            "test-2-3-q008",
+            "test-2-3-q009",
+            "test-2-3-q011",
+            "test-2-3-q014",
+            "test-2-3-q015",
+            "test-2-3-q016",
+            "test-2-3-q018",
+            "test-2-3-q034",
+            "test-2-3-q035"
+          ]
+        },
+        "acceptance": {
+          "direct": [
+            "VL80-ACC-011",
+            "VL80-ACC-015",
+            "VL80-ACC-020"
+          ],
+          "viaEquipment": [
+            "VL80-ACC-021"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "external-object-impact",
+        "originLayer": "DiagnosticExtendedCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE6_SEMANTIC_BINDING"
+      }
+    },
+    {
+      "id": "vl80s.diag.sand-nozzle-blocked",
+      "aliases": [
+        "sand-nozzle-blocked"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "EXTENDED",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Песок не поступает к нужной колёсной паре",
+      "summary": "Команда есть, но подача отсутствует или направлена неверно.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Ходовая часть"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Песок не поступает к нужной колёсной паре",
+        "Команда есть, но подача отсутствует или направлена неверно.",
+        "Ходовая часть"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-001",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-036",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-063",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-MONITORING",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "EXTENDED",
+        "extendedClass": "SUPPLEMENTAL_OPERATIONAL",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-MC"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-eq-sanders",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [
+            "VL80-ACC-036",
+            "VL80-ACC-063"
+          ],
+          "viaEquipment": []
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": [
+            "VL-SCH-PN-MONITORING"
+          ]
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "sand-nozzle-blocked",
+        "originLayer": "DiagnosticExtendedCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE6_SEMANTIC_BINDING"
+      }
+    },
+    {
+      "id": "vl80s.diag.suspension-damage",
+      "aliases": [
+        "suspension-damage"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "EXTENDED",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Признаки повреждения подвешивания или тележки",
+      "summary": "Есть перекос, стук, изменение высоты либо видимое повреждение.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Ходовая часть"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Признаки повреждения подвешивания или тележки",
+        "Есть перекос, стук, изменение высоты либо видимое повреждение.",
+        "Ходовая часть"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-005",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-022",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-023",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-024",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-025",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-026",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-027",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-028",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-029",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-030",
+          "role": "related-acceptance"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "EXTENDED",
+        "extendedClass": "SUPPLEMENTAL_OPERATIONAL",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-MC"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-eq-suspension",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [],
+          "viaEquipment": [
+            "VL80-ACC-022",
+            "VL80-ACC-023",
+            "VL80-ACC-024",
+            "VL80-ACC-025",
+            "VL80-ACC-026",
+            "VL80-ACC-027",
+            "VL80-ACC-028",
+            "VL80-ACC-029",
+            "VL80-ACC-030"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "suspension-damage",
+        "originLayer": "DiagnosticExtendedCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    },
+    {
+      "id": "vl80s.diag.traction-gear-noise",
+      "aliases": [
+        "traction-gear-noise"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "EXTENDED",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Шум тяговой передачи",
+      "summary": "Появился гул, стук или вибрация, связанные со скоростью и тягой.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Ходовая часть"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Шум тяговой передачи",
+        "Появился гул, стук или вибрация, связанные со скоростью и тягой.",
+        "Ходовая часть"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-006",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-007",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-031",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "EXTENDED",
+        "extendedClass": "SUPPLEMENTAL_OPERATIONAL",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-MC",
+          "VL-SYS-TR"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-eq-motor-axle-bearing",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-traction-drive",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [],
+          "viaEquipment": [
+            "VL80-ACC-031"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [
+            "VL-SCH-EL-TRACTION-POWER-937-1260"
+          ],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "traction-gear-noise",
+        "originLayer": "DiagnosticExtendedCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    },
+    {
+      "id": "vl80s.diag.wheel-bearing-heat",
+      "aliases": [
+        "wheel-bearing-heat"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "EXTENDED",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Нагрев буксы или подшипникового узла",
+      "summary": "Обнаружены повышенная температура, запах или изменение звука ходовой части.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Ходовая часть"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Нагрев буксы или подшипникового узла",
+        "Обнаружены повышенная температура, запах или изменение звука ходовой части.",
+        "Ходовая часть"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-004",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-006",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-018",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-019",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-031",
+          "role": "related-acceptance"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "EXTENDED",
+        "extendedClass": "SUPPLEMENTAL_OPERATIONAL",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-MC"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-eq-axlebox",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-motor-axle-bearing",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [
+            "VL80-ACC-018",
+            "VL80-ACC-019"
+          ],
+          "viaEquipment": [
+            "VL80-ACC-031"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "wheel-bearing-heat",
+        "originLayer": "DiagnosticExtendedCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    },
+    {
+      "id": "vl80s.diag.wheel-flat-impact",
+      "aliases": [
+        "wheel-flat-impact"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "EXTENDED",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Удары от ползуна или дефекта колеса",
+      "summary": "При движении слышны ритмичные удары, зависящие от скорости.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Ходовая часть"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Удары от ползуна или дефекта колеса",
+        "При движении слышны ритмичные удары, зависящие от скорости.",
+        "Ходовая часть"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-003",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-016",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-017",
+          "role": "related-acceptance"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "EXTENDED",
+        "extendedClass": "SUPPLEMENTAL_OPERATIONAL",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-MC"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-eq-wheelset",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [
+            "VL80-ACC-016"
+          ],
+          "viaEquipment": [
+            "VL80-ACC-017"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "wheel-flat-impact",
+        "originLayer": "DiagnosticExtendedCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    }
+  ]
+}

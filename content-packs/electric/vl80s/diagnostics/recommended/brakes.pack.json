@@ -1,0 +1,891 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.diagnostics.recommended.brakes",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "vl80s.diag.brake-lock-state-mismatch",
+      "vl80s.diag.brake-pipe-leak",
+      "vl80s.diag.uncommanded-braking",
+      "vl80s.diag.wheel-dragging"
+    ],
+    "requiresRuntime": "1.2.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-diagnostics",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "vl80s.diag.brake-lock-state-mismatch",
+      "aliases": [
+        "brake-lock-state-mismatch"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "STANDARD",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Блокировка тормозов №367М не подтверждает состояние кабины",
+      "summary": "После смены кабины или подготовки к управлению положение блокировки, питание пневматических цепей и фактическое состояние тормозов не согласованы.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Тормоза"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Блокировка тормозов №367М не подтверждает состояние кабины",
+        "После смены кабины или подготовки к управлению положение блокировки, питание пневматических цепей и фактическое состояние тормозов не согласованы.",
+        "Тормоза"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-009",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brake-pipe-no-charge",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.equalizing-reservoir-mismatch",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.independent-brake-no-apply",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brakes-no-apply-release",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-058",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-AUTOMATIC",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-INDEPENDENT",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "RECOMMENDED",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-BR"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-eq-brake-lock",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [],
+          "viaEquipment": [
+            "VL80-ACC-058"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [
+            "VL-SCH-BR-AUTOMATIC",
+            "VL-SCH-BR-INDEPENDENT"
+          ],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 3,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "brake-lock-state-mismatch",
+        "originLayer": "DiagnosticCompletionCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    },
+    {
+      "id": "vl80s.diag.brake-pipe-leak",
+      "aliases": [
+        "brake-pipe-leak"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "STANDARD",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Повышенная утечка тормозной магистрали",
+      "summary": "Давление ТМ не поддерживается, компрессоры часто включаются или проверка плотности даёт неудовлетворительный результат.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Тормоза"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Повышенная утечка тормозной магистрали",
+        "Давление ТМ не поддерживается, компрессоры часто включаются или проверка плотности даёт неудовлетворительный результат.",
+        "Тормоза"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-001",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-015",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brakes-no-apply-release",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.uncommanded-braking",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.compressor-pressure",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.main-reservoir-leak",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-012",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-035",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-038",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-050",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-058",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-AUTOMATIC",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-EPK",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-RHEO-INTERLOCK",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-INTERSECTION",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "RECOMMENDED",
+        "severity": "STOP_AND_REPORT",
+        "systemIds": [
+          "VL-SYS-BR"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-eq-brake-pipe",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-end-cocks-hoses",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-km395",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": [
+            "test-1-q072",
+            "test-1-q164"
+          ]
+        },
+        "acceptance": {
+          "direct": [
+            "VL80-ACC-012",
+            "VL80-ACC-035",
+            "VL80-ACC-038",
+            "VL80-ACC-058"
+          ],
+          "viaEquipment": [
+            "VL80-ACC-050"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [
+            "VL-SCH-BR-AUTOMATIC",
+            "VL-SCH-BR-EPK",
+            "VL-SCH-BR-RHEO-INTERLOCK",
+            "VL-SCH-PN-INTERSECTION"
+          ],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 3,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "brake-pipe-leak",
+        "originLayer": "DiagnosticExpansion.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    },
+    {
+      "id": "vl80s.diag.uncommanded-braking",
+      "aliases": [
+        "uncommanded-braking"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "STANDARD",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Самопроизвольное торможение или срабатывание экстренного торможения",
+      "summary": "Без команды снижается давление ТМ, наполняются тормозные цилиндры либо срабатывает ЭПК/другая цепь безопасности.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Тормоза"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Самопроизвольное торможение или срабатывание экстренного торможения",
+        "Без команды снижается давление ТМ, наполняются тормозные цилиндры либо срабатывает ЭПК/другая цепь безопасности.",
+        "Тормоза"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-001",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-010",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-012",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-013",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-014",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-001",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-002",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brake-pipe-leak",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brakes-no-apply-release",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.alsn-epk",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.wheel-dragging",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-002",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-012",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-035",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-038",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-050",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-054",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-055",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-058",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-AUTOMATIC",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-EPK",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-RHEO-INTERLOCK",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-CONTROL-BURT125",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-INTERSECTION",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-MONITORING",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "RECOMMENDED",
+        "severity": "STOP_AND_REPORT",
+        "systemIds": [
+          "VL-SYS-BR",
+          "VL-SYS-SF"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-detail-alsn",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-eq-air-distributor483",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-alsn",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-brake-pipe",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-electric-blocking-valve",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-epk",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-impulse-line",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-km395",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-pvu-group",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": [
+            "test-1-q072",
+            "test-1-q081",
+            "test-1-q164",
+            "test-2-3-q025",
+            "test-2-3-q027",
+            "test-2-3-q040",
+            "test-2-3-q041",
+            "test-2-3-q042",
+            "test-2-3-q043",
+            "test-2-3-q044"
+          ]
+        },
+        "acceptance": {
+          "direct": [],
+          "viaEquipment": [
+            "VL80-ACC-002",
+            "VL80-ACC-012",
+            "VL80-ACC-035",
+            "VL80-ACC-038",
+            "VL80-ACC-050",
+            "VL80-ACC-054",
+            "VL80-ACC-055",
+            "VL80-ACC-058"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [
+            "VL-SCH-EL-RHEO-CONTROL-BURT125"
+          ],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [
+            "VL-SCH-BR-AUTOMATIC",
+            "VL-SCH-BR-EPK",
+            "VL-SCH-BR-RHEO-INTERLOCK",
+            "VL-SCH-PN-INTERSECTION",
+            "VL-SCH-PN-MONITORING"
+          ],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 3,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "uncommanded-braking",
+        "originLayer": "DiagnosticExpansion.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    },
+    {
+      "id": "vl80s.diag.wheel-dragging",
+      "aliases": [
+        "wheel-dragging"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "STANDARD",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Не отпускает тормоз, заторможена тележка или нагревается колесо",
+      "summary": "После отпуска сохраняется давление ТЦ, колодки не отходят либо появляется запах и нагрев колёсной пары.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Тормоза"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Не отпускает тормоз, заторможена тележка или нагревается колесо",
+        "После отпуска сохраняется давление ТЦ, колодки не отходят либо появляется запах и нагрев колёсной пары.",
+        "Тормоза"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-002",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-004",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-005",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-006",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-008",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-002",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-003",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brakes-no-apply-release",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.uncommanded-braking",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brake-pipe-leak",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.mechanical-noise-heating",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-016",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-017",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-020",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-021",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-032",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-033",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-034",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-037",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-050",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-058",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-AUTOMATIC",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-INDEPENDENT",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-RHEO-INTERLOCK",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-MONITORING",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "RECOMMENDED",
+        "severity": "STOP_AND_REPORT",
+        "systemIds": [
+          "VL-SYS-BR",
+          "VL-SYS-MC"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-eq-bogie",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-brake-rigging",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-handbrake",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-kvt254",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-pressure-relay",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-tc",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-wheelset",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": [
+            "test-1-q005",
+            "test-1-q006",
+            "test-1-q007",
+            "test-1-q008",
+            "test-1-q009",
+            "test-1-q015",
+            "test-1-q017",
+            "test-1-q058",
+            "test-1-q075",
+            "test-1-q076",
+            "test-1-q077",
+            "test-2-1-q011",
+            "test-2-1-q012",
+            "test-2-1-q014",
+            "test-2-1-q015",
+            "test-2-1-q016",
+            "test-2-1-q021",
+            "test-2-2-q062",
+            "test-2-3-q006",
+            "test-2-3-q007",
+            "test-2-3-q008",
+            "test-2-3-q009",
+            "test-2-3-q011",
+            "test-2-3-q014",
+            "test-2-3-q015",
+            "test-2-3-q016",
+            "test-2-3-q018",
+            "test-2-3-q034",
+            "test-2-3-q035"
+          ]
+        },
+        "acceptance": {
+          "direct": [],
+          "viaEquipment": [
+            "VL80-ACC-016",
+            "VL80-ACC-017",
+            "VL80-ACC-020",
+            "VL80-ACC-021",
+            "VL80-ACC-032",
+            "VL80-ACC-033",
+            "VL80-ACC-034",
+            "VL80-ACC-037",
+            "VL80-ACC-050",
+            "VL80-ACC-058"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [
+            "VL-SCH-BR-AUTOMATIC",
+            "VL-SCH-BR-INDEPENDENT",
+            "VL-SCH-BR-RHEO-INTERLOCK",
+            "VL-SCH-PN-MONITORING"
+          ],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 3,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "wheel-dragging",
+        "originLayer": "DiagnosticExpansion.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    }
+  ]
+}

@@ -111,6 +111,21 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-PROTECTION-BASE",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.gv-no-close",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.protection-trip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-motor-flashover",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -213,6 +228,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-RHEO-POWER-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.persistent-wheel-slip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.sanding-failure",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -317,6 +342,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.protection-trip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.transformer-protection",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -443,6 +478,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.protection-trip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-current-surge",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -548,6 +593,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.protection-trip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.smoke-fire-flashover",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {

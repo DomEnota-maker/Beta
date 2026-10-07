@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "modelId": "vl80s",
+  "sourceSnapshot": {
+    "repository": "DomEnota-maker/Test-",
+    "commit": "3176d6ee228f0ed4b78371f45209e10c1c724eff",
+    "asset": "app/src/main/assets/technical/vl80s_diagnostics.json.gz",
+    "blobSha": "6ffdfdabf2f467dcdc4958768905f2b675ac0c26"
+  },
+  "recommendedPacks": [
+    "electric/vl80s/diagnostics/recommended/auxiliary.pack.json",
+    "electric/vl80s/diagnostics/recommended/brakes.pack.json",
+    "electric/vl80s/diagnostics/recommended/control.pack.json",
+    "electric/vl80s/diagnostics/recommended/electric-braking.pack.json",
+    "electric/vl80s/diagnostics/recommended/emergency.pack.json",
+    "electric/vl80s/diagnostics/recommended/high-voltage.pack.json",
+    "electric/vl80s/diagnostics/recommended/mechanical.pack.json",
+    "electric/vl80s/diagnostics/recommended/pneumatics.pack.json",
+    "electric/vl80s/diagnostics/recommended/power-circuits.pack.json",
+    "electric/vl80s/diagnostics/recommended/protections.pack.json",
+    "electric/vl80s/diagnostics/recommended/running-gear.pack.json",
+    "electric/vl80s/diagnostics/recommended/traction.pack.json",
+    "electric/vl80s/diagnostics/recommended/traffic-safety.pack.json"
+  ],
+  "extendedCorpora": {
+    "SUPPLEMENTAL_OPERATIONAL": [
+      "electric/vl80s/diagnostics/extended/supplemental-operational/auxiliary.pack.json",
+      "electric/vl80s/diagnostics/extended/supplemental-operational/brakes.pack.json",
+      "electric/vl80s/diagnostics/extended/supplemental-operational/cab-communication.pack.json",
+      "electric/vl80s/diagnostics/extended/supplemental-operational/control.pack.json",
+      "electric/vl80s/diagnostics/extended/supplemental-operational/fire-safety.pack.json",
+      "electric/vl80s/diagnostics/extended/supplemental-operational/high-voltage.pack.json",
+      "electric/vl80s/diagnostics/extended/supplemental-operational/pneumatics.pack.json",
+      "electric/vl80s/diagnostics/extended/supplemental-operational/running-gear.pack.json",
+      "electric/vl80s/diagnostics/extended/supplemental-operational/traction.pack.json",
+      "electric/vl80s/diagnostics/extended/supplemental-operational/traffic-safety.pack.json"
+    ]
+  },
+  "graph": "electric/vl80s/diagnostics/graph.json",
+  "publicationPolicy": "ALL_CANDIDATE_UNTIL_FEATURE_RUNTIME_ACCEPTANCE",
+  "goldenReferenceCandidate": "vl80s.diag.pantograph-no-rise"
+}

@@ -1,0 +1,715 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.diagnostics.recommended.high-voltage",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "vl80s.diag.gv-no-close",
+      "vl80s.diag.pantograph-no-rise",
+      "vl80s.diag.substation-protection-roof",
+      "vl80s.diag.transformer-protection"
+    ],
+    "requiresRuntime": "1.2.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-diagnostics",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "vl80s.diag.gv-no-close",
+      "aliases": [
+        "gv-no-close"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "STANDARD",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Главный выключатель не включается или отключается",
+      "summary": "ГВ не принимает команду, не удерживается либо отключается сразу/при наборе позиции.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Высоковольтные цепи"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Главный выключатель не включается или отключается",
+        "ГВ не принимает команду, не удерживается либо отключается сразу/при наборе позиции.",
+        "Высоковольтные цепи"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-003",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-004",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-001",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-004",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-008",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-014",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-039",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-042",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-060",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-AUX-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-EKG-CONTROL-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-PROTECTION-BASE",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-CONTROL",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "RECOMMENDED",
+        "severity": "ATTENTION",
+        "systemIds": [
+          "VL-SYS-HV",
+          "VL-SYS-PR",
+          "VL-SYS-TR"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general",
+          "vl80s-937-1260",
+          "vl80s-later"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-detail-relay-panels",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-detail-vvk1",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-eq-gv",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-protection",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-roof-disconnector",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-transformer",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-vvk",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [
+            "VL80-ACC-014",
+            "VL80-ACC-039",
+            "VL80-ACC-042",
+            "VL80-ACC-060"
+          ],
+          "viaEquipment": [
+            "VL80-ACC-008"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [
+            "VL-SCH-EL-AUX-937-1260",
+            "VL-SCH-EL-EKG-CONTROL-937-1260",
+            "VL-SCH-EL-HV-START-937-1260",
+            "VL-SCH-EL-PROTECTION-BASE",
+            "VL-SCH-EL-TRACTION-POWER-937-1260"
+          ],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [
+            "VL-SCH-PN-CONTROL"
+          ],
+          "viaEquipment": []
+        },
+        "questionCount": 5,
+        "checkCount": 4,
+        "dangerCount": 3,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "gv-no-close",
+        "originLayer": "DiagnosticRepository.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    },
+    {
+      "id": "vl80s.diag.pantograph-no-rise",
+      "aliases": [
+        "pantograph-no-rise"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "STANDARD",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Токоприёмник не поднимается",
+      "summary": "Нет подъёма выбранного токоприёмника либо он поднимается и сразу опускается.",
+      "details": [
+        "Источник-кандидат содержит 8 вопросных узлов и 24 ветви ответов YES/NO/UNKNOWN.",
+        "Этот объект существует для проверки межраздельных ссылок, но не публикуется в runtime до отдельного GOLDEN REFERENCE PASS."
+      ],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Высоковольтные цепи"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Токоприёмник не поднимается",
+        "Нет подъёма выбранного токоприёмника либо он поднимается и сразу опускается.",
+        "Высоковольтные цепи"
+      ],
+      "sourceRefs": [
+        "VL80S-PANTO-S01",
+        "VL80S-PANTO-S12"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-002",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-002",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-007",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-013",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-016",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-008",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-014",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-039",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-059",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-CONTROL",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "RECOMMENDED",
+        "severity": "ATTENTION",
+        "systemIds": [
+          "VL-SYS-HV",
+          "VL-SYS-PN"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-eq-aux-compressor",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-control-air-line",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-control-reservoir",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-pantograph",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-valve245",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [
+            "VL80-ACC-014",
+            "VL80-ACC-039",
+            "VL80-ACC-059"
+          ],
+          "viaEquipment": [
+            "VL80-ACC-008"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [
+            "VL-SCH-EL-HV-START-937-1260",
+            "VL-SCH-EL-TRACTION-POWER-937-1260"
+          ],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [
+            "VL-SCH-PN-CONTROL"
+          ],
+          "viaEquipment": []
+        },
+        "questionCount": 5,
+        "checkCount": 4,
+        "dangerCount": 3,
+        "acceptanceGate": "GOLDEN_REFERENCE_PASS_NOT_PASSED"
+      },
+      "migrationRefs": {
+        "legacyId": "pantograph-no-rise",
+        "originLayer": "DiagnosticRepository.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    },
+    {
+      "id": "vl80s.diag.substation-protection-roof",
+      "aliases": [
+        "substation-protection-roof"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "STANDARD",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Сработала защита подстанции: подозрение на крышевое оборудование",
+      "summary": "После вспышки или повреждения на крыше пропало напряжение контактной сети; возможны повреждение токоприёмника, изолятора, крышевой шины или ГВ.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Высоковольтные цепи"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Сработала защита подстанции: подозрение на крышевое оборудование",
+        "После вспышки или повреждения на крыше пропало напряжение контактной сети; возможны повреждение токоприёмника, изолятора, крышевой шины или ГВ.",
+        "Высоковольтные цепи"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.roof-insulation-signs",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.pantograph-contact-arcing",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.pantograph-no-rise",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.protection-trip",
+          "role": "related-diagnostic"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "RECOMMENDED",
+        "severity": "STOP_AND_REPORT",
+        "systemIds": [
+          "VL-SYS-HV"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [],
+          "viaEquipment": []
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 2,
+        "checkCount": 3,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "substation-protection-roof",
+        "originLayer": "DiagnosticCompletionCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "SOURCE_REVIEW_2026-09-26"
+      }
+    },
+    {
+      "id": "vl80s.diag.transformer-protection",
+      "aliases": [
+        "transformer-protection"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "STANDARD",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Признаки неисправности тягового трансформатора или действие его защиты",
+      "summary": "ГВ отключается по связанной защите, появляется ненормальный гул, масло, запах или нагрев трансформатора.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Высоковольтные цепи"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Признаки неисправности тягового трансформатора или действие его защиты",
+        "ГВ отключается по связанной защите, появляется ненормальный гул, масло, запах или нагрев трансформатора.",
+        "Высоковольтные цепи"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-003",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-003",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-004",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.gv-no-close",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.protection-trip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.smoke-fire-flashover",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.rectifier-group-fault",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-008",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-014",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-039",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-042",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-060",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-AUX-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-EKG-CONTROL-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-PROTECTION-BASE",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-CONTROL",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "RECOMMENDED",
+        "severity": "STOP_AND_REPORT",
+        "systemIds": [
+          "VL-SYS-HV",
+          "VL-SYS-PR",
+          "VL-SYS-TR"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-detail-vvk1",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-eq-differential-relay-block",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-gv",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-transformer",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-vvk",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [],
+          "viaEquipment": [
+            "VL80-ACC-008",
+            "VL80-ACC-014",
+            "VL80-ACC-039",
+            "VL80-ACC-042",
+            "VL80-ACC-060"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [
+            "VL-SCH-EL-AUX-937-1260",
+            "VL-SCH-EL-EKG-CONTROL-937-1260",
+            "VL-SCH-EL-HV-START-937-1260",
+            "VL-SCH-EL-PROTECTION-BASE",
+            "VL-SCH-EL-TRACTION-POWER-937-1260"
+          ],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [
+            "VL-SCH-PN-CONTROL"
+          ],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 3,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "transformer-protection",
+        "originLayer": "DiagnosticExpansion.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    }
+  ]
+}

@@ -112,6 +112,26 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-060",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.gv-no-close",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.gv-no-open",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.protection-trip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.transformer-protection",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -250,6 +270,21 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-059",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.pantograph-slow-rise",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.pantograph-wrong-selection",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.smoke-fire-flashover",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -344,6 +379,26 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-039",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.gv-no-close",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.smoke-fire-flashover",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.transformer-protection",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.vvk-interlock-fault",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -459,6 +514,16 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-014",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.gv-no-close",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.roof-insulation-signs",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -563,6 +628,11 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-014",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.protection-trip",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -663,6 +733,16 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-014",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.roof-insulation-signs",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.smoke-fire-flashover",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -756,6 +836,11 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-014",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.roof-insulation-signs",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -864,6 +949,16 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-014",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.pantograph-contact-arcing",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.roof-insulation-signs",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {

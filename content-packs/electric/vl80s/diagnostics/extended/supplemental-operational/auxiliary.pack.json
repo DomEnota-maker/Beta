@@ -1,0 +1,974 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.diagnostics.extended.supplemental-operational.auxiliary",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "vl80s.diag.aux-common-loss",
+      "vl80s.diag.aux-contactor-chatter",
+      "vl80s.diag.compressor-long-run",
+      "vl80s.diag.compressor-overheat",
+      "vl80s.diag.fan-low-airflow",
+      "vl80s.diag.fan-vibration",
+      "vl80s.diag.heater-fault"
+    ],
+    "requiresRuntime": "1.2.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-diagnostics",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "vl80s.diag.aux-common-loss",
+      "aliases": [
+        "aux-common-loss"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "EXTENDED",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Одновременно отключились вспомогательные машины",
+      "summary": "Несколько потребителей одной системы потеряли питание или управление.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Вспомогательные машины"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Одновременно отключились вспомогательные машины",
+        "Несколько потребителей одной системы потеряли питание или управление.",
+        "Вспомогательные машины"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-001",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-004",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.compressor-no-start",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.control-voltage-low",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.motor-fan-failure",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.oil-pump-failure",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.phase-splitter-no-start",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-044",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-061",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-AUX-937-1260",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "EXTENDED",
+        "extendedClass": "SUPPLEMENTAL_OPERATIONAL",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-AU"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-detail-phase-splitter",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-detail-relay-panels",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-eq-aux-contactor",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-phase-splitter",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [],
+          "viaEquipment": [
+            "VL80-ACC-044",
+            "VL80-ACC-061"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [
+            "VL-SCH-EL-AUX-937-1260"
+          ],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "aux-common-loss",
+        "originLayer": "DiagnosticExtendedCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    },
+    {
+      "id": "vl80s.diag.aux-contactor-chatter",
+      "aliases": [
+        "aux-contactor-chatter"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "EXTENDED",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Дребезг контактора вспомогательной машины",
+      "summary": "Контактор многократно включается и отпадает.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Вспомогательные машины"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Дребезг контактора вспомогательной машины",
+        "Контактор многократно включается и отпадает.",
+        "Вспомогательные машины"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-004",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-061",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-AUX-937-1260",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "EXTENDED",
+        "extendedClass": "SUPPLEMENTAL_OPERATIONAL",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-AU"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-detail-relay-panels",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-eq-aux-contactor",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [],
+          "viaEquipment": [
+            "VL80-ACC-061"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [
+            "VL-SCH-EL-AUX-937-1260"
+          ],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "aux-contactor-chatter",
+        "originLayer": "DiagnosticExtendedCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    },
+    {
+      "id": "vl80s.diag.compressor-long-run",
+      "aliases": [
+        "compressor-long-run"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "EXTENDED",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Компрессор работает непрерывно или слишком долго",
+      "summary": "Давление растёт медленно либо регулятор не отключает компрессор.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Вспомогательные машины"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Компрессор работает непрерывно или слишком долго",
+        "Давление растёт медленно либо регулятор не отключает компрессор.",
+        "Вспомогательные машины"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-003",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-003",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-005",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-009",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.compressor-no-start",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.main-reservoir-leak",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.feed-line-leak",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.pressure-gauge-mismatch",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-043",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-057",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-061",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-AUX-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-SUPPLY",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "EXTENDED",
+        "extendedClass": "SUPPLEMENTAL_OPERATIONAL",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-AU",
+          "VL-SYS-PN"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-detail-mk",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-eq-compressor",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-pressure-regulator",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-safety-valve",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-unloading-valve",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [],
+          "viaEquipment": [
+            "VL80-ACC-043",
+            "VL80-ACC-057",
+            "VL80-ACC-061"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [
+            "VL-SCH-EL-AUX-937-1260"
+          ],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [
+            "VL-SCH-PN-SUPPLY"
+          ],
+          "viaEquipment": []
+        },
+        "questionCount": 4,
+        "checkCount": 3,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "compressor-long-run",
+        "originLayer": "DiagnosticExtendedCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    },
+    {
+      "id": "vl80s.diag.compressor-overheat",
+      "aliases": [
+        "compressor-overheat"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "EXTENDED",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Перегрев или необычный шум компрессора",
+      "summary": "Появились запах, нагрев, стук или дым от мотор-компрессора.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Вспомогательные машины"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Перегрев или необычный шум компрессора",
+        "Появились запах, нагрев, стук или дым от мотор-компрессора.",
+        "Вспомогательные машины"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-003",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-043",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-057",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-061",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-AUX-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-SUPPLY",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "EXTENDED",
+        "extendedClass": "SUPPLEMENTAL_OPERATIONAL",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-AU"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-detail-mk",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-eq-compressor",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [
+            "VL80-ACC-043",
+            "VL80-ACC-057"
+          ],
+          "viaEquipment": [
+            "VL80-ACC-061"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": [
+            "VL-SCH-EL-AUX-937-1260"
+          ]
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": [
+            "VL-SCH-PN-SUPPLY"
+          ]
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "compressor-overheat",
+        "originLayer": "DiagnosticExtendedCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE6_SEMANTIC_BINDING"
+      }
+    },
+    {
+      "id": "vl80s.diag.fan-low-airflow",
+      "aliases": [
+        "fan-low-airflow"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "EXTENDED",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Недостаточный поток вентиляции",
+      "summary": "Вентилятор работает, но поток слабый или не подтверждается.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Вспомогательные машины"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Недостаточный поток вентиляции",
+        "Вентилятор работает, но поток слабый или не подтверждается.",
+        "Вспомогательные машины"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-002",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-005",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-007",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.motor-fan-failure",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.phase-splitter-no-start",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.rectifier-overheat",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-motor-overheat",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-045",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-047",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-061",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-AUX-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-CONTROL-BURT125",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-POWER-937-1260",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "EXTENDED",
+        "extendedClass": "SUPPLEMENTAL_OPERATIONAL",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-AU"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-detail-mv3",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-detail-mv4",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-eq-air-flow-switch",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-motor-fans",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-ventilation-ducts",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [],
+          "viaEquipment": [
+            "VL80-ACC-045",
+            "VL80-ACC-047",
+            "VL80-ACC-061"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [
+            "VL-SCH-EL-AUX-937-1260",
+            "VL-SCH-EL-RHEO-CONTROL-BURT125",
+            "VL-SCH-EL-RHEO-POWER-937-1260"
+          ],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "fan-low-airflow",
+        "originLayer": "DiagnosticExtendedCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    },
+    {
+      "id": "vl80s.diag.fan-vibration",
+      "aliases": [
+        "fan-vibration"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "EXTENDED",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Сильная вибрация или стук вентилятора",
+      "summary": "При работе вентилятора возникает механический шум или вибрация.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Вспомогательные машины"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Сильная вибрация или стук вентилятора",
+        "При работе вентилятора возникает механический шум или вибрация.",
+        "Вспомогательные машины"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-002",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-045",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-061",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-AUX-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-CONTROL-BURT125",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-POWER-937-1260",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "EXTENDED",
+        "extendedClass": "SUPPLEMENTAL_OPERATIONAL",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-AU"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-detail-mv3",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-detail-mv4",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-eq-motor-fans",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [
+            "VL80-ACC-045",
+            "VL80-ACC-061"
+          ],
+          "viaEquipment": []
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": [
+            "VL-SCH-EL-AUX-937-1260",
+            "VL-SCH-EL-RHEO-CONTROL-BURT125",
+            "VL-SCH-EL-RHEO-POWER-937-1260"
+          ]
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "fan-vibration",
+        "originLayer": "DiagnosticExtendedCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE6_SEMANTIC_BINDING"
+      }
+    },
+    {
+      "id": "vl80s.diag.heater-fault",
+      "aliases": [
+        "heater-fault"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "EXTENDED",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Не работает отопление или появляется перегрев",
+      "summary": "Отопительный прибор не включается, отключается защитой или имеет запах.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Вспомогательные машины"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Не работает отопление или появляется перегрев",
+        "Отопительный прибор не включается, отключается защитой или имеет запах.",
+        "Вспомогательные машины"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-052",
+          "role": "related-acceptance"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "EXTENDED",
+        "extendedClass": "SUPPLEMENTAL_OPERATIONAL",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-AU"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [
+            "VL80-ACC-052"
+          ],
+          "viaEquipment": []
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "heater-fault",
+        "originLayer": "DiagnosticExtendedCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE6_SYSTEM_ACCEPTANCE_BINDING"
+      }
+    }
+  ]
+}

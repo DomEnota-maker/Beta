@@ -1,0 +1,115 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.diagnostics.recommended.mechanical",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "vl80s.diag.ext-coupler-damage"
+    ],
+    "requiresRuntime": "1.2.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-diagnostics",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "vl80s.diag.ext-coupler-damage",
+      "aliases": [
+        "ext-coupler-damage"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "STANDARD",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Повреждение автосцепки или ударно-тягового устройства",
+      "summary": "После удара/рывка есть подозрение на трещину, перекос, ненормальное положение или неисправность сцепления.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Механическая часть"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Повреждение автосцепки или ударно-тягового устройства",
+        "После удара/рывка есть подозрение на трещину, перекос, ненормальное положение или неисправность сцепления.",
+        "Механическая часть"
+      ],
+      "sourceRefs": [
+        "CURRENT_REPO_GRANULAR",
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.external-object-impact",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-010",
+          "role": "related-acceptance"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "RECOMMENDED",
+        "severity": "STOP_BOUNDARY_IN_EXISTING_CARD",
+        "systemIds": [
+          "VL-SYS-MC"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [
+            "VL80-ACC-010"
+          ],
+          "viaEquipment": []
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 2,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "ext-coupler-damage",
+        "originLayer": "DiagnosticExpansionRepository.kt",
+        "originId": "ext-coupler-damage",
+        "runtimeStatus": "PROMOTE_EXISTING_DORMANT_GRANULAR_CARD",
+        "linkProvenance": "PROMOTED_TO_CLOSE_REAL_STAGE3_GAP"
+      }
+    }
+  ]
+}

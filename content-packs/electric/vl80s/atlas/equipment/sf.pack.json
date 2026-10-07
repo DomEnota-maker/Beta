@@ -112,6 +112,21 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-055",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.alsn-epk",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.uncommanded-braking",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.vigilance-control-fault",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -219,6 +234,21 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-055",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.alsn-epk",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.uncommanded-braking",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.vigilance-control-fault",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -318,6 +348,11 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-063",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.radio-communication-loss",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -416,6 +451,11 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-054",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.speed-indication-fault",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -497,6 +537,16 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-054",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.alsn-code-loss",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.alsn-epk",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {

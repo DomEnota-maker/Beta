@@ -1,0 +1,1300 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.diagnostics.recommended.traction",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "vl80s.diag.ekg-drive-disconnected",
+      "vl80s.diag.ekg-stuck",
+      "vl80s.diag.persistent-wheel-slip",
+      "vl80s.diag.traction-current-imbalance",
+      "vl80s.diag.traction-ground-relay-trip",
+      "vl80s.diag.traction-no-assemble",
+      "vl80s.diag.traction-overload-relay-trip",
+      "vl80s.diag.vl80s-ekg-section-desync"
+    ],
+    "requiresRuntime": "1.2.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-diagnostics",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "vl80s.diag.ekg-drive-disconnected",
+      "aliases": [
+        "ekg-drive-disconnected"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "STANDARD",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Привод ГП слышен, но вал и позиция не изменяются",
+      "summary": "При уже поданной штатной команде слышна работа серводвигателя, а вал главного переключателя остаётся неподвижен.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Тяга"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Привод ГП слышен, но вал и позиция не изменяются",
+        "При уже поданной штатной команде слышна работа серводвигателя, а вал главного переключателя остаётся неподвижен.",
+        "Тяга"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.ekg-stuck",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.ekg-position-mismatch",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.ekg-slow-transition",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.vl80s-ekg-section-desync",
+          "role": "related-diagnostic"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "RECOMMENDED",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-CT",
+          "VL-SYS-TR"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [],
+          "viaEquipment": []
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 3,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "ekg-drive-disconnected",
+        "originLayer": "DiagnosticCompletionCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "SOURCE_REVIEW_2026-09-26"
+      }
+    },
+    {
+      "id": "vl80s.diag.ekg-stuck",
+      "aliases": [
+        "ekg-stuck"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "STANDARD",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "ЭКГ не набирает, не сбрасывает или застрял между позициями",
+      "summary": "Нет перемещения главного контроллера, указатель не соответствует команде либо движение прекращается на переходной позиции.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Тяга"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "ЭКГ не набирает, не сбрасывает или застрял между позициями",
+        "Нет перемещения главного контроллера, указатель не соответствует команде либо движение прекращается на переходной позиции.",
+        "Тяга"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-004",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-001",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-011",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.vl80s-ekg-section-desync",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-050",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-062",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-EKG-CONTROL-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-CONTROL-BURT125",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "RECOMMENDED",
+        "severity": "ATTENTION",
+        "systemIds": [
+          "VL-SYS-CT",
+          "VL-SYS-TR"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-eq-driver-controller",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-ekg",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-transition-reactor",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [
+            "VL80-ACC-062"
+          ],
+          "viaEquipment": [
+            "VL80-ACC-050"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [
+            "VL-SCH-EL-EKG-CONTROL-937-1260",
+            "VL-SCH-EL-HV-START-937-1260",
+            "VL-SCH-EL-RHEO-CONTROL-BURT125",
+            "VL-SCH-EL-TRACTION-POWER-937-1260"
+          ],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 5,
+        "checkCount": 3,
+        "dangerCount": 3,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "ekg-stuck",
+        "originLayer": "DiagnosticRepository.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    },
+    {
+      "id": "vl80s.diag.persistent-wheel-slip",
+      "aliases": [
+        "persistent-wheel-slip"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "STANDARD",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Устойчивое боксование или не работает противобоксовочная защита",
+      "summary": "Боксование продолжается после обычных действий, повторяется на одной группе либо защита действует без явного боксования.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Тяга"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Устойчивое боксование или не работает противобоксовочная защита",
+        "Боксование продолжается после обычных действий, повторяется на одной группе либо защита действует без явного боксования.",
+        "Тяга"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-001",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-002",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-002",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-007",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.sanding-failure",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-current-imbalance",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-no-assemble",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.mechanical-noise-heating",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-020",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-021",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-031",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-036",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-063",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-PROTECTION-BASE",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-CONTROL-BURT125",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-POWER-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-MONITORING",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "RECOMMENDED",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-MC",
+          "VL-SYS-PR",
+          "VL-SYS-TR"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-detail-relay-panels",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-eq-anti-slip",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-bogie",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-sanders",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-traction-drive",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-traction-motors",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": [
+            "test-1-q005",
+            "test-1-q006",
+            "test-1-q007",
+            "test-1-q008",
+            "test-1-q009",
+            "test-1-q015",
+            "test-1-q017",
+            "test-2-1-q011",
+            "test-2-1-q012",
+            "test-2-1-q014",
+            "test-2-1-q015",
+            "test-2-1-q016",
+            "test-2-1-q021",
+            "test-2-2-q062",
+            "test-2-3-q006",
+            "test-2-3-q007",
+            "test-2-3-q008",
+            "test-2-3-q009",
+            "test-2-3-q011",
+            "test-2-3-q014",
+            "test-2-3-q015",
+            "test-2-3-q016",
+            "test-2-3-q018",
+            "test-2-3-q034",
+            "test-2-3-q035"
+          ]
+        },
+        "acceptance": {
+          "direct": [],
+          "viaEquipment": [
+            "VL80-ACC-020",
+            "VL80-ACC-021",
+            "VL80-ACC-031",
+            "VL80-ACC-036",
+            "VL80-ACC-063"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [
+            "VL-SCH-EL-PROTECTION-BASE",
+            "VL-SCH-EL-RHEO-CONTROL-BURT125",
+            "VL-SCH-EL-RHEO-POWER-937-1260",
+            "VL-SCH-EL-TRACTION-POWER-937-1260"
+          ],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [
+            "VL-SCH-PN-MONITORING"
+          ],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 3,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "persistent-wheel-slip",
+        "originLayer": "DiagnosticExpansion.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    },
+    {
+      "id": "vl80s.diag.traction-current-imbalance",
+      "aliases": [
+        "traction-current-imbalance"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "STANDARD",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Асимметрия или ненормальный ток тяговых двигателей",
+      "summary": "Токи секций/групп заметно различаются, ток скачет либо не соответствует позиции и тяговому усилию.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Тяга"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Асимметрия или ненормальный ток тяговых двигателей",
+        "Токи секций/групп заметно различаются, ток скачет либо не соответствует позиции и тяговому усилию.",
+        "Тяга"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-001",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-002",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-003",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-010",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-015",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.ekg-stuck",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.persistent-wheel-slip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.protection-trip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.rectifier-group-fault",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-no-assemble",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.vl80s-ekg-section-desync",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-031",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-062",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-EKG-CONTROL-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-PROTECTION-BASE",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-CONTROL-BURT125",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-POWER-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "RECOMMENDED",
+        "severity": "STOP_AND_REPORT",
+        "systemIds": [
+          "VL-SYS-TR"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-detail-bsa1",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-detail-bsa2",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-detail-rectifier-left",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-detail-rectifier-right",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-eq-bsa",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-ekg",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-rectifier",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-smoothing-reactor",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-traction-current-sensor",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-traction-motors",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [],
+          "viaEquipment": [
+            "VL80-ACC-031",
+            "VL80-ACC-062"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [
+            "VL-SCH-EL-EKG-CONTROL-937-1260",
+            "VL-SCH-EL-PROTECTION-BASE",
+            "VL-SCH-EL-RHEO-CONTROL-BURT125",
+            "VL-SCH-EL-RHEO-POWER-937-1260",
+            "VL-SCH-EL-TRACTION-POWER-937-1260"
+          ],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 3,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "traction-current-imbalance",
+        "originLayer": "DiagnosticExpansion.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    },
+    {
+      "id": "vl80s.diag.traction-ground-relay-trip",
+      "aliases": [
+        "traction-ground-relay-trip"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "STANDARD",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Сработало реле заземления РЗ тяговой цепи",
+      "summary": "Отключился ГВ и появился сигнал РЗ секции; возможен пробой изоляции вторичной силовой цепи на корпус.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Тяга"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Сработало реле заземления РЗ тяговой цепи",
+        "Отключился ГВ и появился сигнал РЗ секции; возможен пробой изоляции вторичной силовой цепи на корпус.",
+        "Тяга"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.protection-trip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.rectifier-differential-trip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-motor-flashover",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.transformer-protection",
+          "role": "related-diagnostic"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "RECOMMENDED",
+        "severity": "STOP_AND_REPORT",
+        "systemIds": [
+          "VL-SYS-HV",
+          "VL-SYS-PR",
+          "VL-SYS-TR"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [],
+          "viaEquipment": []
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 3,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "traction-ground-relay-trip",
+        "originLayer": "DiagnosticCompletionCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "SOURCE_REVIEW_2026-09-26_R2"
+      }
+    },
+    {
+      "id": "vl80s.diag.traction-no-assemble",
+      "aliases": [
+        "traction-no-assemble"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "STANDARD",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Не собирается тяга или отсутствует тяга секции",
+      "summary": "После задания направления и позиции ток ТЭД отсутствует полностью либо только на одной группе/секции.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Тяга"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Не собирается тяга или отсутствует тяга секции",
+        "После задания направления и позиции ток ТЭД отсутствует полностью либо только на одной группе/секции.",
+        "Тяга"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-001",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-002",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-008",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-014",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.vl80s-ekg-section-desync",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-031",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-062",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-RHEO-INTERLOCK",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-EKG-CONTROL-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-PROTECTION-BASE",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-CONTROL-BURT125",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-POWER-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "RECOMMENDED",
+        "severity": "ATTENTION",
+        "systemIds": [
+          "VL-SYS-TR"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-detail-bsa1",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-detail-bsa2",
+            "status": "existing"
+          },
+          {
+            "id": "vl80-eq-brake-switches",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-bsa",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-ekg",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-reverser",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-traction-motors",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [
+            "VL80-ACC-062"
+          ],
+          "viaEquipment": [
+            "VL80-ACC-031"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [
+            "VL-SCH-EL-EKG-CONTROL-937-1260",
+            "VL-SCH-EL-PROTECTION-BASE",
+            "VL-SCH-EL-RHEO-CONTROL-BURT125",
+            "VL-SCH-EL-RHEO-POWER-937-1260",
+            "VL-SCH-EL-TRACTION-POWER-937-1260"
+          ],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [
+            "VL-SCH-BR-RHEO-INTERLOCK"
+          ],
+          "viaEquipment": []
+        },
+        "questionCount": 5,
+        "checkCount": 4,
+        "dangerCount": 3,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "traction-no-assemble",
+        "originLayer": "DiagnosticRepository.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    },
+    {
+      "id": "vl80s.diag.traction-overload-relay-trip",
+      "aliases": [
+        "traction-overload-relay-trip"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "STANDARD",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Сработало реле перегрузки РП1–РП4 тягового двигателя",
+      "summary": "На секции появился сигнал РП; требуется отличить устойчивую перегрузку или повреждение ТЭД от неисправности самого реле и от другого защитного отключения.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Тяга"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Сработало реле перегрузки РП1–РП4 тягового двигателя",
+        "На секции появился сигнал РП; требуется отличить устойчивую перегрузку или повреждение ТЭД от неисправности самого реле и от другого защитного отключения.",
+        "Тяга"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.protection-trip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-motor-flashover",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-current-surge",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-current-imbalance",
+          "role": "related-diagnostic"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "RECOMMENDED",
+        "severity": "STOP_AND_REPORT",
+        "systemIds": [
+          "VL-SYS-HV",
+          "VL-SYS-PR",
+          "VL-SYS-TR"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [],
+          "viaEquipment": []
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 3,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "traction-overload-relay-trip",
+        "originLayer": "DiagnosticCompletionCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "SOURCE_REVIEW_2026-09-26_R2"
+      }
+    },
+    {
+      "id": "vl80s.diag.vl80s-ekg-section-desync",
+      "aliases": [
+        "vl80s-ekg-section-desync"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "STANDARD",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Рассогласование позиций ЭКГ между секциями",
+      "summary": "Указатели или фактически подтверждённые положения ЭКГ разных секций не совпадают при одной команде управления.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Тяга"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Рассогласование позиций ЭКГ между секциями",
+        "Указатели или фактически подтверждённые положения ЭКГ разных секций не совпадают при одной команде управления.",
+        "Тяга"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-004",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-001",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.ekg-position-mismatch",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.ekg-slow-transition",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.ekg-stuck",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.section-control-loss",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-current-imbalance",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-one-section-low",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-no-assemble",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-050",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-062",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-EKG-CONTROL-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-CONTROL-BURT125",
+          "role": "related-scheme"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "related-scheme"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "RECOMMENDED",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-CT",
+          "VL-SYS-TR"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-eq-driver-controller",
+            "status": "planned_canonical"
+          },
+          {
+            "id": "vl80-eq-ekg",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [
+            "VL80-ACC-050",
+            "VL80-ACC-062"
+          ],
+          "viaEquipment": []
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": [
+            "VL-SCH-EL-EKG-CONTROL-937-1260",
+            "VL-SCH-EL-HV-START-937-1260",
+            "VL-SCH-EL-RHEO-CONTROL-BURT125",
+            "VL-SCH-EL-TRACTION-POWER-937-1260"
+          ]
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 3,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "vl80s-ekg-section-desync",
+        "originLayer": "DiagnosticResearchIntegration.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "BETA51_RESEARCH_INTEGRATION"
+      }
+    }
+  ]
+}

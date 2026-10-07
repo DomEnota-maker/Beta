@@ -107,6 +107,21 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-061",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.aux-common-loss",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.aux-machines",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.phase-splitter-no-start",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -269,6 +284,36 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-061",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.fan-low-airflow",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.fan-vibration",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.motor-fan-failure",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.rectifier-overheat",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.rheostatic-brake",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-motor-overheat",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -411,6 +456,31 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-061",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.compressor-long-run",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.compressor-no-start",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.compressor-overheat",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.compressor-pressure",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.main-reservoir-leak",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -541,6 +611,26 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-061",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.aux-common-loss",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.aux-contactor-chatter",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.aux-machine-single-trip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.oil-pump-failure",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -645,6 +735,31 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-047",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.fan-low-airflow",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.motor-fan-failure",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.rectifier-overheat",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.rheostatic-resistor-overheat",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.ventilation-duct-damage",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -742,6 +857,21 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-061",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.aux-machine-single-trip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.oil-pump-failure",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.transformer-oil-signs",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -828,6 +958,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-AUX-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.fan-low-airflow",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.motor-fan-failure",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {

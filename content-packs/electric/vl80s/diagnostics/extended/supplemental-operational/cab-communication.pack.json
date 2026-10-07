@@ -1,0 +1,529 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.diagnostics.extended.supplemental-operational.cab-communication",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "vl80s.diag.cab-heating-smell",
+      "vl80s.diag.door-lock-fault",
+      "vl80s.diag.headlight-fault",
+      "vl80s.diag.radio-communication-loss",
+      "vl80s.diag.wiper-fault"
+    ],
+    "requiresRuntime": "1.2.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-diagnostics",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "vl80s.diag.cab-heating-smell",
+      "aliases": [
+        "cab-heating-smell"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "EXTENDED",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Запах или дым от оборудования кабины",
+      "summary": "В кабине появился локальный запах перегрева, дым или треск.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Кабина и связь"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Запах или дым от оборудования кабины",
+        "В кабине появился локальный запах перегрева, дым или треск.",
+        "Кабина и связь"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-048",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-052",
+          "role": "related-acceptance"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "EXTENDED",
+        "extendedClass": "SUPPLEMENTAL_OPERATIONAL",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-CB"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [
+            "VL80-ACC-048",
+            "VL80-ACC-052"
+          ],
+          "viaEquipment": []
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "cab-heating-smell",
+        "originLayer": "DiagnosticExtendedCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE6_SYSTEM_ACCEPTANCE_BINDING"
+      }
+    },
+    {
+      "id": "vl80s.diag.door-lock-fault",
+      "aliases": [
+        "door-lock-fault"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "EXTENDED",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Неисправна дверь или её фиксация",
+      "summary": "Дверь не закрывается, не удерживается либо мешает безопасной работе.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Кабина и связь"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Неисправна дверь или её фиксация",
+        "Дверь не закрывается, не удерживается либо мешает безопасной работе.",
+        "Кабина и связь"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-013",
+          "role": "related-acceptance"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "EXTENDED",
+        "extendedClass": "SUPPLEMENTAL_OPERATIONAL",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-CB"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [
+            "VL80-ACC-013"
+          ],
+          "viaEquipment": []
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "door-lock-fault",
+        "originLayer": "DiagnosticExtendedCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE6_SYSTEM_ACCEPTANCE_BINDING"
+      }
+    },
+    {
+      "id": "vl80s.diag.headlight-fault",
+      "aliases": [
+        "headlight-fault"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "EXTENDED",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Не работает прожектор или буферные фонари",
+      "summary": "Освещение не включается, мигает либо отключается защитой.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Кабина и связь"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Не работает прожектор или буферные фонари",
+        "Освещение не включается, мигает либо отключается защитой.",
+        "Кабина и связь"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CB-002",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-052",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-056",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-063",
+          "role": "related-acceptance"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "EXTENDED",
+        "extendedClass": "SUPPLEMENTAL_OPERATIONAL",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-CB"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-eq-cab-lighting",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [],
+          "viaEquipment": [
+            "VL80-ACC-052",
+            "VL80-ACC-056",
+            "VL80-ACC-063"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "headlight-fault",
+        "originLayer": "DiagnosticExtendedCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    },
+    {
+      "id": "vl80s.diag.radio-communication-loss",
+      "aliases": [
+        "radio-communication-loss"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "EXTENDED",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Нет поездной радиосвязи",
+      "summary": "Не удаётся установить связь либо приём/передача нестабильны.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Кабина и связь"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Нет поездной радиосвязи",
+        "Не удаётся установить связь либо приём/передача нестабильны.",
+        "Кабина и связь"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-003",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-002",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-005",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-053",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-063",
+          "role": "related-acceptance"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "EXTENDED",
+        "extendedClass": "SUPPLEMENTAL_OPERATIONAL",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-CB",
+          "VL-SYS-SF"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-eq-radio",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [
+            "VL80-ACC-053",
+            "VL80-ACC-063"
+          ],
+          "viaEquipment": [
+            "VL80-ACC-002",
+            "VL80-ACC-005"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "radio-communication-loss",
+        "originLayer": "DiagnosticExtendedCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    },
+    {
+      "id": "vl80s.diag.wiper-fault",
+      "aliases": [
+        "wiper-fault"
+      ],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "layer": "EXTENDED",
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Не работают стеклоочистители или омыватель",
+      "summary": "Очистка стекла отсутствует либо механизм заедает.",
+      "details": [],
+      "blocks": [
+        {
+          "title": "Категория",
+          "lines": [
+            "Кабина и связь"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Не работают стеклоочистители или омыватель",
+        "Очистка стекла отсутствует либо механизм заедает.",
+        "Кабина и связь"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CB-004",
+          "role": "diagnostic-equipment"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-052",
+          "role": "related-acceptance"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-063",
+          "role": "related-acceptance"
+        }
+      ],
+      "diagnosticMeta": {
+        "corpus": "EXTENDED",
+        "extendedClass": "SUPPLEMENTAL_OPERATIONAL",
+        "severity": "RESTRICT_OPERATION",
+        "systemIds": [
+          "VL-SYS-CB"
+        ],
+        "legacyApplicableVariantIds": [
+          "vl80s-general"
+        ],
+        "articleTargets": [
+          {
+            "id": "vl80-eq-wiper",
+            "status": "planned_canonical"
+          }
+        ],
+        "qna": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "acceptance": {
+          "direct": [],
+          "viaEquipment": [
+            "VL80-ACC-052",
+            "VL80-ACC-063"
+          ]
+        },
+        "electricalSchemes": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "pneumaticViews": {
+          "explicit": [],
+          "viaEquipment": []
+        },
+        "questionCount": 3,
+        "checkCount": 3,
+        "dangerCount": 2,
+        "acceptanceGate": "FEATURE_DIAGNOSTICS_RUNTIME_PENDING"
+      },
+      "migrationRefs": {
+        "legacyId": "wiper-fault",
+        "originLayer": "DiagnosticExtendedCatalog.kt",
+        "originId": null,
+        "runtimeStatus": "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY",
+        "linkProvenance": "STAGE2_REVERSE_INDEX"
+      }
+    }
+  ]
+}

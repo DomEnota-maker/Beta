@@ -115,6 +115,31 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-058",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brake-pipe-leak",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brake-pipe-no-charge",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brakes-no-apply-release",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.equalizing-reservoir-mismatch",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.uncommanded-braking",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -231,6 +256,26 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-058",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brakes-no-apply-release",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.independent-brake-no-apply",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.independent-brake-no-release",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.wheel-dragging",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -368,6 +413,26 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-058",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brake-pipe-leak",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brake-pipe-no-charge",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.equalizing-reservoir-mismatch",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.uncommanded-braking",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -487,6 +552,31 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-058",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brake-cylinder-imbalance",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brakes-no-apply-release",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.independent-brake-no-apply",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.independent-brake-no-release",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.wheel-dragging",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -601,6 +691,31 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-058",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brake-cylinder-imbalance",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brakes-no-apply-release",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.independent-brake-no-apply",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.independent-brake-no-release",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.wheel-dragging",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -715,6 +830,21 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-033",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brake-rigging-damage",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.mechanical-noise-heating",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.wheel-dragging",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -804,6 +934,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-BR-AUTOMATIC",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brakes-no-apply-release",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.equalizing-reservoir-mismatch",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -895,6 +1035,16 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-037",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.handbrake-not-release",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.wheel-dragging",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -1002,6 +1152,21 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-058",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brake-lock-state-mismatch",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brake-pipe-no-charge",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.independent-brake-no-apply",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -1102,6 +1267,16 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-058",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brakes-no-apply-release",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.uncommanded-braking",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -1182,6 +1357,11 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-BR-AUTOMATIC",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brakes-no-apply-release",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -1277,6 +1457,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-BR-RHEO-INTERLOCK",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brakes-no-apply-release",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.uncommanded-braking",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -1376,6 +1566,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-RHEO-CONTROL-BURT125",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.rheostatic-brake",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.uncommanded-braking",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -1485,6 +1685,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-PN-MONITORING",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.rheostatic-brake",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.uncommanded-braking",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -1582,6 +1792,21 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-038",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brake-pipe-leak",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.brake-pipe-no-charge",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.feed-line-leak",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {

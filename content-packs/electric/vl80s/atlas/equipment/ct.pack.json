@@ -99,6 +99,21 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-HV-START-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.battery-no-charge",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.battery-overcharge",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.control-voltage-low",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -201,6 +216,21 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-EKG-CONTROL-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.battery-no-charge",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.battery-overcharge",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.control-voltage-low",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -332,6 +362,31 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-062",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.control-fuse-trip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.intersection-command-loss",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.relay-panel-overheat",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.section-control-loss",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-intermittent",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -469,6 +524,36 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-062",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.cab-control-mismatch",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.ekg-position-mismatch",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.ekg-stuck",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.rheostatic-brake",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-intermittent",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.vl80s-ekg-section-desync",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -598,6 +683,26 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-062",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.control-fuse-trip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.control-voltage-low",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.intersection-command-loss",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.section-control-loss",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -691,6 +796,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-HV-START-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.control-fuse-trip",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.section-control-loss",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {

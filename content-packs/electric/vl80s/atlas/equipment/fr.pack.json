@@ -86,6 +86,26 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-048",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.fire-alarm-signal",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.fire-loop-fault",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.machine-room-smoke",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.smoke-fire-flashover",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -184,6 +204,21 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-ACC-048",
           "role": "acceptance-check"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.extinguisher-system-fault",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.machine-room-smoke",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.smoke-fire-flashover",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {

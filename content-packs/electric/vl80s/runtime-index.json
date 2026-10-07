@@ -24,15 +24,38 @@
     "electric/vl80s/technical-data/equipment/pr.pack.json",
     "electric/vl80s/technical-data/equipment/sf.pack.json",
     "electric/vl80s/technical-data/equipment/tr.pack.json",
-    "electric/vl80s/diagnostics/recommended/pantograph-no-rise.candidate.pack.json",
     "electric/vl80s/atlas/schemes/electrical.pack.json",
     "electric/vl80s/atlas/schemes/pneumatic.pack.json",
     "electric/vl80s/acceptance/required.pack.json",
-    "electric/vl80s/acceptance/items.pack.json"
+    "electric/vl80s/acceptance/items.pack.json",
+    "electric/vl80s/diagnostics/recommended/auxiliary.pack.json",
+    "electric/vl80s/diagnostics/recommended/brakes.pack.json",
+    "electric/vl80s/diagnostics/recommended/control.pack.json",
+    "electric/vl80s/diagnostics/recommended/electric-braking.pack.json",
+    "electric/vl80s/diagnostics/recommended/emergency.pack.json",
+    "electric/vl80s/diagnostics/recommended/high-voltage.pack.json",
+    "electric/vl80s/diagnostics/recommended/mechanical.pack.json",
+    "electric/vl80s/diagnostics/recommended/pneumatics.pack.json",
+    "electric/vl80s/diagnostics/recommended/power-circuits.pack.json",
+    "electric/vl80s/diagnostics/recommended/protections.pack.json",
+    "electric/vl80s/diagnostics/recommended/running-gear.pack.json",
+    "electric/vl80s/diagnostics/recommended/traction.pack.json",
+    "electric/vl80s/diagnostics/recommended/traffic-safety.pack.json",
+    "electric/vl80s/diagnostics/extended/supplemental-operational/auxiliary.pack.json",
+    "electric/vl80s/diagnostics/extended/supplemental-operational/brakes.pack.json",
+    "electric/vl80s/diagnostics/extended/supplemental-operational/cab-communication.pack.json",
+    "electric/vl80s/diagnostics/extended/supplemental-operational/control.pack.json",
+    "electric/vl80s/diagnostics/extended/supplemental-operational/fire-safety.pack.json",
+    "electric/vl80s/diagnostics/extended/supplemental-operational/high-voltage.pack.json",
+    "electric/vl80s/diagnostics/extended/supplemental-operational/pneumatics.pack.json",
+    "electric/vl80s/diagnostics/extended/supplemental-operational/running-gear.pack.json",
+    "electric/vl80s/diagnostics/extended/supplemental-operational/traction.pack.json",
+    "electric/vl80s/diagnostics/extended/supplemental-operational/traffic-safety.pack.json"
   ],
   "profileCatalog": "electric/vl80s/profile-catalog.json",
   "featureIndexes": {
     "atlas": "electric/vl80s/atlas/schemes/index.json",
-    "acceptance": "electric/vl80s/acceptance/index.json"
+    "acceptance": "electric/vl80s/acceptance/index.json",
+    "diagnostics": "electric/vl80s/diagnostics/index.json"
   }
 }

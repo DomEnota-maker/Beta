@@ -1,0 +1,18 @@
+{
+  "sourceCommit": "3176d6ee228f0ed4b78371f45209e10c1c724eff",
+  "scenarioCount": 103,
+  "edgeCount": 1181,
+  "recommendedCount": 44,
+  "supplementalOperationalCount": 59,
+  "recommendedPackCount": 13,
+  "supplementalOperationalPackCount": 10,
+  "publicationCandidateCount": 103,
+  "equipmentWithDiagnosticLinks": 88,
+  "acceptanceItemsWithDiagnosticLinks": 57,
+  "schemesWithDiagnosticLinks": 16,
+  "legacyGeneralVariantCount": 103,
+  "goldenReferenceCandidate": "vl80s.diag.pantograph-no-rise",
+  "replacedTemporaryPacks": [
+    "content-packs/electric/vl80s/diagnostics/recommended/pantograph-no-rise.candidate.pack.json"
+  ]
+}
