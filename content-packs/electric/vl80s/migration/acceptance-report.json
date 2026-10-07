@@ -1,0 +1,13 @@
+{
+  "sourceCommit": "3176d6ee228f0ed4b78371f45209e10c1c724eff",
+  "donorItemCount": 66,
+  "requiredItemCount": 15,
+  "totalItemCount": 81,
+  "donorRouteCount": 7,
+  "runtimeRouteCount": 8,
+  "equipmentWithAcceptanceLinks": 53,
+  "pendingDiagnosticHintCount": 61,
+  "replacedTemporaryPacks": [
+    "content-packs/electric/vl80s/acceptance/pantograph.vertical.pack.json"
+  ]
+}

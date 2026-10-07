@@ -119,6 +119,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-PN-SUPPLY",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-035",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-057",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -235,6 +245,11 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-PN-CONTROL",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-059",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -332,6 +347,11 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-PN-SUPPLY",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-057",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -455,6 +475,26 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-PN-SUPPLY",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-012",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-035",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-038",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-057",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {

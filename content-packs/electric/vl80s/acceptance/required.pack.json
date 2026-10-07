@@ -1,0 +1,716 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.acceptance.required",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "VL80-REQ-01",
+      "VL80-REQ-02",
+      "VL80-REQ-03",
+      "VL80-REQ-04",
+      "VL80-REQ-05",
+      "VL80-REQ-06",
+      "VL80-REQ-07",
+      "VL80-REQ-08",
+      "VL80-REQ-09",
+      "VL80-REQ-10",
+      "VL80-REQ-11",
+      "VL80-REQ-12",
+      "VL80-REQ-13",
+      "VL80-REQ-14",
+      "VL80-REQ-15"
+    ],
+    "requiresRuntime": "1.1.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-acceptance",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "VL80-REQ-01",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "MANUFACTURER",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Документы и передача замечаний",
+      "summary": "Проверить записи в журнале технического состояния, получить сведения о замечаниях и выполненных работах.",
+      "blocks": [
+        {
+          "title": "Обязательная проверка",
+          "lines": [
+            "Проверить записи в журнале технического состояния, получить сведения о замечаниях и выполненных работах."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "ВЛ80С. Руководство по эксплуатации: раздел IV «Техническое обслуживание ТО-1 электровоза локомотивными бригадами» и раздел «Приёмка электровоза в депо»"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Документы и передача замечаний",
+        "Проверить записи в журнале технического состояния, получить сведения о замечаниях и выполненных работах.",
+        "обязательная приёмка",
+        "ТО-1"
+      ],
+      "sourceRefs": [],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "REQUIRED",
+        "requiredBaseItem": true
+      }
+    },
+    {
+      "id": "VL80-REQ-02",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "MANUFACTURER",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Механическая часть",
+      "summary": "Осмотреть доступные узлы механической части в объёме ТО-1; выявленные неисправности зафиксировать установленным порядком.",
+      "blocks": [
+        {
+          "title": "Обязательная проверка",
+          "lines": [
+            "Осмотреть доступные узлы механической части в объёме ТО-1; выявленные неисправности зафиксировать установленным порядком."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "ВЛ80С. Руководство по эксплуатации: раздел IV «Техническое обслуживание ТО-1 электровоза локомотивными бригадами» и раздел «Приёмка электровоза в депо»"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Механическая часть",
+        "Осмотреть доступные узлы механической части в объёме ТО-1; выявленные неисправности зафиксировать установленным порядком.",
+        "обязательная приёмка",
+        "ТО-1"
+      ],
+      "sourceRefs": [],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "REQUIRED",
+        "requiredBaseItem": true
+      }
+    },
+    {
+      "id": "VL80-REQ-03",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "MANUFACTURER",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Крышевое оборудование и токоприёмник",
+      "summary": "Осмотреть с земли крышевое оборудование и проверить токоприёмник в установленном безопасном порядке.",
+      "blocks": [
+        {
+          "title": "Обязательная проверка",
+          "lines": [
+            "Осмотреть с земли крышевое оборудование и проверить токоприёмник в установленном безопасном порядке."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "ВЛ80С. Руководство по эксплуатации: раздел IV «Техническое обслуживание ТО-1 электровоза локомотивными бригадами» и раздел «Приёмка электровоза в депо»"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Крышевое оборудование и токоприёмник",
+        "Осмотреть с земли крышевое оборудование и проверить токоприёмник в установленном безопасном порядке.",
+        "обязательная приёмка",
+        "ТО-1"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-002",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "REQUIRED",
+        "requiredBaseItem": true
+      }
+    },
+    {
+      "id": "VL80-REQ-04",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "MANUFACTURER",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Тяговые двигатели и вспомогательные машины",
+      "summary": "Осмотреть доступное внешнее состояние тяговых двигателей и вспомогательных машин.",
+      "blocks": [
+        {
+          "title": "Обязательная проверка",
+          "lines": [
+            "Осмотреть доступное внешнее состояние тяговых двигателей и вспомогательных машин."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "ВЛ80С. Руководство по эксплуатации: раздел IV «Техническое обслуживание ТО-1 электровоза локомотивными бригадами» и раздел «Приёмка электровоза в депо»"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Тяговые двигатели и вспомогательные машины",
+        "Осмотреть доступное внешнее состояние тяговых двигателей и вспомогательных машин.",
+        "обязательная приёмка",
+        "ТО-1"
+      ],
+      "sourceRefs": [],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "REQUIRED",
+        "requiredBaseItem": true
+      }
+    },
+    {
+      "id": "VL80-REQ-05",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "MANUFACTURER",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Вентиляция и форкамеры",
+      "summary": "Проверить доступное состояние вентиляции, воздухозаборов и форкамер.",
+      "blocks": [
+        {
+          "title": "Обязательная проверка",
+          "lines": [
+            "Проверить доступное состояние вентиляции, воздухозаборов и форкамер."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "ВЛ80С. Руководство по эксплуатации: раздел IV «Техническое обслуживание ТО-1 электровоза локомотивными бригадами» и раздел «Приёмка электровоза в депо»"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Вентиляция и форкамеры",
+        "Проверить доступное состояние вентиляции, воздухозаборов и форкамер.",
+        "обязательная приёмка",
+        "ТО-1"
+      ],
+      "sourceRefs": [],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "REQUIRED",
+        "requiredBaseItem": true
+      }
+    },
+    {
+      "id": "VL80-REQ-06",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "MANUFACTURER",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Электрическое и пневматическое управление",
+      "summary": "Проверить аппаратуру управления и работу вспомогательных машин в предусмотренном руководством порядке.",
+      "blocks": [
+        {
+          "title": "Обязательная проверка",
+          "lines": [
+            "Проверить аппаратуру управления и работу вспомогательных машин в предусмотренном руководством порядке."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "ВЛ80С. Руководство по эксплуатации: раздел IV «Техническое обслуживание ТО-1 электровоза локомотивными бригадами» и раздел «Приёмка электровоза в депо»"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Электрическое и пневматическое управление",
+        "Проверить аппаратуру управления и работу вспомогательных машин в предусмотренном руководством порядке.",
+        "обязательная приёмка",
+        "ТО-1"
+      ],
+      "sourceRefs": [],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "REQUIRED",
+        "requiredBaseItem": true
+      }
+    },
+    {
+      "id": "VL80-REQ-07",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "MANUFACTURER",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Освещение и сигнализация",
+      "summary": "Проверить освещение, звуковые и световые сигналы.",
+      "blocks": [
+        {
+          "title": "Обязательная проверка",
+          "lines": [
+            "Проверить освещение, звуковые и световые сигналы."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "ВЛ80С. Руководство по эксплуатации: раздел IV «Техническое обслуживание ТО-1 электровоза локомотивными бригадами» и раздел «Приёмка электровоза в депо»"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Освещение и сигнализация",
+        "Проверить освещение, звуковые и световые сигналы.",
+        "обязательная приёмка",
+        "ТО-1"
+      ],
+      "sourceRefs": [],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "REQUIRED",
+        "requiredBaseItem": true
+      }
+    },
+    {
+      "id": "VL80-REQ-08",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "MANUFACTURER",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Песок и пескоподача",
+      "summary": "Проверить наличие песка и работу устройств пескоподачи.",
+      "blocks": [
+        {
+          "title": "Обязательная проверка",
+          "lines": [
+            "Проверить наличие песка и работу устройств пескоподачи."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "ВЛ80С. Руководство по эксплуатации: раздел IV «Техническое обслуживание ТО-1 электровоза локомотивными бригадами» и раздел «Приёмка электровоза в депо»"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Песок и пескоподача",
+        "Проверить наличие песка и работу устройств пескоподачи.",
+        "обязательная приёмка",
+        "ТО-1"
+      ],
+      "sourceRefs": [],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "REQUIRED",
+        "requiredBaseItem": true
+      }
+    },
+    {
+      "id": "VL80-REQ-09",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "MANUFACTURER",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Масло тягового трансформатора",
+      "summary": "Проверить уровень масла тягового трансформатора.",
+      "blocks": [
+        {
+          "title": "Обязательная проверка",
+          "lines": [
+            "Проверить уровень масла тягового трансформатора."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "ВЛ80С. Руководство по эксплуатации: раздел IV «Техническое обслуживание ТО-1 электровоза локомотивными бригадами» и раздел «Приёмка электровоза в депо»"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Масло тягового трансформатора",
+        "Проверить уровень масла тягового трансформатора.",
+        "обязательная приёмка",
+        "ТО-1"
+      ],
+      "sourceRefs": [],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "REQUIRED",
+        "requiredBaseItem": true
+      }
+    },
+    {
+      "id": "VL80-REQ-10",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "MANUFACTURER",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Конденсат и утечки воздуха",
+      "summary": "Удалить конденсат из предусмотренных сборников и проверить отсутствие недопустимых утечек воздуха.",
+      "blocks": [
+        {
+          "title": "Обязательная проверка",
+          "lines": [
+            "Удалить конденсат из предусмотренных сборников и проверить отсутствие недопустимых утечек воздуха."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "ВЛ80С. Руководство по эксплуатации: раздел IV «Техническое обслуживание ТО-1 электровоза локомотивными бригадами» и раздел «Приёмка электровоза в депо»"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Конденсат и утечки воздуха",
+        "Удалить конденсат из предусмотренных сборников и проверить отсутствие недопустимых утечек воздуха.",
+        "обязательная приёмка",
+        "ТО-1"
+      ],
+      "sourceRefs": [],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "REQUIRED",
+        "requiredBaseItem": true
+      }
+    },
+    {
+      "id": "VL80-REQ-11",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "MANUFACTURER",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Приборы и показания",
+      "summary": "Проверить предусмотренные контрольно-измерительные приборы и сигнализацию.",
+      "blocks": [
+        {
+          "title": "Обязательная проверка",
+          "lines": [
+            "Проверить предусмотренные контрольно-измерительные приборы и сигнализацию."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "ВЛ80С. Руководство по эксплуатации: раздел IV «Техническое обслуживание ТО-1 электровоза локомотивными бригадами» и раздел «Приёмка электровоза в депо»"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Приборы и показания",
+        "Проверить предусмотренные контрольно-измерительные приборы и сигнализацию.",
+        "обязательная приёмка",
+        "ТО-1"
+      ],
+      "sourceRefs": [],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "REQUIRED",
+        "requiredBaseItem": true
+      }
+    },
+    {
+      "id": "VL80-REQ-12",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "MANUFACTURER",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Запас воды",
+      "summary": "Проверить предусмотренный запас воды.",
+      "blocks": [
+        {
+          "title": "Обязательная проверка",
+          "lines": [
+            "Проверить предусмотренный запас воды."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "ВЛ80С. Руководство по эксплуатации: раздел IV «Техническое обслуживание ТО-1 электровоза локомотивными бригадами» и раздел «Приёмка электровоза в депо»"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Запас воды",
+        "Проверить предусмотренный запас воды.",
+        "обязательная приёмка",
+        "ТО-1"
+      ],
+      "sourceRefs": [],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "REQUIRED",
+        "requiredBaseItem": true
+      }
+    },
+    {
+      "id": "VL80-REQ-13",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "MANUFACTURER",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Инструмент, СИЗ и схемы",
+      "summary": "Проверить комплектность инструмента, защитных средств, противопожарного имущества и необходимых схем.",
+      "blocks": [
+        {
+          "title": "Обязательная проверка",
+          "lines": [
+            "Проверить комплектность инструмента, защитных средств, противопожарного имущества и необходимых схем."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "ВЛ80С. Руководство по эксплуатации: раздел IV «Техническое обслуживание ТО-1 электровоза локомотивными бригадами» и раздел «Приёмка электровоза в депо»"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Инструмент, СИЗ и схемы",
+        "Проверить комплектность инструмента, защитных средств, противопожарного имущества и необходимых схем.",
+        "обязательная приёмка",
+        "ТО-1"
+      ],
+      "sourceRefs": [],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "REQUIRED",
+        "requiredBaseItem": true
+      }
+    },
+    {
+      "id": "VL80-REQ-14",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "MANUFACTURER",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Стеклоочистители",
+      "summary": "Проверить работу стеклоочистителей.",
+      "blocks": [
+        {
+          "title": "Обязательная проверка",
+          "lines": [
+            "Проверить работу стеклоочистителей."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "ВЛ80С. Руководство по эксплуатации: раздел IV «Техническое обслуживание ТО-1 электровоза локомотивными бригадами» и раздел «Приёмка электровоза в депо»"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Стеклоочистители",
+        "Проверить работу стеклоочистителей.",
+        "обязательная приёмка",
+        "ТО-1"
+      ],
+      "sourceRefs": [],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "REQUIRED",
+        "requiredBaseItem": true
+      }
+    },
+    {
+      "id": "VL80-REQ-15",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "MANUFACTURER",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Тормозное оборудование",
+      "summary": "Проверить тормозное оборудование по действующей инструкции по техническому обслуживанию тормозов.",
+      "blocks": [
+        {
+          "title": "Обязательная проверка",
+          "lines": [
+            "Проверить тормозное оборудование по действующей инструкции по техническому обслуживанию тормозов."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "ВЛ80С. Руководство по эксплуатации: раздел IV «Техническое обслуживание ТО-1 электровоза локомотивными бригадами» и раздел «Приёмка электровоза в депо»"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Тормозное оборудование",
+        "Проверить тормозное оборудование по действующей инструкции по техническому обслуживанию тормозов.",
+        "обязательная приёмка",
+        "ТО-1"
+      ],
+      "sourceRefs": [],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "REQUIRED",
+        "requiredBaseItem": true
+      }
+    }
+  ]
+}

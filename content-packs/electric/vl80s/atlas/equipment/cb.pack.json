@@ -112,6 +112,11 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-PN-SUPPLY",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-051",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -198,6 +203,21 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-CT-006",
           "role": "powered_and_switched_by"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-052",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-056",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-063",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -278,6 +298,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-PN-MONITORING",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-056",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-063",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -345,6 +375,16 @@
           "type": "TECHNICAL_DATA",
           "targetId": "VL-TD-EQ-CB-004",
           "role": "technical-description"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-052",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-063",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {

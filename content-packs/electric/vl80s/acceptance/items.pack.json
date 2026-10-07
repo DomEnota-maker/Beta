@@ -1,0 +1,5354 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.acceptance.items",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "VL80-ACC-001",
+      "VL80-ACC-002",
+      "VL80-ACC-003",
+      "VL80-ACC-004",
+      "VL80-ACC-005",
+      "VL80-ACC-006",
+      "VL80-ACC-007",
+      "VL80-ACC-008",
+      "VL80-ACC-009",
+      "VL80-ACC-010",
+      "VL80-ACC-011",
+      "VL80-ACC-012",
+      "VL80-ACC-013",
+      "VL80-ACC-014",
+      "VL80-ACC-015",
+      "VL80-ACC-016",
+      "VL80-ACC-017",
+      "VL80-ACC-018",
+      "VL80-ACC-019",
+      "VL80-ACC-020",
+      "VL80-ACC-021",
+      "VL80-ACC-022",
+      "VL80-ACC-023",
+      "VL80-ACC-024",
+      "VL80-ACC-025",
+      "VL80-ACC-026",
+      "VL80-ACC-027",
+      "VL80-ACC-028",
+      "VL80-ACC-029",
+      "VL80-ACC-030",
+      "VL80-ACC-031",
+      "VL80-ACC-032",
+      "VL80-ACC-033",
+      "VL80-ACC-034",
+      "VL80-ACC-035",
+      "VL80-ACC-036",
+      "VL80-ACC-037",
+      "VL80-ACC-038",
+      "VL80-ACC-039",
+      "VL80-ACC-040",
+      "VL80-ACC-041",
+      "VL80-ACC-042",
+      "VL80-ACC-043",
+      "VL80-ACC-044",
+      "VL80-ACC-045",
+      "VL80-ACC-046",
+      "VL80-ACC-047",
+      "VL80-ACC-048",
+      "VL80-ACC-049",
+      "VL80-ACC-050",
+      "VL80-ACC-051",
+      "VL80-ACC-052",
+      "VL80-ACC-053",
+      "VL80-ACC-054",
+      "VL80-ACC-055",
+      "VL80-ACC-056",
+      "VL80-ACC-057",
+      "VL80-ACC-058",
+      "VL80-ACC-059",
+      "VL80-ACC-060",
+      "VL80-ACC-061",
+      "VL80-ACC-062",
+      "VL80-ACC-063",
+      "VL80-ACC-064",
+      "VL80-ACC-065",
+      "VL80-ACC-066"
+    ],
+    "requiresRuntime": "1.1.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-acceptance",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "VL80-ACC-001",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Журнал ТУ-152",
+      "summary": "Просмотреть последние записи: замечания, повторяемость дефектов, выполненный ремонт, подписи и отметки. Новый дефект фиксировать с секцией и местом.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Записи понятны и оформлены; неустранённые замечания имеют решение."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Неустранённый дефект без решения",
+            "Противоречие устной передачи и журнала",
+            "Новый дефект не оформлен"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Неясный дефект, влияющий на безопасность движения."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "LOCAL_PROCEDURE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Журнал ТУ-152",
+        "Просмотреть последние записи: замечания, повторяемость дефектов, выполненный ремонт, подписи и отметки. Новый дефект фиксировать с секцией и местом.",
+        "inspection",
+        "Записи понятны и оформлены; неустранённые замечания имеют решение.",
+        "Неустранённый дефект без решения",
+        "Противоречие устной передачи и журнала",
+        "Новый дефект не оформлен"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005"
+      ],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-002",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "ТО-2 и сроки обязательных проверок",
+      "summary": "Сверить дату/место последнего ТО-2 и сроки проверок устройств безопасности, радиосвязи и иных систем по принятой форме.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Сроки действуют и подтверждены документально."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Истёкший срок",
+            "Нет подтверждения проверки",
+            "Неясная отметка"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Истёкший срок критичной проверки."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "LOCAL_PROCEDURE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "ТО-2 и сроки обязательных проверок",
+        "Сверить дату/место последнего ТО-2 и сроки проверок устройств безопасности, радиосвязи и иных систем по принятой форме.",
+        "inspection",
+        "Сроки действуют и подтверждены документально.",
+        "Истёкший срок",
+        "Нет подтверждения проверки",
+        "Неясная отметка"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-001",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-003",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-003",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Передача замечаний сдающей бригадой",
+      "summary": "Уточнить ненормальную работу, срабатывания защит, перегревы, утечки, замечания по тормозам и тяге; сопоставить с журналом.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Замечания документированы и проверяемы."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Устное замечание отсутствует в журнале",
+            "Повторяемый дефект без решения"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Повторная защита/перегрев/утечка без решения."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "LOCAL_PROCEDURE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Передача замечаний сдающей бригадой",
+        "Уточнить ненормальную работу, срабатывания защит, перегревы, утечки, замечания по тормозам и тяге; сопоставить с журналом.",
+        "inspection",
+        "Замечания документированы и проверяемы.",
+        "Устное замечание отсутствует в журнале",
+        "Повторяемый дефект без решения"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "protection-trip",
+          "mechanical-noise-heating",
+          "compressor-pressure",
+          "brakes-no-apply-release"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-004",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Аварийные и временные схемы",
+      "summary": "Установить, что отключено, выведено из работы или изменено, кем и на каком основании.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Каждое изменение имеет запись и допустимый порядок эксплуатации."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Незадокументированное отключение",
+            "Неизвестная перемычка/изменение",
+            "Нет основания эксплуатации"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Любая незадокументированная аварийная схема."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "STOP_AND_REPORT"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Аварийные и временные схемы",
+        "Установить, что отключено, выведено из работы или изменено, кем и на каком основании.",
+        "inspection",
+        "Каждое изменение имеет запись и допустимый порядок эксплуатации.",
+        "Незадокументированное отключение",
+        "Неизвестная перемычка/изменение",
+        "Нет основания эксплуатации"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005"
+      ],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-005",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Комплектность, СИЗ и аварийное имущество",
+      "summary": "Проверить документы, инструмент, башмаки, сигнальные принадлежности, огнетушители, аптечку, носимые радиостанции и СИЗ.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Комплектность соответствует местному перечню; сроки действуют."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Недостача",
+            "Просроченный СИЗ",
+            "Неисправная радиостанция",
+            "Неисправный огнетушитель"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Нет обязательного средства безопасности."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "LOCAL_PROCEDURE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Комплектность, СИЗ и аварийное имущество",
+        "Проверить документы, инструмент, башмаки, сигнальные принадлежности, огнетушители, аптечку, носимые радиостанции и СИЗ.",
+        "inspection",
+        "Комплектность соответствует местному перечню; сроки действуют.",
+        "Недостача",
+        "Просроченный СИЗ",
+        "Неисправная радиостанция",
+        "Неисправный огнетушитель"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-FR-002",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-003",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "smoke-fire-flashover",
+          "alsn-epk"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-006",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Разрешение и безопасная позиция локомотива",
+      "summary": "Убедиться, что приёмка разрешена на данной позиции/пути и локомотив закреплён установленным порядком.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Осмотр разрешён; самопроизвольное движение исключено."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Нет разрешения",
+            "Не обеспечено закрепление",
+            "Неясно состояние внешнего питания"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Невозможно обеспечить безопасные условия осмотра."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "STOP_AND_REPORT"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Разрешение и безопасная позиция локомотива",
+        "Убедиться, что приёмка разрешена на данной позиции/пути и локомотив закреплён установленным порядком.",
+        "inspection",
+        "Осмотр разрешён; самопроизвольное движение исключено.",
+        "Нет разрешения",
+        "Не обеспечено закрепление",
+        "Неясно состояние внешнего питания"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-007",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Соседний путь и маршрут обхода",
+      "summary": "До выхода наружу оценить движение по соседнему пути и использовать только установленные маршруты прохода.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Маршрут осмотра безопасен; запретных условий нет."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Движение по соседнему пути",
+            "Нет безопасного прохода",
+            "Неограждённая зона между секциями"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Осмотр приостановить до устранения опасных условий."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "STOP_AND_REPORT"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Соседний путь и маршрут обхода",
+        "До выхода наружу оценить движение по соседнему пути и использовать только установленные маршруты прохода.",
+        "inspection",
+        "Маршрут осмотра безопасен; запретных условий нет.",
+        "Движение по соседнему пути",
+        "Нет безопасного прохода",
+        "Неограждённая зона между секциями"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-008",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Крышевое оборудование и ВВК: граница допуска",
+      "summary": "Крышевое оборудование при обычной приёмке осматривать с земли/разрешённой площадки. ВВК и ВВ оборудование только по полному безопасному порядку.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Осмотр выполняется без входа в опасную зону."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Попытка осмотра крыши/ВВК без условий",
+            "Нарушение ограждения/блокировок"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Высокое напряжение или неподтверждённое снятие напряжения."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "AUTHORIZED_ONLY"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Крышевое оборудование и ВВК: граница допуска",
+        "Крышевое оборудование при обычной приёмке осматривать с земли/разрешённой площадки. ВВК и ВВ оборудование только по полному безопасному порядку.",
+        "inspection",
+        "Осмотр выполняется без входа в опасную зону.",
+        "Попытка осмотра крыши/ВВК без условий",
+        "Нарушение ограждения/блокировок"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-003",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-002",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-004",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-006",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-008",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-009",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Зона тормозной пробы свободна",
+      "summary": "Перед пробой тормозов предупредить работников у экипажной части, прекратить наружный осмотр и освободить опасную зону.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Людей в зоне тормозной передачи нет; связь с машинистом обеспечена."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Люди остаются у тележек",
+            "Нет визуального/радиоконтакта"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Проба тормозов при нахождении людей у экипажной части."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "STOP_AND_REPORT"
+          ]
+        },
+        {
+          "title": "Условия",
+          "lines": [
+            "EXTERNAL_INSPECTION_COMPLETE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Зона тормозной пробы свободна",
+        "Перед пробой тормозов предупредить работников у экипажной части, прекратить наружный осмотр и освободить опасную зону.",
+        "pre_functional",
+        "Людей в зоне тормозной передачи нет; связь с машинистом обеспечена.",
+        "Люди остаются у тележек",
+        "Нет визуального/радиоконтакта"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "pre_functional",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-010",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Автосцепка СА-3 и расцепной привод",
+      "summary": "Осмотреть корпус, замок/сигнальный отросток, расцепной привод, центрирующее устройство и доступную часть поглощающего аппарата.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Нет трещин, деформаций и посторонних предметов; привод и крепления целы."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Трещина",
+            "Деформация",
+            "Повреждение расцепного привода",
+            "Посторонний предмет"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Дефект, способный нарушить сцепление."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Автосцепка СА-3 и расцепной привод",
+        "Осмотреть корпус, замок/сигнальный отросток, расцепной привод, центрирующее устройство и доступную часть поглощающего аппарата.",
+        "inspection",
+        "Нет трещин, деформаций и посторонних предметов; привод и крепления целы.",
+        "Трещина",
+        "Деформация",
+        "Повреждение расцепного привода",
+        "Посторонний предмет"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "autocoupler defect"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-011",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Путеочиститель",
+      "summary": "Проверить крепление, целостность и положение относительно пути.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Закреплён, не деформирован, не выходит в опасный габарит."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Ослаблено крепление",
+            "Деформация",
+            "Опасное приближение к рельсу"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Деталь может задеть путь или волочиться."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Путеочиститель",
+        "Проверить крепление, целостность и положение относительно пути.",
+        "inspection",
+        "Закреплён, не деформирован, не выходит в опасный габарит.",
+        "Ослаблено крепление",
+        "Деформация",
+        "Опасное приближение к рельсу"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-012",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Рукава, концевые краны и межсекционные соединения",
+      "summary": "Осмотреть рукава, краны, соединения и крепления на доступных участках.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Рукава целы, соединения закреплены, явных утечек нет."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Трещина рукава",
+            "Повреждение головки",
+            "Неплотность",
+            "Сорванное крепление"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Значительная утечка ТМ/ПМ или повреждённый рукав."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Рукава, концевые краны и межсекционные соединения",
+        "Осмотреть рукава, краны, соединения и крепления на доступных участках.",
+        "inspection",
+        "Рукава целы, соединения закреплены, явных утечек нет.",
+        "Трещина рукава",
+        "Повреждение головки",
+        "Неплотность",
+        "Сорванное крепление"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-015",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-004",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "brake-pipe-leak",
+          "compressor-pressure"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-013",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Кузов, двери, ступени и поручни",
+      "summary": "Осмотреть доступные части кузова, двери, ступени, поручни и крепления.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Нет опасных деформаций и незакреплённых деталей; проход безопасен."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Ослабленная деталь",
+            "Повреждённая ступень/поручень",
+            "Незакрывающаяся дверь"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Деталь может отпасть или создать риск падения."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Кузов, двери, ступени и поручни",
+        "Осмотреть доступные части кузова, двери, ступени, поручни и крепления.",
+        "inspection",
+        "Нет опасных деформаций и незакреплённых деталей; проход безопасен.",
+        "Ослабленная деталь",
+        "Повреждённая ступень/поручень",
+        "Незакрывающаяся дверь"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-014",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Крышевое оборудование с земли",
+      "summary": "С безопасной точки оценить видимое состояние токоприёмников, изоляторов, шин, ГВ и разрядников.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Нет разрушения, перекоса, посторонних предметов и следов пробоя."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Повреждён полоз/рама",
+            "Разрушен изолятор",
+            "Следы дуги/пробоя",
+            "Посторонний предмет"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Контактный провод касается локомотива",
+            "Видимая дуга/дым"
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Крышевое оборудование с земли",
+        "С безопасной точки оценить видимое состояние токоприёмников, изоляторов, шин, ГВ и разрядников.",
+        "inspection",
+        "Нет разрушения, перекоса, посторонних предметов и следов пробоя.",
+        "Повреждён полоз/рама",
+        "Разрушен изолятор",
+        "Следы дуги/пробоя",
+        "Посторонний предмет"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-002",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-004",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-005",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-006",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-007",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-008",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "pantograph-no-rise",
+          "gv-no-close",
+          "smoke-fire-flashover"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-015",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Отсутствие волочащихся и незакреплённых деталей",
+      "summary": "Обойти доступные стороны и проверить, нет ли деталей, труб, тяг или кабелей, опасно приближенных к рельсу/колесу.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Ничто не волочится и не попадает в габарит движения."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Волочащаяся тяга",
+            "Труба/кабель у колеса",
+            "Ослабленный кожух"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Любая деталь может попасть под колесо или зацепить путь."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Отсутствие волочащихся и незакреплённых деталей",
+        "Обойти доступные стороны и проверить, нет ли деталей, труб, тяг или кабелей, опасно приближенных к рельсу/колесу.",
+        "inspection",
+        "Ничто не волочится и не попадает в габарит движения.",
+        "Волочащаяся тяга",
+        "Труба/кабель у колеса",
+        "Ослабленный кожух"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "mechanical-noise-heating"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-016",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Поверхность катания и гребень колёсной пары",
+      "summary": "Осмотреть доступную поверхность катания и гребень: трещины, ползуны, навары, выбоины, выщербины.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Нет видимых браковочных дефектов; размеры оцениваются по действующей норме."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Ползун",
+            "Навар",
+            "Выщербина",
+            "Трещина",
+            "Повреждение гребня"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Подозрение на браковочный дефект колёсной пары."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Поверхность катания и гребень колёсной пары",
+        "Осмотреть доступную поверхность катания и гребень: трещины, ползуны, навары, выбоины, выщербины.",
+        "inspection",
+        "Нет видимых браковочных дефектов; размеры оцениваются по действующей норме.",
+        "Ползун",
+        "Навар",
+        "Выщербина",
+        "Трещина",
+        "Повреждение гребня"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-003",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "ext-wheel-flat"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-017",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Бандаж, бандажное кольцо и контрольные риски",
+      "summary": "Проверить совпадение контрольных рисок, состояние кольца и отсутствие признаков сдвига/ослабления бандажа.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Риски соответствуют; кольцо и посадка без смещения."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Несовпадение рисок",
+            "Ослабление кольца",
+            "Признаки сдвига бандажа"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Сдвиг/ослабление бандажа."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "STOP_AND_REPORT"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Бандаж, бандажное кольцо и контрольные риски",
+        "Проверить совпадение контрольных рисок, состояние кольца и отсутствие признаков сдвига/ослабления бандажа.",
+        "inspection",
+        "Риски соответствуют; кольцо и посадка без смещения.",
+        "Несовпадение рисок",
+        "Ослабление кольца",
+        "Признаки сдвига бандажа"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-003",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-018",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Корпус буксы и сравнительный нагрев",
+      "summary": "Сравнить нагрев однотипных букс безопасным способом; проверить корпус на трещины, перекос, окраску, запах и выход смазки.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Температура сопоставима с однотипными узлами; нет трещин, дыма и аномального шума."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Повышенный нагрев",
+            "Выброс смазки",
+            "Трещина корпуса",
+            "Перекос",
+            "Изменение окраски"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Резкий перегрев, дым, искры, скрежет или признаки заклинивания."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Корпус буксы и сравнительный нагрев",
+        "Сравнить нагрев однотипных букс безопасным способом; проверить корпус на трещины, перекос, окраску, запах и выход смазки.",
+        "inspection",
+        "Температура сопоставима с однотипными узлами; нет трещин, дыма и аномального шума.",
+        "Повышенный нагрев",
+        "Выброс смазки",
+        "Трещина корпуса",
+        "Перекос",
+        "Изменение окраски"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-004",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "wheel-bearing-heat",
+          "mechanical-noise-heating"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-019",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Крышка и уплотнения буксы",
+      "summary": "Проверить наличие и крепление крышки, болты, отсутствие трещин, смещения и обильного выхода смазки.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Крышка закреплена; уплотнение внешне исправно."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Ослабленные болты",
+            "Трещина",
+            "Смещение",
+            "Обильная свежая смазка"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Повреждение вместе с нагревом/шумом буксы."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Крышка и уплотнения буксы",
+        "Проверить наличие и крепление крышки, болты, отсутствие трещин, смещения и обильного выхода смазки.",
+        "inspection",
+        "Крышка закреплена; уплотнение внешне исправно.",
+        "Ослабленные болты",
+        "Трещина",
+        "Смещение",
+        "Обильная свежая смазка"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-004",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "wheel-bearing-heat"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-020",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Рама тележки",
+      "summary": "Осмотреть боковины, брусья, переходы сечений, сварные швы и доступные места.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Нет трещин, деформаций, свежих ржавых дорожек и ненормального касания."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Трещина",
+            "Деформация",
+            "Свежая ржавая дорожка",
+            "Отслоение краски по шву",
+            "Задир"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Предполагаемая трещина рамы тележки."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "STOP_AND_REPORT"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Рама тележки",
+        "Осмотреть боковины, брусья, переходы сечений, сварные швы и доступные места.",
+        "inspection",
+        "Нет трещин, деформаций, свежих ржавых дорожек и ненормального касания.",
+        "Трещина",
+        "Деформация",
+        "Свежая ржавая дорожка",
+        "Отслоение краски по шву",
+        "Задир"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-002",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-021",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Кронштейны рамы тележки",
+      "summary": "Особенно проверить буксовые и другие нагруженные кронштейны, их основания и сварные швы.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Крепления целы; отверстия и кронштейны без трещин/изгиба."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Трещина у основания",
+            "Разбитое отверстие",
+            "Изгиб",
+            "Ослабление крепежа"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Трещина ответственного кронштейна."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "STOP_AND_REPORT"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Кронштейны рамы тележки",
+        "Особенно проверить буксовые и другие нагруженные кронштейны, их основания и сварные швы.",
+        "inspection",
+        "Крепления целы; отверстия и кронштейны без трещин/изгиба.",
+        "Трещина у основания",
+        "Разбитое отверстие",
+        "Изгиб",
+        "Ослабление крепежа"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-002",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-022",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Цилиндрические пружины первой ступени",
+      "summary": "Осмотреть витки, посадку, перекос/смещение, касание соседних деталей; сравнить просадку.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Витки целы; пружина правильно сидит и не перекошена."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Лопнувший виток",
+            "Смещение",
+            "Перекос",
+            "Выпадение из опоры"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Лопнувшая пружина подвешивания."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "STOP_AND_REPORT"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Цилиндрические пружины первой ступени",
+        "Осмотреть витки, посадку, перекос/смещение, касание соседних деталей; сравнить просадку.",
+        "inspection",
+        "Витки целы; пружина правильно сидит и не перекошена.",
+        "Лопнувший виток",
+        "Смещение",
+        "Перекос",
+        "Выпадение из опоры"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-005",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-023",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Листовая рессора, хомут и валик",
+      "summary": "Проверить листы, хомут, валик, стопорение, смещение и следы касания.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Нет трещин/изломов; листы не сдвинуты; стопорение комплектно."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Трещина/излом листа",
+            "Сдвиг листов",
+            "Ослабление хомута",
+            "Нет шплинта/стопорной детали"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Лопнувшая рессора или отсутствующее стопорение."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "STOP_AND_REPORT"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Листовая рессора, хомут и валик",
+        "Проверить листы, хомут, валик, стопорение, смещение и следы касания.",
+        "inspection",
+        "Нет трещин/изломов; листы не сдвинуты; стопорение комплектно.",
+        "Трещина/излом листа",
+        "Сдвиг листов",
+        "Ослабление хомута",
+        "Нет шплинта/стопорной детали"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-005",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-024",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Рессорная стойка и стопорение",
+      "summary": "Проверить прямолинейность стойки, гайки, шайбы, стопорную вилку, шплинт, валики и опоры.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Стойка не погнута; крепёж и стопорение комплектны."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Изгиб",
+            "Отсутствует шплинт/вилка",
+            "Износ/смещение опоры"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Отсутствующий элемент стопорения ответственного узла."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Рессорная стойка и стопорение",
+        "Проверить прямолинейность стойки, гайки, шайбы, стопорную вилку, шплинт, валики и опоры.",
+        "inspection",
+        "Стойка не погнута; крепёж и стопорение комплектны.",
+        "Изгиб",
+        "Отсутствует шплинт/вилка",
+        "Износ/смещение опоры"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-005",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-025",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Люлечные пружины",
+      "summary": "Проверить целостность витков, посадку и перекос; сравнить просадку симметричных узлов.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Пружины целы и симметричны по посадке/просадке."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Лопнувший виток",
+            "Перекос",
+            "Смещение",
+            "Значительная асимметрия"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Разрушение элемента второй ступени подвешивания."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Люлечные пружины",
+        "Проверить целостность витков, посадку и перекос; сравнить просадку симметричных узлов.",
+        "inspection",
+        "Пружины целы и симметричны по посадке/просадке.",
+        "Лопнувший виток",
+        "Перекос",
+        "Смещение",
+        "Значительная асимметрия"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-005",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-026",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Стержни, шарниры и балансиры люлечного подвешивания",
+      "summary": "Проверить стержни, шарниры, балансиры, валики, гайки, шайбы, шплинты и признаки выхода из посадки.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Нет трещин, изгиба, ненормального наклона; стопорение на месте."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Трещина",
+            "Изгиб",
+            "Выработка",
+            "Нет шплинта/гайки",
+            "Выход детали из посадки"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Повреждение основного соединения люлечного подвешивания."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "STOP_AND_REPORT"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Стержни, шарниры и балансиры люлечного подвешивания",
+        "Проверить стержни, шарниры, балансиры, валики, гайки, шайбы, шплинты и признаки выхода из посадки.",
+        "inspection",
+        "Нет трещин, изгиба, ненормального наклона; стопорение на месте.",
+        "Трещина",
+        "Изгиб",
+        "Выработка",
+        "Нет шплинта/гайки",
+        "Выход детали из посадки"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-005",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-027",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Предохранительные тросы",
+      "summary": "Проверить наличие, крепление обоих концов, отсутствие перетирания, оборванных прядей и чрезмерного провисания.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Тросы целы и закреплены."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Нет троса",
+            "Оборванные пряди",
+            "Ослабло крепление",
+            "Сильное перетирание"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Отсутствует предохранительная страховка."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Предохранительные тросы",
+        "Проверить наличие, крепление обоих концов, отсутствие перетирания, оборванных прядей и чрезмерного провисания.",
+        "inspection",
+        "Тросы целы и закреплены.",
+        "Нет троса",
+        "Оборванные пряди",
+        "Ослабло крепление",
+        "Сильное перетирание"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-005",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-028",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Гидравлические гасители колебаний",
+      "summary": "Проверить корпус, шток, головки, валики, стопорение, отсутствие течи и перекоса.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Нет течи, изгиба, заклинивания и разрушения крепления."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Течь масла",
+            "Погнутый шток",
+            "Ослабление/разрушение крепления",
+            "Перекос"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Риск потери детали или разрушения крепления."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Гидравлические гасители колебаний",
+        "Проверить корпус, шток, головки, валики, стопорение, отсутствие течи и перекоса.",
+        "inspection",
+        "Нет течи, изгиба, заклинивания и разрушения крепления.",
+        "Течь масла",
+        "Погнутый шток",
+        "Ослабление/разрушение крепления",
+        "Перекос"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-005",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-029",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Буксовые поводки",
+      "summary": "Проверить оба поводка, корпуса, болты, крепления и отсутствие свежих натиров.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Оба поводка целы и закреплены."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Трещина",
+            "Ослабление",
+            "Изгиб",
+            "Смещение"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Ослабленный или повреждённый поводок."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "STOP_AND_REPORT"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Буксовые поводки",
+        "Проверить оба поводка, корпуса, болты, крепления и отсутствие свежих натиров.",
+        "inspection",
+        "Оба поводка целы и закреплены.",
+        "Трещина",
+        "Ослабление",
+        "Изгиб",
+        "Смещение"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-005",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-030",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Резинометаллические шарниры поводков",
+      "summary": "Осмотреть резину, втулки, шайбы/валики и признаки проворачивания.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Резина не выдавлена и не отслоилась; втулки не смещены."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Выдавливание/отслоение резины",
+            "Смещение втулки",
+            "Следы проворачивания",
+            "Перекос"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Значительное разрушение шарнира с потерей фиксации."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Резинометаллические шарниры поводков",
+        "Осмотреть резину, втулки, шайбы/валики и признаки проворачивания.",
+        "inspection",
+        "Резина не выдавлена и не отслоилась; втулки не смещены.",
+        "Выдавливание/отслоение резины",
+        "Смещение втулки",
+        "Следы проворачивания",
+        "Перекос"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-005",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-031",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "ТЭД, подвеска и кожухи передачи",
+      "summary": "Осмотреть доступные крепления ТЭД, подвеску, кожухи и отсутствие ненормальных следов касания/утечки.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Крепления и кожухи целы; нет волочащихся/ослабленных частей."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Ослабление подвески",
+            "Повреждён кожух",
+            "Течь",
+            "Следы касания"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Повреждение подвески ТЭД или кожуха передачи."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "ТЭД, подвеска и кожухи передачи",
+        "Осмотреть доступные крепления ТЭД, подвеску, кожухи и отсутствие ненормальных следов касания/утечки.",
+        "inspection",
+        "Крепления и кожухи целы; нет волочащихся/ослабленных частей.",
+        "Ослабление подвески",
+        "Повреждён кожух",
+        "Течь",
+        "Следы касания"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-007",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-006",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "ted-overheat",
+          "mechanical-noise-heating"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-032",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Тормозная рычажная передача",
+      "summary": "Проверить тяги, рычаги, валики, шайбы, шплинты, скобы и страховки; ничего не должно приближаться к рельсу/колесу.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Передача комплектна; детали не деформированы и не волочатся."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Выпавший валик",
+            "Нет шплинта",
+            "Трещина",
+            "Погнутая/волочащаяся тяга"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Отсутствующий элемент тормозной передачи."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Тормозная рычажная передача",
+        "Проверить тяги, рычаги, валики, шайбы, шплинты, скобы и страховки; ничего не должно приближаться к рельсу/колесу.",
+        "inspection",
+        "Передача комплектна; детали не деформированы и не волочатся.",
+        "Выпавший валик",
+        "Нет шплинта",
+        "Трещина",
+        "Погнутая/волочащаяся тяга"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002",
+        "VL80-S3-SRC-003",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-006",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "handbrake-not-release",
+          "brakes-no-apply-release"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-033",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Тормозные колодки",
+      "summary": "Проверить целостность, посадку относительно бандажа и отсутствие длительного прижатия в отпущенном состоянии.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Колодки целы, правильно расположены и отпущены."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Раскол",
+            "Предельный износ",
+            "Разворот/сползание",
+            "Неравномерный зазор",
+            "Нагрев"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Колодка/деталь может выпасть или тормоз не отпускает."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Тормозные колодки",
+        "Проверить целостность, посадку относительно бандажа и отсутствие длительного прижатия в отпущенном состоянии.",
+        "inspection",
+        "Колодки целы, правильно расположены и отпущены.",
+        "Раскол",
+        "Предельный износ",
+        "Разворот/сползание",
+        "Неравномерный зазор",
+        "Нагрев"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002",
+        "VL80-S3-SRC-003",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-006",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "brakes-no-apply-release"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-034",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Тормозные цилиндры и выход штоков",
+      "summary": "Проверить крепление, шток, соединение с передачей и отсутствие утечки. Численные нормы только по актуальному правилу конкретного исполнения.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Крепление цело; шток без перекоса; явной утечки нет."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Ослабление крепления",
+            "Перекос",
+            "Утечка",
+            "Неполный отпуск",
+            "Ненормальный выход штока"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Отказ действия/отпуска тормоза."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Тормозные цилиндры и выход штоков",
+        "Проверить крепление, шток, соединение с передачей и отсутствие утечки. Численные нормы только по актуальному правилу конкретного исполнения.",
+        "inspection",
+        "Крепление цело; шток без перекоса; явной утечки нет.",
+        "Ослабление крепления",
+        "Перекос",
+        "Утечка",
+        "Неполный отпуск",
+        "Ненормальный выход штока"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002",
+        "VL80-S3-SRC-003",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-004",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "brakes-no-apply-release"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-035",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Пневматические магистрали и резервуары",
+      "summary": "Осмотреть трубопроводы, хомуты, резервуары, соединения и доступные точки слива конденсата по установленному порядку.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Нет крупных утечек; труба не касается подвижных деталей; крепления целы."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Шипение",
+            "Сорванный хомут",
+            "Повреждённая труба",
+            "Нетипичное масло/влага"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Крупная утечка ТМ/ПМ или опасное касание подвижной детали."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Пневматические магистрали и резервуары",
+        "Осмотреть трубопроводы, хомуты, резервуары, соединения и доступные точки слива конденсата по установленному порядку.",
+        "inspection",
+        "Нет крупных утечек; труба не касается подвижных деталей; крепления целы.",
+        "Шипение",
+        "Сорванный хомут",
+        "Повреждённая труба",
+        "Нетипичное масло/влага"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002",
+        "VL80-S3-SRC-003",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-004",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-001",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "brake-pipe-leak",
+          "compressor-pressure"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-036",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Песочная система",
+      "summary": "Проверить наличие сухого песка, крепление и направление песочных труб/наконечников.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Песок сухой; трубы закреплены и направлены в рабочую зону."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Труба забита/оборвана",
+            "Направлена мимо контакта",
+            "Касается колеса/рельса",
+            "Влажный песок"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Труба/деталь опасно приближена к колесу или рельсу."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Песочная система",
+        "Проверить наличие сухого песка, крепление и направление песочных труб/наконечников.",
+        "inspection",
+        "Песок сухой; трубы закреплены и направлены в рабочую зону.",
+        "Труба забита/оборвана",
+        "Направлена мимо контакта",
+        "Касается колеса/рельса",
+        "Влажный песок"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-001",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-037",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Ручной тормоз",
+      "summary": "Проверить исходное состояние привода и отсутствие признаков неполного отпуска перед движением.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Ручной тормоз в требуемом положении; передача не заклинивает."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Не отпущен",
+            "Тугой ход",
+            "Неполный отпуск",
+            "Повреждение привода"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Сохраняется механическое затормаживание."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Ручной тормоз",
+        "Проверить исходное состояние привода и отсутствие признаков неполного отпуска перед движением.",
+        "inspection",
+        "Ручной тормоз в требуемом положении; передача не заклинивает.",
+        "Не отпущен",
+        "Тугой ход",
+        "Неполный отпуск",
+        "Повреждение привода"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002",
+        "VL80-S3-SRC-003",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-008",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "handbrake-not-release"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-038",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Пневматические соединения межсекционной части",
+      "summary": "Проверить доступные межсекционные рукава/трубопроводы и отсутствие явной утечки или механического повреждения.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Соединения целы и герметичны по внешним признакам."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Утечка",
+            "Перетирание",
+            "Повреждение/натяжение рукава"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Утечка влияет на тормозное/управляющее давление."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Пневматические соединения межсекционной части",
+        "Проверить доступные межсекционные рукава/трубопроводы и отсутствие явной утечки или механического повреждения.",
+        "inspection",
+        "Соединения целы и герметичны по внешним признакам.",
+        "Утечка",
+        "Перетирание",
+        "Повреждение/натяжение рукава"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002",
+        "VL80-S3-SRC-003",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-015",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-004",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "brake-pipe-leak",
+          "compressor-pressure"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-039",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Двери, ограждения и пломбы ВВК",
+      "summary": "Проверить закрытие дверей/ограждений и наличие предусмотренных пломб без вскрытия ВВК при обычной приёмке.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Двери/ограждения закрыты; пломбы и блокировки внешне в порядке."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Нарушена пломба",
+            "Дверь не закрывается",
+            "Повреждено ограждение/блокировка"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Нельзя обеспечить безопасное состояние ВВК."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Двери, ограждения и пломбы ВВК",
+        "Проверить закрытие дверей/ограждений и наличие предусмотренных пломб без вскрытия ВВК при обычной приёмке.",
+        "inspection",
+        "Двери/ограждения закрыты; пломбы и блокировки внешне в порядке.",
+        "Нарушена пломба",
+        "Дверь не закрывается",
+        "Повреждено ограждение/блокировка"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-003",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "pantograph-no-rise",
+          "gv-no-close"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-040",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Заземления кожухов и корпусов",
+      "summary": "Внешне проверить наличие и целостность доступных заземляющих соединений кожухов аппаратов и корпусов вспомогательных машин.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Заземляющие соединения на месте и без явных повреждений."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Обрыв/ослабление",
+            "Следы перегрева/искрения"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Отсутствует обязательное защитное заземление корпуса."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Заземления кожухов и корпусов",
+        "Внешне проверить наличие и целостность доступных заземляющих соединений кожухов аппаратов и корпусов вспомогательных машин.",
+        "inspection",
+        "Заземляющие соединения на месте и без явных повреждений.",
+        "Обрыв/ослабление",
+        "Следы перегрева/искрения"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-041",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Провода и контактные соединения: внешний признак",
+      "summary": "Без входа в опасную зону оценить доступные провода/контакты: крепление, потемнение, копоть, запах, следы нагрева.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Нет незакреплённых проводов, копоти и запаха горелой изоляции."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Ослабленный провод",
+            "Потемнение/копоть",
+            "Запах",
+            "Следы дуги"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Дым, дуга, запах горелой изоляции."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Провода и контактные соединения: внешний признак",
+        "Без входа в опасную зону оценить доступные провода/контакты: крепление, потемнение, копоть, запах, следы нагрева.",
+        "inspection",
+        "Нет незакреплённых проводов, копоти и запаха горелой изоляции.",
+        "Ослабленный провод",
+        "Потемнение/копоть",
+        "Запах",
+        "Следы дуги"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-005",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-003",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "smoke-fire-flashover",
+          "protection-trip"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-042",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Масло и течи силового оборудования",
+      "summary": "Проверить доступные поверхности трансформатора/маслосистемы и пола на нетипичные следы масла.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Нет свежей течи и подтёков на нагревающихся/токоведущих зонах."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Свежая течь",
+            "Масло на нагретой поверхности",
+            "Резкое падение уровня по штатному указателю"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Течь с запахом/дымом/нагревом."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Масло и течи силового оборудования",
+        "Проверить доступные поверхности трансформатора/маслосистемы и пола на нетипичные следы масла.",
+        "inspection",
+        "Нет свежей течи и подтёков на нагревающихся/токоведущих зонах.",
+        "Свежая течь",
+        "Масло на нагретой поверхности",
+        "Резкое падение уровня по штатному указателю"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-004",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "smoke-fire-flashover",
+          "gv-no-close"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-043",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Компрессор КТ-6Эл",
+      "summary": "Проверить крепление, масло и отсутствие посторонних предметов. В работе оценить звук, вибрацию и нагрев без касания вращающихся частей.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Нормальный звук и вибрация; нет дыма, стука и аномальной течи."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Стук",
+            "Перегрев",
+            "Течь масла",
+            "Сильная вибрация",
+            "Не запускается"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Металлический стук, дым, перегрев."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Компрессор КТ-6Эл",
+        "Проверить крепление, масло и отсутствие посторонних предметов. В работе оценить звук, вибрацию и нагрев без касания вращающихся частей.",
+        "inspection",
+        "Нормальный звук и вибрация; нет дыма, стука и аномальной течи.",
+        "Стук",
+        "Перегрев",
+        "Течь масла",
+        "Сильная вибрация",
+        "Не запускается"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-003",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "compressor-pressure"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-044",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Фазорасщепитель",
+      "summary": "Проверить крепление и внешний вид; при запуске оценить разгон, звук, вибрацию и сигнализацию.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Уверенный запуск; штатный звук/вибрация; защита не срабатывает."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Не запускается",
+            "Гудит без разгона",
+            "Повышенная вибрация",
+            "Повторная защита"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Дым, резкий запах, сильная вибрация."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Фазорасщепитель",
+        "Проверить крепление и внешний вид; при запуске оценить разгон, звук, вибрацию и сигнализацию.",
+        "inspection",
+        "Уверенный запуск; штатный звук/вибрация; защита не срабатывает.",
+        "Не запускается",
+        "Гудит без разгона",
+        "Повышенная вибрация",
+        "Повторная защита"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-001",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "aux-machines"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-045",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Мотор-вентиляторы",
+      "summary": "Проверить крепление, воздуховоды и отсутствие посторонних предметов; при работе оценить поток/звук/вибрацию.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Вентиляторы запускаются и устойчиво работают; воздуховоды не перекрыты."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Не запускается",
+            "Слабый/отсутствующий поток",
+            "Вибрация",
+            "Посторонний шум",
+            "Защита"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Нет требуемого охлаждения нагруженного оборудования."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Мотор-вентиляторы",
+        "Проверить крепление, воздуховоды и отсутствие посторонних предметов; при работе оценить поток/звук/вибрацию.",
+        "inspection",
+        "Вентиляторы запускаются и устойчиво работают; воздуховоды не перекрыты.",
+        "Не запускается",
+        "Слабый/отсутствующий поток",
+        "Вибрация",
+        "Посторонний шум",
+        "Защита"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-002",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "aux-machines",
+          "ted-overheat"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-046",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Маслонасос трансформатора",
+      "summary": "Проверить внешнее состояние; при запуске подтвердить работу и отсутствие ненормального шума/течи.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Работа подтверждается штатными признаками; течи нет."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Не запускается",
+            "Течь",
+            "Посторонний шум",
+            "Срабатывание защиты"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Нет требуемой циркуляции масла."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Маслонасос трансформатора",
+        "Проверить внешнее состояние; при запуске подтвердить работу и отсутствие ненормального шума/течи.",
+        "inspection",
+        "Работа подтверждается штатными признаками; течи нет.",
+        "Не запускается",
+        "Течь",
+        "Посторонний шум",
+        "Срабатывание защиты"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-006",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "aux-machines"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-047",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Воздуховоды, люки и фильтры",
+      "summary": "Проверить доступные воздуховоды, люки машинного отделения и отсутствие засоров/посторонних предметов.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Проход воздуха не перекрыт; люки/ограждения закреплены."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Засор",
+            "Посторонний предмет",
+            "Повреждён/открыт люк",
+            "Нарушено крепление"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Риск попадания предмета в машину или потери охлаждения."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Воздуховоды, люки и фильтры",
+        "Проверить доступные воздуховоды, люки машинного отделения и отсутствие засоров/посторонних предметов.",
+        "inspection",
+        "Проход воздуха не перекрыт; люки/ограждения закреплены.",
+        "Засор",
+        "Посторонний предмет",
+        "Повреждён/открыт люк",
+        "Нарушено крепление"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-005",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "aux-machines",
+          "ted-overheat"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-048",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Пожароопасные места и средства пожаротушения",
+      "summary": "Проверить чистоту от масла/ветоши, наличие и состояние огнетушителей, внешнее состояние пожарной сигнализации/средств по комплектации.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Нет горючих скоплений; средства пожаротушения комплектны и годны."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Масло/ветошь у нагретых узлов",
+            "Отсутствует/неисправен огнетушитель",
+            "Неисправна сигнализация"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Дым, тление, огонь."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Пожароопасные места и средства пожаротушения",
+        "Проверить чистоту от масла/ветоши, наличие и состояние огнетушителей, внешнее состояние пожарной сигнализации/средств по комплектации.",
+        "inspection",
+        "Нет горючих скоплений; средства пожаротушения комплектны и годны.",
+        "Масло/ветошь у нагретых узлов",
+        "Отсутствует/неисправен огнетушитель",
+        "Неисправна сигнализация"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-FR-002",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-FR-001",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "smoke-fire-flashover"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-049",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Посторонние предметы в машинном отделении",
+      "summary": "Проверить проходы и зоны возле машин/аппаратов на отсутствие инструмента, ветоши и иных незакреплённых предметов.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Посторонних предметов нет; проходы свободны."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Инструмент/деталь у вращающейся машины",
+            "Ветошь у горячего оборудования",
+            "Загромождённый проход"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Предмет может попасть в механизм или стать источником пожара."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "VISUAL_SAFE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Посторонние предметы в машинном отделении",
+        "Проверить проходы и зоны возле машин/аппаратов на отсутствие инструмента, ветоши и иных незакреплённых предметов.",
+        "inspection",
+        "Посторонних предметов нет; проходы свободны.",
+        "Инструмент/деталь у вращающейся машины",
+        "Ветошь у горячего оборудования",
+        "Загромождённый проход"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-050",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Исходное положение органов управления",
+      "summary": "Проверить контроллеры, краны машиниста и другие органы управления на соответствие исходному положению.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Органы управления находятся в требуемом исходном положении."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Нештатное положение",
+            "Заедание/повреждение",
+            "Неясно положение аппарата"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Невозможно безопасно начать функциональную проверку."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "CAB_ONLY"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Исходное положение органов управления",
+        "Проверить контроллеры, краны машиниста и другие органы управления на соответствие исходному положению.",
+        "inspection",
+        "Органы управления находятся в требуемом исходном положении.",
+        "Нештатное положение",
+        "Заедание/повреждение",
+        "Неясно положение аппарата"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-004",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-001",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-002",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-051",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Манометры, приборы и сигнальные лампы",
+      "summary": "Оценить целостность, начальные показания и самоконтроль доступных приборов/индикации.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Показания правдоподобны; контрольная индикация работает по процедуре."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Неисправен манометр/индикатор",
+            "Не работает контрольная лампа",
+            "Показания противоречат состоянию"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Нет достоверной индикации критичной тормозной/защитной функции."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "CAB_ONLY"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Манометры, приборы и сигнальные лампы",
+        "Оценить целостность, начальные показания и самоконтроль доступных приборов/индикации.",
+        "inspection",
+        "Показания правдоподобны; контрольная индикация работает по процедуре.",
+        "Неисправен манометр/индикатор",
+        "Не работает контрольная лампа",
+        "Показания противоречат состоянию"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CB-001",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-004",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "brakes-no-apply-release",
+          "protection-trip"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-052",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Обзор, стеклоочистители, зеркала, освещение и отопление",
+      "summary": "Проверить свободный обзор, состояние стёкол/зеркал, стеклоочистители, внутреннее освещение и необходимые кабининые функции.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Обзор обеспечен; стеклоочистители и освещение работоспособны."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Повреждённое стекло/зеркало",
+            "Не работает стеклоочиститель",
+            "Нет нужного освещения"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Дефект исключает безопасный обзор по условиям эксплуатации."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "CAB_ONLY"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Обзор, стеклоочистители, зеркала, освещение и отопление",
+        "Проверить свободный обзор, состояние стёкол/зеркал, стеклоочистители, внутреннее освещение и необходимые кабининые функции.",
+        "inspection",
+        "Обзор обеспечен; стеклоочистители и освещение работоспособны.",
+        "Повреждённое стекло/зеркало",
+        "Не работает стеклоочиститель",
+        "Нет нужного освещения"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CB-004",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CB-002",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-053",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Стационарная и носимая радиосвязь",
+      "summary": "Выполнить предусмотренную проверку радиосвязи и комплектности носимых радиостанций.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Связь устойчива в предусмотренном порядке."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Нет связи",
+            "Неисправна радиостанция",
+            "Разряжено/отсутствует носимое средство"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Не обеспечена обязательная связь."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "LOCAL_PROCEDURE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Стационарная и носимая радиосвязь",
+        "Выполнить предусмотренную проверку радиосвязи и комплектности носимых радиостанций.",
+        "inspection",
+        "Связь устойчива в предусмотренном порядке.",
+        "Нет связи",
+        "Неисправна радиостанция",
+        "Разряжено/отсутствует носимое средство"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-003",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "radio communication"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-054",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "АЛСН/КЛУБ или фактически установленный комплекс",
+      "summary": "Проверять только по документации фактически установленного комплекса и установленной процедуре самоконтроля.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Комплекс проходит штатную проверку; индикация соответствует документации."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Не проходит самоконтроль",
+            "Ошибка индикации",
+            "Нет подтверждения функции"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Неисправность устройства безопасности."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "CAB_ONLY"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "АЛСН/КЛУБ или фактически установленный комплекс",
+        "Проверять только по документации фактически установленного комплекса и установленной процедуре самоконтроля.",
+        "inspection",
+        "Комплекс проходит штатную проверку; индикация соответствует документации.",
+        "Не проходит самоконтроль",
+        "Ошибка индикации",
+        "Нет подтверждения функции"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-001",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-004",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-005",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "INSTALLED_SAFETY_SYSTEM_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "alsn-epk"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-055",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "ЭПК и контроль бдительности",
+      "summary": "Выполнить штатную проверку только в предусмотренном нормативном/местном порядке.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Функция подтверждена штатной проверкой."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Не подтверждается действие",
+            "Ложное/неожиданное срабатывание",
+            "Неисправность связи с комплексом"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Не подтверждено действие ЭПК/контроля бдительности."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "LOCAL_PROCEDURE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "ЭПК и контроль бдительности",
+        "Выполнить штатную проверку только в предусмотренном нормативном/местном порядке.",
+        "inspection",
+        "Функция подтверждена штатной проверкой.",
+        "Не подтверждается действие",
+        "Ложное/неожиданное срабатывание",
+        "Неисправность связи с комплексом"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-002",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-001",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "INSTALLED_SAFETY_SYSTEM_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "alsn-epk"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-056",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Звуковые и световые сигналы",
+      "summary": "Проверить прожектор, буферные фонари, тифон/свисток по установленной процедуре.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Световые и звуковые сигналы исправны."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Не работает прожектор/фонарь",
+            "Нет звукового сигнала"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Неисправность обязательного сигнального устройства."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "CAB_ONLY"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Звуковые и световые сигналы",
+        "Проверить прожектор, буферные фонари, тифон/свисток по установленной процедуре.",
+        "inspection",
+        "Световые и звуковые сигналы исправны.",
+        "Не работает прожектор/фонарь",
+        "Нет звукового сигнала"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CB-002",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CB-003",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-057",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Набор давления и работа компрессора/регулятора",
+      "summary": "Контролировать набор давления, работу компрессора/регулятора и явные утечки; численные нормы брать из актуальной документации конкретного исполнения.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Давление набирается устойчиво; крупной утечки и аномальной работы компрессора нет."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Компрессор не запускается",
+            "Давление растёт медленно",
+            "Не отключается",
+            "Быстро падает давление"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Невозможно поддерживать давление, необходимое для тормозов."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "CAB_ONLY"
+          ]
+        },
+        {
+          "title": "Условия",
+          "lines": [
+            "EXTERNAL_INSPECTION_COMPLETE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Набор давления и работа компрессора/регулятора",
+        "Контролировать набор давления, работу компрессора/регулятора и явные утечки; численные нормы брать из актуальной документации конкретного исполнения.",
+        "functional",
+        "Давление набирается устойчиво; крупной утечки и аномальной работы компрессора нет.",
+        "Компрессор не запускается",
+        "Давление растёт медленно",
+        "Не отключается",
+        "Быстро падает давление"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002",
+        "VL80-S3-SRC-003",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-003",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-003",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-001",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-004",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "functional",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "compressor-pressure"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-058",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Функциональная проверка тормозов",
+      "summary": "Выполнить установленную проверку тормозного оборудования по действующим Правилам и местной технологии после освобождения зоны экипажной части.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Торможение/отпуск и показания давлений соответствуют применимым нормам."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Не действует",
+            "Не отпускает",
+            "Различие тележек",
+            "Аномальные давления/время",
+            "Утечка"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Нет подтверждённой тормозной эффективности."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "LOCAL_PROCEDURE"
+          ]
+        },
+        {
+          "title": "Условия",
+          "lines": [
+            "BRAKE_AREA_CLEAR",
+            "EXTERNAL_INSPECTION_COMPLETE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Функциональная проверка тормозов",
+        "Выполнить установленную проверку тормозного оборудования по действующим Правилам и местной технологии после освобождения зоны экипажной части.",
+        "functional",
+        "Торможение/отпуск и показания давлений соответствуют применимым нормам.",
+        "Не действует",
+        "Не отпускает",
+        "Различие тележек",
+        "Аномальные давления/время",
+        "Утечка"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002",
+        "VL80-S3-SRC-003",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-001",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-002",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-004",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-005",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-009",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-010",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "functional",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "brakes-no-apply-release",
+          "brake-pipe-leak"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-059",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Подъём/опускание токоприёмника",
+      "summary": "Выполнить предусмотренную проверку подъёма/опускания, наблюдая индикацию, пневмореакцию и отсутствие ненормального шума/дуги.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Токоприёмник поднимается и опускается чётко; аварийных признаков нет."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Не поднимается",
+            "Самопроизвольно опускается",
+            "Утечка",
+            "Перекос",
+            "Дуга"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Дуга, повреждение контактной сети/крышевого оборудования."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "CAB_ONLY"
+          ]
+        },
+        {
+          "title": "Условия",
+          "lines": [
+            "EXTERNAL_INSPECTION_COMPLETE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Подъём/опускание токоприёмника",
+        "Выполнить предусмотренную проверку подъёма/опускания, наблюдая индикацию, пневмореакцию и отсутствие ненормального шума/дуги.",
+        "functional",
+        "Токоприёмник поднимается и опускается чётко; аварийных признаков нет.",
+        "Не поднимается",
+        "Самопроизвольно опускается",
+        "Утечка",
+        "Перекос",
+        "Дуга"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-002",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-002",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "functional",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "pantograph-no-rise",
+          "smoke-fire-flashover"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-060",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Включение главного выключателя",
+      "summary": "Проверить чёткость включения, удержание и отсутствие повторного защитного отключения. Не восстанавливать защиту вслепую.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "ГВ включается и удерживается; защита не срабатывает."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Не включается",
+            "Сразу отключается",
+            "Повторная защита",
+            "Ненормальный шум"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Повторное защитное отключение, дуга, дым, запах."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "CAB_ONLY"
+          ]
+        },
+        {
+          "title": "Условия",
+          "lines": [
+            "EXTERNAL_INSPECTION_COMPLETE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Включение главного выключателя",
+        "Проверить чёткость включения, удержание и отсутствие повторного защитного отключения. Не восстанавливать защиту вслепую.",
+        "functional",
+        "ГВ включается и удерживается; защита не срабатывает.",
+        "Не включается",
+        "Сразу отключается",
+        "Повторная защита",
+        "Ненормальный шум"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "functional",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "gv-no-close",
+          "protection-trip",
+          "smoke-fire-flashover"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-061",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Последовательность запуска вспомогательных машин",
+      "summary": "Проверить запуск фазорасщепителя, вентиляторов, компрессора, насоса и соответствующую сигнализацию/показания.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Машины запускаются в требуемой последовательности и работают без аномалий."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Не запускается одна/все машины",
+            "Защита",
+            "Необычный звук/вибрация",
+            "Нет охлаждения"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Отказ критичного охлаждения/маслоциркуляции."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "CAB_ONLY"
+          ]
+        },
+        {
+          "title": "Условия",
+          "lines": [
+            "EXTERNAL_INSPECTION_COMPLETE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Последовательность запуска вспомогательных машин",
+        "Проверить запуск фазорасщепителя, вентиляторов, компрессора, насоса и соответствующую сигнализацию/показания.",
+        "functional",
+        "Машины запускаются в требуемой последовательности и работают без аномалий.",
+        "Не запускается одна/все машины",
+        "Защита",
+        "Необычный звук/вибрация",
+        "Нет охлаждения"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-001",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-002",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-003",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-004",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-006",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "functional",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "aux-machines",
+          "compressor-pressure"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-062",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Цепи управления, реверсирование и набор позиций",
+      "summary": "Проверять только в объёме установленной технологии, при закреплённом локомотиве и исправных тормозах; фиксировать рассогласование и защиту.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Команды и подтверждения соответствуют выбранному режиму и исполнению."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Нет реверсирования",
+            "ЭКГ не двигается/между позициями",
+            "Не собирается тяга",
+            "Рассогласование секций"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Неопределённая позиция ЭКГ, повторная защита, неуправляемый ток."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "LOCAL_PROCEDURE"
+          ]
+        },
+        {
+          "title": "Условия",
+          "lines": [
+            "BRAKES_CONFIRMED",
+            "EXTERNAL_INSPECTION_COMPLETE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Цепи управления, реверсирование и набор позиций",
+        "Проверять только в объёме установленной технологии, при закреплённом локомотиве и исправных тормозах; фиксировать рассогласование и защиту.",
+        "functional",
+        "Команды и подтверждения соответствуют выбранному режиму и исполнению.",
+        "Нет реверсирования",
+        "ЭКГ не двигается/между позициями",
+        "Не собирается тяга",
+        "Рассогласование секций"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-004",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-001",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-008",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-003",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-005",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "functional",
+        "variantRule": "ACTUAL_SECTION_SCHEME_REQUIRED",
+        "pendingDiagnosticHints": [
+          "traction-no-assemble",
+          "ekg-stuck",
+          "protection-trip"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-063",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Песочницы, свет, звук, стеклоочистители и связь",
+      "summary": "Закончить комплексную проверку вспомогательных рабочих функций по местной технологии.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Все требуемые функции подтверждены."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Не работает песочница",
+            "Нет света/звука",
+            "Не работает стеклоочиститель/радио"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Неисправность функции, обязательной для предстоящей работы."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "LOCAL_PROCEDURE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Песочницы, свет, звук, стеклоочистители и связь",
+        "Закончить комплексную проверку вспомогательных рабочих функций по местной технологии.",
+        "functional",
+        "Все требуемые функции подтверждены.",
+        "Не работает песочница",
+        "Нет света/звука",
+        "Не работает стеклоочиститель/радио"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002",
+        "VL80-S3-SRC-004",
+        "VL80-S3-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-001",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CB-002",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CB-003",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CB-004",
+          "role": "acceptance-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-003",
+          "role": "acceptance-equipment"
+        }
+      ],
+      "acceptanceMeta": {
+        "phase": "functional",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": [
+          "radio communication"
+        ]
+      }
+    },
+    {
+      "id": "VL80-ACC-064",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Сводка обнаруженных замечаний",
+      "summary": "Собрать все пункты со статусом «замечание» с секцией, зоной, наблюдаемым признаком и ссылкой на связанный элемент/сценарий.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Замечания предметны и не подменяют наблюдение предположительным диагнозом."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Формулировка без места/секции",
+            "Диагноз вместо признака",
+            "Пропущенный красный флаг"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Красный флаг не выделен как блокирующий."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "LOCAL_PROCEDURE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Сводка обнаруженных замечаний",
+        "Собрать все пункты со статусом «замечание» с секцией, зоной, наблюдаемым признаком и ссылкой на связанный элемент/сценарий.",
+        "inspection",
+        "Замечания предметны и не подменяют наблюдение предположительным диагнозом.",
+        "Формулировка без места/секции",
+        "Диагноз вместо признака",
+        "Пропущенный красный флаг"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002"
+      ],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-065",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Запись и доклад",
+      "summary": "Оформить требуемую запись в ТУ-152 и доклад/предъявление ответственному работнику по установленному порядку.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Решение оформлено и прослеживается по документам."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Замечание не записано",
+            "Нет решения ответственного работника"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Эксплуатация при неоформленном блокирующем дефекте."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "LOCAL_PROCEDURE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Запись и доклад",
+        "Оформить требуемую запись в ТУ-152 и доклад/предъявление ответственному работнику по установленному порядку.",
+        "inspection",
+        "Решение оформлено и прослеживается по документам.",
+        "Замечание не записано",
+        "Нет решения ответственного работника"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002"
+      ],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    },
+    {
+      "id": "VL80-ACC-066",
+      "type": "ACCEPTANCE_ITEM",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Итог приёмки",
+      "summary": "Выбрать итог: принято без замечаний / принято после оформленного решения / предъявлено для устранения / приёмка остановлена. Приложение не выдаёт допуск само.",
+      "blocks": [
+        {
+          "title": "Нормальные признаки",
+          "lines": [
+            "Итог соответствует оформленному решению и действующим документам."
+          ]
+        },
+        {
+          "title": "Возможные неисправности",
+          "lines": [
+            "Попытка закрыть блокирующее замечание отметкой в приложении"
+          ]
+        },
+        {
+          "title": "Опасные признаки",
+          "lines": [
+            "Ни одна отметка приложения не отменяет ТУ-152, норму или решение ответственного лица."
+          ]
+        },
+        {
+          "title": "Граница действий",
+          "lines": [
+            "LOCAL_PROCEDURE"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Итог приёмки",
+        "Выбрать итог: принято без замечаний / принято после оформленного решения / предъявлено для устранения / приёмка остановлена. Приложение не выдаёт допуск само.",
+        "inspection",
+        "Итог соответствует оформленному решению и действующим документам.",
+        "Попытка закрыть блокирующее замечание отметкой в приложении"
+      ],
+      "sourceRefs": [
+        "VL80-S3-SRC-001",
+        "VL80-S3-SRC-005",
+        "VL80-S3-SRC-002"
+      ],
+      "links": [],
+      "acceptanceMeta": {
+        "phase": "inspection",
+        "variantRule": "ALL_BASE_VARIANTS_VERIFY_ACTUAL_SECTION",
+        "pendingDiagnosticHints": []
+      }
+    }
+  ]
+}

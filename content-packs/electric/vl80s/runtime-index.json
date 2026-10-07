@@ -24,13 +24,15 @@
     "electric/vl80s/technical-data/equipment/pr.pack.json",
     "electric/vl80s/technical-data/equipment/sf.pack.json",
     "electric/vl80s/technical-data/equipment/tr.pack.json",
-    "electric/vl80s/acceptance/pantograph.vertical.pack.json",
     "electric/vl80s/diagnostics/recommended/pantograph-no-rise.candidate.pack.json",
     "electric/vl80s/atlas/schemes/electrical.pack.json",
-    "electric/vl80s/atlas/schemes/pneumatic.pack.json"
+    "electric/vl80s/atlas/schemes/pneumatic.pack.json",
+    "electric/vl80s/acceptance/required.pack.json",
+    "electric/vl80s/acceptance/items.pack.json"
   ],
   "profileCatalog": "electric/vl80s/profile-catalog.json",
   "featureIndexes": {
-    "atlas": "electric/vl80s/atlas/schemes/index.json"
+    "atlas": "electric/vl80s/atlas/schemes/index.json",
+    "acceptance": "electric/vl80s/acceptance/index.json"
   }
 }

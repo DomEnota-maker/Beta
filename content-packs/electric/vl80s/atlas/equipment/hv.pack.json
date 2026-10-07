@@ -97,6 +97,21 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-PN-CONTROL",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-008",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-014",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-060",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -220,6 +235,21 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-PN-CONTROL",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-008",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-014",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-059",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -304,6 +334,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-HV-START-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-008",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-039",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -409,6 +449,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-008",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-014",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -508,6 +558,11 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-014",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -598,6 +653,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-HV-START-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-008",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-014",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -686,6 +751,11 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-014",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -784,6 +854,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-008",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-014",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {

@@ -97,6 +97,21 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-BR-EPK",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-002",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-054",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-055",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -199,6 +214,11 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-BR-EPK",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-055",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -278,6 +298,26 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-CT-001",
           "role": "powered_by"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-002",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-005",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-053",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-063",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -366,6 +406,16 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-MC-003",
           "role": "related-equipment"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-051",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-054",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -442,6 +492,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-SF-001",
           "role": "sends_signal_to"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-054",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {

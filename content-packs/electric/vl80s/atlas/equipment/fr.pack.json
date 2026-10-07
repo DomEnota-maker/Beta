@@ -81,6 +81,11 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-FIRE-SIGNAL",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-048",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -169,6 +174,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-FIRE-SIGNAL",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-005",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-048",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {

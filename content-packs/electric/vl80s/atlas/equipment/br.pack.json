@@ -105,6 +105,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-BR-AUTOMATIC",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-050",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-058",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -211,6 +221,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-BR-RHEO-INTERLOCK",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-050",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-058",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -328,6 +348,26 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-PN-INTERSECTION",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-012",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-035",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-038",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-058",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -437,6 +477,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-PN-MONITORING",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-034",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-058",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -546,6 +596,11 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-BR-INDEPENDENT",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-058",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -650,6 +705,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-BR-INDEPENDENT",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-032",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-033",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -825,6 +890,11 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-BR-INDEPENDENT",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-037",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -927,6 +997,11 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-BR-INDEPENDENT",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-058",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -1022,6 +1097,11 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-BR-AUTOMATIC",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-058",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
@@ -1492,6 +1572,16 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-PN-INTERSECTION",
           "role": "scheme-membership"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-012",
+          "role": "acceptance-check"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-ACC-038",
+          "role": "acceptance-check"
         }
       ],
       "migrationRefs": {
