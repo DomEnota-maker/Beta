@@ -19,15 +19,17 @@ import ru.railbrake.calculator.domain.PublicationStatus
 import ru.railbrake.calculator.domain.SourceStatus
 import ru.railbrake.calculator.domain.VariantId
 
-class ContentPackJsonLoader(
-    private val gson: Gson = Gson(),
-) {
+class ContentPackJsonLoader {
+    private val gson = Gson()
+
     fun parse(json: String): ContentPack {
         val document = gson.fromJson(json, JsonContentPack::class.java)
             ?: error("content pack document is empty")
 
-        val entries = document.entries.map { it.toDomain() }
-        val manifest = document.manifest.toDomain()
+        val entries = document.entries.orEmpty().map { it.toDomain() }
+        val manifest = requireNotNull(document.manifest) {
+            "content pack manifest is missing"
+        }.toDomain()
 
         return ContentPack(
             manifest = manifest,
@@ -37,113 +39,116 @@ class ContentPackJsonLoader(
 }
 
 private data class JsonContentPack(
-    val manifest: JsonManifest,
-    val entries: List<JsonEntry> = emptyList(),
+    val manifest: JsonManifest? = null,
+    val entries: List<JsonEntry>? = null,
 )
 
 private data class JsonManifest(
-    val schemaVersion: Int,
-    val packId: String,
-    val packVersion: String,
-    val family: String?,
-    val modelIds: List<String> = emptyList(),
-    val variantIds: List<String> = emptyList(),
-    val locale: String,
-    val entries: List<String> = emptyList(),
-    val requiresRuntime: String,
-    val sourceCatalogVersion: String,
-    val checksums: Map<String, String> = emptyMap(),
+    val schemaVersion: Int = 0,
+    val packId: String? = null,
+    val packVersion: String? = null,
+    val family: String? = null,
+    val modelIds: List<String>? = null,
+    val variantIds: List<String>? = null,
+    val locale: String? = null,
+    val entries: List<String>? = null,
+    val requiresRuntime: String? = null,
+    val sourceCatalogVersion: String? = null,
+    val checksums: Map<String, String>? = null,
 ) {
     fun toDomain() = ContentPackManifest(
         schemaVersion = schemaVersion,
-        packId = PackId(packId),
-        packVersion = packVersion,
+        packId = PackId(requireText(packId, "manifest.packId")),
+        packVersion = requireText(packVersion, "manifest.packVersion"),
         family = family,
-        modelIds = modelIds.map(::ModelId).toSet(),
-        variantIds = variantIds.map(::VariantId).toSet(),
-        locale = locale,
-        entries = entries.map(::CanonicalId).toSet(),
-        requiresRuntime = requiresRuntime,
-        sourceCatalogVersion = sourceCatalogVersion,
-        checksums = checksums,
+        modelIds = modelIds.orEmpty().map(::ModelId).toSet(),
+        variantIds = variantIds.orEmpty().map(::VariantId).toSet(),
+        locale = requireText(locale, "manifest.locale"),
+        entries = entries.orEmpty().map(::CanonicalId).toSet(),
+        requiresRuntime = requireText(requiresRuntime, "manifest.requiresRuntime"),
+        sourceCatalogVersion = requireText(sourceCatalogVersion, "manifest.sourceCatalogVersion"),
+        checksums = checksums.orEmpty(),
     )
 }
 
 private data class JsonEntry(
-    val id: String,
-    val aliases: List<String> = emptyList(),
-    val type: String,
-    val owner: JsonOwner,
-    val applicability: JsonApplicability = JsonApplicability(),
-    val layer: String = "STANDARD",
-    val publicationStatus: String = "ACTIVE",
-    val provenance: String = "UNKNOWN",
-    val sourceStatus: String = "UNKNOWN",
-    val actionDisposition: String = "INFORMATION_ONLY",
-    val title: String,
+    val id: String? = null,
+    val aliases: List<String>? = null,
+    val type: String? = null,
+    val owner: JsonOwner? = null,
+    val applicability: JsonApplicability? = null,
+    val layer: String? = null,
+    val publicationStatus: String? = null,
+    val provenance: String? = null,
+    val sourceStatus: String? = null,
+    val actionDisposition: String? = null,
+    val title: String? = null,
     val summary: String? = null,
-    val details: List<String> = emptyList(),
-    val sourceRefs: List<String> = emptyList(),
-    val links: List<JsonLink> = emptyList(),
+    val details: List<String>? = null,
+    val sourceRefs: List<String>? = null,
+    val links: List<JsonLink>? = null,
 ) {
     fun toDomain() = ContentEntry(
-        id = CanonicalId(id),
-        aliases = aliases.map(::CanonicalId).toSet(),
-        type = ContentType.valueOf(type),
-        owner = owner.toDomain(),
-        applicability = applicability.toDomain(),
-        layer = ContentLayer.valueOf(layer),
-        publicationStatus = PublicationStatus.valueOf(publicationStatus),
-        provenance = ProvenanceClass.valueOf(provenance),
-        sourceStatus = SourceStatus.valueOf(sourceStatus),
-        actionDisposition = ActionDisposition.valueOf(actionDisposition),
-        title = title,
+        id = CanonicalId(requireText(id, "entry.id")),
+        aliases = aliases.orEmpty().map(::CanonicalId).toSet(),
+        type = ContentType.valueOf(requireText(type, "entry.type")),
+        owner = requireNotNull(owner) { "entry.owner is missing" }.toDomain(),
+        applicability = applicability?.toDomain() ?: Applicability(),
+        layer = ContentLayer.valueOf(layer ?: "STANDARD"),
+        publicationStatus = PublicationStatus.valueOf(publicationStatus ?: "ACTIVE"),
+        provenance = ProvenanceClass.valueOf(provenance ?: "UNKNOWN"),
+        sourceStatus = SourceStatus.valueOf(sourceStatus ?: "UNKNOWN"),
+        actionDisposition = ActionDisposition.valueOf(actionDisposition ?: "INFORMATION_ONLY"),
+        title = requireText(title, "entry.title"),
         summary = summary,
-        details = details,
-        sourceRefs = sourceRefs.toSet(),
-        links = links.map { it.toDomain() },
+        details = details.orEmpty(),
+        sourceRefs = sourceRefs.orEmpty().toSet(),
+        links = links.orEmpty().map { it.toDomain() },
     )
 }
 
 private data class JsonOwner(
-    val kind: String,
+    val kind: String? = null,
     val modelId: String? = null,
 ) {
-    fun toDomain(): ContentOwner = when (kind) {
+    fun toDomain(): ContentOwner = when (requireText(kind, "owner.kind")) {
         "COMMON" -> ContentOwner.Common
-        "MODEL" -> ContentOwner.Model(ModelId(requireNotNull(modelId) {
-            "MODEL owner requires modelId"
-        }))
+        "MODEL" -> ContentOwner.Model(ModelId(requireText(modelId, "owner.modelId")))
         else -> error("unknown owner kind: $kind")
     }
 }
 
 private data class JsonApplicability(
-    val modelIds: List<String> = emptyList(),
-    val variantIds: List<String> = emptyList(),
-    val sectionIds: List<String> = emptyList(),
-    val equipmentIds: List<String> = emptyList(),
+    val modelIds: List<String>? = null,
+    val variantIds: List<String>? = null,
+    val sectionIds: List<String>? = null,
+    val equipmentIds: List<String>? = null,
 ) {
     fun toDomain() = Applicability(
-        modelIds = modelIds.map(::ModelId).toSet(),
-        variantIds = variantIds.map(::VariantId).toSet(),
-        sectionIds = sectionIds.toSet(),
-        equipmentIds = equipmentIds.map(::CanonicalId).toSet(),
+        modelIds = modelIds.orEmpty().map(::ModelId).toSet(),
+        variantIds = variantIds.orEmpty().map(::VariantId).toSet(),
+        sectionIds = sectionIds.orEmpty().toSet(),
+        equipmentIds = equipmentIds.orEmpty().map(::CanonicalId).toSet(),
     )
 }
 
 private data class JsonLink(
-    val type: String,
-    val targetId: String,
+    val type: String? = null,
+    val targetId: String? = null,
     val role: String? = null,
-    val scope: String = "SAME_MODEL",
-    val applicability: JsonApplicability = JsonApplicability(),
+    val scope: String? = null,
+    val applicability: JsonApplicability? = null,
 ) {
     fun toDomain() = ContentLink(
-        type = LinkType.valueOf(type),
-        targetId = CanonicalId(targetId),
+        type = LinkType.valueOf(requireText(type, "link.type")),
+        targetId = CanonicalId(requireText(targetId, "link.targetId")),
         role = role,
-        scope = LinkScope.valueOf(scope),
-        applicability = applicability.toDomain(),
+        scope = LinkScope.valueOf(scope ?: "SAME_MODEL"),
+        applicability = applicability?.toDomain() ?: Applicability(),
     )
+}
+
+private fun requireText(value: String?, field: String): String {
+    require(!value.isNullOrBlank()) { "$field must not be blank" }
+    return value
 }
