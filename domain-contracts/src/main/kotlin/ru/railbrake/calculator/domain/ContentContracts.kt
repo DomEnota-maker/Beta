@@ -38,6 +38,25 @@ enum class LinkType {
     ACCEPTANCE_ITEM,
     KNOWLEDGE,
     SOURCE,
+    FIRST_AID,
+    SAFETY,
+}
+
+fun LinkType.expectedTargetType(): ContentType = when (this) {
+    LinkType.RELATED_SCENARIO -> ContentType.DIAGNOSTIC_SCENARIO
+    LinkType.EQUIPMENT -> ContentType.EQUIPMENT
+    LinkType.ATLAS_SCHEME -> ContentType.ATLAS_SCHEME
+    LinkType.ACCEPTANCE_ITEM -> ContentType.ACCEPTANCE_ITEM
+    LinkType.KNOWLEDGE -> ContentType.KNOWLEDGE
+    LinkType.SOURCE -> ContentType.SOURCE
+    LinkType.FIRST_AID -> ContentType.FIRST_AID
+    LinkType.SAFETY -> ContentType.SAFETY
+}
+
+enum class LinkScope {
+    SAME_OWNER,
+    COMMON_TARGET,
+    EXPLICIT_CROSS_MODEL,
 }
 
 enum class ContentLayer {
@@ -74,11 +93,20 @@ sealed interface ContentOwner {
     data class Model(val modelId: ModelId) : ContentOwner
 }
 
+fun ContentOwner.modelIdOrNull(): ModelId? = when (this) {
+    ContentOwner.Common -> null
+    is ContentOwner.Model -> modelId
+}
+
 data class RuntimeContext(
     val activeModelId: ModelId? = null,
     val activeVariantId: VariantId? = null,
+    val viewedModelId: ModelId? = null,
     val allowedLayers: Set<ContentLayer> = setOf(ContentLayer.STANDARD),
-)
+) {
+    val contentModelId: ModelId?
+        get() = viewedModelId ?: activeModelId
+}
 
 data class Applicability(
     val modelIds: Set<ModelId> = emptySet(),
@@ -88,7 +116,7 @@ data class Applicability(
 ) {
     fun matches(context: RuntimeContext): Boolean {
         if (modelIds.isNotEmpty()) {
-            val model = context.activeModelId ?: return false
+            val model = context.contentModelId ?: return false
             if (model !in modelIds) return false
         }
         if (variantIds.isNotEmpty()) {
@@ -103,6 +131,7 @@ data class ContentLink(
     val type: LinkType,
     val targetId: CanonicalId,
     val role: String? = null,
+    val scope: LinkScope = LinkScope.SAME_OWNER,
     val applicability: Applicability = Applicability(),
 )
 

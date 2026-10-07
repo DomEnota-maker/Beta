@@ -2,9 +2,12 @@ package ru.railbrake.calculator.runtime
 
 import ru.railbrake.calculator.domain.CanonicalId
 import ru.railbrake.calculator.domain.ContentEntry
+import ru.railbrake.calculator.domain.ContentOwner
 import ru.railbrake.calculator.domain.ContentPackManifest
 import ru.railbrake.calculator.domain.ContentTarget
+import ru.railbrake.calculator.domain.LinkScope
 import ru.railbrake.calculator.domain.RuntimeContext
+import ru.railbrake.calculator.domain.expectedTargetType
 
 data class ContentPack(
     val manifest: ContentPackManifest,
@@ -17,6 +20,8 @@ enum class ValidationIssueCode {
     DUPLICATE_ALIAS,
     ALIAS_COLLIDES_WITH_CANONICAL_ID,
     MISSING_LINK_TARGET,
+    LINK_TYPE_MISMATCH,
+    LINK_SCOPE_VIOLATION,
 }
 
 data class ValidationIssue(
@@ -72,28 +77,59 @@ class ContentRegistry {
         return emptyList()
     }
 
-    fun validateGlobalLinks(): List<ValidationIssue> {
-        val known = entries.keys
-        return entries.values.flatMap { entry ->
-            entry.links
-                .filter { it.targetId !in known && it.targetId !in aliases }
-                .map { link ->
-                    ValidationIssue(
-                        ValidationIssueCode.MISSING_LINK_TARGET,
-                        "${entry.id.value} -> missing ${link.targetId.value}",
-                    )
-                }
+    fun find(id: CanonicalId): ContentEntry? {
+        val canonical = when {
+            id in entries -> id
+            id in aliases -> aliases.getValue(id)
+            else -> return null
         }
+        return entries.getValue(canonical)
     }
 
-    fun resolve(target: ContentTarget, context: RuntimeContext): ResolveResult {
-        val canonical = when {
-            target.id in entries -> target.id
-            target.id in aliases -> aliases.getValue(target.id)
-            else -> return ResolveResult.NotFound
+    fun validateGlobalLinks(): List<ValidationIssue> =
+        entries.values.flatMap { source ->
+            source.links.flatMap { link ->
+                val target = find(link.targetId)
+                when {
+                    target == null -> listOf(
+                        ValidationIssue(
+                            ValidationIssueCode.MISSING_LINK_TARGET,
+                            "${source.id.value} -> missing ${link.targetId.value}",
+                        )
+                    )
+                    target.type != link.type.expectedTargetType() -> listOf(
+                        ValidationIssue(
+                            ValidationIssueCode.LINK_TYPE_MISMATCH,
+                            "${source.id.value} -> ${target.id.value}: expected ${link.type.expectedTargetType()}, got ${target.type}",
+                        )
+                    )
+                    !scopeAllows(source, target, link.scope) -> listOf(
+                        ValidationIssue(
+                            ValidationIssueCode.LINK_SCOPE_VIOLATION,
+                            "${source.id.value} -> ${target.id.value}: scope ${link.scope} is not allowed for owners ${source.owner} -> ${target.owner}",
+                        )
+                    )
+                    else -> emptyList()
+                }
+            }
         }
 
-        val entry = entries.getValue(canonical)
+    fun scopeAllows(source: ContentEntry, target: ContentEntry, scope: LinkScope): Boolean =
+        when (scope) {
+            LinkScope.SAME_OWNER ->
+                target.owner == source.owner || target.owner == ContentOwner.Common
+
+            LinkScope.COMMON_TARGET ->
+                target.owner == ContentOwner.Common
+
+            LinkScope.EXPLICIT_CROSS_MODEL ->
+                source.owner is ContentOwner.Model &&
+                    target.owner is ContentOwner.Model &&
+                    source.owner != target.owner
+        }
+
+    fun resolve(target: ContentTarget, context: RuntimeContext): ResolveResult {
+        val entry = find(target.id) ?: return ResolveResult.NotFound
         if (entry.type != target.expectedType) return ResolveResult.TypeMismatch
         if (!entry.applicability.matches(context)) return ResolveResult.Inapplicable
         if (entry.layer !in context.allowedLayers) return ResolveResult.LayerDenied

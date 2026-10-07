@@ -20,5 +20,7 @@ include(
     ":app-shell",
     ":domain-contracts",
     ":content-runtime",
+    ":navigation-contracts",
+    ":link-router",
     ":source-policy",
 )

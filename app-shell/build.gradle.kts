@@ -34,5 +34,7 @@ android {
 dependencies {
     implementation(project(":domain-contracts"))
     implementation(project(":content-runtime"))
+    implementation(project(":navigation-contracts"))
+    implementation(project(":link-router"))
     implementation(project(":source-policy"))
 }
