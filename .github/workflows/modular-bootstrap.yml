@@ -53,6 +53,9 @@ jobs:
         with:
           gradle-version: '8.7'
 
+      - name: Validate modular content topology
+        run: python3 qa/validate_content_topology.py
+
       - name: Validate pinned candidate inventory
         run: python3 qa/validate_vl80s_candidate_inventory.py
 

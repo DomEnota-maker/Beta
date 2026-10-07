@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "common": {
+    "root": "content-packs/common",
+    "sections": {
+      "FIRST_AID": "content-packs/common/first-aid",
+      "KNOWLEDGE": "content-packs/common/knowledge",
+      "SAFETY": "content-packs/common/safety"
+    }
+  },
+  "models": [
+    {
+      "modelId": "vl80s",
+      "title": "ВЛ80С",
+      "family": "ELECTRIC",
+      "variantIds": ["vl80s-general"],
+      "root": "content-packs/electric/vl80s"
+    },
+    {
+      "modelId": "ermak",
+      "title": "2ЭС5К/3ЭС5К «Ермак»",
+      "family": "ELECTRIC",
+      "variantIds": ["2es5k", "3es5k"],
+      "root": "content-packs/electric/ermak"
+    },
+    {
+      "modelId": "chme3-family",
+      "title": "ЧМЭ3/ЧМЭ3Т/ЧМЭ3Э",
+      "family": "DIESEL",
+      "variantIds": ["chme3", "chme3t", "chme3e"],
+      "root": "content-packs/diesel/chme3-family"
+    },
+    {
+      "modelId": "tem2-family",
+      "title": "ТЭМ2/ТЭМ2У",
+      "family": "DIESEL",
+      "variantIds": ["tem2", "tem2u"],
+      "root": "content-packs/diesel/tem2-family"
+    }
+  ],
+  "modelSections": {
+    "ACCEPTANCE": "acceptance",
+    "ATLAS": "atlas",
+    "DIAGNOSTICS": "diagnostics",
+    "TECHNICAL_DATA": "technical-data"
+  },
+  "diagnostics": {
+    "recommended": "diagnostics/recommended",
+    "extended": {
+      "ARCHIVED_OFFICIAL": "diagnostics/extended/archived-official",
+      "MANUFACTURER_EXTENDED": "diagnostics/extended/manufacturer-extended",
+      "HISTORICAL_TRAINING": "diagnostics/extended/historical-training",
+      "FIELD_PRACTICE": "diagnostics/extended/field-practice"
+    }
+  }
+}
