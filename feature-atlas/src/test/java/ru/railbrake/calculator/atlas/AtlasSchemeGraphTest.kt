@@ -28,7 +28,7 @@ class AtlasSchemeGraphTest {
                   "title": "Тестовая схема",
                   "schemeType": "electrical",
                   "status": "TEST",
-                  "profiles": ["vl80s-general"],
+                  "profiles": ["vl80s_697_1260"],
                   "systems": ["VL-SYS-HV"],
                   "sourceRefs": ["VL-SRC-001"],
                   "nodes": [
@@ -54,6 +54,19 @@ class AtlasSchemeGraphTest {
             actionDisposition = ActionDisposition.INFORMATION_ONLY,
             title = "Токоприёмник",
         )
+        val scheme = ContentEntry(
+            id = CanonicalId("VL-SCH-TEST"),
+            type = ContentType.ATLAS_SCHEME,
+            owner = ContentOwner.Model(ModelId("vl80s")),
+            applicability = Applicability(
+                modelIds = setOf(ModelId("vl80s")),
+                variantIds = setOf(ru.railbrake.calculator.domain.VariantId("vl80s_697_1260")),
+            ),
+            provenance = ProvenanceClass.UNKNOWN,
+            sourceStatus = SourceStatus.UNKNOWN,
+            actionDisposition = ActionDisposition.INFORMATION_ONLY,
+            title = "Тестовая схема",
+        )
         val pack = ContentPack(
             manifest = ContentPackManifest(
                 schemaVersion = 1,
@@ -63,12 +76,12 @@ class AtlasSchemeGraphTest {
                 modelIds = setOf(ModelId("vl80s")),
                 variantIds = emptySet(),
                 locale = "ru-RU",
-                entries = setOf(equipment.id),
+                entries = setOf(equipment.id, scheme.id),
                 requiresRuntime = "1",
                 sourceCatalogVersion = "1",
                 checksums = emptyMap(),
             ),
-            entries = listOf(equipment),
+            entries = listOf(equipment, scheme),
         )
         assertTrue(registry.install(pack).isEmpty())
 

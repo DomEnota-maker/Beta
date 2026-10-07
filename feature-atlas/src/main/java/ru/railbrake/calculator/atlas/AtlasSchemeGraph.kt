@@ -66,6 +66,23 @@ class AtlasGraphValidator(
         pack.schemes.flatMap { scheme ->
             val nodeIds = scheme.nodes.map { it.id }.toSet()
             buildList {
+                val schemeEntry = registry.find(scheme.id)
+                when {
+                    schemeEntry == null -> add(
+                        AtlasGraphIssue(
+                            schemeId = scheme.id,
+                            nodeId = "__scheme__",
+                            message = "scheme content entry is missing",
+                        )
+                    )
+                    schemeEntry.type != ContentType.ATLAS_SCHEME -> add(
+                        AtlasGraphIssue(
+                            schemeId = scheme.id,
+                            nodeId = "__scheme__",
+                            message = "scheme id does not resolve to ATLAS_SCHEME",
+                        )
+                    )
+                }
                 for (node in scheme.nodes) {
                     val equipmentId = node.equipmentId ?: continue
                     val entry = registry.find(equipmentId)

@@ -83,7 +83,12 @@ for entry in entries.values():
 index = json.loads((MODEL_ROOT / "runtime-index.json").read_text(encoding="utf-8"))
 assert index["modelId"] == "vl80s"
 assert len(index["packs"]) == len(set(index["packs"]))
-assert len(index["packs"]) == 24, len(index["packs"])
+assert len(index["packs"]) >= 24, len(index["packs"])
+required_equipment_packs = {
+    str(path.relative_to(ROOT / "content-packs")).replace("\\", "/")
+    for path in atlas_files + technical_files
+}
+assert required_equipment_packs.issubset(set(index["packs"]))
 for relative in index["packs"]:
     assert (ROOT / "content-packs" / relative).is_file(), relative
 

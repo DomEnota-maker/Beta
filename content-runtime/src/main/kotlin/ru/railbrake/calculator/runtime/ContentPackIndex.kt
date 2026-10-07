@@ -7,6 +7,7 @@ data class ContentPackIndex(
     val modelId: String,
     val packs: List<String>,
     val profileCatalog: String? = null,
+    val featureIndexes: Map<String, String> = emptyMap(),
 ) {
     init {
         require(schemaVersion > 0) { "index schemaVersion must be positive" }
@@ -16,6 +17,12 @@ data class ContentPackIndex(
         require(packs.size == packs.distinct().size) { "content pack paths must be unique" }
         require(profileCatalog == null || profileCatalog.isNotBlank()) {
             "profile catalog path must not be blank"
+        }
+        require(featureIndexes.keys.all { it.isNotBlank() }) {
+            "feature index key must not be blank"
+        }
+        require(featureIndexes.values.all { it.isNotBlank() }) {
+            "feature index path must not be blank"
         }
     }
 }
@@ -31,6 +38,7 @@ class ContentPackIndexJsonLoader {
             modelId = requireText(raw.modelId, "index.modelId"),
             packs = raw.packs.orEmpty(),
             profileCatalog = raw.profileCatalog?.takeIf { it.isNotBlank() },
+            featureIndexes = raw.featureIndexes.orEmpty(),
         )
     }
 }
@@ -40,6 +48,7 @@ private data class JsonIndex(
     val modelId: String? = null,
     val packs: List<String>? = null,
     val profileCatalog: String? = null,
+    val featureIndexes: Map<String, String>? = null,
 )
 
 private fun requireText(value: String?, field: String): String {
