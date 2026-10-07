@@ -1,0 +1,50 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.diagnostics.pantograph-candidate.vertical-001",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": ["vl80s"],
+    "variantIds": ["vl80s-general"],
+    "locale": "ru-RU",
+    "entries": ["vl80s.diag.pantograph-no-rise"],
+    "requiresRuntime": "1.1.0",
+    "sourceCatalogVersion": "test-3176d6ee-framework-v2",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "vl80s.diag.pantograph-no-rise",
+      "aliases": ["pantograph-no-rise"],
+      "type": "DIAGNOSTIC_SCENARIO",
+      "owner": {"kind": "MODEL", "modelId": "vl80s"},
+      "applicability": {
+        "modelIds": ["vl80s"],
+        "variantIds": ["vl80s-general"]
+      },
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "CONDITIONAL_ACTION",
+      "title": "Токоприёмник не поднимается",
+      "summary": "После команды подъёма токоприёмник не занимает рабочее положение или сразу опускается.",
+      "details": [
+        "Источник-кандидат содержит 8 вопросных узлов и 24 ветви ответов YES/NO/UNKNOWN.",
+        "Этот объект существует для проверки межраздельных ссылок, но не публикуется в runtime до отдельного GOLDEN REFERENCE PASS."
+      ],
+      "sourceRefs": ["VL80S-PANTO-S01", "VL80S-PANTO-S12"],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-002",
+          "role": "primary-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-002",
+          "role": "related-equipment"
+        }
+      ]
+    }
+  ]
+}

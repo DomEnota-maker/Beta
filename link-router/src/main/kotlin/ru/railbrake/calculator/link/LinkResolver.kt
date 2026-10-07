@@ -24,6 +24,7 @@ sealed interface LinkNavigationResult {
     data object ScopeDenied : LinkNavigationResult
     data object TargetInapplicable : LinkNavigationResult
     data object LayerDenied : LinkNavigationResult
+    data object TargetNotPublished : LinkNavigationResult
 }
 
 class LinkResolver(
@@ -69,6 +70,7 @@ class LinkResolver(
             ResolveResult.TypeMismatch -> LinkNavigationResult.TypeMismatch
             ResolveResult.Inapplicable -> LinkNavigationResult.TargetInapplicable
             ResolveResult.LayerDenied -> LinkNavigationResult.LayerDenied
+            ResolveResult.NotPublished -> LinkNavigationResult.TargetNotPublished
         }
     }
 }

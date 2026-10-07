@@ -1,0 +1,76 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.technical-data.pantograph.vertical-001",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": ["vl80s"],
+    "variantIds": ["vl80s-general"],
+    "locale": "ru-RU",
+    "entries": ["vl80s-panto-tech-001", "vl80s-panto-tech-002"],
+    "requiresRuntime": "1.1.0",
+    "sourceCatalogVersion": "test-3176d6ee-pantograph-reference",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "vl80s-panto-tech-001",
+      "type": "TECHNICAL_DATA",
+      "owner": {"kind": "MODEL", "modelId": "vl80s"},
+      "applicability": {
+        "modelIds": ["vl80s"],
+        "variantIds": ["vl80s-general"]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Токоприёмник Л-13У1: назначение и пневматический принцип подъёма",
+      "summary": "В профильных изданиях для ВЛ80С описан токоприёмник Л-13У1; подъём выполняется пневмоприводом, который освобождает механизм и позволяет подъёмным пружинам поднять полоз.",
+      "details": [
+        "При снятии воздуха механизм обеспечивает опускание токоприёмника.",
+        "Исторические издания также упоминают Л-14М1, поэтому тип на конкретной машине нельзя выводить только из названия серии."
+      ],
+      "sourceRefs": ["VL80S-PANTO-S02", "VL80S-PANTO-S04"],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-002",
+          "role": "describes-equipment"
+        }
+      ]
+    },
+    {
+      "id": "vl80s-panto-tech-002",
+      "type": "TECHNICAL_DATA",
+      "owner": {"kind": "MODEL", "modelId": "vl80s"},
+      "applicability": {
+        "modelIds": ["vl80s"],
+        "variantIds": ["vl80s-general"]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Клапан 245 — исполнительное звено подачи воздуха к приводу",
+      "summary": "Профильные источники связывают электропневматический вентиль/клапан 245 с подачей воздуха к пневмоприводу токоприёмника.",
+      "details": [
+        "Наличие электрической команды на 245 и наличие фактической подачи воздуха — разные наблюдаемые признаки.",
+        "Признак срабатывания клапана не подтверждает исправность гибкого рукава, привода и механики токоприёмника."
+      ],
+      "sourceRefs": ["VL80S-PANTO-S02", "VL80S-PANTO-S03", "VL80S-PANTO-S06"],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-002",
+          "role": "describes-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-002",
+          "role": "related-equipment"
+        }
+      ]
+    }
+  ]
+}

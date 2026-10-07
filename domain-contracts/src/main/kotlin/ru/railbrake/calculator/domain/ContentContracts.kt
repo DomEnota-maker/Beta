@@ -67,6 +67,12 @@ enum class ContentLayer {
     RESTRICTED,
 }
 
+enum class PublicationStatus {
+    ACTIVE,
+    CANDIDATE,
+    ARCHIVED,
+}
+
 enum class ProvenanceClass {
     CURRENT_OFFICIAL,
     ARCHIVED_OFFICIAL,
@@ -144,11 +150,20 @@ data class ContentEntry(
     val owner: ContentOwner,
     val applicability: Applicability = Applicability(),
     val layer: ContentLayer = ContentLayer.STANDARD,
+    val publicationStatus: PublicationStatus = PublicationStatus.ACTIVE,
     val provenance: ProvenanceClass,
     val sourceStatus: SourceStatus,
     val actionDisposition: ActionDisposition,
+    val title: String = id.value,
+    val summary: String? = null,
+    val details: List<String> = emptyList(),
+    val sourceRefs: Set<String> = emptySet(),
     val links: List<ContentLink> = emptyList(),
-)
+) {
+    init {
+        require(title.isNotBlank()) { "content title must not be blank" }
+    }
+}
 
 data class ContentPackManifest(
     val schemaVersion: Int,

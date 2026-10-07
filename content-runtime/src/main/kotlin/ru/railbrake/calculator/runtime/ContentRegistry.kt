@@ -6,6 +6,7 @@ import ru.railbrake.calculator.domain.ContentOwner
 import ru.railbrake.calculator.domain.ContentPackManifest
 import ru.railbrake.calculator.domain.ContentTarget
 import ru.railbrake.calculator.domain.LinkScope
+import ru.railbrake.calculator.domain.PublicationStatus
 import ru.railbrake.calculator.domain.RuntimeContext
 import ru.railbrake.calculator.domain.expectedTargetType
 
@@ -35,6 +36,7 @@ sealed interface ResolveResult {
     data object TypeMismatch : ResolveResult
     data object Inapplicable : ResolveResult
     data object LayerDenied : ResolveResult
+    data object NotPublished : ResolveResult
 }
 
 class ContentRegistry {
@@ -128,6 +130,7 @@ class ContentRegistry {
     fun resolve(target: ContentTarget, context: RuntimeContext): ResolveResult {
         val entry = find(target.id) ?: return ResolveResult.NotFound
         if (entry.type != target.expectedType) return ResolveResult.TypeMismatch
+        if (entry.publicationStatus != PublicationStatus.ACTIVE) return ResolveResult.NotPublished
         if (!entry.applicability.matches(context)) return ResolveResult.Inapplicable
         if (entry.layer !in context.allowedLayers) return ResolveResult.LayerDenied
         return ResolveResult.Found(entry)

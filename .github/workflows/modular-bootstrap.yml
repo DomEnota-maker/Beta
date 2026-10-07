@@ -63,6 +63,9 @@ jobs:
       - name: Validate pinned candidate inventory
         run: python3 qa/validate_vl80s_candidate_inventory.py
 
+      - name: Validate VL80S vertical slice packs
+        run: python3 qa/validate_vl80s_vertical_slice.py
+
       - name: Show project boundaries
         run: gradle projects --console=plain
 
