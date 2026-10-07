@@ -438,13 +438,17 @@ for path, document in scheme_documents.items():
         )
 
 # Preserve the complete canonical graph separately from list-card content.
-graph_path = DIAG_ROOT / "graph.json"
+old_graph_path = DIAG_ROOT / "graph.json"
+relation_graph_path = DIAG_ROOT / "relation-graph.json"
+if old_graph_path.exists():
+    old_graph_path.unlink()
+
 runtime_payload = {
     key: value
     for key, value in root.items()
     if key != "scenarios"
 }
-graph_path.write_text(
+relation_graph_path.write_text(
     json.dumps(
         {
             "schemaVersion": 1,
@@ -480,7 +484,9 @@ index_path.write_text(
             "extendedCorpora": {
                 "SUPPLEMENTAL_OPERATIONAL": extended_paths,
             },
-            "graph": "electric/vl80s/diagnostics/graph.json",
+            "relationGraph": "electric/vl80s/diagnostics/relation-graph.json",
+            "runtimePayloadStatus": "RELATION_GRAPH_ONLY_NOT_EXECUTABLE",
+            "interactiveRuntimeSource": "DiagnosticRepository.scenarios",
             "publicationPolicy": "ALL_CANDIDATE_UNTIL_FEATURE_RUNTIME_ACCEPTANCE",
             "goldenReferenceCandidate": "vl80s.diag.pantograph-no-rise",
         },
@@ -515,6 +521,15 @@ report = {
     "sourceCommit": SOURCE_COMMIT,
     "scenarioCount": len(scenarios),
     "edgeCount": len(edges),
+    "relationGraphOnly": True,
+    "donorRuntimeBaselineScenarioCount": (
+        root.get("runtimeBaseline", {}).get("canonicalStage6Scenarios")
+    ),
+    "catalogScenarioCount": len(scenarios),
+    "runtimeBaselineMetadataMismatch": (
+        root.get("runtimeBaseline", {}).get("canonicalStage6Scenarios")
+        != len(scenarios)
+    ),
     "recommendedCount": recommended_count,
     "supplementalOperationalCount": extended_count,
     "recommendedPackCount": len(recommended_paths),
