@@ -11,6 +11,7 @@ on:
       - 'gradle.properties'
       - 'app-shell/**'
       - 'assistant-core/**'
+      - 'design-system/**'
       - 'domain-contracts/**'
       - 'content-runtime/**'
       - 'navigation-contracts/**'
@@ -27,6 +28,7 @@ on:
       - 'gradle.properties'
       - 'app-shell/**'
       - 'assistant-core/**'
+      - 'design-system/**'
       - 'domain-contracts/**'
       - 'content-runtime/**'
       - 'navigation-contracts/**'
@@ -64,7 +66,7 @@ jobs:
       - name: Show project boundaries
         run: gradle projects --console=plain
 
-      - name: Contract, runtime, assistant, routing and policy tests
+      - name: Contract, runtime, assistant, UI routing and policy tests
         run: >-
           gradle
           :assistant-core:test
@@ -73,10 +75,11 @@ jobs:
           :navigation-contracts:test
           :link-router:test
           :source-policy:test
+          :design-system:testDebugUnitTest
           --stacktrace --console=plain
 
       - name: Android lint
-        run: gradle :app-shell:lintDebug --stacktrace --console=plain
+        run: gradle :design-system:lintDebug :app-shell:lintDebug --stacktrace --console=plain
 
       - name: Assemble debug
-        run: gradle :app-shell:assembleDebug --stacktrace --console=plain
+        run: gradle :design-system:assembleDebug :app-shell:assembleDebug --stacktrace --console=plain

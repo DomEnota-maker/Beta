@@ -11,6 +11,7 @@ class NavigationContractsTest {
         assertEquals(FeatureDestination.ATLAS, ContentType.EQUIPMENT.featureDestination())
         assertEquals(FeatureDestination.ATLAS, ContentType.ATLAS_SCHEME.featureDestination())
         assertEquals(FeatureDestination.ACCEPTANCE, ContentType.ACCEPTANCE_ITEM.featureDestination())
+        assertEquals(FeatureDestination.TECHNICAL_DATA, ContentType.TECHNICAL_DATA.featureDestination())
         assertEquals(FeatureDestination.REFERENCE, ContentType.KNOWLEDGE.featureDestination())
     }
 }

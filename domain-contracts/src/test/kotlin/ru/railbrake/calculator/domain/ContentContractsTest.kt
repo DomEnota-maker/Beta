@@ -36,6 +36,7 @@ class ContentContractsTest {
         assertEquals(ContentType.EQUIPMENT, LinkType.EQUIPMENT.expectedTargetType())
         assertEquals(ContentType.ATLAS_SCHEME, LinkType.ATLAS_SCHEME.expectedTargetType())
         assertEquals(ContentType.ACCEPTANCE_ITEM, LinkType.ACCEPTANCE_ITEM.expectedTargetType())
+        assertEquals(ContentType.TECHNICAL_DATA, LinkType.TECHNICAL_DATA.expectedTargetType())
     }
 
     @Test(expected = IllegalArgumentException::class)

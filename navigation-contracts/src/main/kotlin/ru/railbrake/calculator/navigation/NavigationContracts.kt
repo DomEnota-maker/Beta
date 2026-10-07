@@ -8,6 +8,7 @@ enum class FeatureDestination {
     DIAGNOSTICS,
     ATLAS,
     ACCEPTANCE,
+    TECHNICAL_DATA,
     REFERENCE,
     FIRST_AID,
     SAFETY,
@@ -18,6 +19,7 @@ fun ContentType.featureDestination(): FeatureDestination = when (this) {
     ContentType.EQUIPMENT,
     ContentType.ATLAS_SCHEME -> FeatureDestination.ATLAS
     ContentType.ACCEPTANCE_ITEM -> FeatureDestination.ACCEPTANCE
+    ContentType.TECHNICAL_DATA -> FeatureDestination.TECHNICAL_DATA
     ContentType.KNOWLEDGE,
     ContentType.SOURCE -> FeatureDestination.REFERENCE
     ContentType.FIRST_AID -> FeatureDestination.FIRST_AID

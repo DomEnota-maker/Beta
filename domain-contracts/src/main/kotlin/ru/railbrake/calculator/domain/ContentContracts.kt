@@ -25,6 +25,7 @@ enum class ContentType {
     EQUIPMENT,
     ATLAS_SCHEME,
     ACCEPTANCE_ITEM,
+    TECHNICAL_DATA,
     KNOWLEDGE,
     SOURCE,
     FIRST_AID,
@@ -36,6 +37,7 @@ enum class LinkType {
     EQUIPMENT,
     ATLAS_SCHEME,
     ACCEPTANCE_ITEM,
+    TECHNICAL_DATA,
     KNOWLEDGE,
     SOURCE,
     FIRST_AID,
@@ -47,6 +49,7 @@ fun LinkType.expectedTargetType(): ContentType = when (this) {
     LinkType.EQUIPMENT -> ContentType.EQUIPMENT
     LinkType.ATLAS_SCHEME -> ContentType.ATLAS_SCHEME
     LinkType.ACCEPTANCE_ITEM -> ContentType.ACCEPTANCE_ITEM
+    LinkType.TECHNICAL_DATA -> ContentType.TECHNICAL_DATA
     LinkType.KNOWLEDGE -> ContentType.KNOWLEDGE
     LinkType.SOURCE -> ContentType.SOURCE
     LinkType.FIRST_AID -> ContentType.FIRST_AID

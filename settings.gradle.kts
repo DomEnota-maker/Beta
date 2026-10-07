@@ -19,6 +19,7 @@ rootProject.name = "RailBrakeCalculator"
 include(
     ":app-shell",
     ":assistant-core",
+    ":design-system",
     ":domain-contracts",
     ":content-runtime",
     ":navigation-contracts",
