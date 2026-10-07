@@ -80,6 +80,9 @@ jobs:
       - name: Validate VL80S profile catalog
         run: python3 qa/validate_vl80s_profile_catalog.py
 
+      - name: Validate migrated VL80S acceptance
+        run: python3 qa/validate_vl80s_acceptance.py
+
       - name: Validate migrated VL80S electrical and pneumatic schemes
         run: python3 qa/validate_vl80s_schemes.py
 
@@ -129,6 +132,13 @@ jobs:
               profile_catalog = index.get("profileCatalog")
               assert profile_catalog
               assert names.count("assets/" + profile_catalog) == 1
+              for feature_name, feature_index in index.get("featureIndexes", {}).items():
+                  assert feature_name
+                  assert names.count("assets/" + feature_index) == 1, (
+                      feature_name,
+                      feature_index,
+                      names.count("assets/" + feature_index),
+                  )
               for pack in index["packs"]:
                   asset = "assets/" + pack
                   assert names.count(asset) == 1, (asset, names.count(asset))
