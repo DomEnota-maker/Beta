@@ -13,6 +13,7 @@ on:
       - 'assistant-core/**'
       - 'design-system/**'
       - 'feature-acceptance/**'
+      - 'feature-atlas/**'
       - 'feature-calculations/**'
       - 'feature-history/**'
       - 'domain-contracts/**'
@@ -33,6 +34,7 @@ on:
       - 'assistant-core/**'
       - 'design-system/**'
       - 'feature-acceptance/**'
+      - 'feature-atlas/**'
       - 'feature-calculations/**'
       - 'feature-history/**'
       - 'domain-contracts/**'
@@ -86,15 +88,16 @@ jobs:
           :source-policy:test
           :design-system:testDebugUnitTest
           :feature-acceptance:testDebugUnitTest
+          :feature-atlas:testDebugUnitTest
           :feature-calculations:test
           :feature-history:test
           --stacktrace --console=plain
 
       - name: Android lint
-        run: gradle :design-system:lintDebug :feature-acceptance:lintDebug :app-shell:lintDebug --stacktrace --console=plain
+        run: gradle :design-system:lintDebug :feature-acceptance:lintDebug :feature-atlas:lintDebug :app-shell:lintDebug --stacktrace --console=plain
 
       - name: Assemble debug
-        run: gradle :design-system:assembleDebug :feature-acceptance:assembleDebug :app-shell:assembleDebug --stacktrace --console=plain
+        run: gradle :design-system:assembleDebug :feature-acceptance:assembleDebug :feature-atlas:assembleDebug :app-shell:assembleDebug --stacktrace --console=plain
 
       - name: Verify canonical VL80S assets in APK
         run: |

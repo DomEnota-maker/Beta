@@ -4,6 +4,7 @@ import com.google.gson.Gson
 import ru.railbrake.calculator.domain.ActionDisposition
 import ru.railbrake.calculator.domain.Applicability
 import ru.railbrake.calculator.domain.CanonicalId
+import ru.railbrake.calculator.domain.ContentBlock
 import ru.railbrake.calculator.domain.ContentEntry
 import ru.railbrake.calculator.domain.ContentLayer
 import ru.railbrake.calculator.domain.ContentLink
@@ -85,6 +86,8 @@ private data class JsonEntry(
     val title: String? = null,
     val summary: String? = null,
     val details: List<String>? = null,
+    val blocks: List<JsonBlock>? = null,
+    val searchTerms: List<String>? = null,
     val sourceRefs: List<String>? = null,
     val links: List<JsonLink>? = null,
 ) {
@@ -102,8 +105,20 @@ private data class JsonEntry(
         title = requireText(title, "entry.title"),
         summary = summary,
         details = details.orEmpty(),
+        blocks = blocks.orEmpty().map { it.toDomain() },
+        searchTerms = searchTerms.orEmpty().toSet(),
         sourceRefs = sourceRefs.orEmpty().toSet(),
         links = links.orEmpty().map { it.toDomain() },
+    )
+}
+
+private data class JsonBlock(
+    val title: String? = null,
+    val lines: List<String>? = null,
+) {
+    fun toDomain() = ContentBlock(
+        title = requireText(title, "block.title"),
+        lines = lines.orEmpty().filter { it.isNotBlank() },
     )
 }
 

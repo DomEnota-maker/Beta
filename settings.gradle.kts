@@ -21,6 +21,7 @@ include(
     ":assistant-core",
     ":design-system",
     ":feature-acceptance",
+    ":feature-atlas",
     ":feature-calculations",
     ":feature-history",
     ":domain-contracts",

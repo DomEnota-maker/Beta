@@ -135,6 +135,15 @@ data class Applicability(
     }
 }
 
+data class ContentBlock(
+    val title: String,
+    val lines: List<String>,
+) {
+    init {
+        require(title.isNotBlank()) { "content block title must not be blank" }
+    }
+}
+
 data class ContentLink(
     val type: LinkType,
     val targetId: CanonicalId,
@@ -157,6 +166,8 @@ data class ContentEntry(
     val title: String = id.value,
     val summary: String? = null,
     val details: List<String> = emptyList(),
+    val blocks: List<ContentBlock> = emptyList(),
+    val searchTerms: Set<String> = emptySet(),
     val sourceRefs: Set<String> = emptySet(),
     val links: List<ContentLink> = emptyList(),
 ) {

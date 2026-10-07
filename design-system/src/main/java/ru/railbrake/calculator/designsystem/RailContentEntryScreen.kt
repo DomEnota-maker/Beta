@@ -51,6 +51,30 @@ fun RailContentEntryScreen(
             }
         }
 
+        if (entry.blocks.isNotEmpty()) {
+            Column(
+                modifier = Modifier.padding(top = 12.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                entry.blocks.forEach { block ->
+                    Column(
+                        verticalArrangement = Arrangement.spacedBy(5.dp),
+                    ) {
+                        Text(
+                            text = block.title,
+                            style = MaterialTheme.typography.titleMedium,
+                        )
+                        block.lines.forEach { line ->
+                            Text(
+                                text = "• $line",
+                                style = MaterialTheme.typography.bodyMedium,
+                            )
+                        }
+                    }
+                }
+            }
+        }
+
         extraContent()
 
         if (!notice.isNullOrBlank()) {
