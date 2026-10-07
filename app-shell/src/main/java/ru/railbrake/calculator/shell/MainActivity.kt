@@ -10,13 +10,16 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import ru.railbrake.calculator.acceptance.AcceptanceItemScreen
 import ru.railbrake.calculator.designsystem.RailContentEntryScreen
 import ru.railbrake.calculator.domain.CanonicalId
+import ru.railbrake.calculator.domain.ContentLink
 import ru.railbrake.calculator.domain.ModelId
 import ru.railbrake.calculator.domain.RuntimeContext
 import ru.railbrake.calculator.domain.VariantId
 import ru.railbrake.calculator.link.LinkNavigationResult
 import ru.railbrake.calculator.link.LinkResolver
+import ru.railbrake.calculator.navigation.FeatureDestination
 import ru.railbrake.calculator.navigation.featureDestination
 import ru.railbrake.calculator.runtime.ContentPackJsonLoader
 import ru.railbrake.calculator.runtime.ContentRegistry
@@ -45,50 +48,61 @@ class MainActivity : ComponentActivity() {
                     return@MaterialTheme
                 }
 
-                RailContentEntryScreen(
-                    entry = entry,
-                    destination = entry.type.featureDestination(),
-                    modelTitle = "ВЛ80С",
-                    notice = notice,
-                    onLink = { link ->
-                        when (
-                            val result = loaded.linkResolver.resolve(
-                                sourceId = entry.id,
-                                link = link,
-                                context = loaded.context,
-                            )
-                        ) {
-                            is LinkNavigationResult.Found -> {
-                                currentId = result.target.id
-                                notice = null
-                            }
-
-                            LinkNavigationResult.TargetNotPublished -> {
-                                notice =
-                                    "Связанная диагностика пока не опубликована: сценарий остаётся кандидатом до отдельного GOLDEN REFERENCE PASS."
-                            }
-
-                            LinkNavigationResult.LayerDenied -> {
-                                notice = "Этот слой информации сейчас отключён."
-                            }
-
-                            LinkNavigationResult.TargetInapplicable,
-                            LinkNavigationResult.LinkNotApplicable -> {
-                                notice = "Материал не применим к выбранному исполнению."
-                            }
-
-                            LinkNavigationResult.ScopeDenied -> {
-                                notice = "Связь между этими модельными блоками запрещена."
-                            }
-
-                            LinkNavigationResult.SourceNotFound,
-                            LinkNavigationResult.TargetNotFound,
-                            LinkNavigationResult.TypeMismatch -> {
-                                notice = "Связанный материал временно недоступен."
-                            }
+                val handleLink: (ContentLink) -> Unit = { link ->
+                    when (
+                        val result = loaded.linkResolver.resolve(
+                            sourceId = entry.id,
+                            link = link,
+                            context = loaded.context,
+                        )
+                    ) {
+                        is LinkNavigationResult.Found -> {
+                            currentId = result.target.id
+                            notice = null
                         }
-                    },
-                )
+
+                        LinkNavigationResult.TargetNotPublished -> {
+                            notice =
+                                "Связанная диагностика пока не опубликована: сценарий остаётся кандидатом до отдельного GOLDEN REFERENCE PASS."
+                        }
+
+                        LinkNavigationResult.LayerDenied -> {
+                            notice = "Этот слой информации сейчас отключён."
+                        }
+
+                        LinkNavigationResult.TargetInapplicable,
+                        LinkNavigationResult.LinkNotApplicable -> {
+                            notice = "Материал не применим к выбранному исполнению."
+                        }
+
+                        LinkNavigationResult.ScopeDenied -> {
+                            notice = "Связь между этими модельными блоками запрещена."
+                        }
+
+                        LinkNavigationResult.SourceNotFound,
+                        LinkNavigationResult.TargetNotFound,
+                        LinkNavigationResult.TypeMismatch -> {
+                            notice = "Связанный материал временно недоступен."
+                        }
+                    }
+                }
+
+                when (entry.type.featureDestination()) {
+                    FeatureDestination.ACCEPTANCE -> AcceptanceItemScreen(
+                        entry = entry,
+                        modelTitle = "ВЛ80С",
+                        notice = notice,
+                        onLink = handleLink,
+                    )
+
+                    else -> RailContentEntryScreen(
+                        entry = entry,
+                        destination = entry.type.featureDestination(),
+                        modelTitle = "ВЛ80С",
+                        notice = notice,
+                        onLink = handleLink,
+                    )
+                }
             }
         }
     }

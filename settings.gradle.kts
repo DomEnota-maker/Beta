@@ -20,6 +20,7 @@ include(
     ":app-shell",
     ":assistant-core",
     ":design-system",
+    ":feature-acceptance",
     ":domain-contracts",
     ":content-runtime",
     ":navigation-contracts",

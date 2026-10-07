@@ -46,6 +46,7 @@ android {
 dependencies {
     implementation(project(":assistant-core"))
     implementation(project(":design-system"))
+    implementation(project(":feature-acceptance"))
     implementation(project(":domain-contracts"))
     implementation(project(":content-runtime"))
     implementation(project(":navigation-contracts"))

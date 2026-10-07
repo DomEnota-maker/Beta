@@ -22,6 +22,7 @@ fun RailContentEntryScreen(
     destination: FeatureDestination,
     modelTitle: String,
     notice: String?,
+    extraContent: @Composable () -> Unit = {},
     onLink: (ContentLink) -> Unit,
 ) {
     RailFeatureScaffold(
@@ -49,6 +50,8 @@ fun RailContentEntryScreen(
                 }
             }
         }
+
+        extraContent()
 
         if (!notice.isNullOrBlank()) {
             HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp))
