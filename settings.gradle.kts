@@ -23,6 +23,7 @@ include(
     ":feature-acceptance",
     ":feature-atlas",
     ":feature-calculations",
+    ":feature-diagnostics",
     ":feature-history",
     ":domain-contracts",
     ":content-runtime",

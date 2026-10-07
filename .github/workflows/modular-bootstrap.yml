@@ -15,6 +15,7 @@ on:
       - 'feature-acceptance/**'
       - 'feature-atlas/**'
       - 'feature-calculations/**'
+      - 'feature-diagnostics/**'
       - 'feature-history/**'
       - 'domain-contracts/**'
       - 'content-runtime/**'
@@ -36,6 +37,7 @@ on:
       - 'feature-acceptance/**'
       - 'feature-atlas/**'
       - 'feature-calculations/**'
+      - 'feature-diagnostics/**'
       - 'feature-history/**'
       - 'domain-contracts/**'
       - 'content-runtime/**'
@@ -105,6 +107,7 @@ jobs:
           :feature-acceptance:testDebugUnitTest
           :feature-atlas:testDebugUnitTest
           :feature-calculations:test
+          :feature-diagnostics:test
           :feature-history:test
           --stacktrace --console=plain
 
