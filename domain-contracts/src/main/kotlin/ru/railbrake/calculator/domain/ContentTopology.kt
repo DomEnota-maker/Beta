@@ -28,6 +28,7 @@ enum class ExtendedDiagnosticClass {
     MANUFACTURER_EXTENDED,
     HISTORICAL_TRAINING,
     FIELD_PRACTICE,
+    SUPPLEMENTAL_OPERATIONAL,
 }
 
 data class DiagnosticPlacement(

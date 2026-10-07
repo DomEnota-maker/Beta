@@ -110,22 +110,24 @@ assert any(
 
 assert candidate["publicationStatus"] == "CANDIDATE"
 assert candidate["actionDisposition"] == "CONDITIONAL_ACTION"
-assert "GOLDEN REFERENCE PASS" in " ".join(candidate["details"])
+assert (
+    "GOLDEN REFERENCE PASS" in " ".join(candidate.get("details", []))
+    or candidate.get("diagnosticMeta", {}).get("acceptanceGate")
+       == "GOLDEN_REFERENCE_PASS_NOT_PASSED"
+)
 
-# Deliberately gated content stays non-active. The diagnostic candidate is
-# always present; the fire-signal scheme appears after scheme migration and
-# remains CANDIDATE until its actual-equipment feature gate is implemented.
-expected_candidates = {
-    "vl80s.diag.pantograph-no-rise",
-}
+# Deliberately gated content stays non-active. During diagnostic migration
+# every diagnostic scenario remains CANDIDATE until feature-diagnostics can
+# execute the canonical graph and its acceptance gate is passed.
+assert candidate["publicationStatus"] == "CANDIDATE"
 if "VL-SCH-EL-FIRE-SIGNAL" in entries:
-    expected_candidates.add("VL-SCH-EL-FIRE-SIGNAL")
-
-for candidate_id in expected_candidates:
-    assert entries[candidate_id]["publicationStatus"] == "CANDIDATE", candidate_id
+    assert entries["VL-SCH-EL-FIRE-SIGNAL"]["publicationStatus"] == "CANDIDATE"
 
 for entry_id, entry in entries.items():
-    if entry_id in expected_candidates:
+    if entry["type"] == "DIAGNOSTIC_SCENARIO":
+        assert entry["publicationStatus"] == "CANDIDATE", entry_id
+        continue
+    if entry_id == "VL-SCH-EL-FIRE-SIGNAL":
         continue
     assert entry["publicationStatus"] == "ACTIVE", entry_id
 

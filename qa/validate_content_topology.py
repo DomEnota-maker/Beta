@@ -30,6 +30,7 @@ assert set(diagnostics["extended"]) == {
     "MANUFACTURER_EXTENDED",
     "HISTORICAL_TRAINING",
     "FIELD_PRACTICE",
+    "SUPPLEMENTAL_OPERATIONAL",
 }
 
 models = catalog["models"]

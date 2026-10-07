@@ -70,7 +70,8 @@
       "ARCHIVED_OFFICIAL": "diagnostics/extended/archived-official",
       "MANUFACTURER_EXTENDED": "diagnostics/extended/manufacturer-extended",
       "HISTORICAL_TRAINING": "diagnostics/extended/historical-training",
-      "FIELD_PRACTICE": "diagnostics/extended/field-practice"
+      "FIELD_PRACTICE": "diagnostics/extended/field-practice",
+      "SUPPLEMENTAL_OPERATIONAL": "diagnostics/extended/supplemental-operational"
     }
   }
 }
