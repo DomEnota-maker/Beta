@@ -21,6 +21,8 @@ include(
     ":assistant-core",
     ":design-system",
     ":feature-acceptance",
+    ":feature-calculations",
+    ":feature-history",
     ":domain-contracts",
     ":content-runtime",
     ":navigation-contracts",
