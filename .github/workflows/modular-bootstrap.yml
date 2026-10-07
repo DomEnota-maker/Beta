@@ -86,3 +86,14 @@ jobs:
 
       - name: Assemble debug
         run: gradle :design-system:assembleDebug :app-shell:assembleDebug --stacktrace --console=plain
+
+      - name: Verify canonical VL80S assets in APK
+        run: |
+          APK="app-shell/build/outputs/apk/debug/app-shell-debug.apk"
+          test -f "$APK"
+          for ASSET in             "assets/electric/vl80s/atlas/pantograph.vertical.pack.json"             "assets/electric/vl80s/technical-data/pantograph.vertical.pack.json"             "assets/electric/vl80s/diagnostics/recommended/pantograph-no-rise.candidate.pack.json"
+          do
+            test "$(unzip -l "$APK" | grep -F -c "$ASSET")" -eq 1
+          done
+          ! unzip -l "$APK" | grep -F "RailBrakeCalculator.zip"
+          ! unzip -l "$APK" | grep -F "assets/patch/"

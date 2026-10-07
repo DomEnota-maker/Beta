@@ -30,6 +30,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":domain-contracts"))
     implementation(project(":navigation-contracts"))
 
     implementation(platform("androidx.compose:compose-bom:2024.06.00"))
