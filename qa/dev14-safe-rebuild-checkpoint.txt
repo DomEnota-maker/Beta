@@ -1,3 +1,0 @@
-checkpoint=technical-loader-permanent
-presentation-helpers=restored
-legacy-emulator-workflow=retired
