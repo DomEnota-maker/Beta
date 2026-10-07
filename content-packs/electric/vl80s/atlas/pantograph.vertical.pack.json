@@ -4,10 +4,17 @@
     "packId": "vl80s.atlas.pantograph.vertical-001",
     "packVersion": "0.1.0",
     "family": "ELECTRIC",
-    "modelIds": ["vl80s"],
-    "variantIds": ["vl80s-general"],
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [
+      "vl80s-general"
+    ],
     "locale": "ru-RU",
-    "entries": ["VL-EQ-HV-002", "VL-EQ-PN-002"],
+    "entries": [
+      "VL-EQ-HV-002",
+      "VL-EQ-PN-002"
+    ],
     "requiresRuntime": "1.1.0",
     "sourceCatalogVersion": "test-3176d6ee-pantograph-reference",
     "checksums": {}
@@ -16,10 +23,17 @@
     {
       "id": "VL-EQ-HV-002",
       "type": "EQUIPMENT",
-      "owner": {"kind": "MODEL", "modelId": "vl80s"},
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
       "applicability": {
-        "modelIds": ["vl80s"],
-        "variantIds": ["vl80s-general"]
+        "modelIds": [
+          "vl80s"
+        ],
+        "variantIds": [
+          "vl80s-general"
+        ]
       },
       "publicationStatus": "ACTIVE",
       "provenance": "UNKNOWN",
@@ -31,7 +45,10 @@
         "В reference pack для ВЛ80С с этим canonical ID связан токоприёмник.",
         "Конкретный тип аппарата на реальной секции требует проверки исполнения."
       ],
-      "sourceRefs": ["VL80S-PANTO-S02", "VL80S-PANTO-S04"],
+      "sourceRefs": [
+        "VL80S-PANTO-S02",
+        "VL80S-PANTO-S04"
+      ],
       "links": [
         {
           "type": "TECHNICAL_DATA",
@@ -42,16 +59,28 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.pantograph-no-rise",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-REQ-03",
+          "role": "acceptance-check"
         }
       ]
     },
     {
       "id": "VL-EQ-PN-002",
       "type": "EQUIPMENT",
-      "owner": {"kind": "MODEL", "modelId": "vl80s"},
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
       "applicability": {
-        "modelIds": ["vl80s"],
-        "variantIds": ["vl80s-general"]
+        "modelIds": [
+          "vl80s"
+        ],
+        "variantIds": [
+          "vl80s-general"
+        ]
       },
       "publicationStatus": "ACTIVE",
       "provenance": "UNKNOWN",
@@ -63,7 +92,11 @@
         "Признак электрической команды на клапан и фактическая подача воздуха являются разными наблюдаемыми признаками.",
         "Точное обозначение и исполнение необходимо сверять по схеме конкретной машины."
       ],
-      "sourceRefs": ["VL80S-PANTO-S02", "VL80S-PANTO-S03", "VL80S-PANTO-S06"],
+      "sourceRefs": [
+        "VL80S-PANTO-S02",
+        "VL80S-PANTO-S03",
+        "VL80S-PANTO-S06"
+      ],
       "links": [
         {
           "type": "TECHNICAL_DATA",

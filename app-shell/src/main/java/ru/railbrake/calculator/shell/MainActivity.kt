@@ -100,6 +100,7 @@ class MainActivity : ComponentActivity() {
         val paths = listOf(
             "electric/vl80s/atlas/pantograph.vertical.pack.json",
             "electric/vl80s/technical-data/pantograph.vertical.pack.json",
+            "electric/vl80s/acceptance/pantograph.vertical.pack.json",
             "electric/vl80s/diagnostics/recommended/pantograph-no-rise.candidate.pack.json",
         )
 

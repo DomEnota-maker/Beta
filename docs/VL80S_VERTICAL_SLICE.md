@@ -6,6 +6,7 @@ This slice proves the new modular path using real donor content without promotin
 
 - `content-packs/electric/vl80s/atlas/pantograph.vertical.pack.json`
 - `content-packs/electric/vl80s/technical-data/pantograph.vertical.pack.json`
+- `content-packs/electric/vl80s/acceptance/pantograph.vertical.pack.json`
 - `content-packs/electric/vl80s/diagnostics/recommended/pantograph-no-rise.candidate.pack.json`
 
 The Android application packages `content-packs/` directly as an asset source directory. There is no generated or maintained second copy under `app-shell`.
@@ -18,6 +19,13 @@ Confirmed equipment identifiers:
 
 - `VL-EQ-HV-002` — токоприёмник;
 - `VL-EQ-PN-002` — клапан 245.
+
+The acceptance slice also migrates the exact mandatory item already generated in Test:
+
+- `VL80-REQ-03` — «Крышевое оборудование и токоприёмник»;
+- check text: «Осмотреть с земли крышевое оборудование и проверить токоприёмник в установленном безопасном порядке.»
+
+For this first slice the acceptance item is read-only navigation content. Persistent acceptance states and notes are intentionally not migrated in the same commit.
 
 Two technical-reference records are migrated from the reference pack:
 
@@ -54,8 +62,9 @@ CI must prove:
 
 1. modular topology is valid;
 2. the three slice packs have a closed same-model link graph;
-3. candidate diagnostics remain non-published;
-4. runtime/parser/link tests pass;
+3. the acceptance item links to the same-model pantograph equipment and back;
+4. candidate diagnostics remain non-published;
+5. runtime/parser/link tests pass;
 5. design-system and application lint pass;
 6. debug APK assembles;
 7. each canonical VL80S slice file exists exactly once in the APK;

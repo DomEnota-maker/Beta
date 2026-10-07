@@ -6,6 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PACKS = [
     ROOT / "content-packs/electric/vl80s/atlas/pantograph.vertical.pack.json",
     ROOT / "content-packs/electric/vl80s/technical-data/pantograph.vertical.pack.json",
+    ROOT / "content-packs/electric/vl80s/acceptance/pantograph.vertical.pack.json",
     ROOT / "content-packs/electric/vl80s/diagnostics/recommended/pantograph-no-rise.candidate.pack.json",
 ]
 
@@ -54,6 +55,17 @@ for entry in entries.values():
 
 assert entries["VL-EQ-HV-002"]["title"] == "Токоприёмник"
 assert entries["VL-EQ-PN-002"]["title"] == "Клапан 245"
+assert entries["VL80-REQ-03"]["title"] == "Крышевое оборудование и токоприёмник"
+assert entries["VL80-REQ-03"]["summary"] == "Осмотреть с земли крышевое оборудование и проверить токоприёмник в установленном безопасном порядке."
+assert entries["VL80-REQ-03"]["actionDisposition"] == "INFORMATION_ONLY"
+assert any(
+    link["targetId"] == "VL80-REQ-03" and link["type"] == "ACCEPTANCE_ITEM"
+    for link in entries["VL-EQ-HV-002"]["links"]
+)
+assert any(
+    link["targetId"] == "VL-EQ-HV-002" and link["type"] == "EQUIPMENT"
+    for link in entries["VL80-REQ-03"]["links"]
+)
 assert set(entries["vl80s-panto-tech-002"]["sourceRefs"]) == {
     "VL80S-PANTO-S02",
     "VL80S-PANTO-S03",

@@ -91,7 +91,7 @@ jobs:
         run: |
           APK="app-shell/build/outputs/apk/debug/app-shell-debug.apk"
           test -f "$APK"
-          for ASSET in             "assets/electric/vl80s/atlas/pantograph.vertical.pack.json"             "assets/electric/vl80s/technical-data/pantograph.vertical.pack.json"             "assets/electric/vl80s/diagnostics/recommended/pantograph-no-rise.candidate.pack.json"
+          for ASSET in             "assets/electric/vl80s/atlas/pantograph.vertical.pack.json"             "assets/electric/vl80s/technical-data/pantograph.vertical.pack.json"             "assets/electric/vl80s/acceptance/pantograph.vertical.pack.json"             "assets/electric/vl80s/diagnostics/recommended/pantograph-no-rise.candidate.pack.json"
           do
             test "$(unzip -l "$APK" | grep -F -c "$ASSET")" -eq 1
           done
