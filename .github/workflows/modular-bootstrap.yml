@@ -80,6 +80,9 @@ jobs:
       - name: Validate VL80S profile catalog
         run: python3 qa/validate_vl80s_profile_catalog.py
 
+      - name: Validate migrated VL80S electrical and pneumatic schemes
+        run: python3 qa/validate_vl80s_schemes.py
+
       - name: Show project boundaries
         run: gradle projects --console=plain
 
