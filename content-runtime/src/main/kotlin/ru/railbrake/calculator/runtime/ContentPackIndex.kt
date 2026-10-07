@@ -16,9 +16,9 @@ data class ContentPackIndex(
     }
 }
 
-class ContentPackIndexJsonLoader(
-    private val gson: Gson = Gson(),
-) {
+class ContentPackIndexJsonLoader {
+    private val gson = Gson()
+
     fun parse(json: String): ContentPackIndex {
         val raw = gson.fromJson(json, JsonIndex::class.java)
             ?: error("content pack index is empty")

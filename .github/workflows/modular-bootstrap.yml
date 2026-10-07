@@ -74,6 +74,9 @@ jobs:
       - name: Validate VL80S vertical slice packs
         run: python3 qa/validate_vl80s_vertical_slice.py
 
+      - name: Validate migrated VL80S equipment and technical data
+        run: python3 qa/validate_vl80s_equipment_migration.py
+
       - name: Show project boundaries
         run: gradle projects --console=plain
 
