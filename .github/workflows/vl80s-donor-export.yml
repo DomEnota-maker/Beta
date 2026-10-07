@@ -1,0 +1,31 @@
+name: Export pinned VL80S donor
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - modular-rebuild
+    paths:
+      - 'qa/export_vl80s_donor.py'
+      - '.github/workflows/vl80s-donor-export.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Export pinned Test assets
+        run: python3 qa/export_vl80s_donor.py
+
+      - name: Upload verified donor JSON
+        uses: actions/upload-artifact@v4
+        with:
+          name: vl80s-donor-3176d6ee
+          path: build/vl80s-donor/
+          if-no-files-found: error
+          retention-days: 7

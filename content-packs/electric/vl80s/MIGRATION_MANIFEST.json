@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "donor": {
+    "repository": "DomEnota-maker/Test-",
+    "commit": "3176d6ee228f0ed4b78371f45209e10c1c724eff"
+  },
+  "sources": [
+    {
+      "source": "vl80s_equipment.json.gz",
+      "blobSha": "a6d00459e18ca428601b4a0cd32ee95a7d1551e7",
+      "destination": "content-packs/electric/vl80s/atlas",
+      "role": "equipment"
+    },
+    {
+      "source": "vl80s_electrical.json.gz",
+      "blobSha": "6891068a9aeb92d6a33c445e1c7284f9a4c21ff9",
+      "destination": "content-packs/electric/vl80s/atlas",
+      "role": "electrical-schemes"
+    },
+    {
+      "source": "vl80s_electrical_variants.json.gz",
+      "blobSha": "f9f7956f871cbb04d38b8315e1b902372d5f3f7b",
+      "destination": "content-packs/electric/vl80s/atlas",
+      "role": "electrical-variant-overlays"
+    },
+    {
+      "source": "vl80s_pneumatic.json.gz",
+      "blobSha": "6adafce6307445d881a2f7cebde4837230431129",
+      "destination": "content-packs/electric/vl80s/atlas",
+      "role": "pneumatic-schemes"
+    },
+    {
+      "source": "vl80s_pneumatic_variants.json.gz",
+      "blobSha": "3899e9e653f17c7b26e2c3d97a8852d4537a2537",
+      "destination": "content-packs/electric/vl80s/atlas",
+      "role": "pneumatic-variant-overlays"
+    },
+    {
+      "source": "vl80s_acceptance.json.gz",
+      "blobSha": "5174e8fa343bb4d5b61d4f541d4dffec2708127d",
+      "destination": "content-packs/electric/vl80s/acceptance",
+      "role": "acceptance"
+    },
+    {
+      "source": "vl80s_diagnostics.json.gz",
+      "blobSha": "6ffdfdabf2f467dcdc4958768905f2b675ac0c26",
+      "destination": "content-packs/electric/vl80s/diagnostics",
+      "role": "diagnostics"
+    },
+    {
+      "source": "vl80s_variants.json.gz",
+      "blobSha": "9a35df3df98173e7baa3edc05e4457c8f5eed6ea",
+      "destination": "content-packs/electric/vl80s",
+      "role": "model-variants"
+    }
+  ],
+  "rules": [
+    "Donor blobs must be verified before decompression.",
+    "Decompressed donor JSON is migration input, not a second runtime source.",
+    "Canonical modular packs remain the only runtime source in Beta.",
+    "No cross-model links may be created during conversion.",
+    "Diagnostic publication status must be preserved or made stricter; candidates cannot be promoted implicitly."
+  ]
+}
