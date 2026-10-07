@@ -104,6 +104,16 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-TR-003",
           "role": "regulates_supply_to"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-EKG-CONTROL-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -226,6 +236,16 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-TR-005",
           "role": "works_with"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-POWER-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -336,6 +356,16 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-AU-002",
           "role": "cooled_by"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-PROTECTION-BASE",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -453,6 +483,26 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-AU-006",
           "role": "cooled_via"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-AUX-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-EKG-CONTROL-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -584,6 +634,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-PR-004",
           "role": "works_with_protection"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-CONTROL-BURT125",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -704,6 +759,21 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-TR-014",
           "role": "works_with"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-PROTECTION-BASE",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-POWER-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -811,6 +881,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-MC-006",
           "role": "geometry_depends_on"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -910,6 +985,16 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-MC-001",
           "role": "direction_signal_used_by"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-POWER-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -1018,6 +1103,16 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-TR-002",
           "role": "works_with"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-RHEO-INTERLOCK",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-POWER-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -1125,6 +1220,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-TR-006",
           "role": "related-equipment"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -1209,6 +1309,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-TR-004",
           "role": "related-equipment"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -1292,6 +1397,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-AU-002",
           "role": "related-equipment"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -1381,6 +1491,16 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-TR-014",
           "role": "interlocked_with"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-CONTROL-BURT125",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-POWER-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -1476,6 +1596,21 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-BR-014",
           "role": "interlocked_with"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-RHEO-INTERLOCK",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-CONTROL-BURT125",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-POWER-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -1558,6 +1693,26 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-TR-005",
           "role": "control_signal_to"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-PROTECTION-BASE",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-CONTROL-BURT125",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-POWER-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {

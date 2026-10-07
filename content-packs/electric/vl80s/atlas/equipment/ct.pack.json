@@ -89,6 +89,16 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-CT-006",
           "role": "protected_via"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-EKG-CONTROL-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -186,6 +196,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-CT-006",
           "role": "protected_via"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-EKG-CONTROL-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -287,6 +302,26 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-PR-001",
           "role": "interacts_with"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-EKG-CONTROL-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-FIRE-SIGNAL",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-PROTECTION-BASE",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -399,6 +434,21 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-TR-005",
           "role": "commands"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-EKG-CONTROL-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-CONTROL-BURT125",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -498,6 +548,26 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-PN-002",
           "role": "supplies"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-AUX-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-EKG-CONTROL-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-FIRE-SIGNAL",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -581,6 +651,16 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-CT-004",
           "role": "protects"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-EKG-CONTROL-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {

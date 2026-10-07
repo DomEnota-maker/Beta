@@ -82,6 +82,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-PR-002",
           "role": "cooperates_with"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-MONITORING",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {

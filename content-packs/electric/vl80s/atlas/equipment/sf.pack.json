@@ -92,6 +92,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-CT-001",
           "role": "powered_by"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-EPK",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -189,6 +194,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-MC-001",
           "role": "functional_link"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-EPK",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {

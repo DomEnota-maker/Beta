@@ -92,6 +92,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-AU-006",
           "role": "supplies"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-AUX-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -229,6 +234,21 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-TR-009",
           "role": "cools"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-AUX-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-CONTROL-BURT125",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-RHEO-POWER-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -346,6 +366,16 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-PN-012",
           "role": "functional_link"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-AUX-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-SUPPLY",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -466,6 +496,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-AU-006",
           "role": "switches"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-AUX-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -560,6 +595,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-TR-009",
           "role": "cools"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-AUX-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -642,6 +682,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-AU-005",
           "role": "works_with"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-AUX-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -723,6 +768,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-CT-003",
           "role": "control_signal_to"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-AUX-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {

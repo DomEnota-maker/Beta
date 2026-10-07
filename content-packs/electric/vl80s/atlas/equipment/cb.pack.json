@@ -97,6 +97,21 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-PN-006",
           "role": "measured_via"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-EPK",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-MONITORING",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-SUPPLY",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -258,6 +273,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-PN-004",
           "role": "related-equipment"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-MONITORING",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {

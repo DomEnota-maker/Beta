@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "sourceSnapshot": {
+    "repository": "DomEnota-maker/Test-",
+    "commit": "3176d6ee228f0ed4b78371f45209e10c1c724eff",
+    "asset": "vl80s_pneumatic_variants.json.gz",
+    "blobSha": "3899e9e653f17c7b26e2c3d97a8852d4537a2537"
+  },
+  "runtimeStatus": "PENDING_OVERLAY_ENGINE",
+  "policy": {
+    "stage": 5,
+    "version": "1.0",
+    "status": "FINAL",
+    "variantContract": {
+      "sectionAware": true,
+      "rules": [
+        {
+          "id": "VL-PN-VAR-ACTUAL-SECTION",
+          "condition": "modified_or_mixed OR unknown equipment replacement",
+          "action": "suppress exact valve/tube claims; use functional view until actual section pneumatic drawing is known",
+          "status": "REQUIRED"
+        },
+        {
+          "id": "VL-PN-VAR-KM395-INDEX",
+          "condition": "additional KM395 position VA/VЭ or check timing",
+          "action": "require full crane index and applicable checking method; do not infer from generic “№395”",
+          "status": "REQUIRED"
+        },
+        {
+          "id": "VL-PN-VAR-THIRD-SECTION",
+          "condition": "three-section operation",
+          "action": "PM/TM remain section-connected; rheostatic overlay must not mark third trailer section as participating in rheostatic braking",
+          "status": "CONFIRMED_GENERAL"
+        },
+        {
+          "id": "VL-PN-VAR-COMP-882-883",
+          "condition": "section 882 or 883",
+          "action": "retain Stage2 compressor equipment override; functional supply topology unchanged",
+          "status": "HISTORICAL_OVERRIDE"
+        },
+        {
+          "id": "VL-PN-VAR-SAFETY-EQUIPMENT",
+          "condition": "post-repair/reconfigured safety complex",
+          "action": "EPK/safety exact implementation follows actual installed equipment and documentation",
+          "status": "PROFILE_REQUIRED"
+        }
+      ],
+      "nonMergeRules": [
+        "do_not_assume_same_pneumatic_equipment_for_recombined_sections",
+        "exact_valve_number_and_mounting_requires_section_source",
+        "do_not_turn_training_reference_values_into_universal_norms"
+      ]
+    },
+    "stateApplicability": [
+      {
+        "id": "VL-PN-STATE-SUPPLY-CHARGE",
+        "variantGate": "SECTION_PROFILE_REQUIRED_FOR_EXACT_DETAIL"
+      },
+      {
+        "id": "VL-PN-STATE-AUX-INITIAL",
+        "variantGate": "SECTION_PROFILE_REQUIRED_FOR_EXACT_DETAIL"
+      },
+      {
+        "id": "VL-BR-STATE-TM-CHARGE",
+        "variantGate": "SECTION_PROFILE_REQUIRED_FOR_EXACT_DETAIL"
+      },
+      {
+        "id": "VL-BR-STATE-RUNNING",
+        "variantGate": "SECTION_PROFILE_REQUIRED_FOR_EXACT_DETAIL"
+      },
+      {
+        "id": "VL-BR-STATE-SERVICE",
+        "variantGate": "SECTION_PROFILE_REQUIRED_FOR_EXACT_DETAIL"
+      },
+      {
+        "id": "VL-BR-STATE-HOLD",
+        "variantGate": "SECTION_PROFILE_REQUIRED_FOR_EXACT_DETAIL"
+      },
+      {
+        "id": "VL-BR-STATE-RELEASE",
+        "variantGate": "SECTION_PROFILE_REQUIRED_FOR_EXACT_DETAIL"
+      },
+      {
+        "id": "VL-BR-STATE-INDEPENDENT",
+        "variantGate": "SECTION_PROFILE_REQUIRED_FOR_EXACT_DETAIL"
+      },
+      {
+        "id": "VL-BR-STATE-EMERGENCY-KM",
+        "variantGate": "SECTION_PROFILE_REQUIRED_FOR_EXACT_DETAIL"
+      },
+      {
+        "id": "VL-BR-STATE-EPK",
+        "variantGate": "SECTION_PROFILE_REQUIRED_FOR_EXACT_DETAIL"
+      },
+      {
+        "id": "VL-BR-STATE-TM-DROP",
+        "variantGate": "SECTION_PROFILE_REQUIRED_FOR_EXACT_DETAIL"
+      },
+      {
+        "id": "VL-BR-STATE-RHEO-INTERLOCK",
+        "variantGate": "SECTION_PROFILE_AND_RHEOSTATIC_CAPABILITY_REQUIRED"
+      },
+      {
+        "id": "VL-BR-STATE-RHEO-SUBSTITUTION",
+        "variantGate": "SECTION_PROFILE_AND_RHEOSTATIC_CAPABILITY_REQUIRED"
+      }
+    ]
+  }
+}

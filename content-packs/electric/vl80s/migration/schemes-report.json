@@ -1,0 +1,13 @@
+{
+  "sourceCommit": "3176d6ee228f0ed4b78371f45209e10c1c724eff",
+  "electricalSchemes": 8,
+  "pneumaticSchemes": 8,
+  "equipmentWithSchemeLinks": 79,
+  "candidateSchemes": [
+    "VL-SCH-EL-FIRE-SIGNAL"
+  ],
+  "variantPolicies": [
+    "electric/vl80s/atlas/schemes/policies/electrical-variants.json",
+    "electric/vl80s/atlas/schemes/policies/pneumatic-variants.json"
+  ]
+}

@@ -109,6 +109,16 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-PN-012",
           "role": "functional_link"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-EPK",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-SUPPLY",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -215,6 +225,16 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.pantograph-no-rise",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-CONTROL",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -307,6 +327,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-PN-005",
           "role": "functional_link"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-SUPPLY",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -395,6 +420,41 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-BR-001",
           "role": "functional_link"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-AUTOMATIC",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-INDEPENDENT",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-RHEO-INTERLOCK",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-CONTROL",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-INTERSECTION",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-MONITORING",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-SUPPLY",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -493,6 +553,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-CB-001",
           "role": "functional_link"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-SUPPLY",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -581,6 +646,16 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-CB-001",
           "role": "transmits_pressure_to"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-MONITORING",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-SUPPLY",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -666,6 +741,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-PN-016",
           "role": "functional_link"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-CONTROL",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -765,6 +845,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-PN-001",
           "role": "functional_link"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-SUPPLY",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -847,6 +932,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-PN-008",
           "role": "installed_before"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-SUPPLY",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -942,6 +1032,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-PN-012",
           "role": "functional_link"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-SUPPLY",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -1024,6 +1119,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-PN-012",
           "role": "related-equipment"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-SUPPLY",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -1111,6 +1211,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-PN-010",
           "role": "functional_link"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-SUPPLY",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -1191,6 +1296,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-PN-016",
           "role": "functional_link"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-CONTROL",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -1271,6 +1381,16 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-BR-005",
           "role": "feeds"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-BR-RHEO-INTERLOCK",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-CONTROL",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -1345,6 +1465,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-PN-016",
           "role": "functional_link"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-CONTROL",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -1422,6 +1547,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-PN-015",
           "role": "functional_link"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-CONTROL",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {

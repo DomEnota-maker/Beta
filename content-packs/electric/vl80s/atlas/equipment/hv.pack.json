@@ -77,6 +77,26 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-TR-004",
           "role": "functional_link"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-PROTECTION-BASE",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-CONTROL",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -185,6 +205,21 @@
           "type": "ACCEPTANCE_ITEM",
           "targetId": "VL80-REQ-03",
           "role": "acceptance-check"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-PN-CONTROL",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -264,6 +299,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-TR-004",
           "role": "functional_link"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -359,6 +399,16 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-HV-001",
           "role": "related-equipment"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -443,6 +493,21 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-TR-004",
           "role": "related-equipment"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-PROTECTION-BASE",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -528,6 +593,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-HV-001",
           "role": "related-equipment"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -606,6 +676,16 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-HV-002",
           "role": "related-equipment"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -694,6 +774,16 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-HV-001",
           "role": "related-equipment"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-HV-START-937-1260",
+          "role": "scheme-membership"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-TRACTION-POWER-937-1260",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {

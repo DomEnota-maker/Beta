@@ -1,0 +1,1712 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.atlas.schemes.electrical",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [
+      "vl80s_1261_1405",
+      "vl80s_1406_2318",
+      "vl80s_2319_2348",
+      "vl80s_2349_2653",
+      "vl80s_2654plus",
+      "vl80s_697_1260",
+      "vl80s_modified_or_mixed",
+      "vl80s_pre697"
+    ],
+    "locale": "ru-RU",
+    "entries": [
+      "VL-SCH-EL-HV-START-937-1260",
+      "VL-SCH-EL-TRACTION-POWER-937-1260",
+      "VL-SCH-EL-EKG-CONTROL-937-1260",
+      "VL-SCH-EL-AUX-937-1260",
+      "VL-SCH-EL-RHEO-POWER-937-1260",
+      "VL-SCH-EL-RHEO-CONTROL-BURT125",
+      "VL-SCH-EL-PROTECTION-BASE",
+      "VL-SCH-EL-FIRE-SIGNAL"
+    ],
+    "requiresRuntime": "1.1.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-schemes",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "VL-SCH-EL-HV-START-937-1260",
+      "type": "ATLAS_SCHEME",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ],
+        "variantIds": [
+          "vl80s_697_1260"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Высоковольтная подготовка: цепи управления ТП и ГВ",
+      "summary": "Рабочая детализация для source-reference bucket №937–1260. Точные номера проводов и контактов только из листа конкретной секции.",
+      "searchTerms": [
+        "Высоковольтная подготовка: цепи управления ТП и ГВ",
+        "electrical_control_hv"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-001",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-005",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-006",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-003",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-003",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-002",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-008",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-005",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-006",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-007",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-001",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-002",
+          "role": "scheme-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "originalStatus": "WORKING_REFERENCE_CONFIRMED",
+        "systems": [
+          "VL-SYS-CT",
+          "VL-SYS-HV",
+          "VL-SYS-PR",
+          "VL-SYS-PN",
+          "VL-SYS-TR"
+        ],
+        "rawProfiles": [
+          "vl80s_697_1260"
+        ]
+      }
+    },
+    {
+      "id": "VL-SCH-EL-TRACTION-POWER-937-1260",
+      "type": "ATLAS_SCHEME",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ],
+        "variantIds": [
+          "vl80s_697_1260"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Силовая цепь режима тяги",
+      "summary": "Показывать важные аппараты, ранее условно опущенные в функциональном тренажёре: трансформаторы тока, переходной/сглаживающий реакторы, шунты и защиты.",
+      "searchTerms": [
+        "Силовая цепь режима тяги",
+        "electrical_power"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-002",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-005",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-007",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-008",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-001",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-011",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-003",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-010",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-002",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-008",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-007",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-012",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-015",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-003",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-005",
+          "role": "scheme-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "originalStatus": "WORKING_REFERENCE_CONFIRMED",
+        "systems": [
+          "VL-SYS-HV",
+          "VL-SYS-TR",
+          "VL-SYS-PR"
+        ],
+        "rawProfiles": [
+          "vl80s_697_1260"
+        ]
+      }
+    },
+    {
+      "id": "VL-SCH-EL-EKG-CONTROL-937-1260",
+      "type": "ATLAS_SCHEME",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ],
+        "variantIds": [
+          "vl80s_697_1260"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Управление ЭКГ: набор, сброс и контроль положения",
+      "summary": "Разделить набор и сброс в flowLayer. Синхронизацию СМЕ с №1406 накладывать отдельным overlay.",
+      "searchTerms": [
+        "Управление ЭКГ: набор, сброс и контроль положения",
+        "electrical_control"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-001",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-002",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-003",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-005",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-006",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-001",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-001",
+          "role": "scheme-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "originalStatus": "WORKING_REFERENCE_CONFIRMED",
+        "systems": [
+          "VL-SYS-CT",
+          "VL-SYS-TR",
+          "VL-SYS-PR"
+        ],
+        "rawProfiles": [
+          "vl80s_697_1260"
+        ]
+      }
+    },
+    {
+      "id": "VL-SCH-EL-AUX-937-1260",
+      "type": "ATLAS_SCHEME",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ],
+        "variantIds": [
+          "vl80s_697_1260"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Вспомогательные машины и собственные нужды",
+      "summary": "Поздние изменения фазорасщепителя и ПВУ7 не смешивать с base.",
+      "searchTerms": [
+        "Вспомогательные машины и собственные нужды",
+        "electrical_auxiliary"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-001",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-002",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-003",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-005",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-006",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-007",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-005",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-001",
+          "role": "scheme-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "originalStatus": "WORKING_REFERENCE_CONFIRMED",
+        "systems": [
+          "VL-SYS-AU",
+          "VL-SYS-TR",
+          "VL-SYS-CT",
+          "VL-SYS-PR"
+        ],
+        "rawProfiles": [
+          "vl80s_697_1260"
+        ]
+      }
+    },
+    {
+      "id": "VL-SCH-EL-RHEO-POWER-937-1260",
+      "type": "ATLAS_SCHEME",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ],
+        "variantIds": [
+          "vl80s_697_1260"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Силовая цепь реостатного торможения",
+      "summary": "Третья секция при трёхсекционной работе не должна автоматически подсвечиваться как участвующая в реостатном торможении.",
+      "searchTerms": [
+        "Силовая цепь реостатного торможения",
+        "electrical_braking_power"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-009",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-013",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-014",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-002",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-008",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-015",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-002",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-002",
+          "role": "scheme-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "originalStatus": "WORKING_REFERENCE_CONFIRMED",
+        "systems": [
+          "VL-SYS-TR",
+          "VL-SYS-PR",
+          "VL-SYS-AU"
+        ],
+        "rawProfiles": [
+          "vl80s_697_1260"
+        ]
+      }
+    },
+    {
+      "id": "VL-SCH-EL-RHEO-CONTROL-BURT125",
+      "type": "ATLAS_SCHEME",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ],
+        "variantIds": [
+          "vl80s_697_1260",
+          "vl80s_1261_1405",
+          "vl80s_1406_2318"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Управление реостатным торможением: БУРТ-125",
+      "summary": "Для диапазона с БУРТ-16 использовать отдельный overlay; не считать БУРТ-125 универсальным после №2319.",
+      "searchTerms": [
+        "Управление реостатным торможением: БУРТ-125",
+        "electrical_braking_control"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-005",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-013",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-014",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-015",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-002",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-002",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-013",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-014",
+          "role": "scheme-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "originalStatus": "WORKING_REFERENCE_CONFIRMED_WITH_VARIANT_GATE",
+        "systems": [
+          "VL-SYS-CT",
+          "VL-SYS-TR",
+          "VL-SYS-PR",
+          "VL-SYS-BR",
+          "VL-SYS-AU"
+        ],
+        "rawProfiles": [
+          "vl80s_697_1260",
+          "vl80s_1261_1405",
+          "vl80s_1406_2318"
+        ]
+      }
+    },
+    {
+      "id": "VL-SCH-EL-PROTECTION-BASE",
+      "type": "ATLAS_SCHEME",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ],
+        "variantIds": [
+          "vl80s_pre697",
+          "vl80s_697_1260",
+          "vl80s_1261_1405",
+          "vl80s_1406_2318",
+          "vl80s_2319_2348"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Защиты силовых и вспомогательных цепей",
+      "summary": "Для №2349+ схема защиты ВУ/ГВ меняется: базовый вариант не показывать как применимый.",
+      "searchTerms": [
+        "Защиты силовых и вспомогательных цепей",
+        "electrical_protection"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-010"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-005",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-015",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-001",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-003",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-005",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-003",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-003",
+          "role": "scheme-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "originalStatus": "WORKING_REFERENCE_CONFIRMED_WITH_VARIANT_GATE",
+        "systems": [
+          "VL-SYS-PR",
+          "VL-SYS-HV",
+          "VL-SYS-TR",
+          "VL-SYS-CT"
+        ],
+        "rawProfiles": [
+          "vl80s_pre697",
+          "vl80s_697_1260",
+          "vl80s_1261_1405",
+          "vl80s_1406_2318",
+          "vl80s_2319_2348"
+        ]
+      }
+    },
+    {
+      "id": "VL-SCH-EL-FIRE-SIGNAL",
+      "type": "ATLAS_SCHEME",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ],
+        "variantIds": [
+          "vl80s_1406_2318",
+          "vl80s_2319_2348",
+          "vl80s_2349_2653",
+          "vl80s_2654plus",
+          "vl80s_modified_or_mixed"
+        ]
+      },
+      "publicationStatus": "CANDIDATE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Электрические цепи пожарной сигнализации",
+      "summary": "Feature `fire_signalization_present`; точная схема и состав датчиков/исполнительных цепей должны подтверждаться схемой конкретной секции.",
+      "searchTerms": [
+        "Электрические цепи пожарной сигнализации",
+        "electrical_fire_signal"
+      ],
+      "sourceRefs": [
+        "VL-SRC-010"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-FR-001",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-FR-002",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-005",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-003",
+          "role": "scheme-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "originalStatus": "PROFILE_REQUIRED",
+        "systems": [
+          "VL-SYS-FR",
+          "VL-SYS-CT"
+        ],
+        "rawProfiles": [
+          "vl80s_1406_2318",
+          "vl80s_2319_2348",
+          "vl80s_2349_2653",
+          "vl80s_2654plus",
+          "vl80s_modified_or_mixed"
+        ]
+      }
+    }
+  ],
+  "schemes": [
+    {
+      "id": "VL-SCH-EL-HV-START-937-1260",
+      "title": "Высоковольтная подготовка: цепи управления ТП и ГВ",
+      "schemeType": "electrical_control_hv",
+      "status": "WORKING_REFERENCE_CONFIRMED",
+      "profiles": [
+        "vl80s_697_1260"
+      ],
+      "systems": [
+        "VL-SYS-CT",
+        "VL-SYS-HV",
+        "VL-SYS-PR",
+        "VL-SYS-PN",
+        "VL-SYS-TR"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "scopeNote": "Рабочая детализация для source-reference bucket №937–1260. Точные номера проводов и контактов только из листа конкретной секции.",
+      "nodes": [
+        {
+          "label": "Аккумуляторная батарея",
+          "equipmentId": "VL-EQ-CT-001"
+        },
+        {
+          "label": "Шина и распределение цепей управления 50 В",
+          "equipmentId": "VL-EQ-CT-005"
+        },
+        {
+          "label": "Блок автоматических выключателей цепей управления",
+          "equipmentId": "VL-EQ-CT-006"
+        },
+        {
+          "label": "Контроллер машиниста",
+          "equipmentId": "VL-EQ-CT-004"
+        },
+        {
+          "label": "Релейная панель цепей управления",
+          "equipmentId": "VL-EQ-CT-003"
+        },
+        {
+          "label": "Высоковольтная камера",
+          "equipmentId": "VL-EQ-HV-003"
+        },
+        {
+          "label": "Токоприёмник",
+          "equipmentId": "VL-EQ-HV-002"
+        },
+        {
+          "label": "Высоковольтный разъединитель крыши",
+          "equipmentId": "VL-EQ-HV-004"
+        },
+        {
+          "label": "Главный выключатель",
+          "equipmentId": "VL-EQ-HV-001"
+        },
+        {
+          "label": "Крышевые высоковольтные шины",
+          "equipmentId": "VL-EQ-HV-008"
+        },
+        {
+          "label": "Трансформатор тока высокого напряжения",
+          "equipmentId": "VL-EQ-HV-005"
+        },
+        {
+          "label": "Ограничитель перенапряжений / разрядник",
+          "equipmentId": "VL-EQ-HV-006"
+        },
+        {
+          "label": "Помехоподавляющий дроссель",
+          "equipmentId": "VL-EQ-HV-007"
+        },
+        {
+          "label": "Тяговый трансформатор",
+          "equipmentId": "VL-EQ-TR-004"
+        },
+        {
+          "label": "Реле и цепи защит",
+          "equipmentId": "VL-EQ-PR-001"
+        },
+        {
+          "label": "Клапан токоприёмника №245",
+          "equipmentId": "VL-EQ-PN-002"
+        }
+      ],
+      "edges": [
+        {
+          "from": "VL-EQ-CT-001",
+          "to": "VL-EQ-CT-005",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-CT-001",
+          "to": "VL-EQ-CT-006",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-CT-003",
+          "to": "VL-EQ-CT-005",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-CT-003",
+          "to": "VL-EQ-CT-006",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-HV-003",
+          "to": "VL-EQ-HV-001",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-HV-003",
+          "to": "VL-EQ-TR-004",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-HV-002",
+          "to": "VL-EQ-HV-001",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-HV-002",
+          "to": "VL-EQ-PN-002",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-HV-001",
+          "to": "VL-EQ-TR-004",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-PR-001",
+          "to": "VL-EQ-HV-001",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-PR-001",
+          "to": "VL-EQ-TR-004",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-PN-002",
+          "to": "VL-EQ-CT-005",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        }
+      ]
+    },
+    {
+      "id": "VL-SCH-EL-TRACTION-POWER-937-1260",
+      "title": "Силовая цепь режима тяги",
+      "schemeType": "electrical_power",
+      "status": "WORKING_REFERENCE_CONFIRMED",
+      "profiles": [
+        "vl80s_697_1260"
+      ],
+      "systems": [
+        "VL-SYS-HV",
+        "VL-SYS-TR",
+        "VL-SYS-PR"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "scopeNote": "Показывать важные аппараты, ранее условно опущенные в функциональном тренажёре: трансформаторы тока, переходной/сглаживающий реакторы, шунты и защиты.",
+      "nodes": [
+        {
+          "label": "Токоприёмник",
+          "equipmentId": "VL-EQ-HV-002"
+        },
+        {
+          "label": "Высоковольтный разъединитель крыши",
+          "equipmentId": "VL-EQ-HV-004"
+        },
+        {
+          "label": "Главный выключатель",
+          "equipmentId": "VL-EQ-HV-001"
+        },
+        {
+          "label": "Трансформатор тока высокого напряжения",
+          "equipmentId": "VL-EQ-HV-005"
+        },
+        {
+          "label": "Помехоподавляющий дроссель",
+          "equipmentId": "VL-EQ-HV-007"
+        },
+        {
+          "label": "Крышевые высоковольтные шины",
+          "equipmentId": "VL-EQ-HV-008"
+        },
+        {
+          "label": "Тяговый трансформатор",
+          "equipmentId": "VL-EQ-TR-004"
+        },
+        {
+          "label": "ЭКГ",
+          "equipmentId": "VL-EQ-TR-001"
+        },
+        {
+          "label": "Переходной реактор",
+          "equipmentId": "VL-EQ-TR-011"
+        },
+        {
+          "label": "Выпрямительная установка",
+          "equipmentId": "VL-EQ-TR-003"
+        },
+        {
+          "label": "Сглаживающий реактор",
+          "equipmentId": "VL-EQ-TR-010"
+        },
+        {
+          "label": "Блок силовых аппаратов",
+          "equipmentId": "VL-EQ-TR-002"
+        },
+        {
+          "label": "Реверсор",
+          "equipmentId": "VL-EQ-TR-008"
+        },
+        {
+          "label": "Тяговые двигатели",
+          "equipmentId": "VL-EQ-TR-006"
+        },
+        {
+          "label": "Тяговая передача",
+          "equipmentId": "VL-EQ-TR-007"
+        },
+        {
+          "label": "Индуктивный шунт",
+          "equipmentId": "VL-EQ-TR-012"
+        },
+        {
+          "label": "Датчик тягового тока",
+          "equipmentId": "VL-EQ-TR-015"
+        },
+        {
+          "label": "Блок дифференциальных реле",
+          "equipmentId": "VL-EQ-PR-003"
+        },
+        {
+          "label": "Реле перегрузки силовых цепей",
+          "equipmentId": "VL-EQ-PR-004"
+        },
+        {
+          "label": "Реле заземления / контроль замыкания на корпус",
+          "equipmentId": "VL-EQ-PR-005"
+        }
+      ],
+      "edges": [
+        {
+          "from": "VL-EQ-HV-002",
+          "to": "VL-EQ-HV-001",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-HV-001",
+          "to": "VL-EQ-TR-004",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-TR-004",
+          "to": "VL-EQ-TR-001",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-TR-004",
+          "to": "VL-EQ-TR-003",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-TR-001",
+          "to": "VL-EQ-TR-002",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-TR-001",
+          "to": "VL-EQ-TR-003",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-TR-003",
+          "to": "VL-EQ-TR-002",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-TR-003",
+          "to": "VL-EQ-TR-006",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-TR-002",
+          "to": "VL-EQ-TR-006",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-TR-008",
+          "to": "VL-EQ-TR-002",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-TR-008",
+          "to": "VL-EQ-TR-006",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-TR-006",
+          "to": "VL-EQ-TR-007",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        }
+      ]
+    },
+    {
+      "id": "VL-SCH-EL-EKG-CONTROL-937-1260",
+      "title": "Управление ЭКГ: набор, сброс и контроль положения",
+      "schemeType": "electrical_control",
+      "status": "WORKING_REFERENCE_CONFIRMED",
+      "profiles": [
+        "vl80s_697_1260"
+      ],
+      "systems": [
+        "VL-SYS-CT",
+        "VL-SYS-TR",
+        "VL-SYS-PR"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "scopeNote": "Разделить набор и сброс в flowLayer. Синхронизацию СМЕ с №1406 накладывать отдельным overlay.",
+      "nodes": [
+        {
+          "label": "Аккумуляторная батарея",
+          "equipmentId": "VL-EQ-CT-001"
+        },
+        {
+          "label": "Источник зарядки цепей управления",
+          "equipmentId": "VL-EQ-CT-002"
+        },
+        {
+          "label": "Релейная панель цепей управления",
+          "equipmentId": "VL-EQ-CT-003"
+        },
+        {
+          "label": "Контроллер машиниста",
+          "equipmentId": "VL-EQ-CT-004"
+        },
+        {
+          "label": "Шина и распределение цепей управления 50 В",
+          "equipmentId": "VL-EQ-CT-005"
+        },
+        {
+          "label": "Блок автоматических выключателей цепей управления",
+          "equipmentId": "VL-EQ-CT-006"
+        },
+        {
+          "label": "ЭКГ",
+          "equipmentId": "VL-EQ-TR-001"
+        },
+        {
+          "label": "Тяговый трансформатор",
+          "equipmentId": "VL-EQ-TR-004"
+        },
+        {
+          "label": "Реле и цепи защит",
+          "equipmentId": "VL-EQ-PR-001"
+        }
+      ],
+      "edges": [
+        {
+          "from": "VL-EQ-CT-001",
+          "to": "VL-EQ-CT-002",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-CT-001",
+          "to": "VL-EQ-CT-005",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-CT-001",
+          "to": "VL-EQ-CT-006",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-CT-002",
+          "to": "VL-EQ-CT-005",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-CT-002",
+          "to": "VL-EQ-CT-006",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-CT-003",
+          "to": "VL-EQ-CT-005",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-CT-003",
+          "to": "VL-EQ-CT-006",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-TR-001",
+          "to": "VL-EQ-CT-004",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-TR-004",
+          "to": "VL-EQ-TR-001",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-PR-001",
+          "to": "VL-EQ-TR-004",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        }
+      ]
+    },
+    {
+      "id": "VL-SCH-EL-AUX-937-1260",
+      "title": "Вспомогательные машины и собственные нужды",
+      "schemeType": "electrical_auxiliary",
+      "status": "WORKING_REFERENCE_CONFIRMED",
+      "profiles": [
+        "vl80s_697_1260"
+      ],
+      "systems": [
+        "VL-SYS-AU",
+        "VL-SYS-TR",
+        "VL-SYS-CT",
+        "VL-SYS-PR"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "scopeNote": "Поздние изменения фазорасщепителя и ПВУ7 не смешивать с base.",
+      "nodes": [
+        {
+          "label": "Тяговый трансформатор",
+          "equipmentId": "VL-EQ-TR-004"
+        },
+        {
+          "label": "Фазорасщепитель",
+          "equipmentId": "VL-EQ-AU-001"
+        },
+        {
+          "label": "Мотор-вентиляторы",
+          "equipmentId": "VL-EQ-AU-002"
+        },
+        {
+          "label": "Мотор-компрессор",
+          "equipmentId": "VL-EQ-AU-003"
+        },
+        {
+          "label": "Контакторы вспомогательных машин",
+          "equipmentId": "VL-EQ-AU-004"
+        },
+        {
+          "label": "Воздуховоды и заслонки охлаждения",
+          "equipmentId": "VL-EQ-AU-005"
+        },
+        {
+          "label": "Электронасос масла тягового трансформатора",
+          "equipmentId": "VL-EQ-AU-006"
+        },
+        {
+          "label": "Устройство контроля вентиляции",
+          "equipmentId": "VL-EQ-AU-007"
+        },
+        {
+          "label": "Шина и распределение цепей управления 50 В",
+          "equipmentId": "VL-EQ-CT-005"
+        },
+        {
+          "label": "Реле и цепи защит",
+          "equipmentId": "VL-EQ-PR-001"
+        }
+      ],
+      "edges": [
+        {
+          "from": "VL-EQ-AU-001",
+          "to": "VL-EQ-AU-002",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-AU-001",
+          "to": "VL-EQ-AU-003",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-AU-002",
+          "to": "VL-EQ-AU-005",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-AU-004",
+          "to": "VL-EQ-AU-001",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-PR-001",
+          "to": "VL-EQ-TR-004",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        }
+      ]
+    },
+    {
+      "id": "VL-SCH-EL-RHEO-POWER-937-1260",
+      "title": "Силовая цепь реостатного торможения",
+      "schemeType": "electrical_braking_power",
+      "status": "WORKING_REFERENCE_CONFIRMED",
+      "profiles": [
+        "vl80s_697_1260"
+      ],
+      "systems": [
+        "VL-SYS-TR",
+        "VL-SYS-PR",
+        "VL-SYS-AU"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "scopeNote": "Третья секция при трёхсекционной работе не должна автоматически подсвечиваться как участвующая в реостатном торможении.",
+      "nodes": [
+        {
+          "label": "Тяговые двигатели",
+          "equipmentId": "VL-EQ-TR-006"
+        },
+        {
+          "label": "Тормозные резисторы",
+          "equipmentId": "VL-EQ-TR-009"
+        },
+        {
+          "label": "Выпрямительная установка возбуждения",
+          "equipmentId": "VL-EQ-TR-013"
+        },
+        {
+          "label": "Переключатели тяга/торможение",
+          "equipmentId": "VL-EQ-TR-014"
+        },
+        {
+          "label": "Блок силовых аппаратов",
+          "equipmentId": "VL-EQ-TR-002"
+        },
+        {
+          "label": "Реверсор",
+          "equipmentId": "VL-EQ-TR-008"
+        },
+        {
+          "label": "Датчик тягового тока",
+          "equipmentId": "VL-EQ-TR-015"
+        },
+        {
+          "label": "Противобоксовочная защита",
+          "equipmentId": "VL-EQ-PR-002"
+        },
+        {
+          "label": "Реле перегрузки силовых цепей",
+          "equipmentId": "VL-EQ-PR-004"
+        },
+        {
+          "label": "Мотор-вентиляторы",
+          "equipmentId": "VL-EQ-AU-002"
+        }
+      ],
+      "edges": [
+        {
+          "from": "VL-EQ-TR-006",
+          "to": "VL-EQ-TR-002",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-TR-009",
+          "to": "VL-EQ-TR-006",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-TR-008",
+          "to": "VL-EQ-TR-002",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-TR-008",
+          "to": "VL-EQ-TR-006",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-PR-002",
+          "to": "VL-EQ-TR-006",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        }
+      ]
+    },
+    {
+      "id": "VL-SCH-EL-RHEO-CONTROL-BURT125",
+      "title": "Управление реостатным торможением: БУРТ-125",
+      "schemeType": "electrical_braking_control",
+      "status": "WORKING_REFERENCE_CONFIRMED_WITH_VARIANT_GATE",
+      "profiles": [
+        "vl80s_697_1260",
+        "vl80s_1261_1405",
+        "vl80s_1406_2318"
+      ],
+      "systems": [
+        "VL-SYS-CT",
+        "VL-SYS-TR",
+        "VL-SYS-PR",
+        "VL-SYS-BR",
+        "VL-SYS-AU"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "scopeNote": "Для диапазона с БУРТ-16 использовать отдельный overlay; не считать БУРТ-125 универсальным после №2319.",
+      "nodes": [
+        {
+          "label": "Контроллер машиниста",
+          "equipmentId": "VL-EQ-CT-004"
+        },
+        {
+          "label": "БУРТ",
+          "equipmentId": "VL-EQ-TR-005"
+        },
+        {
+          "label": "Выпрямительная установка возбуждения",
+          "equipmentId": "VL-EQ-TR-013"
+        },
+        {
+          "label": "Переключатели тяга/торможение",
+          "equipmentId": "VL-EQ-TR-014"
+        },
+        {
+          "label": "Датчик тягового тока",
+          "equipmentId": "VL-EQ-TR-015"
+        },
+        {
+          "label": "Противобоксовочная защита",
+          "equipmentId": "VL-EQ-PR-002"
+        },
+        {
+          "label": "Реле перегрузки силовых цепей",
+          "equipmentId": "VL-EQ-PR-004"
+        },
+        {
+          "label": "Мотор-вентиляторы",
+          "equipmentId": "VL-EQ-AU-002"
+        },
+        {
+          "label": "Электроблокировочный клапан тормоза",
+          "equipmentId": "VL-EQ-BR-013"
+        },
+        {
+          "label": "Пневматические выключатели управления тормозным режимом",
+          "equipmentId": "VL-EQ-BR-014"
+        }
+      ],
+      "edges": [
+        {
+          "from": "VL-EQ-TR-005",
+          "to": "VL-EQ-BR-014",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        }
+      ]
+    },
+    {
+      "id": "VL-SCH-EL-PROTECTION-BASE",
+      "title": "Защиты силовых и вспомогательных цепей",
+      "schemeType": "electrical_protection",
+      "status": "WORKING_REFERENCE_CONFIRMED_WITH_VARIANT_GATE",
+      "profiles": [
+        "vl80s_pre697",
+        "vl80s_697_1260",
+        "vl80s_1261_1405",
+        "vl80s_1406_2318",
+        "vl80s_2319_2348"
+      ],
+      "systems": [
+        "VL-SYS-PR",
+        "VL-SYS-HV",
+        "VL-SYS-TR",
+        "VL-SYS-CT"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-010"
+      ],
+      "scopeNote": "Для №2349+ схема защиты ВУ/ГВ меняется: базовый вариант не показывать как применимый.",
+      "nodes": [
+        {
+          "label": "Трансформатор тока высокого напряжения",
+          "equipmentId": "VL-EQ-HV-005"
+        },
+        {
+          "label": "Датчик тягового тока",
+          "equipmentId": "VL-EQ-TR-015"
+        },
+        {
+          "label": "Реле и цепи защит",
+          "equipmentId": "VL-EQ-PR-001"
+        },
+        {
+          "label": "Блок дифференциальных реле",
+          "equipmentId": "VL-EQ-PR-003"
+        },
+        {
+          "label": "Реле перегрузки силовых цепей",
+          "equipmentId": "VL-EQ-PR-004"
+        },
+        {
+          "label": "Реле заземления / контроль замыкания на корпус",
+          "equipmentId": "VL-EQ-PR-005"
+        },
+        {
+          "label": "Главный выключатель",
+          "equipmentId": "VL-EQ-HV-001"
+        },
+        {
+          "label": "Выпрямительная установка",
+          "equipmentId": "VL-EQ-TR-003"
+        },
+        {
+          "label": "Тяговые двигатели",
+          "equipmentId": "VL-EQ-TR-006"
+        },
+        {
+          "label": "Релейная панель цепей управления",
+          "equipmentId": "VL-EQ-CT-003"
+        }
+      ],
+      "edges": [
+        {
+          "from": "VL-EQ-PR-001",
+          "to": "VL-EQ-HV-001",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-PR-001",
+          "to": "VL-EQ-TR-003",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-PR-001",
+          "to": "VL-EQ-TR-006",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-TR-003",
+          "to": "VL-EQ-TR-006",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        }
+      ]
+    },
+    {
+      "id": "VL-SCH-EL-FIRE-SIGNAL",
+      "title": "Электрические цепи пожарной сигнализации",
+      "schemeType": "electrical_fire_signal",
+      "status": "PROFILE_REQUIRED",
+      "profiles": [
+        "vl80s_1406_2318",
+        "vl80s_2319_2348",
+        "vl80s_2349_2653",
+        "vl80s_2654plus",
+        "vl80s_modified_or_mixed"
+      ],
+      "systems": [
+        "VL-SYS-FR",
+        "VL-SYS-CT"
+      ],
+      "sourceRefs": [
+        "VL-SRC-010"
+      ],
+      "scopeNote": "Feature `fire_signalization_present`; точная схема и состав датчиков/исполнительных цепей должны подтверждаться схемой конкретной секции.",
+      "nodes": [
+        {
+          "label": "Пожарная сигнализация",
+          "equipmentId": "VL-EQ-FR-001"
+        },
+        {
+          "label": "Система пожаротушения",
+          "equipmentId": "VL-EQ-FR-002"
+        },
+        {
+          "label": "Шина и распределение цепей управления 50 В",
+          "equipmentId": "VL-EQ-CT-005"
+        },
+        {
+          "label": "Релейная панель цепей управления",
+          "equipmentId": "VL-EQ-CT-003"
+        }
+      ],
+      "edges": [
+        {
+          "from": "VL-EQ-FR-002",
+          "to": "VL-EQ-FR-001",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        },
+        {
+          "from": "VL-EQ-CT-003",
+          "to": "VL-EQ-CT-005",
+          "kind": "atlas_functional_link",
+          "direction": "unspecified"
+        }
+      ]
+    }
+  ]
+}

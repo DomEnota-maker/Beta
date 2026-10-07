@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "modelId": "vl80s",
+  "schemePacks": [
+    "electric/vl80s/atlas/schemes/electrical.pack.json",
+    "electric/vl80s/atlas/schemes/pneumatic.pack.json"
+  ],
+  "variantPolicies": [
+    "electric/vl80s/atlas/schemes/policies/electrical-variants.json",
+    "electric/vl80s/atlas/schemes/policies/pneumatic-variants.json"
+  ]
+}

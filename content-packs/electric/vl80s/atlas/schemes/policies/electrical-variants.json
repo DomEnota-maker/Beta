@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "sourceSnapshot": {
+    "repository": "DomEnota-maker/Test-",
+    "commit": "3176d6ee228f0ed4b78371f45209e10c1c724eff",
+    "asset": "vl80s_electrical_variants.json.gz",
+    "blobSha": "f9f7956f871cbb04d38b8315e1b902372d5f3f7b"
+  },
+  "runtimeStatus": "PENDING_OVERLAY_ENGINE",
+  "policy": {
+    "stage": 4,
+    "version": "1.0-final",
+    "status": "FINAL",
+    "inheritedVariantMatrix": "VL80S-VARIANT-MATRIX-STAGE1.json",
+    "variantOverlays": [
+      {
+        "id": "VL-OVL-EL-THIRD-SECTION-RHEO-GATE",
+        "title": "Трёхсекционная СМЕ: третья секция вне реостатного торможения",
+        "trigger": {
+          "feature": "third_section_rheostatic_brake_unavailable",
+          "value": true
+        },
+        "appliesTo": [
+          "VL-SCH-EL-RHEO-POWER-937-1260",
+          "VL-SCH-EL-RHEO-CONTROL-BURT125"
+        ],
+        "action": "disable_rheo_flow_for_optional_sectionC",
+        "status": "CONFIRMED_GENERAL",
+        "sourceRefs": [
+          {
+            "sourceId": "VL-SRC-007",
+            "locator": "серийная трёхсекционная СМЕ; особенности РТ"
+          },
+          {
+            "sourceId": "VL-SRC-008",
+            "locator": "схемные материалы ВЛ80С"
+          }
+        ]
+      },
+      {
+        "id": "VL-OVL-EL-PR-1261",
+        "title": "Изменение управления ПР с №1261",
+        "trigger": {
+          "feature": "pr_isolation_on_working_positions",
+          "value": true
+        },
+        "appliesTo": [
+          "VL-SCH-EL-EKG-CONTROL-937-1260"
+        ],
+        "action": "replace_pr_control_fragment",
+        "status": "TRAINING_SOURCE_CONFIRMED",
+        "sourceRefs": [
+          {
+            "sourceId": "VL-SRC-009",
+            "locator": "граница №1261; подтверждать схемой секции перед contact-level render"
+          }
+        ]
+      },
+      {
+        "id": "VL-OVL-EL-EKG-SME-1406",
+        "title": "Синхронизация ЭКГ при СМЕ с №1406",
+        "trigger": {
+          "feature": "ekg_sme_sync_updated",
+          "value": true
+        },
+        "appliesTo": [
+          "VL-SCH-EL-EKG-CONTROL-937-1260"
+        ],
+        "action": "replace_sme_sync_fragment",
+        "status": "MIXED_SOURCE_CONFIRMED",
+        "sourceRefs": [
+          {
+            "sourceId": "VL-SRC-007",
+            "locator": "изменение схемы управления с №1406"
+          },
+          {
+            "sourceId": "VL-SRC-010",
+            "locator": "изменения синхронизации ЭКГ"
+          }
+        ]
+      },
+      {
+        "id": "VL-OVL-EL-BURT16-2319",
+        "title": "БУРТ-16 с №2319",
+        "trigger": {
+          "feature": "burt16",
+          "value": true
+        },
+        "appliesTo": [
+          "VL-SCH-EL-RHEO-CONTROL-BURT125"
+        ],
+        "action": "do_not_render_burt125_as_current; select_burt16_fragment",
+        "status": "SECONDARY_SCHEME_CONFIRMED_PRIMARY_SECTION_DRAWING_REQUIRED",
+        "sourceRefs": [
+          {
+            "sourceId": "VL-SRC-008",
+            "locator": "Потанин/Куприн: раздел изменений схем, №2319, рисунки 8–9; БУРТ-16 вместо БУРТ-125, исключение ТПТЯ5"
+          },
+          {
+            "sourceId": "VL-SRC-009",
+            "locator": "cross-check границы №2319"
+          }
+        ],
+        "evidenceNote": "Граница и принцип изменения подтверждены схемным учебным источником. Exact contact-level рендер конкретной секции остаётся gated до заводского/секционного листа."
+      },
+      {
+        "id": "VL-OVL-EL-PROTECTION-2349",
+        "title": "Изменение защиты ВУ/ГВ с №2349",
+        "trigger": {
+          "feature": "vu_protection_rp21_22",
+          "value": true
+        },
+        "appliesTo": [
+          "VL-SCH-EL-PROTECTION-BASE",
+          "VL-SCH-EL-HV-START-937-1260"
+        ],
+        "action": "replace_brd_fragment_with_rp21_22_and_changed_signalization",
+        "status": "SECONDARY_SCHEME_CONFIRMED_PRIMARY_SECTION_DRAWING_REQUIRED",
+        "sourceRefs": [
+          {
+            "sourceId": "VL-SRC-008",
+            "locator": "Потанин/Куприн: №2349, рисунки 8, 9, 20, 21; БРД→реле 21/22, изменение цепи ГВ, сигнализация через 236"
+          },
+          {
+            "sourceId": "VL-SRC-011",
+            "locator": "secondary cross-check №2349"
+          }
+        ],
+        "evidenceNote": "Логика отличия подтверждена схемным учебным источником; точные монтажные номера/контакты не универсализируются."
+      },
+      {
+        "id": "VL-OVL-EL-AUX-PVU7-2349",
+        "title": "ПВУ7 в цепи вспомогательного компрессора с №2349",
+        "trigger": {
+          "feature": "aux_compressor_pvu7",
+          "value": true
+        },
+        "appliesTo": [
+          "VL-SCH-EL-AUX-937-1260"
+        ],
+        "action": "insert_pvu7_variant_fragment",
+        "status": "SECONDARY_SCHEME_CONFIRMED_PRIMARY_SECTION_DRAWING_REQUIRED",
+        "sourceRefs": [
+          {
+            "sourceId": "VL-SRC-008",
+            "locator": "Потанин/Куприн: №2349, рисунок 22; МКП через ПВУ7/контактор 135"
+          },
+          {
+            "sourceId": "VL-SRC-009",
+            "locator": "cross-check границы №2349"
+          }
+        ],
+        "evidenceNote": "Вариантный фрагмент подтверждён схемным учебным источником, но contact-level отображение конкретной секции требует её листа."
+      },
+      {
+        "id": "VL-OVL-EL-FR-2654",
+        "title": "Поздняя схема фазорасщепителя с №2654",
+        "trigger": {
+          "feature": "fr_late_scheme",
+          "value": true
+        },
+        "appliesTo": [
+          "VL-SCH-EL-AUX-937-1260"
+        ],
+        "action": "replace_phase_splitter_fragment",
+        "status": "SECONDARY_CONFIRMED_PRIMARY_SECTION_DRAWING_REQUIRED",
+        "sourceRefs": [
+          {
+            "sourceId": "VL-SRC-010",
+            "locator": "изменения цепей фазорасщепителя; поздняя схема"
+          },
+          {
+            "sourceId": "VL-SRC-011",
+            "locator": "secondary cross-check №2654: аппараты 101/102, реле 205, двухполюсный 126; исключены 119 и R6"
+          }
+        ],
+        "evidenceNote": "Состав позднего изменения подтверждён вторичными схемными материалами; точный рабочий contact-level слой остаётся gated."
+      },
+      {
+        "id": "VL-OVL-EL-FIRE-2110",
+        "title": "Пожарная сигнализация как feature",
+        "trigger": {
+          "feature": "fire_signalization_present",
+          "value": true,
+          "serialAutoInference": false
+        },
+        "appliesTo": [
+          "VL-SCH-EL-FIRE-SIGNAL"
+        ],
+        "action": "enable_fire_signal_scheme",
+        "status": "EVIDENCE_CONFLICT_SERIAL_BOUNDARY",
+        "sourceRefs": [
+          {
+            "sourceId": "VL-SRC-008",
+            "locator": "Потанин/Куприн: в разделе изменений указана пожарная сигнализация с №2210"
+          },
+          {
+            "sourceId": "VL-SRC-010",
+            "locator": "учебные схемные материалы указывают границу №2110"
+          },
+          {
+            "sourceId": "VL-SRC-011",
+            "locator": "secondary cross-check указывает №2110"
+          }
+        ],
+        "evidenceNote": "Конфликт 2110 vs 2210. До разрешения feature fire_signalization_present задаётся по фактическому оснащению секции, а не автоматически по номеру.",
+        "serialBoundaryCandidates": [
+          2110,
+          2210
+        ]
+      }
+    ],
+    "candidateVariantFragments": [
+      {
+        "id": "VL-CAND-EL-FR-PRE430",
+        "title": "Фазорасщепитель до №429",
+        "status": "SEARCH_TARGET_ONLY",
+        "sourceRefs": [
+          {
+            "sourceId": "VL-SRC-010",
+            "locator": "раздел «Изменения ... фазорасщепителем ... до №429»"
+          }
+        ],
+        "reason": "Нужна заводская/деповская схема для рабочего contact-level представления."
+      },
+      {
+        "id": "VL-CAND-EL-FR-430-696",
+        "title": "Фазорасщепитель №430–696",
+        "status": "SEARCH_TARGET_ONLY",
+        "sourceRefs": [
+          {
+            "sourceId": "VL-SRC-010",
+            "locator": "раздел «... с №430 до №696»"
+          }
+        ],
+        "reason": "Не активировать как рабочую схему без первичного листа."
+      }
+    ],
+    "renderPolicy": [
+      "unknown profile => only quick_functional or source-reference view without exact contact/wire numbering",
+      "modified_or_mixed => exact working scheme requires actual section drawing",
+      "later overlay with EVIDENCE_PENDING_PRIMARY_DRAWING is visible as difference notice, not executable working wiring",
+      "node click opens equipment card and related diagnostics; article button only for existing article links",
+      "do not copy diagnostic switching instructions into scheme layer",
+      "fire_signalization_present не выводить автоматически из серийного номера до разрешения конфликта 2110/2210; использовать фактическое оснащение секции."
+    ],
+    "finalPolicy": "Unresolved serial/source boundaries remain explicit gates; no automatic exact-contact rendering without actual/primary section evidence."
+  }
+}

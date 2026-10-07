@@ -76,6 +76,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-AU-005",
           "role": "functional_link"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-FIRE-SIGNAL",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {
@@ -159,6 +164,11 @@
           "type": "EQUIPMENT",
           "targetId": "VL-EQ-FR-001",
           "role": "functional_link"
+        },
+        {
+          "type": "ATLAS_SCHEME",
+          "targetId": "VL-SCH-EL-FIRE-SIGNAL",
+          "role": "scheme-membership"
         }
       ],
       "migrationRefs": {

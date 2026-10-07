@@ -1,0 +1,1999 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.atlas.schemes.pneumatic",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "VL-SCH-PN-SUPPLY",
+      "VL-SCH-PN-CONTROL",
+      "VL-SCH-BR-AUTOMATIC",
+      "VL-SCH-BR-INDEPENDENT",
+      "VL-SCH-BR-EPK",
+      "VL-SCH-BR-RHEO-INTERLOCK",
+      "VL-SCH-PN-INTERSECTION",
+      "VL-SCH-PN-MONITORING"
+    ],
+    "requiresRuntime": "1.1.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-schemes",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "VL-SCH-PN-SUPPLY",
+      "type": "ATLAS_SCHEME",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Питание сжатым воздухом: КТ-6Эл → ГР → ПМ",
+      "summary": "Функциональная топология одной секции. Точные краны, трубопроводы и монтажные отличия определяются схемой конкретной секции.",
+      "searchTerms": [
+        "Питание сжатым воздухом: КТ-6Эл → ГР → ПМ",
+        "pneumatic_supply"
+      ],
+      "sourceRefs": [
+        "VL-S5-SRC-001",
+        "VL-S5-SRC-002",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-003",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-010",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-008",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-009",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-001",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-003",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-005",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-011",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-012",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CB-001",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-006",
+          "role": "scheme-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "originalStatus": "FINAL_CONTENT_CONFIRMED",
+        "systems": [
+          "VL-SYS-PN",
+          "VL-SYS-AU",
+          "VL-SYS-CB"
+        ],
+        "rawProfiles": [
+          "vl80s_base_section_aware"
+        ]
+      }
+    },
+    {
+      "id": "VL-SCH-PN-CONTROL",
+      "type": "ATLAS_SCHEME",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Пневматика аппаратов управления и первоначальная зарядка",
+      "summary": "Показывает функциональные ветви воздуха к цепям управления, токоприёмнику и ГВ. Электрические блокировки и точная разводка остаются в Stage 4/схеме секции.",
+      "searchTerms": [
+        "Пневматика аппаратов управления и первоначальная зарядка",
+        "pneumatic_control_air"
+      ],
+      "sourceRefs": [
+        "VL-S5-SRC-001",
+        "VL-S5-SRC-002",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-014",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-015",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-013",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-016",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-007",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-002",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-002",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "scheme-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "originalStatus": "FINAL_CONTENT_CONFIRMED",
+        "systems": [
+          "VL-SYS-PN",
+          "VL-SYS-HV"
+        ],
+        "rawProfiles": [
+          "vl80s_base_section_aware"
+        ]
+      }
+    },
+    {
+      "id": "VL-SCH-BR-AUTOMATIC",
+      "type": "ATLAS_SCHEME",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Автоматический тормоз: КМ №395 → ТМ → ВР №483 → КВТ/РД → ТЦ",
+      "summary": "Схема хранит функциональные пути зарядки, торможения и отпуска. Положения крана №395 показываются состояниями, а не универсальной монтажной схемой.",
+      "searchTerms": [
+        "Автоматический тормоз: КМ №395 → ТМ → ВР №483 → КВТ/РД → ТЦ",
+        "automatic_brake"
+      ],
+      "sourceRefs": [
+        "VL-S5-SRC-001",
+        "VL-S5-SRC-002",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-001",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-007",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-010",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-011",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-012",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-002",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-009",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-005",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-006",
+          "role": "scheme-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "originalStatus": "FINAL_CONTENT_CONFIRMED",
+        "systems": [
+          "VL-SYS-BR",
+          "VL-SYS-PN"
+        ],
+        "rawProfiles": [
+          "vl80s_base_section_aware"
+        ]
+      }
+    },
+    {
+      "id": "VL-SCH-BR-INDEPENDENT",
+      "type": "ATLAS_SCHEME",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Независимый тормоз локомотива: КВТ №254",
+      "summary": "Независимый пневматический тормоз и отдельный ручной механический путь показаны как разные механизмы.",
+      "searchTerms": [
+        "Независимый тормоз локомотива: КВТ №254",
+        "independent_brake"
+      ],
+      "sourceRefs": [
+        "VL-S5-SRC-001",
+        "VL-S5-SRC-002"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-002",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-009",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-005",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-006",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-008",
+          "role": "scheme-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "originalStatus": "FINAL_CONTENT_CONFIRMED",
+        "systems": [
+          "VL-SYS-BR",
+          "VL-SYS-PN"
+        ],
+        "rawProfiles": [
+          "vl80s_base_section_aware"
+        ]
+      }
+    },
+    {
+      "id": "VL-SCH-BR-EPK",
+      "type": "ATLAS_SCHEME",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "ЭПК-150: камера выдержки и экстренная разрядка ТМ",
+      "summary": "Функциональная внутренняя схема ЭПК основана на отдельном учебно-техническом источнике. Stage 5 не хранит команды по отключению/восстановлению ЭПК.",
+      "searchTerms": [
+        "ЭПК-150: камера выдержки и экстренная разрядка ТМ",
+        "safety_brake_epk"
+      ],
+      "sourceRefs": [
+        "VL-S5-SRC-003",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-001",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-002",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-001",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CB-001",
+          "role": "scheme-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "originalStatus": "FINAL_CONTENT_CONFIRMED",
+        "systems": [
+          "VL-SYS-SF",
+          "VL-SYS-BR"
+        ],
+        "rawProfiles": [
+          "vl80s_base_section_aware"
+        ]
+      }
+    },
+    {
+      "id": "VL-SCH-BR-RHEO-INTERLOCK",
+      "type": "ATLAS_SCHEME",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Пневматические блокировки реостатного торможения и замещение",
+      "summary": "КЭБ/ПВУ и замещение показаны функционально. Третья секция при трёхсекционной работе не должна автоматически подсвечиваться как участвующая в реостатном торможении.",
+      "searchTerms": [
+        "Пневматические блокировки реостатного торможения и замещение",
+        "rheostatic_pneumatic_interface"
+      ],
+      "sourceRefs": [
+        "VL-S5-SRC-001",
+        "VL-S5-SRC-002",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-014",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-012",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-013",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-014",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-002",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-014",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-009",
+          "role": "scheme-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "originalStatus": "FINAL_CONTENT_CONFIRMED",
+        "systems": [
+          "VL-SYS-BR",
+          "VL-SYS-PN",
+          "VL-SYS-TR"
+        ],
+        "rawProfiles": [
+          "vl80s_base_section_aware"
+        ]
+      }
+    },
+    {
+      "id": "VL-SCH-PN-INTERSECTION",
+      "type": "ATLAS_SCHEME",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Межсекционные ПМ/ТМ и концевые соединения",
+      "summary": "Section-aware представление. Для рекомплектованных составов профили секций A/B/C определяются отдельно; фактические рукава/краны проверяются по локомотиву.",
+      "searchTerms": [
+        "Межсекционные ПМ/ТМ и концевые соединения",
+        "pneumatic_intersection"
+      ],
+      "sourceRefs": [
+        "VL-S5-SRC-001",
+        "VL-S5-SRC-002",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-015",
+          "role": "scheme-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "originalStatus": "FINAL_CONTENT_CONFIRMED",
+        "systems": [
+          "VL-SYS-PN",
+          "VL-SYS-BR"
+        ],
+        "rawProfiles": [
+          "vl80s_base_section_aware"
+        ]
+      }
+    },
+    {
+      "id": "VL-SCH-PN-MONITORING",
+      "type": "ATLAS_SCHEME",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Контроль давления, индикация и вспомогательные пневмопотребители",
+      "summary": "Дополнительное представление для индикации и связанных пневмопотребителей; не заменяет их профильные схемы.",
+      "searchTerms": [
+        "Контроль давления, индикация и вспомогательные пневмопотребители",
+        "pneumatic_monitoring_consumers"
+      ],
+      "sourceRefs": [
+        "VL-S5-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-006",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CB-001",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-001",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CB-003",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-004",
+          "role": "scheme-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-014",
+          "role": "scheme-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "originalStatus": "FINAL_CONTENT_CONFIRMED",
+        "systems": [
+          "VL-SYS-PN",
+          "VL-SYS-BR",
+          "VL-SYS-CB",
+          "VL-SYS-MC"
+        ],
+        "rawProfiles": [
+          "vl80s_base_section_aware"
+        ]
+      }
+    }
+  ],
+  "schemes": [
+    {
+      "id": "VL-SCH-PN-SUPPLY",
+      "title": "Питание сжатым воздухом: КТ-6Эл → ГР → ПМ",
+      "schemeType": "pneumatic_supply",
+      "status": "FINAL_CONTENT_CONFIRMED",
+      "profiles": [
+        "vl80s_unknown",
+        "vl80s_pre697",
+        "vl80s_697_1260",
+        "vl80s_1261_1405",
+        "vl80s_1406_2318",
+        "vl80s_2319_2348",
+        "vl80s_2349_2653",
+        "vl80s_2654plus",
+        "vl80s_modified_or_mixed"
+      ],
+      "systems": [
+        "VL-SYS-PN",
+        "VL-SYS-AU",
+        "VL-SYS-CB"
+      ],
+      "sourceRefs": [
+        "VL-S5-SRC-001",
+        "VL-S5-SRC-002",
+        "VL-SRC-006"
+      ],
+      "scopeNote": "Функциональная топология одной секции. Точные краны, трубопроводы и монтажные отличия определяются схемой конкретной секции.",
+      "nodes": [
+        {
+          "label": "Мотор-компрессор",
+          "equipmentId": "VL-EQ-AU-003",
+          "domain": "AU",
+          "systemIds": [
+            "VL-SYS-AU"
+          ]
+        },
+        {
+          "label": "Маслоотделитель пневмосистемы",
+          "equipmentId": "VL-EQ-PN-010",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Обратный клапан компрессора",
+          "equipmentId": "VL-EQ-PN-008",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Разгрузочный клапан компрессора",
+          "equipmentId": "VL-EQ-PN-009",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Главные резервуары",
+          "equipmentId": "VL-EQ-PN-001",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Регулятор давления компрессора",
+          "equipmentId": "VL-EQ-PN-003",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Предохранительный клапан главных резервуаров",
+          "equipmentId": "VL-EQ-PN-005",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Сборники конденсата главных резервуаров",
+          "equipmentId": "VL-EQ-PN-011",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Клапаны продувки конденсата",
+          "equipmentId": "VL-EQ-PN-012",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Питательная магистраль",
+          "equipmentId": "VL-EQ-PN-004",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Манометры пневматических систем",
+          "equipmentId": "VL-EQ-CB-001",
+          "domain": "CB",
+          "systemIds": [
+            "VL-SYS-CB"
+          ]
+        },
+        {
+          "label": "Импульсные линии манометров",
+          "equipmentId": "VL-EQ-PN-006",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Атмосфера",
+          "virtualNodeId": "VL-VIRT-ATM",
+          "kind": "sink"
+        },
+        {
+          "label": "Напорный трубопровод",
+          "virtualNodeId": "VL-VIRT-COMPRESSOR-DISCHARGE",
+          "kind": "junction"
+        }
+      ],
+      "edges": [
+        {
+          "from": "VL-EQ-AU-003",
+          "to": "VL-EQ-PN-010",
+          "kind": "air_flow",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-010",
+          "to": "VL-EQ-PN-008",
+          "kind": "air_flow",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-008",
+          "to": "VL-EQ-PN-001",
+          "kind": "air_flow",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-001",
+          "to": "VL-EQ-PN-004",
+          "kind": "air_flow",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-009",
+          "to": "VL-VIRT-ATM",
+          "kind": "exhaust",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED",
+          "note": "Разгрузочная ветвь при запуске/остановке компрессора."
+        },
+        {
+          "from": "VL-EQ-PN-001",
+          "to": "VL-EQ-PN-003",
+          "kind": "pressure_sensing",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-001",
+          "to": "VL-EQ-PN-005",
+          "kind": "overpressure_protection",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-001",
+          "to": "VL-EQ-PN-011",
+          "kind": "condensate_collection",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-011",
+          "to": "VL-EQ-PN-012",
+          "kind": "drain_control",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-004",
+          "to": "VL-EQ-CB-001",
+          "kind": "pressure_indication",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-004",
+          "to": "VL-EQ-PN-006",
+          "kind": "pressure_signal",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "id": "VL-SCH-PN-CONTROL",
+      "title": "Пневматика аппаратов управления и первоначальная зарядка",
+      "schemeType": "pneumatic_control_air",
+      "status": "FINAL_CONTENT_CONFIRMED",
+      "profiles": [
+        "vl80s_unknown",
+        "vl80s_pre697",
+        "vl80s_697_1260",
+        "vl80s_1261_1405",
+        "vl80s_1406_2318",
+        "vl80s_2319_2348",
+        "vl80s_2349_2653",
+        "vl80s_2654plus",
+        "vl80s_modified_or_mixed"
+      ],
+      "systems": [
+        "VL-SYS-PN",
+        "VL-SYS-HV"
+      ],
+      "sourceRefs": [
+        "VL-S5-SRC-001",
+        "VL-S5-SRC-002",
+        "VL-SRC-006"
+      ],
+      "scopeNote": "Показывает функциональные ветви воздуха к цепям управления, токоприёмнику и ГВ. Электрические блокировки и точная разводка остаются в Stage 4/схеме секции.",
+      "nodes": [
+        {
+          "label": "Питательная магистраль",
+          "equipmentId": "VL-EQ-PN-004",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Редуктор давления №348",
+          "equipmentId": "VL-EQ-PN-014",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Фильтр сжатого воздуха",
+          "equipmentId": "VL-EQ-PN-015",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Резервуар цепей управления",
+          "equipmentId": "VL-EQ-PN-013",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Магистраль воздуха аппаратов управления",
+          "equipmentId": "VL-EQ-PN-016",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Вспомогательный компрессор",
+          "equipmentId": "VL-EQ-PN-007",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Клапан токоприёмника №245",
+          "equipmentId": "VL-EQ-PN-002",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Токоприёмник",
+          "equipmentId": "VL-EQ-HV-002",
+          "domain": "HV",
+          "systemIds": [
+            "VL-SYS-HV"
+          ]
+        },
+        {
+          "label": "Главный выключатель",
+          "equipmentId": "VL-EQ-HV-001",
+          "domain": "HV",
+          "systemIds": [
+            "VL-SYS-HV"
+          ]
+        },
+        {
+          "label": "Резервуар ГВ",
+          "virtualNodeId": "VL-VIRT-GV-RES",
+          "kind": "reservoir"
+        },
+        {
+          "label": "Пневмоаппараты ВВК/ЭКГ",
+          "virtualNodeId": "VL-VIRT-HV-AIR-CONSUMERS",
+          "kind": "consumer"
+        }
+      ],
+      "edges": [
+        {
+          "from": "VL-EQ-PN-004",
+          "to": "VL-EQ-PN-015",
+          "kind": "air_flow",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-015",
+          "to": "VL-EQ-PN-014",
+          "kind": "air_flow",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-014",
+          "to": "VL-EQ-PN-016",
+          "kind": "regulated_air",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-016",
+          "to": "VL-EQ-PN-013",
+          "kind": "air_flow",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-016",
+          "to": "VL-EQ-PN-002",
+          "kind": "control_air",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-002",
+          "to": "VL-EQ-HV-002",
+          "kind": "pneumatic_actuation",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-016",
+          "to": "VL-VIRT-GV-RES",
+          "kind": "air_flow",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-VIRT-GV-RES",
+          "to": "VL-EQ-HV-001",
+          "kind": "pneumatic_supply",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-007",
+          "to": "VL-VIRT-GV-RES",
+          "kind": "initial_air",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-007",
+          "to": "VL-EQ-PN-002",
+          "kind": "initial_air",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "id": "VL-SCH-BR-AUTOMATIC",
+      "title": "Автоматический тормоз: КМ №395 → ТМ → ВР №483 → КВТ/РД → ТЦ",
+      "schemeType": "automatic_brake",
+      "status": "FINAL_CONTENT_CONFIRMED",
+      "profiles": [
+        "vl80s_unknown",
+        "vl80s_pre697",
+        "vl80s_697_1260",
+        "vl80s_1261_1405",
+        "vl80s_1406_2318",
+        "vl80s_2319_2348",
+        "vl80s_2349_2653",
+        "vl80s_2654plus",
+        "vl80s_modified_or_mixed"
+      ],
+      "systems": [
+        "VL-SYS-BR",
+        "VL-SYS-PN"
+      ],
+      "sourceRefs": [
+        "VL-S5-SRC-001",
+        "VL-S5-SRC-002",
+        "VL-SRC-006"
+      ],
+      "scopeNote": "Схема хранит функциональные пути зарядки, торможения и отпуска. Положения крана №395 показываются состояниями, а не универсальной монтажной схемой.",
+      "nodes": [
+        {
+          "label": "Питательная магистраль",
+          "equipmentId": "VL-EQ-PN-004",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Кран машиниста №395",
+          "equipmentId": "VL-EQ-BR-001",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Уравнительный резервуар",
+          "equipmentId": "VL-EQ-BR-007",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Тормозная магистраль",
+          "equipmentId": "VL-EQ-BR-003",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Воздухораспределитель №483",
+          "equipmentId": "VL-EQ-BR-010",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Запасный резервуар тормоза",
+          "equipmentId": "VL-EQ-BR-011",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Импульсная магистраль тормоза",
+          "equipmentId": "VL-EQ-BR-012",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Кран вспомогательного тормоза №254",
+          "equipmentId": "VL-EQ-BR-002",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Блокировка тормозов №367М",
+          "equipmentId": "VL-EQ-BR-009",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Регулятор давления №304",
+          "equipmentId": "VL-EQ-BR-005",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Тормозные цилиндры",
+          "equipmentId": "VL-EQ-BR-004",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Тормозная рычажная передача",
+          "equipmentId": "VL-EQ-BR-006",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Атмосфера",
+          "virtualNodeId": "VL-VIRT-ATM",
+          "kind": "sink"
+        }
+      ],
+      "edges": [
+        {
+          "from": "VL-EQ-PN-004",
+          "to": "VL-EQ-BR-001",
+          "kind": "supply_air",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-001",
+          "to": "VL-EQ-BR-007",
+          "kind": "control_pressure",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-001",
+          "to": "VL-EQ-BR-003",
+          "kind": "brake_pipe_charge_or_exhaust",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-003",
+          "to": "VL-EQ-BR-010",
+          "kind": "pressure_signal",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-010",
+          "to": "VL-EQ-BR-011",
+          "kind": "reservoir_charge",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-011",
+          "to": "VL-EQ-BR-012",
+          "kind": "control_air_on_brake",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-012",
+          "to": "VL-EQ-BR-002",
+          "kind": "control_pressure",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-004",
+          "to": "VL-EQ-BR-002",
+          "kind": "supply_air",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-002",
+          "to": "VL-EQ-BR-009",
+          "kind": "cylinder_fill",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-009",
+          "to": "VL-EQ-BR-004",
+          "kind": "cylinder_fill",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-002",
+          "to": "VL-EQ-BR-005",
+          "kind": "relay_control",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-004",
+          "to": "VL-EQ-BR-005",
+          "kind": "supply_air",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-005",
+          "to": "VL-EQ-BR-004",
+          "kind": "cylinder_fill",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-004",
+          "to": "VL-EQ-BR-006",
+          "kind": "mechanical_force",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-012",
+          "to": "VL-VIRT-ATM",
+          "kind": "exhaust_on_release",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-002",
+          "to": "VL-VIRT-ATM",
+          "kind": "cylinder_exhaust",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-005",
+          "to": "VL-VIRT-ATM",
+          "kind": "cylinder_exhaust",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "id": "VL-SCH-BR-INDEPENDENT",
+      "title": "Независимый тормоз локомотива: КВТ №254",
+      "schemeType": "independent_brake",
+      "status": "FINAL_CONTENT_CONFIRMED",
+      "profiles": [
+        "vl80s_unknown",
+        "vl80s_pre697",
+        "vl80s_697_1260",
+        "vl80s_1261_1405",
+        "vl80s_1406_2318",
+        "vl80s_2319_2348",
+        "vl80s_2349_2653",
+        "vl80s_2654plus",
+        "vl80s_modified_or_mixed"
+      ],
+      "systems": [
+        "VL-SYS-BR",
+        "VL-SYS-PN"
+      ],
+      "sourceRefs": [
+        "VL-S5-SRC-001",
+        "VL-S5-SRC-002"
+      ],
+      "scopeNote": "Независимый пневматический тормоз и отдельный ручной механический путь показаны как разные механизмы.",
+      "nodes": [
+        {
+          "label": "Питательная магистраль",
+          "equipmentId": "VL-EQ-PN-004",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Кран вспомогательного тормоза №254",
+          "equipmentId": "VL-EQ-BR-002",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Блокировка тормозов №367М",
+          "equipmentId": "VL-EQ-BR-009",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Регулятор давления №304",
+          "equipmentId": "VL-EQ-BR-005",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Тормозные цилиндры",
+          "equipmentId": "VL-EQ-BR-004",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Тормозная рычажная передача",
+          "equipmentId": "VL-EQ-BR-006",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Ручной тормоз локомотива",
+          "equipmentId": "VL-EQ-BR-008",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Атмосфера",
+          "virtualNodeId": "VL-VIRT-ATM",
+          "kind": "sink"
+        }
+      ],
+      "edges": [
+        {
+          "from": "VL-EQ-PN-004",
+          "to": "VL-EQ-BR-002",
+          "kind": "supply_air",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-002",
+          "to": "VL-EQ-BR-009",
+          "kind": "cylinder_fill",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-009",
+          "to": "VL-EQ-BR-004",
+          "kind": "cylinder_fill",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-002",
+          "to": "VL-EQ-BR-005",
+          "kind": "relay_control",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-004",
+          "to": "VL-EQ-BR-005",
+          "kind": "supply_air",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-005",
+          "to": "VL-EQ-BR-004",
+          "kind": "cylinder_fill",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-004",
+          "to": "VL-EQ-BR-006",
+          "kind": "mechanical_force",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-002",
+          "to": "VL-VIRT-ATM",
+          "kind": "cylinder_exhaust",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-005",
+          "to": "VL-VIRT-ATM",
+          "kind": "cylinder_exhaust",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-008",
+          "to": "VL-EQ-BR-006",
+          "kind": "manual_mechanical_force",
+          "status": "MECHANICAL_PARALLEL_PATH"
+        }
+      ]
+    },
+    {
+      "id": "VL-SCH-BR-EPK",
+      "title": "ЭПК-150: камера выдержки и экстренная разрядка ТМ",
+      "schemeType": "safety_brake_epk",
+      "status": "FINAL_CONTENT_CONFIRMED",
+      "profiles": [
+        "vl80s_unknown",
+        "vl80s_pre697",
+        "vl80s_697_1260",
+        "vl80s_1261_1405",
+        "vl80s_1406_2318",
+        "vl80s_2319_2348",
+        "vl80s_2349_2653",
+        "vl80s_2654plus",
+        "vl80s_modified_or_mixed"
+      ],
+      "systems": [
+        "VL-SYS-SF",
+        "VL-SYS-BR"
+      ],
+      "sourceRefs": [
+        "VL-S5-SRC-003",
+        "VL-SRC-006"
+      ],
+      "scopeNote": "Функциональная внутренняя схема ЭПК основана на отдельном учебно-техническом источнике. Stage 5 не хранит команды по отключению/восстановлению ЭПК.",
+      "nodes": [
+        {
+          "label": "АЛСН и ЭПК",
+          "equipmentId": "VL-EQ-SF-001",
+          "domain": "SF",
+          "systemIds": [
+            "VL-SYS-SF"
+          ]
+        },
+        {
+          "label": "ЭПК-150",
+          "equipmentId": "VL-EQ-SF-002",
+          "domain": "SF",
+          "systemIds": [
+            "VL-SYS-SF"
+          ]
+        },
+        {
+          "label": "Главные резервуары",
+          "equipmentId": "VL-EQ-PN-001",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Тормозная магистраль",
+          "equipmentId": "VL-EQ-BR-003",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Манометры пневматических систем",
+          "equipmentId": "VL-EQ-CB-001",
+          "domain": "CB",
+          "systemIds": [
+            "VL-SYS-CB"
+          ]
+        },
+        {
+          "label": "Камера выдержки времени ЭПК",
+          "virtualNodeId": "VL-VIRT-EPK-TIME",
+          "kind": "chamber"
+        },
+        {
+          "label": "Срывной клапан ЭПК",
+          "virtualNodeId": "VL-VIRT-EPK-TRIP",
+          "kind": "valve"
+        },
+        {
+          "label": "Атмосфера Ат1",
+          "virtualNodeId": "VL-VIRT-ATM-1",
+          "kind": "sink"
+        },
+        {
+          "label": "Атмосфера Ат2",
+          "virtualNodeId": "VL-VIRT-ATM-2",
+          "kind": "sink"
+        }
+      ],
+      "edges": [
+        {
+          "from": "VL-EQ-PN-001",
+          "to": "VL-VIRT-EPK-TIME",
+          "kind": "charging_air",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-003",
+          "to": "VL-VIRT-EPK-TRIP",
+          "kind": "brake_pipe_pressure",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-VIRT-EPK-TIME",
+          "to": "VL-VIRT-EPK-TRIP",
+          "kind": "holding_pressure",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-SF-001",
+          "to": "VL-EQ-SF-002",
+          "kind": "safety_command",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-SF-002",
+          "to": "VL-VIRT-EPK-TRIP",
+          "kind": "trip_control",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-VIRT-EPK-TRIP",
+          "to": "VL-VIRT-ATM-1",
+          "kind": "emergency_exhaust",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-SF-002",
+          "to": "VL-EQ-CB-001",
+          "kind": "state_indication",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "id": "VL-SCH-BR-RHEO-INTERLOCK",
+      "title": "Пневматические блокировки реостатного торможения и замещение",
+      "schemeType": "rheostatic_pneumatic_interface",
+      "status": "FINAL_CONTENT_CONFIRMED",
+      "profiles": [
+        "vl80s_unknown",
+        "vl80s_pre697",
+        "vl80s_697_1260",
+        "vl80s_1261_1405",
+        "vl80s_1406_2318",
+        "vl80s_2319_2348",
+        "vl80s_2349_2653",
+        "vl80s_2654plus",
+        "vl80s_modified_or_mixed"
+      ],
+      "systems": [
+        "VL-SYS-BR",
+        "VL-SYS-PN",
+        "VL-SYS-TR"
+      ],
+      "sourceRefs": [
+        "VL-S5-SRC-001",
+        "VL-S5-SRC-002",
+        "VL-SRC-006"
+      ],
+      "scopeNote": "КЭБ/ПВУ и замещение показаны функционально. Третья секция при трёхсекционной работе не должна автоматически подсвечиваться как участвующая в реостатном торможении.",
+      "nodes": [
+        {
+          "label": "Питательная магистраль",
+          "equipmentId": "VL-EQ-PN-004",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Редуктор давления №348",
+          "equipmentId": "VL-EQ-PN-014",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Тормозная магистраль",
+          "equipmentId": "VL-EQ-BR-003",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Импульсная магистраль тормоза",
+          "equipmentId": "VL-EQ-BR-012",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Электроблокировочный клапан тормоза",
+          "equipmentId": "VL-EQ-BR-013",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Пневматические выключатели управления тормозным режимом",
+          "equipmentId": "VL-EQ-BR-014",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Кран вспомогательного тормоза №254",
+          "equipmentId": "VL-EQ-BR-002",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Тормозные цилиндры",
+          "equipmentId": "VL-EQ-BR-004",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Переключатели тяга/торможение",
+          "equipmentId": "VL-EQ-TR-014",
+          "domain": "TR",
+          "systemIds": [
+            "VL-SYS-TR"
+          ]
+        },
+        {
+          "label": "Тормозные резисторы",
+          "equipmentId": "VL-EQ-TR-009",
+          "domain": "TR",
+          "systemIds": [
+            "VL-SYS-TR"
+          ]
+        },
+        {
+          "label": "ЭПВ2",
+          "virtualNodeId": "VL-VIRT-EPV2",
+          "kind": "schematic_component"
+        },
+        {
+          "label": "Переключательный клапан / КPR",
+          "virtualNodeId": "VL-VIRT-KPR",
+          "kind": "schematic_component"
+        },
+        {
+          "label": "Атмосфера",
+          "virtualNodeId": "VL-VIRT-ATM",
+          "kind": "sink"
+        }
+      ],
+      "edges": [
+        {
+          "from": "VL-EQ-TR-014",
+          "to": "VL-EQ-BR-013",
+          "kind": "electrical_interlock",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-013",
+          "to": "VL-EQ-BR-012",
+          "kind": "block_and_exhaust",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-012",
+          "to": "VL-VIRT-ATM",
+          "kind": "exhaust",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-004",
+          "to": "VL-EQ-BR-014",
+          "kind": "pressure_signal",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-003",
+          "to": "VL-EQ-BR-014",
+          "kind": "pressure_signal",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-014",
+          "to": "VL-EQ-TR-014",
+          "kind": "brake_interlock",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-004",
+          "to": "VL-EQ-PN-014",
+          "kind": "supply_air",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-014",
+          "to": "VL-VIRT-EPV2",
+          "kind": "regulated_air",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-VIRT-EPV2",
+          "to": "VL-VIRT-KPR",
+          "kind": "substitution_control",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-VIRT-KPR",
+          "to": "VL-EQ-BR-002",
+          "kind": "control_pressure",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-002",
+          "to": "VL-EQ-BR-004",
+          "kind": "pneumatic_substitution",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-TR-009",
+          "to": "VL-EQ-TR-014",
+          "kind": "rheostatic_brake_context",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "id": "VL-SCH-PN-INTERSECTION",
+      "title": "Межсекционные ПМ/ТМ и концевые соединения",
+      "schemeType": "pneumatic_intersection",
+      "status": "FINAL_CONTENT_CONFIRMED",
+      "profiles": [
+        "vl80s_unknown",
+        "vl80s_pre697",
+        "vl80s_697_1260",
+        "vl80s_1261_1405",
+        "vl80s_1406_2318",
+        "vl80s_2319_2348",
+        "vl80s_2349_2653",
+        "vl80s_2654plus",
+        "vl80s_modified_or_mixed"
+      ],
+      "systems": [
+        "VL-SYS-PN",
+        "VL-SYS-BR"
+      ],
+      "sourceRefs": [
+        "VL-S5-SRC-001",
+        "VL-S5-SRC-002",
+        "VL-SRC-006"
+      ],
+      "scopeNote": "Section-aware представление. Для рекомплектованных составов профили секций A/B/C определяются отдельно; фактические рукава/краны проверяются по локомотиву.",
+      "nodes": [
+        {
+          "label": "Питательная магистраль",
+          "equipmentId": "VL-EQ-PN-004",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Тормозная магистраль",
+          "equipmentId": "VL-EQ-BR-003",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Концевые краны и соединительные рукава ТМ/ПМ",
+          "equipmentId": "VL-EQ-BR-015",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Секция A",
+          "virtualNodeId": "VL-VIRT-SECTION-A",
+          "kind": "section"
+        },
+        {
+          "label": "Секция B",
+          "virtualNodeId": "VL-VIRT-SECTION-B",
+          "kind": "section"
+        },
+        {
+          "label": "Секция C",
+          "virtualNodeId": "VL-VIRT-SECTION-C",
+          "kind": "section_optional"
+        }
+      ],
+      "edges": [
+        {
+          "from": "VL-VIRT-SECTION-A",
+          "to": "VL-EQ-BR-015",
+          "kind": "section_connection",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-015",
+          "to": "VL-VIRT-SECTION-B",
+          "kind": "section_connection",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-004",
+          "to": "VL-EQ-BR-015",
+          "kind": "feed_line_connection",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-003",
+          "to": "VL-EQ-BR-015",
+          "kind": "brake_pipe_connection",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        }
+      ]
+    },
+    {
+      "id": "VL-SCH-PN-MONITORING",
+      "title": "Контроль давления, индикация и вспомогательные пневмопотребители",
+      "schemeType": "pneumatic_monitoring_consumers",
+      "status": "FINAL_CONTENT_CONFIRMED",
+      "profiles": [
+        "vl80s_unknown",
+        "vl80s_pre697",
+        "vl80s_697_1260",
+        "vl80s_1261_1405",
+        "vl80s_1406_2318",
+        "vl80s_2319_2348",
+        "vl80s_2349_2653",
+        "vl80s_2654plus",
+        "vl80s_modified_or_mixed"
+      ],
+      "systems": [
+        "VL-SYS-PN",
+        "VL-SYS-BR",
+        "VL-SYS-CB",
+        "VL-SYS-MC"
+      ],
+      "sourceRefs": [
+        "VL-S5-SRC-001",
+        "VL-SRC-006"
+      ],
+      "scopeNote": "Дополнительное представление для индикации и связанных пневмопотребителей; не заменяет их профильные схемы.",
+      "nodes": [
+        {
+          "label": "Питательная магистраль",
+          "equipmentId": "VL-EQ-PN-004",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Импульсные линии манометров",
+          "equipmentId": "VL-EQ-PN-006",
+          "domain": "PN",
+          "systemIds": [
+            "VL-SYS-PN"
+          ]
+        },
+        {
+          "label": "Манометры пневматических систем",
+          "equipmentId": "VL-EQ-CB-001",
+          "domain": "CB",
+          "systemIds": [
+            "VL-SYS-CB"
+          ]
+        },
+        {
+          "label": "Песочницы",
+          "equipmentId": "VL-EQ-MC-001",
+          "domain": "MC",
+          "systemIds": [
+            "VL-SYS-MC"
+          ]
+        },
+        {
+          "label": "Тифон, свисток и звуковые сигналы",
+          "equipmentId": "VL-EQ-CB-003",
+          "domain": "CB",
+          "systemIds": [
+            "VL-SYS-CB"
+          ]
+        },
+        {
+          "label": "Тормозные цилиндры",
+          "equipmentId": "VL-EQ-BR-004",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "Пневматические выключатели управления тормозным режимом",
+          "equipmentId": "VL-EQ-BR-014",
+          "domain": "BR",
+          "systemIds": [
+            "VL-SYS-BR"
+          ]
+        },
+        {
+          "label": "ПРУ / противоразгрузочные цилиндры",
+          "virtualNodeId": "VL-VIRT-PRU",
+          "kind": "schematic_component"
+        }
+      ],
+      "edges": [
+        {
+          "from": "VL-EQ-PN-004",
+          "to": "VL-EQ-PN-006",
+          "kind": "pressure_signal",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-006",
+          "to": "VL-EQ-CB-001",
+          "kind": "pressure_indication",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-004",
+          "to": "VL-EQ-MC-001",
+          "kind": "air_consumer",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-004",
+          "to": "VL-EQ-CB-003",
+          "kind": "air_consumer",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-004",
+          "to": "VL-EQ-BR-014",
+          "kind": "pressure_switch_signal",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-BR-014",
+          "to": "VL-EQ-MC-001",
+          "kind": "automatic_sanding_signal",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        },
+        {
+          "from": "VL-EQ-PN-004",
+          "to": "VL-VIRT-PRU",
+          "kind": "regulated_air",
+          "status": "FUNCTIONAL_FLOW_CONFIRMED"
+        }
+      ]
+    }
+  ]
+}
