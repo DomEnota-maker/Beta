@@ -10,6 +10,7 @@ on:
       - 'build.gradle.kts'
       - 'gradle.properties'
       - 'app-shell/**'
+      - 'assistant-core/**'
       - 'domain-contracts/**'
       - 'content-runtime/**'
       - 'navigation-contracts/**'
@@ -25,6 +26,7 @@ on:
       - 'build.gradle.kts'
       - 'gradle.properties'
       - 'app-shell/**'
+      - 'assistant-core/**'
       - 'domain-contracts/**'
       - 'content-runtime/**'
       - 'navigation-contracts/**'
@@ -62,9 +64,10 @@ jobs:
       - name: Show project boundaries
         run: gradle projects --console=plain
 
-      - name: Contract, runtime, routing and policy tests
+      - name: Contract, runtime, assistant, routing and policy tests
         run: >-
           gradle
+          :assistant-core:test
           :domain-contracts:test
           :content-runtime:test
           :navigation-contracts:test

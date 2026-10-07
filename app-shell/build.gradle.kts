@@ -32,6 +32,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":assistant-core"))
     implementation(project(":domain-contracts"))
     implementation(project(":content-runtime"))
     implementation(project(":navigation-contracts"))
