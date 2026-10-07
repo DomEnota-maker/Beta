@@ -116,16 +116,13 @@ class ContentRegistry {
 
     fun scopeAllows(source: ContentEntry, target: ContentEntry, scope: LinkScope): Boolean =
         when (scope) {
-            LinkScope.SAME_OWNER ->
-                target.owner == source.owner || target.owner == ContentOwner.Common
+            LinkScope.SAME_MODEL ->
+                source.owner is ContentOwner.Model &&
+                    target.owner == source.owner
 
             LinkScope.COMMON_TARGET ->
-                target.owner == ContentOwner.Common
-
-            LinkScope.EXPLICIT_CROSS_MODEL ->
                 source.owner is ContentOwner.Model &&
-                    target.owner is ContentOwner.Model &&
-                    source.owner != target.owner
+                    target.owner == ContentOwner.Common
         }
 
     fun resolve(target: ContentTarget, context: RuntimeContext): ResolveResult {

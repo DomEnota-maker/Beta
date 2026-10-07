@@ -54,9 +54,8 @@ fun LinkType.expectedTargetType(): ContentType = when (this) {
 }
 
 enum class LinkScope {
-    SAME_OWNER,
+    SAME_MODEL,
     COMMON_TARGET,
-    EXPLICIT_CROSS_MODEL,
 }
 
 enum class ContentLayer {
@@ -99,13 +98,13 @@ fun ContentOwner.modelIdOrNull(): ModelId? = when (this) {
 }
 
 data class RuntimeContext(
-    val activeModelId: ModelId? = null,
-    val activeVariantId: VariantId? = null,
+    val workingModelId: ModelId? = null,
     val viewedModelId: ModelId? = null,
+    val activeVariantId: VariantId? = null,
     val allowedLayers: Set<ContentLayer> = setOf(ContentLayer.STANDARD),
 ) {
     val contentModelId: ModelId?
-        get() = viewedModelId ?: activeModelId
+        get() = viewedModelId ?: workingModelId
 }
 
 data class Applicability(
@@ -131,7 +130,7 @@ data class ContentLink(
     val type: LinkType,
     val targetId: CanonicalId,
     val role: String? = null,
-    val scope: LinkScope = LinkScope.SAME_OWNER,
+    val scope: LinkScope = LinkScope.SAME_MODEL,
     val applicability: Applicability = Applicability(),
 )
 

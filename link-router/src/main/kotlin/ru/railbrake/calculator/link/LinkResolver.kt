@@ -2,9 +2,7 @@ package ru.railbrake.calculator.link
 
 import ru.railbrake.calculator.domain.CanonicalId
 import ru.railbrake.calculator.domain.ContentLink
-import ru.railbrake.calculator.domain.ContentOwner
 import ru.railbrake.calculator.domain.ContentTarget
-import ru.railbrake.calculator.domain.LinkScope
 import ru.railbrake.calculator.domain.RuntimeContext
 import ru.railbrake.calculator.domain.expectedTargetType
 import ru.railbrake.calculator.domain.modelIdOrNull
@@ -52,19 +50,10 @@ class LinkResolver(
             return LinkNavigationResult.ScopeDenied
         }
 
-        val targetContext = when (link.scope) {
-            LinkScope.EXPLICIT_CROSS_MODEL -> {
-                val targetModel = (target.owner as ContentOwner.Model).modelId
-                context.copy(viewedModelId = targetModel)
-            }
-            LinkScope.SAME_OWNER,
-            LinkScope.COMMON_TARGET -> context
-        }
-
         return when (
             registry.resolve(
                 ContentTarget(target.id, target.type),
-                targetContext,
+                context,
             )
         ) {
             is ResolveResult.Found -> LinkNavigationResult.Found(
@@ -74,7 +63,7 @@ class LinkResolver(
                     destination = target.type.featureDestination(),
                     viewedModelId = target.owner.modelIdOrNull(),
                 ),
-                targetContext = targetContext,
+                targetContext = context,
             )
             ResolveResult.NotFound -> LinkNavigationResult.TargetNotFound
             ResolveResult.TypeMismatch -> LinkNavigationResult.TypeMismatch

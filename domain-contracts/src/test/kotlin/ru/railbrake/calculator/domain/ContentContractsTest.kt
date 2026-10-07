@@ -11,18 +11,18 @@ class ContentContractsTest {
         val scope = Applicability(modelIds = setOf(ModelId("vl80s")))
 
         assertFalse(scope.matches(RuntimeContext()))
-        assertFalse(scope.matches(RuntimeContext(activeModelId = ModelId("ermak"))))
-        assertTrue(scope.matches(RuntimeContext(activeModelId = ModelId("vl80s"))))
+        assertFalse(scope.matches(RuntimeContext(workingModelId = ModelId("ermak"))))
+        assertTrue(scope.matches(RuntimeContext(workingModelId = ModelId("vl80s"))))
     }
 
     @Test
-    fun viewedModelOverridesWorkingModelForContentResolutionOnly() {
+    fun viewedModelIsSeparateFromAssistantWorkingModel() {
         val context = RuntimeContext(
-            activeModelId = ModelId("vl80s"),
+            workingModelId = ModelId("vl80s"),
             viewedModelId = ModelId("ermak"),
         )
 
-        assertEquals(ModelId("vl80s"), context.activeModelId)
+        assertEquals(ModelId("vl80s"), context.workingModelId)
         assertEquals(ModelId("ermak"), context.contentModelId)
         assertTrue(
             Applicability(modelIds = setOf(ModelId("ermak")))

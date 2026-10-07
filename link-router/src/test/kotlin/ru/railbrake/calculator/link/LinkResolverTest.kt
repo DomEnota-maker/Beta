@@ -66,7 +66,7 @@ class LinkResolverTest {
     )
 
     @Test
-    fun graphLinksDiagnosticsAtlasAcceptanceAndCommonKnowledgeWithoutFeatureCoupling() {
+    fun modelLinksDiagnosticsAtlasAcceptanceAndCommonKnowledgeWithoutFeatureCoupling() {
         val equipmentLink = ContentLink(LinkType.EQUIPMENT, CanonicalId("vl80s.eq.pantograph"))
         val acceptanceLink = ContentLink(LinkType.ACCEPTANCE_ITEM, CanonicalId("vl80s.accept.pantograph"))
         val commonLink = ContentLink(
@@ -91,7 +91,7 @@ class LinkResolverTest {
         assertTrue(registry.validateGlobalLinks().isEmpty())
 
         val resolver = LinkResolver(registry)
-        val context = RuntimeContext(activeModelId = vl80s)
+        val context = RuntimeContext(workingModelId = vl80s, viewedModelId = vl80s)
 
         val equipmentResult = resolver.resolve(diagnostic.id, equipmentLink, context)
         assertTrue(equipmentResult is LinkNavigationResult.Found)
@@ -114,10 +114,11 @@ class LinkResolverTest {
     }
 
     @Test
-    fun accidentalCrossModelLinkFailsGraphValidation() {
+    fun directCrossModelLinkIsAlwaysRejected() {
         val wrongLink = ContentLink(
             type = LinkType.EQUIPMENT,
             targetId = CanonicalId("ermak.eq.pantograph"),
+            scope = LinkScope.SAME_MODEL,
         )
         val source = entry(
             "vl80s.diag.pantograph-no-rise",
@@ -133,37 +134,34 @@ class LinkResolverTest {
         assertTrue(
             registry.validateGlobalLinks().any { it.code == ValidationIssueCode.LINK_SCOPE_VIOLATION }
         )
+
+        val result = LinkResolver(registry).resolve(
+            source.id,
+            wrongLink,
+            RuntimeContext(workingModelId = vl80s, viewedModelId = vl80s),
+        )
+        assertEquals(LinkNavigationResult.ScopeDenied, result)
     }
 
     @Test
-    fun explicitCrossModelLinkChangesViewedModelButNotWorkingModel() {
-        val link = ContentLink(
+    fun commonContentCannotOwnLinksBackIntoModelPackages() {
+        val wrongLink = ContentLink(
             type = LinkType.EQUIPMENT,
-            targetId = CanonicalId("ermak.eq.pantograph"),
-            scope = LinkScope.EXPLICIT_CROSS_MODEL,
+            targetId = CanonicalId("vl80s.eq.pantograph"),
+            scope = LinkScope.SAME_MODEL,
         )
-        val source = entry(
-            "vl80s.diag.pantograph-no-rise",
-            ContentType.DIAGNOSTIC_SCENARIO,
-            ContentOwner.Model(vl80s),
-            links = listOf(link),
+        val common = entry(
+            "common.knowledge.hv-safety",
+            ContentType.KNOWLEDGE,
+            ContentOwner.Common,
+            links = listOf(wrongLink),
         )
-        val target = entry("ermak.eq.pantograph", ContentType.EQUIPMENT, ContentOwner.Model(ermak))
+        val equipment = entry("vl80s.eq.pantograph", ContentType.EQUIPMENT, ContentOwner.Model(vl80s))
 
         val registry = ContentRegistry()
-        assertTrue(registry.install(pack("cross.links", listOf(source, target))).isEmpty())
-        assertTrue(registry.validateGlobalLinks().isEmpty())
-
-        val original = RuntimeContext(activeModelId = vl80s)
-        val result = LinkResolver(registry).resolve(source.id, link, original)
-
-        assertTrue(result is LinkNavigationResult.Found)
-        val found = result as LinkNavigationResult.Found
-        assertEquals(vl80s, original.activeModelId)
-        assertEquals(null, original.viewedModelId)
-        assertEquals(vl80s, found.targetContext.activeModelId)
-        assertEquals(ermak, found.targetContext.viewedModelId)
-        assertEquals(ermak, found.target.viewedModelId)
-        assertEquals(FeatureDestination.ATLAS, found.target.destination)
+        assertTrue(registry.install(pack("common.bad", listOf(common, equipment))).isEmpty())
+        assertTrue(
+            registry.validateGlobalLinks().any { it.code == ValidationIssueCode.LINK_SCOPE_VIOLATION }
+        )
     }
 }
