@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://railbrake.local/schema/content-pack-manifest.schema.json",
+  "title": "RailBrakeCalculator content pack manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "packId",
+    "packVersion",
+    "family",
+    "modelIds",
+    "variantIds",
+    "locale",
+    "entries",
+    "requiresRuntime",
+    "sourceCatalogVersion",
+    "checksums"
+  ],
+  "properties": {
+    "schemaVersion": { "type": "integer", "minimum": 1 },
+    "packId": { "type": "string", "minLength": 1 },
+    "packVersion": { "type": "string", "minLength": 1 },
+    "family": { "type": ["string", "null"] },
+    "modelIds": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "variantIds": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "locale": { "type": "string", "minLength": 1 },
+    "entries": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "requiresRuntime": { "type": "string", "minLength": 1 },
+    "sourceCatalogVersion": { "type": "string", "minLength": 1 },
+    "checksums": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "minLength": 1 }
+    }
+  }
+}

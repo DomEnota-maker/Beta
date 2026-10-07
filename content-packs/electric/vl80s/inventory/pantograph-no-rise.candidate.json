@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "inventoryId": "vl80s.pantograph-no-rise.candidate.2026-10-07",
+  "migrationStatus": "CANDIDATE_NOT_RUNTIME",
+  "acceptanceGate": {
+    "required": "GOLDEN_REFERENCE_PASS",
+    "status": "NOT_PASSED_AT_INVENTORY_TIME"
+  },
+  "source": {
+    "repository": "DomEnota-maker/Test-",
+    "branch": "feature/diagnostic-framework-v2",
+    "sha": "3176d6ee228f0ed4b78371f45209e10c1c724eff",
+    "frameworkAsset": "app/src/main/assets/technical/diagnostic_framework_v2.json",
+    "referencePackAsset": "app/src/main/assets/technical/vl80s_pantograph_reference_pack.json"
+  },
+  "scenario": {
+    "legacyScenarioId": "pantograph-no-rise",
+    "title": "Токоприёмник не поднимается",
+    "profileId": "vl80s",
+    "variantIds": ["vl80s-general"],
+    "startNodeId": "pnr-danger",
+    "nodeIds": [
+      "pnr-danger",
+      "pnr-arc",
+      "pnr-permission",
+      "pnr-door",
+      "pnr-pressure",
+      "pnr-scope",
+      "pnr-valve",
+      "pnr-leak"
+    ],
+    "responseEdgeCount": 24,
+    "terminalEdgeCount": 15,
+    "continuingEdgeCount": 9,
+    "systemIds": ["VL-SYS-HV", "VL-SYS-PN"],
+    "componentIds": [
+      "VL-EQ-HV-002",
+      "VL-EQ-PN-002",
+      "VL-EQ-PN-007",
+      "VL-EQ-PN-013",
+      "VL-EQ-PN-016"
+    ]
+  },
+  "referencePack": {
+    "legacySchemaVersion": "knowledge-reference-pack/1",
+    "packId": "vl80s-pantograph-no-rise-reference-2026-10",
+    "productionStatus": "REFERENCE_ONLY_PENDING_HUMAN_REVIEW",
+    "sourceCount": 12,
+    "entryCount": 19,
+    "classifications": {
+      "NORMATIVE": 2,
+      "TECHNICAL_REFERENCE": 4,
+      "OPERATIONAL_EXPERIENCE": 3,
+      "MAINTENANCE_PRACTICE": 2,
+      "HISTORICAL": 2,
+      "ARCHIVE": 1,
+      "CASE_STUDY": 2,
+      "FIELD_PRACTICE": 1,
+      "UNSAFE_METHOD": 1,
+      "UNVERIFIED": 1
+    },
+    "runtimeRoles": {
+      "DIAGNOSTIC_CONTEXT": 10,
+      "LEARNING_REFERENCE": 6,
+      "RESTRICTED_REFERENCE": 2,
+      "SOURCE_NOTE": 1
+    },
+    "restrictedEntryIds": [
+      "vl80s-panto-field-001",
+      "vl80s-panto-unsafe-001"
+    ],
+    "conflictGroups": [
+      {
+        "id": "PANTO-PRESSURE-POINT-001",
+        "status": "UNRESOLVED_UNIVERSAL_THRESHOLD"
+      },
+      {
+        "id": "PANTO-RELAY248-VARIANT-001",
+        "status": "REQUIRES_PRIMARY_VARIANT_SOURCE"
+      },
+      {
+        "id": "PANTO-FIELD-SAFETY-001",
+        "status": "EXPECTED_CONFLICT"
+      }
+    ]
+  },
+  "migrationRules": [
+    "This inventory is read-only and is not a production content pack.",
+    "Legacy IDs are recorded before any canonical-ID mapping is proposed.",
+    "No diagnostic action, numerical threshold or source claim is promoted by this file.",
+    "Restricted FIELD_PRACTICE and UNSAFE_METHOD entries remain independently gated.",
+    "The candidate must pass its separate golden-reference gate before it can become the structural reference."
+  ]
+}

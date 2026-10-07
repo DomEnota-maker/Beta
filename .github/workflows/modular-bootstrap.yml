@@ -13,6 +13,9 @@ on:
       - 'domain-contracts/**'
       - 'content-runtime/**'
       - 'source-policy/**'
+      - 'content-schema/**'
+      - 'content-packs/**'
+      - 'qa/**'
       - '.github/workflows/modular-bootstrap.yml'
   pull_request:
     paths:
@@ -23,6 +26,9 @@ on:
       - 'domain-contracts/**'
       - 'content-runtime/**'
       - 'source-policy/**'
+      - 'content-schema/**'
+      - 'content-packs/**'
+      - 'qa/**'
 
 permissions:
   contents: read
@@ -42,6 +48,9 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.7'
+
+      - name: Validate pinned candidate inventory
+        run: python3 qa/validate_vl80s_candidate_inventory.py
 
       - name: Show project boundaries
         run: gradle projects --console=plain
