@@ -55,10 +55,10 @@ class ContentRegistryTest {
         assertTrue(registry.install(pack()).isEmpty())
 
         val target = ContentTarget(CanonicalId("pantograph-not-raise"), ContentType.DIAGNOSTIC_SCENARIO)
-        val found = registry.resolve(target, RuntimeContext(activeModelId = model))
+        val found = registry.resolve(target, RuntimeContext(workingModelId = model))
         assertTrue(found is ResolveResult.Found)
 
-        val denied = registry.resolve(target, RuntimeContext(activeModelId = ModelId("ermak")))
+        val denied = registry.resolve(target, RuntimeContext(workingModelId = ModelId("ermak")))
         assertEquals(ResolveResult.Inapplicable, denied)
     }
 
