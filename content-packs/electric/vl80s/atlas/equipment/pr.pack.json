@@ -1,0 +1,504 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.atlas.equipment.pr",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "VL-EQ-PR-001",
+      "VL-EQ-PR-002",
+      "VL-EQ-PR-003",
+      "VL-EQ-PR-004",
+      "VL-EQ-PR-005"
+    ],
+    "requiresRuntime": "1.1.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-equipment",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "VL-EQ-PR-001",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Реле и цепи защит",
+      "summary": "Контролируют аварийные и ненормальные режимы, формируя отключение или сигнал.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Аппараты защиты распределены по панелям, блокам силовых аппаратов и блоку тягового трансформатора; это группа аппаратов, а не один монтажный узел."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Реле и цепи защит",
+        "protection",
+        "защита",
+        "РП",
+        "реле перегрузки"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-009",
+        "VL-SRC-011",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PR-001",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-002",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-003",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-004",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "functional_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "protection",
+        "slug": "protection",
+        "domain": "PR",
+        "systemIds": [
+          "VL-SYS-PR"
+        ],
+        "diagnosticScenarioIds": [
+          "gv-no-close",
+          "protection-trip",
+          "traction-motor-flashover"
+        ],
+        "schemeNodeIds": [
+          "protection",
+          "sensors"
+        ],
+        "legacyHotspotIds": [
+          "relay-panels"
+        ],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [
+          {
+            "feature": "vu_protection_rp21_22",
+            "condition": "section.variantBucket in [vl80s_2349_2653, vl80s_2654plus] unless actualEquipmentOverrides says otherwise",
+            "affects": "configuration",
+            "sourceRefs": [
+              "VL-SRC-009",
+              "VL-SRC-011",
+              "VL-SRC-006"
+            ],
+            "confidence": "confirmed_boundary",
+            "note": "С №2349 отмечено изменение защиты ВУ/цепей ГВ: реле 21/22 вместо БРД; рабочие обозначения брать из схемы секции."
+          }
+        ],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-PR-002",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Противобоксовочная защита",
+      "summary": "Обнаруживает признаки боксования и формирует предусмотренное схемой воздействие.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Реле боксования тяговых двигателей размещены в блоках силовых аппаратов соответствующих тележек; защита от юза при реостатном торможении имеет отдельную панель."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Противобоксовочная защита",
+        "anti-slip",
+        "защита боксования",
+        "бокс"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PR-002",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-001",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "functional_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "anti-slip",
+        "slug": "anti-slip",
+        "domain": "PR",
+        "systemIds": [
+          "VL-SYS-PR"
+        ],
+        "diagnosticScenarioIds": [
+          "persistent-wheel-slip",
+          "sanding-failure"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [
+          "relay-panels"
+        ],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": [
+          "датчики/реле",
+          "цепи тяги"
+        ]
+      }
+    },
+    {
+      "id": "VL-EQ-PR-003",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Блок дифференциальных реле",
+      "summary": "До изменения с №2349 контролирует дифференциальные токи цепей выпрямительных установок и при аварийном небалансе формирует действие на отключение главного выключателя.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На тяговом трансформаторе; элементы защитной цепи связаны с панелями защит"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: БРД-356",
+            "До изменения с №2349 — один блок на секцию, содержащий два дифференциальных реле 21 и 22; для более поздних секций конфигурация защиты выпрямительной установки иная.",
+            "Обозначения на схемах: 21, 22"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Блок дифференциальных реле",
+        "differential-relay-block",
+        "БРД-356",
+        "дифференциальные реле",
+        "21",
+        "22"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-009",
+        "VL-SRC-011"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PR-003",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-003",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-004",
+          "role": "related-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "differential-relay-block",
+        "domain": "PR",
+        "systemIds": [
+          "VL-SYS-PR"
+        ],
+        "diagnosticScenarioIds": [
+          "transformer-protection",
+          "protection-trip"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [
+          {
+            "feature": "vu_protection_rp21_22",
+            "condition": "section.variantBucket in [vl80s_2349_2653, vl80s_2654plus] unless actualEquipmentOverrides says otherwise",
+            "affects": "configuration",
+            "sourceRefs": [
+              "VL-SRC-009",
+              "VL-SRC-011",
+              "VL-SRC-006"
+            ],
+            "confidence": "confirmed_boundary",
+            "note": "С №2349 защита выпрямительной установки изменена: вместо дифференциальных реле 21/22 БРД применены токовые реле 21/22; фактическое исполнение сверять по секции."
+          }
+        ],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-PR-004",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Реле перегрузки силовых цепей",
+      "summary": "Контролируют ток тяговых двигателей и при недопустимой перегрузке формируют защитное действие на отключение главного выключателя.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "РП1–РП2 — БСА1, РП3–РП4 — БСА2; другие токовые реле защиты размещаются согласно схеме конкретного исполнения"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: РТ-253, РТ-255 (отдельные поздние функции защиты)",
+            "Основная защита тяговых двигателей — четыре реле РП1–РП4 на секцию; на поздних секциях отдельные реле 21/22 защиты выпрямительных установок имеют другую функцию и исполнение.",
+            "Обозначения на схемах: РП1, РП2, РП3, РП4"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Реле перегрузки силовых цепей",
+        "overload-relays",
+        "РП",
+        "реле перегрузки",
+        "РТ-253",
+        "РТ-255 (отдельные поздние функции защиты)",
+        "РП1",
+        "РП2",
+        "РП3",
+        "РП4"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-009",
+        "VL-SRC-011"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PR-004",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-002",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "related-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "overload-relays",
+        "domain": "PR",
+        "systemIds": [
+          "VL-SYS-PR"
+        ],
+        "diagnosticScenarioIds": [
+          "protection-trip",
+          "traction-current-surge"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [
+          {
+            "feature": "vu_protection_rp21_22",
+            "condition": "section.variantBucket in [vl80s_2349_2653, vl80s_2654plus] unless actualEquipmentOverrides says otherwise",
+            "affects": "configuration",
+            "sourceRefs": [
+              "VL-SRC-009",
+              "VL-SRC-011",
+              "VL-SRC-006"
+            ],
+            "confidence": "confirmed_boundary",
+            "note": "С №2349 защита выпрямительной установки изменена: вместо дифференциальных реле 21/22 БРД применены токовые реле 21/22; фактическое исполнение сверять по секции."
+          }
+        ],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-PR-005",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Реле заземления / контроль замыкания на корпус",
+      "summary": "Контролирует замыкание силовой цепи относительно корпуса и при действии защиты участвует в отключении главного выключателя.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Панель №4 цепей защиты силовой цепи"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: РЗ-303",
+            "1 реле на секцию в базовой силовой схеме",
+            "Обозначения на схемах: 88"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Реле заземления / контроль замыкания на корпус",
+        "earth-relay",
+        "реле земли",
+        "РЗ",
+        "РЗ-303",
+        "88"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PR-005",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-001",
+          "role": "related-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "earth-relay",
+        "domain": "PR",
+        "systemIds": [
+          "VL-SYS-PR"
+        ],
+        "diagnosticScenarioIds": [
+          "protection-trip",
+          "smoke-fire-flashover"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    }
+  ]
+}

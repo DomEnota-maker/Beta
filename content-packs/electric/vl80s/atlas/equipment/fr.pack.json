@@ -1,0 +1,189 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.atlas.equipment.fr",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "VL-EQ-FR-001",
+      "VL-EQ-FR-002"
+    ],
+    "requiresRuntime": "1.1.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-equipment",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "VL-EQ-FR-001",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Пожарная сигнализация",
+      "summary": "Обнаруживает признаки пожара по термозащитным реле и формирует световой и звуковой сигнал для локомотивной бригады.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "К1–К7 распределены по кабине и кузову: два термозащитных реле в кабине и пять в кузове; с №2174 реле 442 размещается на панели №2."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "7 термозащитных реле К1–К7 на секцию в исполнении с пожарной сигнализацией",
+            "Обозначения на схемах: К1–К7 — термозащитные реле, 442 — реле пожарной сигнализации, 443 «ПС» — сигнальная лампа, 410 — выключатель цепи пожарной сигнализации"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Пожарная сигнализация",
+        "fire-system",
+        "датчики пожара",
+        "пожарка",
+        "К1–К7 — термозащитные реле",
+        "442 — реле пожарной сигнализации",
+        "443 «ПС» — сигнальная лампа",
+        "410 — выключатель цепи пожарной сигнализации"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-010"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-FR-001",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-005",
+          "role": "functional_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "fire-system",
+        "slug": "fire-system",
+        "domain": "FR",
+        "systemIds": [
+          "VL-SYS-FR"
+        ],
+        "diagnosticScenarioIds": [
+          "fire-alarm-signal",
+          "fire-loop-fault",
+          "machine-room-smoke",
+          "smoke-fire-flashover"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [
+          {
+            "feature": "fire_signalization_present",
+            "condition": "section.serialNumber >= 2110 unless actualEquipmentOverrides says otherwise",
+            "affects": "presence_and_configuration",
+            "sourceRefs": [
+              "VL-SRC-010",
+              "VL-SRC-006"
+            ],
+            "confidence": "confirmed_boundary",
+            "note": "С №2110 внедрена пожарная сигнализация. На секциях после ремонтов и модернизаций фактическое наличие и состав всё равно имеют приоритет над серийной границей."
+          }
+        ],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-FR-002",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Система пожаротушения",
+      "summary": "Предназначена для штатного воздействия на очаг в предусмотренных конструкцией зонах.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Исполнительные средства пожаротушения и их размещение зависят от фактической комплектации секции; подтверждённая граница №2110 относится к пожарной сигнализации, а не автоматически к системе пожаротушения."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Система пожаротушения",
+        "fire-suppression",
+        "пожаротушение",
+        "баллоны",
+        "генераторы аэрозоля"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-FR-002",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-FR-001",
+          "role": "functional_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "fire-suppression",
+        "slug": "fire-suppression",
+        "domain": "FR",
+        "systemIds": [
+          "VL-SYS-FR"
+        ],
+        "diagnosticScenarioIds": [
+          "extinguisher-system-fault",
+          "machine-room-smoke",
+          "smoke-fire-flashover"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": [
+          "пусковая цепь",
+          "огнетушители"
+        ]
+      }
+    }
+  ]
+}

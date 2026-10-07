@@ -1,0 +1,567 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.atlas.equipment.mc",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "VL-EQ-MC-001",
+      "VL-EQ-MC-002",
+      "VL-EQ-MC-003",
+      "VL-EQ-MC-004",
+      "VL-EQ-MC-005",
+      "VL-EQ-MC-006"
+    ],
+    "requiresRuntime": "1.1.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-equipment",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "VL-EQ-MC-001",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Песочницы",
+      "summary": "Подаёт песок в зону контакта колёс с рельсами для повышения сцепления при тяге и для уменьшения риска юза при торможении.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Бункеры размещены в кузове секции и заправляются через крышевые люки; форсунки и пескоподающие трубы расположены у тележек и направляют песок к колёсным парам."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "6 песочных бункеров на секцию, общий объём 1232 л; два средних бункера общие для обоих направлений движения.",
+            "Обозначения на схемах: 241, 242 — электропневматические вентили пескоподачи, 219 «Песок» — дополнительная кнопка на исполнениях с №1904"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Песочницы",
+        "sanders",
+        "форсунки",
+        "песок",
+        "241, 242 — электропневматические вентили пескоподачи",
+        "219 «Песок» — дополнительная кнопка на исполнениях с №1904"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-MC-001",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-004",
+          "role": "supplied_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-002",
+          "role": "cooperates_with"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "sanders",
+        "slug": "sanders",
+        "domain": "MC",
+        "systemIds": [
+          "VL-SYS-MC"
+        ],
+        "diagnosticScenarioIds": [
+          "persistent-wheel-slip",
+          "sand-nozzle-blocked",
+          "sanding-failure"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "source_confirmed",
+        "featureRules": [
+          {
+            "feature": "sand_control_1904",
+            "condition": "section.serialNumber >= 1904 unless actualEquipmentOverrides says otherwise",
+            "affects": "control_configuration",
+            "sourceRefs": [
+              "VL-SRC-006"
+            ],
+            "confidence": "confirmed_boundary",
+            "note": "С №1904 ручной пневматический клапан подачи песка под 1-ю и 3-ю колёсные пары ведущей секции не применяется; введена дополнительная кнопка 219 «Песок» с электропневматическим управлением."
+          }
+        ],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-MC-002",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Тележка и колёсные пары",
+      "summary": "Несёт кузов, направляет секцию по пути и передаёт между кузовом и рельсами вертикальные, тяговые, тормозные и боковые усилия через колёсные пары, буксы и подвешивание.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Под кузовом каждой секции; кузов опирается на две тележки."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "2 двухосные тележки на секцию; 4 на штатном двухсекционном ВЛ80С."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Тележка и колёсные пары",
+        "bogie",
+        "букса",
+        "колесо",
+        "ходовая"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-MC-002",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-003",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-004",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-005",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-007",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-006",
+          "role": "related-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "bogie",
+        "slug": "bogie",
+        "domain": "MC",
+        "systemIds": [
+          "VL-SYS-MC"
+        ],
+        "diagnosticScenarioIds": [
+          "external-object-impact",
+          "mechanical-noise-heating",
+          "persistent-wheel-slip",
+          "wheel-dragging"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "source_confirmed",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-MC-003",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Колёсная пара",
+      "summary": "Передаёт тяговые и тормозные силы на рельс и воспринимает нагрузку локомотива.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Тележки"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "4 на секцию (по 2 на каждую двухосную тележку); 8 на штатный двухсекционный ВЛ80С"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Колёсная пара",
+        "wheelset",
+        "колёсная пара",
+        "колесная пара"
+      ],
+      "sourceRefs": [
+        "VL-SRC-014",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-MC-003",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-004",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-007",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-006",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-002",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-004",
+          "role": "related-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "wheelset",
+        "domain": "MC",
+        "systemIds": [
+          "VL-SYS-MC"
+        ],
+        "diagnosticScenarioIds": [
+          "wheel-flat-impact",
+          "wheel-dragging"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-MC-004",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Буксовый узел",
+      "summary": "Обеспечивает опору колесной пары и передачу нагрузок на раму тележки.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Концы осей колёсных пар"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "2 на колёсную пару; 8 на секцию; 16 на штатный двухсекционный ВЛ80С"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Буксовый узел",
+        "axlebox",
+        "букса",
+        "буксовый узел",
+        "бесчелюстная букса",
+        "буксовые подшипники"
+      ],
+      "sourceRefs": [
+        "VL-SRC-014",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-MC-004",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-003",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-002",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-005",
+          "role": "related-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "axlebox",
+        "domain": "MC",
+        "systemIds": [
+          "VL-SYS-MC"
+        ],
+        "diagnosticScenarioIds": [
+          "wheel-bearing-heat",
+          "mechanical-noise-heating"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-MC-005",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Рессорное подвешивание тележки",
+      "summary": "Снижает динамические нагрузки и обеспечивает требуемое взаимодействие кузова, тележки и колёсных пар.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Тележки и связи кузова"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Первая ступень — индивидуальная рессорная система на каждую буксу; элементы люлечного подвешивания образуют отдельную связь кузова с тележкой"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Рессорное подвешивание тележки",
+        "suspension",
+        "рессорное подвешивание",
+        "пружины",
+        "гидрогасители"
+      ],
+      "sourceRefs": [
+        "VL-SRC-014",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-MC-005",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-004",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-002",
+          "role": "related-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "suspension",
+        "domain": "MC",
+        "systemIds": [
+          "VL-SYS-MC"
+        ],
+        "diagnosticScenarioIds": [
+          "suspension-damage",
+          "mechanical-noise-heating"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-MC-006",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Моторно-осевой подшипник",
+      "summary": "Поддерживает тяговый двигатель относительно оси колесной пары в тяговом приводе.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Колёсно-моторный блок"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Для базового тягового двигателя НБ-418К6 — 2 буксы моторно-осевых подшипников на двигатель; для иного ТЭД сверять фактическое исполнение"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Моторно-осевой подшипник",
+        "motor-axle-bearing",
+        "МОП",
+        "моторно-осевой подшипник"
+      ],
+      "sourceRefs": [
+        "VL-SRC-014",
+        "VL-SRC-006",
+        "VL-SRC-007"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-MC-006",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-003",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-007",
+          "role": "related-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "motor-axle-bearing",
+        "domain": "MC",
+        "systemIds": [
+          "VL-SYS-MC"
+        ],
+        "diagnosticScenarioIds": [
+          "wheel-bearing-heat",
+          "traction-gear-noise"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    }
+  ]
+}

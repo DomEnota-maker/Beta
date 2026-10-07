@@ -1,0 +1,1369 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.atlas.equipment.br",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "VL-EQ-BR-001",
+      "VL-EQ-BR-002",
+      "VL-EQ-BR-003",
+      "VL-EQ-BR-004",
+      "VL-EQ-BR-005",
+      "VL-EQ-BR-006",
+      "VL-EQ-BR-007",
+      "VL-EQ-BR-008",
+      "VL-EQ-BR-009",
+      "VL-EQ-BR-010",
+      "VL-EQ-BR-011",
+      "VL-EQ-BR-012",
+      "VL-EQ-BR-013",
+      "VL-EQ-BR-014",
+      "VL-EQ-BR-015"
+    ],
+    "requiresRuntime": "1.1.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-equipment",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "VL-EQ-BR-001",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Кран машиниста №395",
+      "summary": "Управляет давлением ТМ через уравнительный резервуар.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Кабина машиниста."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: Кран машиниста №395",
+            "Обозначения на схемах: КМ №395, КМ"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Кран машиниста №395",
+        "km395",
+        "КМ",
+        "395",
+        "КМ №395"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-BR-001",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-007",
+          "role": "controls"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "controls"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-009",
+          "role": "interlocked_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-002",
+          "role": "safety_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "km395",
+        "slug": "km395",
+        "domain": "BR",
+        "systemIds": [
+          "VL-SYS-BR"
+        ],
+        "diagnosticScenarioIds": [
+          "brake-pipe-no-charge",
+          "equalizing-reservoir-mismatch",
+          "brake-pipe-leak",
+          "brakes-no-apply-release",
+          "uncommanded-braking"
+        ],
+        "schemeNodeIds": [
+          "km"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-BR-002",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Кран вспомогательного тормоза №254",
+      "summary": "Управляет независимым тормозом локомотива и участвует в повторительном действии по схеме.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Кабина машиниста."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: Кран вспомогательного тормоза №254",
+            "Обозначения на схемах: КВТ №254, КВТ"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Кран вспомогательного тормоза №254",
+        "kvt254",
+        "КВТ",
+        "254",
+        "КВТ №254"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-BR-002",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-004",
+          "role": "controls"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-005",
+          "role": "control_signal_to"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-009",
+          "role": "interlocked_by"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "kvt254",
+        "slug": "kvt254",
+        "domain": "BR",
+        "systemIds": [
+          "VL-SYS-BR"
+        ],
+        "diagnosticScenarioIds": [
+          "independent-brake-no-apply",
+          "independent-brake-no-release",
+          "wheel-dragging",
+          "brakes-no-apply-release"
+        ],
+        "schemeNodeIds": [
+          "kvt"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": [
+          "РД №304"
+        ]
+      }
+    },
+    {
+      "id": "VL-EQ-BR-003",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Тормозная магистраль",
+      "summary": "Передаёт по всему электровозу и составу пневматическую команду автоматического тормоза: зарядку, служебную разрядку, перекрышу и экстренную разрядку.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Магистральный трубопровод проходит вдоль электровоза; на концах секций связан с концевыми кранами и соединительными рукавами."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Одна непрерывная тормозная магистраль, проходящая через секции и соединяемая между единицами подвижного состава концевыми кранами и рукавами.",
+            "Обозначения на схемах: ТМ — тормозная магистраль"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Тормозная магистраль",
+        "brake-pipe",
+        "ТМ",
+        "магистраль",
+        "ТМ — тормозная магистраль"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-BR-003",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-001",
+          "role": "controlled_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-010",
+          "role": "command_source_for"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-015",
+          "role": "coupled_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-002",
+          "role": "monitored_by"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "brake-pipe",
+        "slug": "brake-pipe",
+        "domain": "BR",
+        "systemIds": [
+          "VL-SYS-BR"
+        ],
+        "diagnosticScenarioIds": [
+          "brake-pipe-no-charge",
+          "equalizing-reservoir-mismatch",
+          "brake-pipe-leak",
+          "uncommanded-braking"
+        ],
+        "schemeNodeIds": [
+          "tm"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "source_confirmed",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-BR-004",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Тормозные цилиндры",
+      "summary": "Преобразуют давление сжатого воздуха в механическое усилие, передаваемое тормозной рычажной передачей к колодкам.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На кронштейнах шкворневых брусьев рам тележек."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: Тормозной цилиндр 10″",
+            "4 на секцию: по 2 на каждую двухосную тележку, с индивидуальным цилиндром на каждую сторону тележки."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Тормозные цилиндры",
+        "tc",
+        "ТЦ",
+        "Тормозной цилиндр 10″"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-BR-004",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-002",
+          "role": "controlled_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-005",
+          "role": "supplied_by_relay"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-006",
+          "role": "actuates"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "tc",
+        "slug": "tc",
+        "domain": "BR",
+        "systemIds": [
+          "VL-SYS-BR"
+        ],
+        "diagnosticScenarioIds": [
+          "independent-brake-no-apply",
+          "independent-brake-no-release",
+          "brake-cylinder-imbalance",
+          "wheel-dragging",
+          "brakes-no-apply-release"
+        ],
+        "schemeNodeIds": [
+          "tc1",
+          "tc2"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "source_confirmed",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-BR-005",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Реле давления №304",
+      "summary": "Повторяет управляющее давление вспомогательного тормоза и обеспечивает наполнение тормозных цилиндров второй тележки непосредственно из питательной магистрали через редуктор №348.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "В пневматической тормозной системе секции: после редуктора №348 в цепи питания тормозных цилиндров второй тележки."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: Реле давления №304",
+            "Обозначения на схемах: РД №304, №304"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Реле давления №304",
+        "pressure-relay",
+        "РД",
+        "304",
+        "реле-повторитель №304",
+        "РД №304",
+        "№304"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-BR-005",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-002",
+          "role": "controlled_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-004",
+          "role": "supplies"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-014",
+          "role": "fed_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-004",
+          "role": "air_source"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "pressure-relay",
+        "slug": "pressure-relay",
+        "domain": "BR",
+        "systemIds": [
+          "VL-SYS-BR"
+        ],
+        "diagnosticScenarioIds": [
+          "independent-brake-no-apply",
+          "independent-brake-no-release",
+          "brake-cylinder-imbalance",
+          "wheel-dragging",
+          "brakes-no-apply-release"
+        ],
+        "schemeNodeIds": [
+          "rd"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-BR-006",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Тормозная рычажная передача",
+      "summary": "Передаёт усилие тормозных цилиндров или ручного тормоза к тормозным колодкам и обеспечивает двустороннее нажатие колодок на бандажи колёс.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На обеих тележках; рычаги, балансиры, тяги, подвески и башмаки закреплены на элементах рамы тележки."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "2 комплекта на секцию — по одному на каждую тележку."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Тормозная рычажная передача",
+        "brake-rigging",
+        "рычажка",
+        "колодки"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-BR-006",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-004",
+          "role": "actuated_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-008",
+          "role": "actuated_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-003",
+          "role": "brakes"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-002",
+          "role": "mounted_on"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "brake-rigging",
+        "slug": "brake-rigging",
+        "domain": "BR",
+        "systemIds": [
+          "VL-SYS-BR"
+        ],
+        "diagnosticScenarioIds": [
+          "brake-rigging-damage",
+          "mechanical-noise-heating",
+          "wheel-dragging"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "source_confirmed",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-BR-007",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Уравнительный резервуар",
+      "summary": "Задаёт темп и величину изменения давления, которое кран машиниста преобразует в управление тормозной магистралью.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Кабина и пневматическая разводка секции."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Обозначения на схемах: УР"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Уравнительный резервуар",
+        "equalizing-reservoir",
+        "УР"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-BR-007",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-001",
+          "role": "controlled_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "controls_via_valve"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CB-001",
+          "role": "monitored_by"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "equalizing-reservoir",
+        "slug": "equalizing-reservoir",
+        "domain": "BR",
+        "systemIds": [
+          "VL-SYS-BR"
+        ],
+        "diagnosticScenarioIds": [
+          "equalizing-reservoir-mismatch",
+          "brakes-no-apply-release"
+        ],
+        "schemeNodeIds": [
+          "ur"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-BR-008",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Ручной тормоз локомотива",
+      "summary": "Механически затормаживает локомотив без использования сжатого воздуха, передавая усилие от колонки ручного тормоза на тормозные колодки через рычажную передачу.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Колонка ручного тормоза установлена на поперечной стенке кабины; механический привод связан с тормозной рычажной передачей тележки."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "1 колонка ручного тормоза в каждой кабине секции; 2 на штатном двухсекционном ВЛ80С."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Ручной тормоз локомотива",
+        "handbrake",
+        "стояночный тормоз",
+        "ручник"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-BR-008",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-006",
+          "role": "actuates"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-003",
+          "role": "brakes"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "handbrake",
+        "slug": "handbrake",
+        "domain": "BR",
+        "systemIds": [
+          "VL-SYS-BR"
+        ],
+        "diagnosticScenarioIds": [
+          "handbrake-not-release",
+          "wheel-dragging"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "source_confirmed",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-BR-009",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Блокировка тормозов №367М",
+      "summary": "Переключает и блокирует связанные пневматические цепи при смене кабины управления.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На посту машиниста в кабине; устройство блокировки тормозов включено в пневматические и электрические цепи активной кабины."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: Блокировка тормозов №367М",
+            "Обозначения на схемах: №367М, БТ 367М"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Блокировка тормозов №367М",
+        "brake-lock",
+        "БТ 367М",
+        "367",
+        "блокировка тормозов",
+        "№367М"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-BR-009",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-001",
+          "role": "interlocks"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-002",
+          "role": "interlocks"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "connects"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-004",
+          "role": "connects"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "brake-lock",
+        "slug": "brake-lock",
+        "domain": "BR",
+        "systemIds": [
+          "VL-SYS-BR"
+        ],
+        "diagnosticScenarioIds": [
+          "brake-lock-state-mismatch",
+          "brake-pipe-no-charge",
+          "independent-brake-no-apply"
+        ],
+        "schemeNodeIds": [
+          "bt"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-BR-010",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Воздухораспределитель №483",
+      "summary": "Воспринимает изменение давления ТМ и управляет наполнением/разрядкой связанных тормозных полостей.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Пневматическая тормозная аппаратура"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: Воздухораспределитель №483",
+            "Обозначения на схемах: ВР №483, ВР"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Воздухораспределитель №483",
+        "air-distributor483",
+        "ВР №483",
+        "483",
+        "воздухораспределитель",
+        "ВР"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-BR-010",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "responds_to"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-011",
+          "role": "charges_and_uses"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-012",
+          "role": "control_output"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "air-distributor483",
+        "domain": "BR",
+        "systemIds": [
+          "VL-SYS-BR"
+        ],
+        "diagnosticScenarioIds": [
+          "brakes-no-apply-release",
+          "uncommanded-braking"
+        ],
+        "schemeNodeIds": [
+          "vr"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-BR-011",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Запасный резервуар тормоза",
+      "summary": "Накапливает воздух для действия тормозной схемы через воздухораспределитель.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Возле воздухораспределителя / пневматический блок"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Обозначения на схемах: ЗР"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Запасный резервуар тормоза",
+        "spare-reservoir",
+        "ЗР",
+        "запасный резервуар"
+      ],
+      "sourceRefs": [
+        "VL-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-BR-011",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-010",
+          "role": "works_with"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "spare-reservoir",
+        "domain": "BR",
+        "systemIds": [
+          "VL-SYS-BR"
+        ],
+        "diagnosticScenarioIds": [
+          "brakes-no-apply-release"
+        ],
+        "schemeNodeIds": [
+          "zr"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-BR-012",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Импульсная магистраль тормоза",
+      "summary": "Передаёт управляющее давление от воздухораспределителя к схеме локомотивного тормоза.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Пневматическая разводка между ВР, КВТ и РД"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Обозначения на схемах: ИМ"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Импульсная магистраль тормоза",
+        "impulse-line",
+        "ИМ",
+        "импульсная магистраль"
+      ],
+      "sourceRefs": [
+        "VL-SRC-004",
+        "VL-SRC-001"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-BR-012",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-010",
+          "role": "receives_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-002",
+          "role": "interfaces_with"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-005",
+          "role": "control_signal_to"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "impulse-line",
+        "domain": "BR",
+        "systemIds": [
+          "VL-SYS-BR"
+        ],
+        "diagnosticScenarioIds": [
+          "brakes-no-apply-release",
+          "uncommanded-braking"
+        ],
+        "schemeNodeIds": [
+          "impulse"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-BR-013",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Электроблокировочный клапан тормоза",
+      "summary": "Изменяет пневматическую связь тормозной схемы при электрическом торможении.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "В пневматической тормозной цепи между воздухораспределителем и краном вспомогательного тормоза №254; конкретное исполнение и монтаж сверяют по схеме секции."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: КПЭ-99, КПЭ-99-02",
+            "Обозначения на схемах: ВР (в схеме взаимодействия электрического и пневматического тормозов)"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Электроблокировочный клапан тормоза",
+        "electric-blocking-valve",
+        "КЭБ",
+        "КПЭ-99",
+        "КПЭ-99-02",
+        "ВР (в схеме взаимодействия электрического и пневматического тормозов)"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-BR-013",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-010",
+          "role": "receives_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-002",
+          "role": "interfaces_with"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-014",
+          "role": "interlocked_with"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "electric-blocking-valve",
+        "domain": "BR",
+        "systemIds": [
+          "VL-SYS-BR"
+        ],
+        "diagnosticScenarioIds": [
+          "rheostatic-brake",
+          "uncommanded-braking"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-BR-014",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Пневматические выключатели управления тормозным режимом",
+      "summary": "Контролируют давление и участвуют в согласовании электрического и пневматического торможения.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "В пневматических цепях взаимодействия тормозов: ПВУ1 контролирует давление тормозной магистрали, ПВУ2 — давление тормозных цилиндров."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: ПВУ-2, ПВУ-7",
+            "Обозначения на схемах: ПВУ1, ПВУ2"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Пневматические выключатели управления тормозным режимом",
+        "pvu-group",
+        "ПВУ",
+        "ПВУ1",
+        "ПВУ2",
+        "ПВУ-2",
+        "ПВУ-7"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-004",
+        "VL-SRC-001"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-BR-014",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "monitors"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-004",
+          "role": "monitors"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-013",
+          "role": "interlocks"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-014",
+          "role": "interlocks"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "pvu-group",
+        "domain": "BR",
+        "systemIds": [
+          "VL-SYS-BR"
+        ],
+        "diagnosticScenarioIds": [
+          "rheostatic-brake",
+          "uncommanded-braking"
+        ],
+        "schemeNodeIds": [
+          "pvu"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-BR-015",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Концевые краны и соединительные рукава ТМ/ПМ",
+      "summary": "Соединяют тормозную и питательную магистрали между секциями/единицами подвижного состава и позволяют штатно разобщать их концевыми кранами.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На концевых брусьях/торцах секций в местах вывода тормозной и питательной магистралей; к кранам присоединены соединительные рукава."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: 190.00 — концевой кран"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Концевые краны и соединительные рукава ТМ/ПМ",
+        "end-cocks-hoses",
+        "концевой кран 190",
+        "рукава ТМ",
+        "рукава ПМ",
+        "190.00 — концевой кран"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-BR-015",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "connects"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-004",
+          "role": "connects"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "end-cocks-hoses",
+        "domain": "BR",
+        "systemIds": [
+          "VL-SYS-BR"
+        ],
+        "diagnosticScenarioIds": [
+          "brake-pipe-leak",
+          "brake-pipe-no-charge",
+          "feed-line-leak"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "source_confirmed",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    }
+  ]
+}

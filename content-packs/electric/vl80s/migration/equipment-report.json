@@ -1,0 +1,48 @@
+{
+  "sourceCommit": "3176d6ee228f0ed4b78371f45209e10c1c724eff",
+  "equipmentCount": 89,
+  "technicalDataCount": 89,
+  "domains": {
+    "AU": 7,
+    "BR": 15,
+    "CB": 4,
+    "CT": 6,
+    "FR": 2,
+    "HV": 8,
+    "MC": 6,
+    "PN": 16,
+    "PR": 5,
+    "SF": 5,
+    "TR": 15
+  },
+  "atlasPacks": [
+    "content-packs/electric/vl80s/atlas/equipment/au.pack.json",
+    "content-packs/electric/vl80s/atlas/equipment/br.pack.json",
+    "content-packs/electric/vl80s/atlas/equipment/cb.pack.json",
+    "content-packs/electric/vl80s/atlas/equipment/ct.pack.json",
+    "content-packs/electric/vl80s/atlas/equipment/fr.pack.json",
+    "content-packs/electric/vl80s/atlas/equipment/hv.pack.json",
+    "content-packs/electric/vl80s/atlas/equipment/mc.pack.json",
+    "content-packs/electric/vl80s/atlas/equipment/pn.pack.json",
+    "content-packs/electric/vl80s/atlas/equipment/pr.pack.json",
+    "content-packs/electric/vl80s/atlas/equipment/sf.pack.json",
+    "content-packs/electric/vl80s/atlas/equipment/tr.pack.json"
+  ],
+  "technicalDataPacks": [
+    "content-packs/electric/vl80s/technical-data/equipment/au.pack.json",
+    "content-packs/electric/vl80s/technical-data/equipment/br.pack.json",
+    "content-packs/electric/vl80s/technical-data/equipment/cb.pack.json",
+    "content-packs/electric/vl80s/technical-data/equipment/ct.pack.json",
+    "content-packs/electric/vl80s/technical-data/equipment/fr.pack.json",
+    "content-packs/electric/vl80s/technical-data/equipment/hv.pack.json",
+    "content-packs/electric/vl80s/technical-data/equipment/mc.pack.json",
+    "content-packs/electric/vl80s/technical-data/equipment/pn.pack.json",
+    "content-packs/electric/vl80s/technical-data/equipment/pr.pack.json",
+    "content-packs/electric/vl80s/technical-data/equipment/sf.pack.json",
+    "content-packs/electric/vl80s/technical-data/equipment/tr.pack.json"
+  ],
+  "replacedTemporaryPacks": [
+    "content-packs/electric/vl80s/atlas/pantograph.vertical.pack.json",
+    "content-packs/electric/vl80s/technical-data/pantograph.vertical.pack.json"
+  ]
+}

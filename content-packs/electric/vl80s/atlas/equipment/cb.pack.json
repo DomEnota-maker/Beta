@@ -1,0 +1,350 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.atlas.equipment.cb",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "VL-EQ-CB-001",
+      "VL-EQ-CB-002",
+      "VL-EQ-CB-003",
+      "VL-EQ-CB-004"
+    ],
+    "requiresRuntime": "1.1.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-equipment",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "VL-EQ-CB-001",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Манометры пневматических систем",
+      "summary": "Показывают состояние ГР, ТМ, УР и тормозных цилиндров в предусмотренной схеме.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На панели контрольно-измерительных приборов поста машиниста в кабине; точная компоновка после ремонтов и модернизаций определяется фактическим исполнением секции."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "4 основных кабинных манометра в базовой компоновке панели ВЛ80С; фактическую компоновку после модернизаций сверяют по документации секции.",
+            "Обозначения на схемах: М1 — давление тормозных цилиндров, М2 — давление главных резервуаров / питательной системы, М3 — давление тормозной магистрали, М4 — давление уравнительного резервуара"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Манометры пневматических систем",
+        "pressure-gauges",
+        "манометр",
+        "приборы давления",
+        "М1 — давление тормозных цилиндров",
+        "М2 — давление главных резервуаров / питательной системы",
+        "М3 — давление тормозной магистрали",
+        "М4 — давление уравнительного резервуара"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-CB-001",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "monitors_pressure_of"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-004",
+          "role": "monitors_pressure_of"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-007",
+          "role": "monitors_pressure_of"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-001",
+          "role": "monitors_pressure_of"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-006",
+          "role": "measured_via"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "pressure-gauges",
+        "slug": "pressure-gauges",
+        "domain": "CB",
+        "systemIds": [
+          "VL-SYS-CB"
+        ],
+        "diagnosticScenarioIds": [
+          "pressure-gauge-mismatch",
+          "equalizing-reservoir-mismatch",
+          "brake-cylinder-imbalance",
+          "compressor-pressure",
+          "brakes-no-apply-release"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-CB-002",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Прожектор и буферные фонари",
+      "summary": "Обеспечивают освещение пути прожектором и световое обозначение лобовой части секции белыми/красными буферными фонарями.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Прожектор и два буферных фонаря установлены на лобовой части каждой кабины; управление — из кабины машиниста."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: ПЖ50-500-1 — лампа прожектора, Ж-54-60 — лампы буферных фонарей",
+            "На секцию: 1 прожектор и 2 буферных фонаря; в двухсекционном электровозе — 2 лампы прожектора и 4 лампы буферных фонарей.",
+            "Обозначения на схемах: 300 — лампа прожектора, 320, 321 — лампы буферных фонарей, 257, 258 — тумблеры выбора буферных фонарей, г41 — сопротивление цепи прожектора"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Прожектор и буферные фонари",
+        "cab-lighting",
+        "прожектор",
+        "буферные",
+        "освещение",
+        "ПЖ50-500-1 — лампа прожектора",
+        "Ж-54-60 — лампы буферных фонарей",
+        "300 — лампа прожектора",
+        "320, 321 — лампы буферных фонарей",
+        "257, 258 — тумблеры выбора буферных фонарей",
+        "г41 — сопротивление цепи прожектора"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-CB-002",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-006",
+          "role": "powered_and_switched_by"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "cab-lighting",
+        "slug": "cab-lighting",
+        "domain": "CB",
+        "systemIds": [
+          "VL-SYS-CB"
+        ],
+        "diagnosticScenarioIds": [
+          "headlight-fault"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "source_confirmed",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-CB-003",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Тифон, свисток и звуковые сигналы",
+      "summary": "Формируют наружные звуковые сигналы локомотива.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Передняя/крышевaя зона кабины"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: ТС-22, С-17"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Тифон, свисток и звуковые сигналы",
+        "horn-whistle",
+        "ТС-22",
+        "С-17",
+        "тифон",
+        "свисток"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-014"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-CB-003",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-004",
+          "role": "related-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "horn-whistle",
+        "domain": "CB",
+        "systemIds": [
+          "VL-SYS-CB"
+        ],
+        "diagnosticScenarioIds": [],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-CB-004",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Стеклоочиститель",
+      "summary": "Пневматически очищает лобовое стекло кабины от атмосферных осадков и пыли.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Лобовое остекление кабины; привод и распределитель расположены со стороны кабины у механизма щётки."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: СЛ-440Б",
+            "Комплект стеклоочистителей рабочей кабины; точное количество щёток определяется фактическим исполнением остекления секции."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Стеклоочиститель",
+        "wiper",
+        "СЛ-440Б",
+        "стеклоочиститель"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-014"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-CB-004",
+          "role": "technical-description"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "wiper",
+        "domain": "CB",
+        "systemIds": [
+          "VL-SYS-CB"
+        ],
+        "diagnosticScenarioIds": [
+          "wiper-fault"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "source_confirmed",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,458 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.atlas.equipment.sf",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "VL-EQ-SF-001",
+      "VL-EQ-SF-002",
+      "VL-EQ-SF-003",
+      "VL-EQ-SF-004",
+      "VL-EQ-SF-005"
+    ],
+    "requiresRuntime": "1.1.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-equipment",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "VL-EQ-SF-001",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "АЛСН и ЭПК",
+      "summary": "Принимает кодовые сигналы из рельсовой цепи, формирует показания локомотивной сигнализации и участвует в контроле бдительности с воздействием через ЭПК.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Кабинные приборы АЛСН размещены на рабочих постах; приёмный тракт начинается от вынесенных под кузов катушек SF-005. В базовом исполнении фильтр и дешифратор размещаются у поста помощника, локомотивный светофор и органы контроля бдительности — в кабине."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Обозначения на схемах: 225 — «Локомотивная сигнализация», ВА6/ВА7 — защита цепей АЛСН, Н119 — линия питания от аккумуляторной батареи"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "АЛСН и ЭПК",
+        "alsn",
+        "локомотивный светофор",
+        "ЭПК-150",
+        "225 — «Локомотивная сигнализация»",
+        "ВА6/ВА7 — защита цепей АЛСН",
+        "Н119 — линия питания от аккумуляторной батареи"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-015"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-SF-001",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-005",
+          "role": "receives_signal_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-002",
+          "role": "controls"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "works_with"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-001",
+          "role": "powered_by"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "alsn",
+        "slug": "alsn",
+        "domain": "SF",
+        "systemIds": [
+          "VL-SYS-SF"
+        ],
+        "diagnosticScenarioIds": [
+          "alsn-epk",
+          "uncommanded-braking",
+          "vigilance-control-fault"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [
+          "alsn"
+        ],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-SF-002",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "ЭПК-150",
+      "summary": "Преобразует электрическую команду системы безопасности в пневматическое воздействие на тормозную магистраль при срабатывании АЛСН/контроля бдительности.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "В кабине машиниста, в составе электрической и пневматической части системы безопасности."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: ЭПК-150, ЭПК-150И",
+            "2 на двухсекционный электровоз — по одному в каждой рабочей кабине",
+            "Обозначения на схемах: ЭПК, 267 — реле контроля состояния ЭПК в цепях ВЛ80С"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "ЭПК-150",
+        "epk",
+        "ЭПК",
+        "электропневматический клапан",
+        "ЭПК-150И",
+        "267 — реле контроля состояния ЭПК в цепях ВЛ80С"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-015"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-SF-002",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-001",
+          "role": "controlled_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "acts_on"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-002",
+          "role": "interlocked_with"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-001",
+          "role": "functional_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "epk",
+        "slug": "epk",
+        "domain": "SF",
+        "systemIds": [
+          "VL-SYS-SF"
+        ],
+        "diagnosticScenarioIds": [
+          "alsn-epk",
+          "uncommanded-braking",
+          "vigilance-control-fault"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-SF-003",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Поездная радиостанция",
+      "summary": "Обеспечивает поездную и маневровую радиосвязь через штатный КВ/УКВ тракт в зависимости от исполнения электровоза.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Аппаратура и органы управления размещаются в кабине/секции, антенно-фидерный тракт — на кузове; в раннем базовом описании КВ-радиостанция относится к первой секции."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Обозначения на схемах: ВА8 — «Радиосвязь», 477 — «Радио КВ», 231 — «УКВ», 478 — «Радиосвязь»"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Поездная радиостанция",
+        "radio",
+        "радиосвязь",
+        "радиостанция",
+        "ВА8 — «Радиосвязь»",
+        "477 — «Радио КВ»",
+        "231 — «УКВ»",
+        "478 — «Радиосвязь»"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-SF-003",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-001",
+          "role": "powered_by"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "radio",
+        "slug": "radio",
+        "domain": "SF",
+        "systemIds": [
+          "VL-SYS-SF"
+        ],
+        "diagnosticScenarioIds": [
+          "radio-communication-loss"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [
+          {
+            "feature": "radio_ukv_late_execution",
+            "condition": "section.serialNumber >= 1428 unless actualEquipmentOverrides says otherwise",
+            "affects": "installed_radio_channels_and_controls",
+            "sourceRefs": [
+              "VL-SRC-006"
+            ],
+            "confidence": "confirmed_boundary_with_profile_check",
+            "note": "С №1428 в документации фиксируется внедрение УКВ-радиосвязи и связанного оборудования; после ремонтов и модернизаций фактическая комплектация имеет приоритет."
+          }
+        ],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-SF-004",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Скоростемер / канал индикации скорости",
+      "summary": "Формирует и отображает информацию о скорости для машиниста и связанных систем.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Кабина и привод/датчики ходовой части"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: 3СЛ-2М",
+            "2 на двухсекционный электровоз",
+            "Обозначения на схемах: СМ"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Скоростемер / канал индикации скорости",
+        "speedometer",
+        "скоростемер",
+        "датчик скорости",
+        "3СЛ-2М",
+        "СМ"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-014"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-SF-004",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-003",
+          "role": "related-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "speedometer",
+        "domain": "SF",
+        "systemIds": [
+          "VL-SYS-SF"
+        ],
+        "diagnosticScenarioIds": [
+          "speed-indication-fault"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-SF-005",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Приёмные катушки АЛСН",
+      "summary": "Индуктивно принимает кодовый ток из рельсовой цепи и передаёт электрический сигнал в аппаратуру АЛСН.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На путеочистителе/в нижней передней части каждой секции над рельсовыми нитями."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "2 на секцию; 4 на штатный двухсекционный электровоз",
+            "Обозначения на схемах: ПК1, ПК2"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Приёмные катушки АЛСН",
+        "alsn-coils",
+        "приёмные катушки",
+        "катушки АЛСН",
+        "ПК1",
+        "ПК2"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-015"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-SF-005",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-SF-001",
+          "role": "sends_signal_to"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "alsn-coils",
+        "domain": "SF",
+        "systemIds": [
+          "VL-SYS-SF"
+        ],
+        "diagnosticScenarioIds": [
+          "alsn-code-loss",
+          "alsn-epk"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    }
+  ]
+}

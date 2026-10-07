@@ -1,0 +1,720 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.atlas.equipment.hv",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "VL-EQ-HV-001",
+      "VL-EQ-HV-002",
+      "VL-EQ-HV-003",
+      "VL-EQ-HV-004",
+      "VL-EQ-HV-005",
+      "VL-EQ-HV-006",
+      "VL-EQ-HV-007",
+      "VL-EQ-HV-008"
+    ],
+    "requiresRuntime": "1.1.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-equipment",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "VL-EQ-HV-001",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Главный выключатель",
+      "summary": "Коммутирует высоковольтное питание электровоза и отключается защитами.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Крыша секции; воздушный главный выключатель расположен в крышевом высоковольтном тракте."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Главный выключатель",
+        "gv",
+        "ГВ",
+        "ВОВ-25",
+        "главник"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-HV-001",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-002",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-004",
+          "role": "functional_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "gv",
+        "slug": "gv",
+        "domain": "HV",
+        "systemIds": [
+          "VL-SYS-HV"
+        ],
+        "diagnosticScenarioIds": [
+          "gv-no-close",
+          "gv-no-open",
+          "protection-trip",
+          "transformer-protection"
+        ],
+        "schemeNodeIds": [
+          "gv"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": [
+          "цепи удержания",
+          "защиты"
+        ]
+      }
+    },
+    {
+      "id": "VL-EQ-HV-002",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Токоприёмник",
+      "summary": "Снимает ток с контактного провода.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На крыше секции."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: Л-13У1, Л-14М1",
+            "2 на двухсекционный электровоз"
+          ]
+        },
+        {
+          "title": "Дополнительная профильная справка",
+          "lines": [
+            "Конкретный тип аппарата на реальной секции требует проверки исполнения."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Токоприёмник",
+        "pantograph",
+        "пантограф",
+        "рога",
+        "Л-13У1",
+        "Л-14М1"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-008",
+        "VL80S-PANTO-S02",
+        "VL80S-PANTO-S04"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-HV-002",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-002",
+          "role": "functional_link"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.pantograph-no-rise",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "ACCEPTANCE_ITEM",
+          "targetId": "VL80-REQ-03",
+          "role": "acceptance-check"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "pantograph",
+        "slug": "pantograph",
+        "domain": "HV",
+        "systemIds": [
+          "VL-SYS-HV"
+        ],
+        "diagnosticScenarioIds": [
+          "pantograph-no-rise",
+          "pantograph-slow-rise",
+          "pantograph-wrong-selection",
+          "smoke-fire-flashover"
+        ],
+        "schemeNodeIds": [
+          "pantograph"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": [
+          "защитный вентиль",
+          "контактная сеть"
+        ]
+      }
+    },
+    {
+      "id": "VL-EQ-HV-003",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Высоковольтная камера",
+      "summary": "Ограждает и размещает высоковольтные аппараты и блокировки.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Аппаратные отсеки ВВК1/ВВК2 на учебной схеме."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Высоковольтная камера",
+        "vvk",
+        "ВВК"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-HV-003",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-004",
+          "role": "functional_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "vvk",
+        "slug": "vvk",
+        "domain": "HV",
+        "systemIds": [
+          "VL-SYS-HV"
+        ],
+        "diagnosticScenarioIds": [
+          "gv-no-close",
+          "smoke-fire-flashover",
+          "transformer-protection",
+          "vvk-interlock-fault"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [
+          "vvk1"
+        ],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": [
+          "силовые контакторы",
+          "защиты"
+        ]
+      }
+    },
+    {
+      "id": "VL-EQ-HV-004",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Высоковольтный разъединитель крыши",
+      "summary": "Разъединяет высоковольтный крышевой ввод в предусмотренной схемой конфигурации.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На крыше; приводные рукоятки выведены в высоковольтную камеру над тяговым трансформатором"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: РВН-2",
+            "В базовой крышевой схеме используются разъединители 2 и 6; фактическое количество и назначение проверять по схеме конкретного исполнения.",
+            "Обозначения на схемах: 2, 6"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Высоковольтный разъединитель крыши",
+        "roof-disconnector",
+        "РВН-2",
+        "разъединитель крыши",
+        "2",
+        "6"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-HV-004",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-002",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-008",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "related-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "roof-disconnector",
+        "domain": "HV",
+        "systemIds": [
+          "VL-SYS-HV"
+        ],
+        "diagnosticScenarioIds": [
+          "gv-no-close",
+          "roof-insulation-signs"
+        ],
+        "schemeNodeIds": [
+          "rvn"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-HV-005",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Трансформатор тока высокого напряжения",
+      "summary": "Формирует измерительный сигнал тока первичной высоковольтной цепи для контроля и защит.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Крышевой/вводной высоковольтный тракт"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: ТПОФ-25",
+            "2 на двухсекционный электровоз",
+            "Обозначения на схемах: ТТ"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Трансформатор тока высокого напряжения",
+        "main-current-transformer",
+        "ТПОФ-25",
+        "трансформатор тока",
+        "ТТ"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-014"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-HV-005",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-004",
+          "role": "related-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "main-current-transformer",
+        "domain": "HV",
+        "systemIds": [
+          "VL-SYS-HV"
+        ],
+        "diagnosticScenarioIds": [
+          "protection-trip"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-HV-006",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Крышевой разрядник / ограничитель перенапряжений",
+      "summary": "Защищает крышевую высоковольтную цепь и подключённое оборудование от атмосферных перенапряжений со стороны контактной сети.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На крыше в высоковольтной цепи контактной сети"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: РВЭ-25М, ОПН-25УХЛ1",
+            "1 аппарат защиты от атмосферных перенапряжений в крышевой высоковольтной цепи секции; конкретный тип зависит от исполнения и периода выпуска",
+            "Обозначения на схемах: 5"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Крышевой разрядник / ограничитель перенапряжений",
+        "surge-arrester",
+        "РВЭ-25М",
+        "ОПН-25",
+        "ОПН-25УХЛ1",
+        "разрядник",
+        "ограничитель перенапряжений",
+        "5"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-008",
+        "VL-SRC-009"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-HV-006",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-008",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "related-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "surge-arrester",
+        "domain": "HV",
+        "systemIds": [
+          "VL-SYS-HV"
+        ],
+        "diagnosticScenarioIds": [
+          "roof-insulation-signs",
+          "smoke-fire-flashover"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-HV-007",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Помехоподавляющий дроссель",
+      "summary": "Ограничивает распространение высокочастотных помех по высоковольтному тракту.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Крышевой высоковольтный тракт"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: Д-51",
+            "2 на двухсекционный электровоз",
+            "Обозначения на схемах: ДП"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Помехоподавляющий дроссель",
+        "interference-choke",
+        "Д-51",
+        "дроссель помех",
+        "дроссель помехоподавления",
+        "ДП"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-014"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-HV-007",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-002",
+          "role": "related-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "interference-choke",
+        "domain": "HV",
+        "systemIds": [
+          "VL-SYS-HV"
+        ],
+        "diagnosticScenarioIds": [
+          "roof-insulation-signs"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-HV-008",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Крышевые высоковольтные шины",
+      "summary": "Соединяют токоприёмник и аппараты высоковольтного ввода по крыше секции.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На крыше между токоприёмником, разъединителями и аппаратом высоковольтного ввода"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Комплект токоведущих шинных соединений на секцию; число отдельных участков определяется крышевой схемой конкретного исполнения"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Крышевые высоковольтные шины",
+        "roof-bus",
+        "крышевые шины",
+        "шина 25 кВ"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-HV-008",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-002",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-004",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-006",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "related-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "roof-bus",
+        "domain": "HV",
+        "systemIds": [
+          "VL-SYS-HV"
+        ],
+        "diagnosticScenarioIds": [
+          "pantograph-contact-arcing",
+          "roof-insulation-signs"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    }
+  ]
+}

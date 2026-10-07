@@ -1,0 +1,1584 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.atlas.equipment.tr",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "VL-EQ-TR-001",
+      "VL-EQ-TR-002",
+      "VL-EQ-TR-003",
+      "VL-EQ-TR-004",
+      "VL-EQ-TR-005",
+      "VL-EQ-TR-006",
+      "VL-EQ-TR-007",
+      "VL-EQ-TR-008",
+      "VL-EQ-TR-009",
+      "VL-EQ-TR-010",
+      "VL-EQ-TR-011",
+      "VL-EQ-TR-012",
+      "VL-EQ-TR-013",
+      "VL-EQ-TR-014",
+      "VL-EQ-TR-015"
+    ],
+    "requiresRuntime": "1.1.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-equipment",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "VL-EQ-TR-001",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "ЭКГ",
+      "summary": "Ступенчато изменяет включение обмоток/цепей в тяговом режиме согласно схеме.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "В блоке тягового трансформатора в ВВК; базовая компоновка подтверждена техописанием, фактическую компоновку после модернизаций сверять по конкретной секции."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: ЭКГ-8Ж",
+            "1 главный контроллер ЭКГ-8Ж на секцию.",
+            "Обозначения на схемах: ГП"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "ЭКГ",
+        "ekg",
+        "главный контроллер",
+        "позиции ЭКГ",
+        "ЭКГ-8Ж",
+        "ГП"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-007",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-TR-001",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-004",
+          "role": "commanded_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-004",
+          "role": "switches"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-011",
+          "role": "works_with"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-003",
+          "role": "regulates_supply_to"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "ekg",
+        "slug": "ekg",
+        "domain": "TR",
+        "systemIds": [
+          "VL-SYS-TR"
+        ],
+        "diagnosticScenarioIds": [
+          "ekg-position-mismatch",
+          "ekg-slow-transition",
+          "ekg-stuck",
+          "traction-current-imbalance",
+          "traction-no-assemble",
+          "traction-one-section-low"
+        ],
+        "schemeNodeIds": [
+          "ekg"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [
+          {
+            "feature": "ekg_sme_sync_updated",
+            "condition": "section.variantBucket in [vl80s_1406_2318, vl80s_2319_2348, vl80s_2349_2653, vl80s_2654plus]",
+            "affects": "configuration",
+            "sourceRefs": [
+              "VL-SRC-007"
+            ],
+            "confidence": "confirmed_boundary",
+            "note": "С №1406 изменены цепи управления для исключения рассогласования ЭКГ при СМЕ; точную схему всё равно выбирать по секции."
+          }
+        ],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": [
+          "сигнализация положения"
+        ]
+      }
+    },
+    {
+      "id": "VL-EQ-TR-002",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Блок силовых аппаратов",
+      "summary": "Группирует коммутацию, ослабление поля и часть защит тяговой группы.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Секция, шкафной блок БСА №1/№2."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "2 блока на секцию: БСА №1 обслуживает силовые аппараты первой тележки, БСА №2 — второй.",
+            "Обозначения на схемах: БСА №1, БСА №2"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Блок силовых аппаратов",
+        "bsa",
+        "БСА",
+        "линейные контакторы",
+        "БСА №1",
+        "БСА №2"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-TR-002",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-003",
+          "role": "receives_power_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "switches_power_to"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-008",
+          "role": "contains"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-012",
+          "role": "works_with"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-004",
+          "role": "contains"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-005",
+          "role": "works_with"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "bsa",
+        "slug": "bsa",
+        "domain": "TR",
+        "systemIds": [
+          "VL-SYS-TR"
+        ],
+        "diagnosticScenarioIds": [
+          "protection-trip",
+          "traction-current-imbalance",
+          "traction-intermittent",
+          "traction-no-assemble",
+          "traction-one-section-low"
+        ],
+        "schemeNodeIds": [
+          "switchgear"
+        ],
+        "legacyHotspotIds": [
+          "bsa1"
+        ],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-TR-003",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Выпрямительная установка",
+      "summary": "Преобразует питание тяговой цепи для групп ТЭД.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "В ВВК секции расположены тяговые выпрямительные установки 61 и 62; базовая компоновка подтверждена техописанием, после модернизаций возможна иная аппаратура."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: ВУК-4000Т-02, ВОППД-3,15к-1,4к-02",
+            "2 тяговые выпрямительные установки на секцию — аппараты 61 и 62.",
+            "Обозначения на схемах: 61, 62"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Выпрямительная установка",
+        "rectifier",
+        "ВУ",
+        "выпрямитель",
+        "ВУК-4000Т-02",
+        "ВОППД-3,15к-1,4к-02",
+        "61",
+        "62"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-009",
+        "VL-SRC-011",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-TR-003",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-004",
+          "role": "fed_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-010",
+          "role": "feeds"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-002",
+          "role": "works_with"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "supplies"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-002",
+          "role": "cooled_by"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "rectifier",
+        "slug": "rectifier",
+        "domain": "TR",
+        "systemIds": [
+          "VL-SYS-TR"
+        ],
+        "diagnosticScenarioIds": [
+          "rectifier-group-fault",
+          "rectifier-overheat",
+          "traction-current-imbalance",
+          "traction-one-section-low"
+        ],
+        "schemeNodeIds": [
+          "rectifier"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [
+          {
+            "feature": "vu_protection_rp21_22",
+            "condition": "section.variantBucket in [vl80s_2349_2653, vl80s_2654plus] unless actualEquipmentOverrides says otherwise",
+            "affects": "configuration",
+            "sourceRefs": [
+              "VL-SRC-009",
+              "VL-SRC-011",
+              "VL-SRC-006"
+            ],
+            "confidence": "confirmed_boundary",
+            "note": "Применимость защиты выпрямительной установки зависит от позднего схемного изменения с №2349."
+          }
+        ],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-TR-004",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Тяговый трансформатор",
+      "summary": "Понижает и распределяет напряжение для тяговых и вспомогательных цепей.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Центральная трансформаторная зона секции."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: ОДЦЭ-5000/25Б",
+            "1 тяговый трансформатор на секцию.",
+            "Обозначения на схемах: 3 — тяговый трансформатор в базовой силовой схеме №937–1260"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Тяговый трансформатор",
+        "transformer",
+        "трансформатор",
+        "ТС",
+        "ОДЦЭ-5000/25Б",
+        "3 — тяговый трансформатор в базовой силовой схеме №937–1260"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-007",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-TR-004",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "fed_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-001",
+          "role": "regulated_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-003",
+          "role": "supplies"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-001",
+          "role": "supplies"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-006",
+          "role": "cooled_via"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "transformer",
+        "slug": "transformer",
+        "domain": "TR",
+        "systemIds": [
+          "VL-SYS-TR"
+        ],
+        "diagnosticScenarioIds": [
+          "gv-no-close",
+          "smoke-fire-flashover",
+          "transformer-oil-signs",
+          "transformer-protection"
+        ],
+        "schemeNodeIds": [
+          "transformer"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [
+          {
+            "selector": {
+              "serials": [
+                "1270"
+              ],
+              "type": "experimental_single"
+            },
+            "value": {
+              "difference": "опытный тяговый трансформатор с двухрядным расположением радиаторов"
+            },
+            "sourceRefs": [
+              "VL-SRC-007"
+            ],
+            "confidence": "confirmed_historical",
+            "note": "Не распространять на соседние номера."
+          }
+        ],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-TR-005",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "БУРТ",
+      "summary": "Автоматически регулирует реостатное торможение: принимает задание машиниста и сигналы обратной связи, формирует управление возбуждением ТЭД через ВУВ и координирует аппараты тормозного режима.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "В базовом исполнении БУРТ-125 — первая секция, аппаратная зона. Для БУРТ-16 и модернизированных машин расположение и состав подтверждают по секционной документации."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: БУРТ-125, БУРТ-16",
+            "В базовом исполнении блок БУРТ установлен только в первой секции электровоза; фактическое исполнение после модернизаций определяется по документации конкретных секций.",
+            "Обозначения на схемах: БА — блок управления реостатным торможением"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "БУРТ",
+        "burt",
+        "блок управления реостатным торможением",
+        "БУРТ-125",
+        "БУРТ-16",
+        "БА — блок управления реостатным торможением"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-009",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-TR-005",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-004",
+          "role": "commanded_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-013",
+          "role": "controls"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-014",
+          "role": "works_with"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-015",
+          "role": "receives_feedback_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-009",
+          "role": "coordinates"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-014",
+          "role": "interlocked_with"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-004",
+          "role": "works_with_protection"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "burt",
+        "slug": "burt",
+        "domain": "TR",
+        "systemIds": [
+          "VL-SYS-TR"
+        ],
+        "diagnosticScenarioIds": [
+          "rheostatic-brake",
+          "motor-fan-failure"
+        ],
+        "schemeNodeIds": [
+          "burt"
+        ],
+        "legacyHotspotIds": [
+          "burt"
+        ],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [
+          {
+            "feature": "burt16",
+            "condition": "section.variantBucket in [vl80s_2319_2348, vl80s_2349_2653, vl80s_2654plus] unless actualEquipmentOverrides says otherwise",
+            "affects": "configuration",
+            "sourceRefs": [
+              "VL-SRC-009"
+            ],
+            "confidence": "secondary_requires_section_check",
+            "note": "С №2319 вторичный эксплуатационный источник указывает БУРТ-16; не использовать номер как единственное доказательство после ремонтов/рекомплектации."
+          }
+        ],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-TR-006",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Тяговые двигатели",
+      "summary": "Создают тяговое усилие и участвуют в электрическом торможении.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На тележках локомотива."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: НБ-418К6",
+            "4 тяговых двигателя на секцию; 8 на штатный двухсекционный ВЛ80С.",
+            "Обозначения на схемах: ТЭД 1–4 на секцию"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Тяговые двигатели",
+        "traction-motors",
+        "ТЭД",
+        "двигатели",
+        "НБ-418К6",
+        "ТЭД 1–4 на секцию"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-007",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-TR-006",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-003",
+          "role": "fed_via"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-002",
+          "role": "switched_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-002",
+          "role": "cooled_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-007",
+          "role": "drives"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-006",
+          "role": "supported_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-014",
+          "role": "works_with"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "traction-motors",
+        "slug": "traction-motors",
+        "domain": "TR",
+        "systemIds": [
+          "VL-SYS-TR"
+        ],
+        "diagnosticScenarioIds": [
+          "persistent-wheel-slip",
+          "traction-current-imbalance",
+          "traction-motor-flashover",
+          "traction-motor-overheat",
+          "traction-no-assemble",
+          "traction-one-section-low"
+        ],
+        "schemeNodeIds": [
+          "ted"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [
+          {
+            "selector": {
+              "productionPeriod": "1985",
+              "serials": "UNKNOWN_FIVE_UNITS",
+              "type": "experimental_batch"
+            },
+            "value": {
+              "model": "НБ-514",
+              "difference": "опытные ТЭД"
+            },
+            "sourceRefs": [
+              "VL-SRC-007"
+            ],
+            "confidence": "confirmed_fact_serials_open",
+            "note": "Известен факт пяти машин; точные номера остаются открытым вопросом и не должны угадываться."
+          }
+        ],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-TR-007",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Тяговая передача",
+      "summary": "Передаёт вращающий момент от тягового двигателя к колёсной паре, снижая частоту вращения колёсной пары относительно якоря ТЭД и увеличивая реализуемый на ободе колеса крутящий момент.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На тележках между валом каждого ТЭД и соответствующей колёсной парой; зубчатые пары закрыты защитными кожухами."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "4 тяговые передачи на секцию — по одной на каждый тяговый двигатель и связанную с ним колёсную пару."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Тяговая передача",
+        "traction-drive",
+        "редуктор",
+        "зубчатая передача"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-TR-007",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "driven_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-003",
+          "role": "drives"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-006",
+          "role": "geometry_depends_on"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "traction-drive",
+        "slug": "traction-drive",
+        "domain": "TR",
+        "systemIds": [
+          "VL-SYS-TR"
+        ],
+        "diagnosticScenarioIds": [
+          "mechanical-noise-heating",
+          "persistent-wheel-slip",
+          "traction-gear-noise"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-TR-008",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Реверсор",
+      "summary": "Изменяет направление тока в цепях возбуждения тяговых двигателей для задания направления движения и своими блокировками подтверждает, что силовая схема может собираться в выбранном направлении.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Аппарат 63 расположен в БСА №1 и относится к первой тележке; аппарат 64 расположен в БСА №2 и относится ко второй тележке."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: ПКД-142",
+            "2 реверсора на секцию: аппарат 63 обслуживает первую тележку, аппарат 64 — вторую.",
+            "Обозначения на схемах: 63, 64"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Реверсор",
+        "reverser",
+        "реверсивный переключатель",
+        "ПКД-142",
+        "63",
+        "64"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-TR-008",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-004",
+          "role": "commanded_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-002",
+          "role": "installed_in"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "reverses_field_of"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-002",
+          "role": "interlocks_traction_assembly"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-001",
+          "role": "direction_signal_used_by"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "reverser",
+        "slug": "reverser",
+        "domain": "TR",
+        "systemIds": [
+          "VL-SYS-TR"
+        ],
+        "diagnosticScenarioIds": [
+          "reverser-no-confirm",
+          "traction-no-assemble"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-TR-009",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Тормозные резисторы",
+      "summary": "Рассеивают в виде тепла электрическую энергию, вырабатываемую тяговыми двигателями в генераторном режиме реостатного торможения.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Четыре блока R11–R14 расположены в кузове секции и включены в систему принудительного охлаждения: R11/R12 связаны с каналом МВ3, R13/R14 — с МВ4."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: БТР-135, БТР-171",
+            "4 блока на секцию — R11, R12, R13 и R14.",
+            "Обозначения на схемах: R11, R12, R13, R14"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Тормозные резисторы",
+        "brake-resistors",
+        "резисторы реостатного торможения",
+        "тормозные сопротивления",
+        "БТР-135",
+        "БТР-171",
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-TR-009",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "dissipates_energy_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-014",
+          "role": "connected_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-005",
+          "role": "controlled_in_mode_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-002",
+          "role": "cooled_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-005",
+          "role": "cooled_via"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-002",
+          "role": "works_with"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "brake-resistors",
+        "slug": "brake-resistors",
+        "domain": "TR",
+        "systemIds": [
+          "VL-SYS-TR"
+        ],
+        "diagnosticScenarioIds": [
+          "rheostatic-resistor-overheat",
+          "rheostatic-brake",
+          "motor-fan-failure"
+        ],
+        "schemeNodeIds": [
+          "brakeRes"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [
+          {
+            "feature": "brake_resistor_btr135_early",
+            "condition": "section.number < 1670 unless actualEquipmentOverrides says otherwise",
+            "affects": "configuration",
+            "sourceRefs": [
+              "VL-SRC-001"
+            ],
+            "confidence": "source_confirmed_with_section_check",
+            "note": "На ВЛ80С до №1670 применялись блоки БТР-135. Численные параметры БТР-171 на них не переносить."
+          },
+          {
+            "feature": "brake_resistor_btr171_late",
+            "condition": "section.number >= 1670 unless actualEquipmentOverrides says otherwise",
+            "affects": "configuration",
+            "sourceRefs": [
+              "VL-SRC-001"
+            ],
+            "confidence": "source_confirmed_with_section_check",
+            "note": "Для ВЛ80С с №1670 базовым подтверждённым исполнением считается БТР-171; после ремонтов и замен приоритет имеет actualEquipmentOverrides."
+          }
+        ],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-TR-010",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Сглаживающий реактор",
+      "summary": "Снижает пульсации выпрямленного тягового тока.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "В силовой аппаратной зоне под выпрямительными установками ВУ1 и ВУ2; каждый реактор связан со своей ветвью"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: РС-53",
+            "2 на секцию — аппараты 55 и 56",
+            "Обозначения на схемах: 55, 56"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Сглаживающий реактор",
+        "smoothing-reactor",
+        "РС-53",
+        "сглаживающий реактор",
+        "55",
+        "56"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-TR-010",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-003",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "related-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "smoothing-reactor",
+        "domain": "TR",
+        "systemIds": [
+          "VL-SYS-TR"
+        ],
+        "diagnosticScenarioIds": [
+          "traction-current-imbalance",
+          "protection-trip"
+        ],
+        "schemeNodeIds": [
+          "reactor"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-TR-011",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Переходной реактор",
+      "summary": "Ограничивает переходные токи при коммутации ступеней тяговой схемы.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На тяговом трансформаторе, под электропневматическим переключателем ступеней ЭКГ"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: ПРА-48",
+            "1 комплект на секцию; комплект содержит два реактора, работающих в соответствующих ветвях переходной схемы",
+            "Обозначения на схемах: 25"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Переходной реактор",
+        "transition-reactor",
+        "ПРА-48",
+        "переходной реактор",
+        "25"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-TR-011",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-001",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-004",
+          "role": "related-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "transition-reactor",
+        "domain": "TR",
+        "systemIds": [
+          "VL-SYS-TR"
+        ],
+        "diagnosticScenarioIds": [
+          "ekg-stuck",
+          "ekg-slow-transition"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-TR-012",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Индуктивный шунт",
+      "summary": "Участвует в цепях ослабления возбуждения тяговых двигателей.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Силовая аппаратная зона"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: ИШ-95, ИШ-009",
+            "8 на двухсекционный электровоз",
+            "Обозначения на схемах: ИШ1…ИШ4 на секцию"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Индуктивный шунт",
+        "inductive-shunt",
+        "ИШ-95",
+        "индуктивный шунт",
+        "ИШ-009",
+        "ИШ1…ИШ4 на секцию"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-014"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-TR-012",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-002",
+          "role": "related-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "inductive-shunt",
+        "domain": "TR",
+        "systemIds": [
+          "VL-SYS-TR"
+        ],
+        "diagnosticScenarioIds": [
+          "field-weakening-fault"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-TR-013",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Выпрямительная установка возбуждения",
+      "summary": "Формирует регулируемый ток возбуждения ТЭД в режиме реостатного торможения.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "В высоковольтной камере, во втором конце секции; фактическую компоновку сверяют по документации конкретной секции."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: ВУВ-758",
+            "По одной установке на секцию; 2 на штатный двухсекционный ВЛ80С.",
+            "Обозначения на схемах: 60, ВУВ"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Выпрямительная установка возбуждения",
+        "excitation-rectifier",
+        "ВУ возбуждения",
+        "ВУВ",
+        "ВУ 60",
+        "ВУВ-758",
+        "60"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-001",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-TR-013",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "supplies_excitation_to"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-005",
+          "role": "controlled_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-014",
+          "role": "interlocked_with"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "excitation-rectifier",
+        "domain": "TR",
+        "systemIds": [
+          "VL-SYS-TR"
+        ],
+        "diagnosticScenarioIds": [
+          "rheostatic-brake"
+        ],
+        "schemeNodeIds": [
+          "excitation"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-TR-014",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Переключатели тяга/торможение",
+      "summary": "Переключают силовые цепи ТЭД между тяговым и реостатным тормозным режимом.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "В блоках силовых аппаратов №1 и №2."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: ПКД-142",
+            "2 переключателя (49 и 50) на секцию; 4 на штатный двухсекционный ВЛ80С.",
+            "Обозначения на схемах: 49, 50"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Переключатели тяга/торможение",
+        "brake-switches",
+        "переключатели 49/50",
+        "49",
+        "50",
+        "ПКД-142"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-TR-014",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "switches_mode_for"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-009",
+          "role": "connects_to"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-013",
+          "role": "interlocked_with"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-014",
+          "role": "interlocked_with"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "brake-switches",
+        "domain": "TR",
+        "systemIds": [
+          "VL-SYS-TR"
+        ],
+        "diagnosticScenarioIds": [
+          "rheostatic-brake",
+          "traction-no-assemble"
+        ],
+        "schemeNodeIds": [
+          "brakeSwitch",
+          "bp"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-TR-015",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Датчик тока ДТ-39",
+      "summary": "Формирует электрический сигнал, пропорциональный току якоря либо току возбуждения тяговых двигателей в режиме реостатного торможения, для системы автоматического регулирования тормозного усилия.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Первичная токовая шина включается последовательно в контролируемую цепь якоря либо возбуждения ТЭД; конкретные обозначения и размещение датчиков сверяют по схеме секции."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: ДТ-39"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Датчик тока ДТ-39",
+        "traction-current-sensor",
+        "ДТ-39",
+        "датчик тока",
+        "датчик тока якоря/возбуждения"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-TR-015",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "measures_current_of"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-005",
+          "role": "control_signal_to"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "traction-current-sensor",
+        "domain": "TR",
+        "systemIds": [
+          "VL-SYS-TR"
+        ],
+        "diagnosticScenarioIds": [
+          "traction-current-imbalance",
+          "traction-current-surge"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    }
+  ]
+}

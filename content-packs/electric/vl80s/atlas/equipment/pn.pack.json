@@ -1,0 +1,1450 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.atlas.equipment.pn",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "VL-EQ-PN-001",
+      "VL-EQ-PN-002",
+      "VL-EQ-PN-003",
+      "VL-EQ-PN-004",
+      "VL-EQ-PN-005",
+      "VL-EQ-PN-006",
+      "VL-EQ-PN-007",
+      "VL-EQ-PN-008",
+      "VL-EQ-PN-009",
+      "VL-EQ-PN-010",
+      "VL-EQ-PN-011",
+      "VL-EQ-PN-012",
+      "VL-EQ-PN-013",
+      "VL-EQ-PN-014",
+      "VL-EQ-PN-015",
+      "VL-EQ-PN-016"
+    ],
+    "requiresRuntime": "1.1.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-equipment",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "VL-EQ-PN-001",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Главные резервуары",
+      "summary": "Хранят запас сжатого воздуха.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На крыше каждой секции расположена группа РС1–РС3 из трёх главных резервуаров."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "3 главных резервуара на секцию; 6 на штатный двухсекционный ВЛ80С.",
+            "Обозначения на схемах: РС1, РС2, РС3"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Главные резервуары",
+        "main-reservoirs",
+        "ГР",
+        "резервуары",
+        "РС1",
+        "РС2",
+        "РС3"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PN-001",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-003",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-004",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-003",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-005",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-012",
+          "role": "functional_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "main-reservoirs",
+        "slug": "main-reservoirs",
+        "domain": "PN",
+        "systemIds": [
+          "VL-SYS-PN"
+        ],
+        "diagnosticScenarioIds": [
+          "main-reservoir-leak",
+          "compressor-no-start"
+        ],
+        "schemeNodeIds": [
+          "gr"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": [
+          "предохранительные клапаны"
+        ]
+      }
+    },
+    {
+      "id": "VL-EQ-PN-002",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Клапан токоприёмника №245",
+      "summary": "Управляет подачей воздуха к приводу токоприёмника в соответствии с цепью управления.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Над правой входной дверью."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: ЭВТ-54А",
+            "Обозначения на схемах: 245, КЭП6"
+          ]
+        },
+        {
+          "title": "Дополнительная профильная справка",
+          "lines": [
+            "Признак электрической команды на клапан и фактическая подача воздуха являются разными наблюдаемыми признаками.",
+            "Точное обозначение и исполнение необходимо сверять по схеме конкретной машины."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Клапан токоприёмника №245",
+        "valve245",
+        "245",
+        "электропневматический клапан токоприёмника",
+        "ЭВТ-54А",
+        "КЭП6"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL80S-PANTO-S02",
+        "VL80S-PANTO-S03",
+        "VL80S-PANTO-S06"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PN-002",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-005",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-002",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-016",
+          "role": "functional_link"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.pantograph-no-rise",
+          "role": "related-diagnostic"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "valve245",
+        "slug": "valve245",
+        "domain": "PN",
+        "systemIds": [
+          "VL-SYS-PN"
+        ],
+        "diagnosticScenarioIds": [
+          "pantograph-no-rise",
+          "pantograph-slow-rise"
+        ],
+        "schemeNodeIds": [
+          "valve245"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": [
+          "защитный вентиль"
+        ]
+      }
+    },
+    {
+      "id": "VL-EQ-PN-003",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Регулятор давления компрессора",
+      "summary": "Автоматически включает и отключает мотор-компрессор в заданном диапазоне.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "В цепи контроля давления питательной системы/главных резервуаров; конкретное монтажное место сверяют по документации секции."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: АК-11БТЗ",
+            "По одному регулятору давления на секцию; 2 на двухсекционный электровоз.",
+            "Обозначения на схемах: РГД"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Регулятор давления компрессора",
+        "pressure-regulator",
+        "АК-11Б",
+        "регулятор давления",
+        "РГД",
+        "АК-11БТЗ"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PN-003",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-001",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-003",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-005",
+          "role": "functional_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "pressure-regulator",
+        "slug": "pressure-regulator",
+        "domain": "PN",
+        "systemIds": [
+          "VL-SYS-PN"
+        ],
+        "diagnosticScenarioIds": [
+          "compressor-long-run",
+          "compressor-no-start",
+          "compressor-pressure"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": [
+          "контактор"
+        ]
+      }
+    },
+    {
+      "id": "VL-EQ-PN-004",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Питательная магистраль",
+      "summary": "Передаёт запас сжатого воздуха от главных резервуаров к пневматическим потребителям.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Проходит вдоль секций от групп главных резервуаров, имеет межсекционное сообщение и ответвления к тормозным, управляющим и вспомогательным пневматическим потребителям."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Одна функционально общая питательная магистраль электровоза с межсекционным соединением и ответвлениями к потребителям.",
+            "Обозначения на схемах: ПМ"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Питательная магистраль",
+        "feed-line",
+        "ПМ",
+        "напорная магистраль"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PN-004",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-001",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-003",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-001",
+          "role": "functional_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "feed-line",
+        "slug": "feed-line",
+        "domain": "PN",
+        "systemIds": [
+          "VL-SYS-PN"
+        ],
+        "diagnosticScenarioIds": [
+          "feed-line-leak",
+          "main-reservoir-leak"
+        ],
+        "schemeNodeIds": [
+          "pm"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": [
+          "РД №304"
+        ]
+      }
+    },
+    {
+      "id": "VL-EQ-PN-005",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Предохранительный клапан главных резервуаров",
+      "summary": "Ограничивает опасное повышение давления в системе главных резервуаров.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "В напорном тракте главных резервуаров: КП1 расположен со стороны компрессора до КО1, КП2 — со стороны группы ГР после КО1."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: Э-216",
+            "По два предохранительных клапана на секцию (КП1 и КП2); 4 на двухсекционный электровоз.",
+            "Обозначения на схемах: КП1, КП2"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Предохранительный клапан главных резервуаров",
+        "safety-valve",
+        "предохранительный клапан",
+        "клапан ГР",
+        "КП1",
+        "КП2",
+        "Э-216"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PN-005",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-001",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-008",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-003",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CB-001",
+          "role": "functional_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "safety-valve",
+        "slug": "safety-valve",
+        "domain": "PN",
+        "systemIds": [
+          "VL-SYS-PN"
+        ],
+        "diagnosticScenarioIds": [
+          "main-reservoir-safety-valve",
+          "compressor-long-run"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-PN-006",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Импульсные линии манометров",
+      "summary": "Передают давление контролируемой пневматической точки к кабинному прибору.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "От точек отбора давления соответствующих пневматических цепей к манометрам на посту машиниста; фактическую трассировку трубок сверяют по схеме конкретной секции."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Импульсные линии манометров",
+        "instrument-lines",
+        "трубка манометра",
+        "линия прибора"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PN-006",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "receives_pressure_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-004",
+          "role": "receives_pressure_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-007",
+          "role": "receives_pressure_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-001",
+          "role": "receives_pressure_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CB-001",
+          "role": "transmits_pressure_to"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "instrument-lines",
+        "slug": "instrument-lines",
+        "domain": "PN",
+        "systemIds": [
+          "VL-SYS-PN"
+        ],
+        "diagnosticScenarioIds": [
+          "pneumatic-instrument-line-leak",
+          "pressure-gauge-mismatch",
+          "equalizing-reservoir-mismatch"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-PN-007",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Вспомогательный компрессор",
+      "summary": "Создаёт запас воздуха для вспомогательных пневматических цепей при отсутствии основного запаса.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Пневматическая/машинная зона"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: КБ-1В",
+            "Обозначения на схемах: КМ2, МКП"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Вспомогательный компрессор",
+        "aux-compressor",
+        "КБ-1В",
+        "вспомогательный компрессор",
+        "МКП",
+        "КМ2"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-004",
+        "VL-SRC-009",
+        "VL-SRC-011"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PN-007",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-013",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-016",
+          "role": "functional_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "aux-compressor",
+        "domain": "PN",
+        "systemIds": [
+          "VL-SYS-PN"
+        ],
+        "diagnosticScenarioIds": [
+          "compressor-pressure",
+          "pantograph-no-rise"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [
+          {
+            "feature": "aux_compressor_pvu7",
+            "condition": "section.variantBucket in [vl80s_2349_2653, vl80s_2654plus] unless actualEquipmentOverrides says otherwise",
+            "affects": "configuration",
+            "sourceRefs": [
+              "VL-SRC-009",
+              "VL-SRC-011",
+              "VL-SRC-006"
+            ],
+            "confidence": "confirmed_boundary",
+            "note": "С №2349 электродвигатель вспомогательного компрессора МКП включается контактором 135 через контакты ПВУ7; ПВУ7 отключает цепь контактора при достижении установленного давления. Фактическую уставку и послеремонтное исполнение сверять по документации секции."
+          }
+        ],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-PN-008",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Обратный клапан компрессора",
+      "summary": "Не допускает обратного воздействия давления главных резервуаров на компрессорный тракт.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На напорном трубопроводе основного компрессора перед маслоотделителем и группой главных резервуаров."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: Э-155",
+            "По одному клапану КО1 в напорном тракте основного компрессора каждой секции; 2 на двухсекционный электровоз.",
+            "Обозначения на схемах: КО1"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Обратный клапан компрессора",
+        "reverse-valve",
+        "Э-155",
+        "КО1",
+        "обратный клапан"
+      ],
+      "sourceRefs": [
+        "VL-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PN-008",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-003",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-010",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-001",
+          "role": "functional_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "reverse-valve",
+        "domain": "PN",
+        "systemIds": [
+          "VL-SYS-PN"
+        ],
+        "diagnosticScenarioIds": [
+          "compressor-pressure",
+          "main-reservoir-leak"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-PN-009",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Разгрузочный клапан компрессора",
+      "summary": "Сообщает нагнетательный участок компрессора с атмосферой при остановленном компрессоре и облегчает последующий запуск электродвигателя без противодавления.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На нагнетательном трубопроводе мотор-компрессора до обратного клапана, аппарат 246 в цепи управления компрессором."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: КР-50, КР-50-01",
+            "Обозначения на схемах: 246 — разгрузочный клапан компрессора"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Разгрузочный клапан компрессора",
+        "unloading-valve",
+        "КР-50",
+        "КР-50-01",
+        "разгрузочный клапан",
+        "246 — разгрузочный клапан компрессора"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PN-009",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-003",
+          "role": "unloads"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-008",
+          "role": "installed_before"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "unloading-valve",
+        "domain": "PN",
+        "systemIds": [
+          "VL-SYS-PN"
+        ],
+        "diagnosticScenarioIds": [
+          "compressor-no-start",
+          "compressor-long-run"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "source_confirmed",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-PN-010",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Маслоотделитель пневмосистемы",
+      "summary": "Удаляет часть масла и влаги из сжатого воздуха перед главными резервуарами.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На напорном трубопроводе после обратного клапана КО1 и перед группой главных резервуаров."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: Э-120/Т, Э-120Д",
+            "По одному маслоотделителю М01 в основном напорном тракте каждой секции; 2 на двухсекционный электровоз.",
+            "Обозначения на схемах: М01"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Маслоотделитель пневмосистемы",
+        "oil-separator",
+        "Э-120",
+        "3-120",
+        "маслоотделитель",
+        "М01",
+        "Э-120/Т",
+        "Э-120Д"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PN-010",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-008",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-003",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-001",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-012",
+          "role": "functional_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "oil-separator",
+        "domain": "PN",
+        "systemIds": [
+          "VL-SYS-PN"
+        ],
+        "diagnosticScenarioIds": [
+          "main-reservoir-slow-fill",
+          "compressor-pressure"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-PN-011",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Сборники конденсата главных резервуаров",
+      "summary": "Собирают конденсат для штатной продувки пневмосистемы.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Группа главных резервуаров"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "3 на секцию (РС11, РС12, РС13)",
+            "Обозначения на схемах: РС11, РС12, РС13"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Сборники конденсата главных резервуаров",
+        "condensate-collector",
+        "РС11",
+        "РС12",
+        "РС13",
+        "сборник конденсата"
+      ],
+      "sourceRefs": [
+        "VL-SRC-004",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PN-011",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-001",
+          "role": "related-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-012",
+          "role": "related-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "condensate-collector",
+        "domain": "PN",
+        "systemIds": [
+          "VL-SYS-PN"
+        ],
+        "diagnosticScenarioIds": [
+          "main-reservoir-leak"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-PN-012",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Клапаны продувки конденсата",
+      "summary": "Дистанционно выпускают конденсат из сборников главных резервуаров.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На резервуарах-сборниках РС11–РС13, куда отводится конденсат из главных резервуаров и связанных змеевиков."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: КП-110-01",
+            "По три клапана дистанционной продувки КЭП10–КЭП12 на секцию для сборников РС11–РС13.",
+            "Обозначения на схемах: КЭП10, КЭП11, КЭП12, РС11, РС12, РС13"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Клапаны продувки конденсата",
+        "purge-valves",
+        "КП-110",
+        "клапан продувки",
+        "КЭП10",
+        "КЭП11",
+        "КЭП12",
+        "КП-110-01",
+        "РС11",
+        "РС12",
+        "РС13"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PN-012",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-001",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-010",
+          "role": "functional_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "purge-valves",
+        "domain": "PN",
+        "systemIds": [
+          "VL-SYS-PN"
+        ],
+        "diagnosticScenarioIds": [
+          "main-reservoir-leak"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-PN-013",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Резервуар цепей управления",
+      "summary": "Создаёт локальный запас воздуха для пневматических цепей управления.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Пневматическая система секции"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Обозначения на схемах: РС5"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Резервуар цепей управления",
+        "control-reservoir",
+        "резервуар управления",
+        "РУ",
+        "РС5",
+        "50 л",
+        "150 л"
+      ],
+      "sourceRefs": [
+        "VL-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PN-013",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-007",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-016",
+          "role": "functional_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "control-reservoir",
+        "domain": "PN",
+        "systemIds": [
+          "VL-SYS-PN"
+        ],
+        "diagnosticScenarioIds": [
+          "compressor-pressure",
+          "pantograph-no-rise"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-PN-014",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Редуктор давления №348",
+      "summary": "Понижает давление питательной магистрали до давления, требуемого отдельным управляющим/тормозным потребителям.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "В пневматической тормозной цепи питания реле давления №304 от питательной магистрали; точное монтажное место сверяется по секции."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: Редуктор давления №348",
+            "Обозначения на схемах: №348"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Редуктор давления №348",
+        "reducer348",
+        "№348",
+        "редуктор 348"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PN-014",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-004",
+          "role": "fed_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-005",
+          "role": "feeds"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "reducer348",
+        "domain": "PN",
+        "systemIds": [
+          "VL-SYS-PN"
+        ],
+        "diagnosticScenarioIds": [
+          "independent-brake-no-apply",
+          "brake-cylinder-imbalance"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-PN-015",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Фильтр сжатого воздуха",
+      "summary": "Очищает воздух перед чувствительными пневматическими приборами.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Пневматические ветви управления и ЭПК"
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: Э-114"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Фильтр сжатого воздуха",
+        "air-filter114",
+        "Э-114",
+        "фильтр 114"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PN-015",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-016",
+          "role": "functional_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "air-filter114",
+        "domain": "PN",
+        "systemIds": [
+          "VL-SYS-PN"
+        ],
+        "diagnosticScenarioIds": [
+          "epk-leak",
+          "pneumatic-instrument-line-leak"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-PN-016",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Магистраль воздуха аппаратов управления",
+      "summary": "Подаёт подготовленный сжатый воздух к пневматическим приводам аппаратов управления.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "По секции от редуктора/резервуара к аппаратам"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Магистраль воздуха аппаратов управления",
+        "control-air-line",
+        "цепь управления воздухом",
+        "магистраль управления"
+      ],
+      "sourceRefs": [
+        "VL-SRC-004"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-PN-016",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-013",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-002",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-015",
+          "role": "functional_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "control-air-line",
+        "domain": "PN",
+        "systemIds": [
+          "VL-SYS-PN"
+        ],
+        "diagnosticScenarioIds": [
+          "pantograph-no-rise",
+          "gv-air-loss"
+        ],
+        "schemeNodeIds": [
+          "airPrep"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    }
+  ]
+}

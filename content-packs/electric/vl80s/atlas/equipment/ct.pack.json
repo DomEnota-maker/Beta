@@ -1,0 +1,607 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.atlas.equipment.ct",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "VL-EQ-CT-001",
+      "VL-EQ-CT-002",
+      "VL-EQ-CT-003",
+      "VL-EQ-CT-004",
+      "VL-EQ-CT-005",
+      "VL-EQ-CT-006"
+    ],
+    "requiresRuntime": "1.1.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-equipment",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "VL-EQ-CT-001",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Аккумуляторная батарея",
+      "summary": "Поддерживает низковольтные цепи управления при отсутствии или переходных режимах основного источника.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Под кузовом каждой секции в аккумуляторных ящиках; батарея разделена на два ящика по 21 элементу."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: НК-125",
+            "По одной аккумуляторной батарее на секцию; батарея состоит из 42 аккумуляторов НК-125, размещённых в двух металлических ящиках по 21 элементу.",
+            "Обозначения на схемах: 200А / 200Б — аккумуляторные батареи секций в базовой схеме ВЛ80С"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Аккумуляторная батарея",
+        "battery",
+        "АКБ",
+        "батарея",
+        "НК-125",
+        "200А / 200Б — аккумуляторные батареи секций в базовой схеме ВЛ80С"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-CT-001",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-002",
+          "role": "charged_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-005",
+          "role": "supplies"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-006",
+          "role": "protected_via"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "battery",
+        "slug": "battery",
+        "domain": "CT",
+        "systemIds": [
+          "VL-SYS-CT"
+        ],
+        "diagnosticScenarioIds": [
+          "control-voltage-low",
+          "battery-no-charge",
+          "battery-overcharge"
+        ],
+        "schemeNodeIds": [
+          "battery"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": [
+          "контакторы"
+        ]
+      }
+    },
+    {
+      "id": "VL-EQ-CT-002",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Источник зарядки цепей управления",
+      "summary": "Питает цепи управления и обеспечивает заряд аккумуляторной батареи в штатном режиме.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Источник питания и зарядки цепей управления расположен в распределительном щите: в базовом раннем исполнении — РЩ-34 с ТРПШ; с №2174 применён щит ЩР1 с иной схемой питания."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: ТРПШ-2 + РЩ-34 — базовое исполнение, ЩР1 — исполнение с №2174",
+            "По одному комплекту штатного источника питания и зарядки цепей управления на секцию; конкретное исполнение определяется номером и фактической комплектацией секции.",
+            "Обозначения на схемах: ТРПШ — трансформатор питания цепей управления, РЩ-34 / аппарат 210 — распределительный щит базового исполнения, ЩР1 — распределительный щит с №2174"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Источник зарядки цепей управления",
+        "charging-unit",
+        "ТРПШ",
+        "зарядный агрегат",
+        "ТРПШ-2 + РЩ-34 — базовое исполнение",
+        "ЩР1 — исполнение с №2174",
+        "ТРПШ — трансформатор питания цепей управления",
+        "РЩ-34 / аппарат 210 — распределительный щит базового исполнения",
+        "ЩР1 — распределительный щит с №2174"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-CT-002",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-001",
+          "role": "charges"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-005",
+          "role": "supplies"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-006",
+          "role": "protected_via"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "charging-unit",
+        "slug": "charging-unit",
+        "domain": "CT",
+        "systemIds": [
+          "VL-SYS-CT"
+        ],
+        "diagnosticScenarioIds": [
+          "battery-no-charge",
+          "battery-overcharge",
+          "control-voltage-low"
+        ],
+        "schemeNodeIds": [
+          "trpsh"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [
+          {
+            "feature": "control_power_shr1_2174",
+            "condition": "section.serialNumber >= 2174 unless actualEquipmentOverrides says otherwise",
+            "affects": "model_location_and_configuration",
+            "sourceRefs": [
+              "VL-SRC-006",
+              "VL-SRC-008"
+            ],
+            "confidence": "confirmed_boundary",
+            "note": "С №2174 вместо РЩ-34 с ТРПШ, ТН и дросселями ДС1/ДС3 установлен щит ЩР1, питаемый от трансформатора 48; фактическое исполнение после ремонтов сверять по секции."
+          }
+        ],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": [
+          "контроль напряжения"
+        ]
+      }
+    },
+    {
+      "id": "VL-EQ-CT-003",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Релейная панель цепей управления",
+      "summary": "Размещает реле, соединения и часть защит низковольтных цепей.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Релейная аппаратура цепей управления распределена по панелям ВВК; состав и размещение отдельных реле изменялись по мере выпуска и модернизаций."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Релейная панель цепей управления",
+        "relay-panel",
+        "панель реле",
+        "релейный шкаф"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-CT-003",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-005",
+          "role": "receives_power_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-006",
+          "role": "protected_via"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-004",
+          "role": "receives_commands_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-001",
+          "role": "interacts_with"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "relay-panel",
+        "slug": "relay-panel",
+        "domain": "CT",
+        "systemIds": [
+          "VL-SYS-CT"
+        ],
+        "diagnosticScenarioIds": [
+          "control-fuse-trip",
+          "intersection-command-loss",
+          "relay-panel-overheat",
+          "section-control-loss",
+          "traction-intermittent"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [
+          "relay-panels"
+        ],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [
+          {
+            "feature": "relay_panel_relayout_2174",
+            "condition": "section.serialNumber >= 2174 unless actualEquipmentOverrides says otherwise",
+            "affects": "location_and_configuration",
+            "sourceRefs": [
+              "VL-SRC-006"
+            ],
+            "confidence": "confirmed_boundary",
+            "note": "С №2174 часть аппаратов перенесена с панелей №2 и №7 на отдельную панель напротив распределительного щита; на панели №2 размещено реле пожарной сигнализации 442."
+          }
+        ],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": [
+          "межсекционные соединения",
+          "контакторы"
+        ]
+      }
+    },
+    {
+      "id": "VL-EQ-CT-004",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Контроллер машиниста",
+      "summary": "Формирует команды режима, набора/сброса и направления для цепей управления.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "На рабочем месте машиниста в кабине каждой секции."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: КМ-84",
+            "По одному контроллеру КМ-84 в каждой кабине/секции; 2 на штатный двухсекционный ВЛ80С.",
+            "Обозначения на схемах: КМЭ — контроллер машиниста"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Контроллер машиниста",
+        "driver-controller",
+        "КМ-84",
+        "контроллер КМ-84",
+        "КМЭ — контроллер машиниста"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-001",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-CT-004",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-005",
+          "role": "receives_power_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-003",
+          "role": "commands_via"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-001",
+          "role": "commands"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-005",
+          "role": "commands"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "driver-controller",
+        "domain": "CT",
+        "systemIds": [
+          "VL-SYS-CT"
+        ],
+        "diagnosticScenarioIds": [
+          "cab-control-mismatch",
+          "ekg-position-mismatch",
+          "ekg-stuck",
+          "rheostatic-brake",
+          "traction-intermittent"
+        ],
+        "schemeNodeIds": [
+          "km84"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-CT-005",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Шина и распределение цепей управления 50 В",
+      "summary": "Распределяет низковольтное питание цепей управления, реле и электропневматических аппаратов.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "По секции; панели и шкафы управления"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Шина и распределение цепей управления 50 В",
+        "control-50v",
+        "цепи 50 В",
+        "50 В"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-CT-005",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-002",
+          "role": "supplied_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-001",
+          "role": "backup_supplied_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-006",
+          "role": "distributed_via"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-003",
+          "role": "supplies"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-004",
+          "role": "supplies"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-002",
+          "role": "supplies"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "control-50v",
+        "domain": "CT",
+        "systemIds": [
+          "VL-SYS-CT"
+        ],
+        "diagnosticScenarioIds": [
+          "control-fuse-trip",
+          "control-voltage-low",
+          "intersection-command-loss",
+          "section-control-loss"
+        ],
+        "schemeNodeIds": [
+          "control50"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-CT-006",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Блок автоматических выключателей цепей управления",
+      "summary": "Защищает и секционирует низковольтные цепи управления и вспомогательных потребителей.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Блоки автоматических выключателей размещены в кабине и на панелях/в кузове в зависимости от защищаемой группы цепей; точную компоновку сверяют по схеме и перечню аппаратов секции."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Блок автоматических выключателей цепей управления",
+        "auto-breaker-block",
+        "автоматы",
+        "ВА",
+        "блок автоматов"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-CT-006",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-005",
+          "role": "receives_power_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-003",
+          "role": "protects"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-004",
+          "role": "protects"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "auto-breaker-block",
+        "domain": "CT",
+        "systemIds": [
+          "VL-SYS-CT"
+        ],
+        "diagnosticScenarioIds": [
+          "control-fuse-trip",
+          "section-control-loss"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    }
+  ]
+}

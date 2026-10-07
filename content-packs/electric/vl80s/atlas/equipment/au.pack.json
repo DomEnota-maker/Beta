@@ -1,0 +1,749 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.atlas.equipment.au",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "VL-EQ-AU-001",
+      "VL-EQ-AU-002",
+      "VL-EQ-AU-003",
+      "VL-EQ-AU-004",
+      "VL-EQ-AU-005",
+      "VL-EQ-AU-006",
+      "VL-EQ-AU-007"
+    ],
+    "requiresRuntime": "1.1.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-equipment",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "VL-EQ-AU-001",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Фазорасщепитель",
+      "summary": "Формирует питание вспомогательных трёхфазных цепей.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Секция, зона ФР на учебной схеме."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Фазорасщепитель",
+        "phase-splitter",
+        "ФР"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-010",
+        "VL-SRC-011",
+        "VL-SRC-007",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-AU-001",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-004",
+          "role": "fed_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-004",
+          "role": "supplies"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-002",
+          "role": "supplies"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-003",
+          "role": "supplies"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-006",
+          "role": "supplies"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "phase-splitter",
+        "slug": "phase-splitter",
+        "domain": "AU",
+        "systemIds": [
+          "VL-SYS-AU"
+        ],
+        "diagnosticScenarioIds": [
+          "phase-splitter-no-start",
+          "aux-common-loss",
+          "aux-machines"
+        ],
+        "schemeNodeIds": [
+          "phaseSplitter"
+        ],
+        "legacyHotspotIds": [
+          "phase-splitter"
+        ],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [
+          {
+            "feature": "fr_late_scheme",
+            "condition": "section.variantBucket == vl80s_2654plus unless actualEquipmentOverrides says otherwise",
+            "affects": "configuration",
+            "sourceRefs": [
+              "VL-SRC-010",
+              "VL-SRC-011",
+              "VL-SRC-006"
+            ],
+            "confidence": "confirmed_boundary",
+            "note": "С №2654 отмечено позднее изменение схемы ФР; рабочую детализацию подтверждать заводской схемой конкретной секции."
+          }
+        ],
+        "equipmentOverrides": [
+          {
+            "selector": {
+              "serialRange": "484-513",
+              "type": "experimental_batch"
+            },
+            "value": {
+              "model": "АЭ-92-4",
+              "role": "фазорасщепитель вместо НБ-455А"
+            },
+            "sourceRefs": [
+              "VL-SRC-007"
+            ],
+            "confidence": "confirmed_historical",
+            "note": "Опытная партия; не превращать в отдельный основной variant bucket."
+          }
+        ],
+        "unresolvedSystemConnections": [
+          "обмотка собственных нужд",
+          "контакторы"
+        ]
+      }
+    },
+    {
+      "id": "VL-EQ-AU-002",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Мотор-вентиляторы",
+      "summary": "Обеспечивают охлаждение закреплённых групп оборудования.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Секция, зоны МВ3/МВ4 на учебной схеме."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Мотор-вентиляторы",
+        "motor-fans",
+        "МВ",
+        "МВ3",
+        "МВ4"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-AU-002",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-001",
+          "role": "receives_power_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-004",
+          "role": "switched_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-005",
+          "role": "supplies_airflow_to"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-007",
+          "role": "monitored_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-003",
+          "role": "cools"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "cools"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-009",
+          "role": "cools"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "motor-fans",
+        "slug": "motor-fans",
+        "domain": "AU",
+        "systemIds": [
+          "VL-SYS-AU"
+        ],
+        "diagnosticScenarioIds": [
+          "fan-low-airflow",
+          "fan-vibration",
+          "motor-fan-failure",
+          "rectifier-overheat",
+          "rheostatic-brake",
+          "traction-motor-overheat"
+        ],
+        "schemeNodeIds": [
+          "fans12",
+          "fans34"
+        ],
+        "legacyHotspotIds": [
+          "mv3"
+        ],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": [
+          "контакторы",
+          "ТЭД/ВУ/резисторы"
+        ]
+      }
+    },
+    {
+      "id": "VL-EQ-AU-003",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Мотор-компрессор",
+      "summary": "Создаёт сжатый воздух для тормозов и пневмоаппаратов.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "В высоковольтной камере секции, в зоне блока мотор-компрессора; точную монтажную компоновку сверяют по документации секции."
+          ]
+        },
+        {
+          "title": "Исполнение",
+          "lines": [
+            "Исполнения/обозначения: КТ6-Эл",
+            "По одному мотор-компрессору на секцию; 2 на штатный двухсекционный ВЛ80С.",
+            "Обозначения на схемах: КМ1"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Мотор-компрессор",
+        "compressor",
+        "МК",
+        "КТ-6Эл",
+        "КТ6-Эл",
+        "КМ1"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006",
+        "VL-SRC-007",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-AU-003",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-008",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-010",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-001",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-003",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-004",
+          "role": "functional_link"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-012",
+          "role": "functional_link"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "compressor",
+        "slug": "compressor",
+        "domain": "AU",
+        "systemIds": [
+          "VL-SYS-AU"
+        ],
+        "diagnosticScenarioIds": [
+          "compressor-long-run",
+          "compressor-no-start",
+          "compressor-overheat",
+          "compressor-pressure",
+          "main-reservoir-leak"
+        ],
+        "schemeNodeIds": [
+          "motorCompressor"
+        ],
+        "legacyHotspotIds": [
+          "mk"
+        ],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [
+          {
+            "selector": {
+              "serials": [
+                "882",
+                "883"
+              ],
+              "type": "experimental_pair"
+            },
+            "value": {
+              "model": "КТ-6Эл",
+              "difference": "повышенная частота вращения"
+            },
+            "sourceRefs": [
+              "VL-SRC-007"
+            ],
+            "confidence": "confirmed_historical",
+            "note": "Точное техническое исполнение хранить как section override."
+          }
+        ],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-AU-004",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Контакторы вспомогательных машин",
+      "summary": "Коммутируют питание отдельных вспомогательных двигателей по командам и условиям защиты.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Панели контакторов в аппаратной зоне конкретной секции."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Контакторы вспомогательных машин",
+        "aux-contactor",
+        "контактор МВ",
+        "контактор МК",
+        "контакторы собственных нужд"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-AU-004",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-001",
+          "role": "receives_power_from"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-003",
+          "role": "controlled_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-005",
+          "role": "controlled_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-002",
+          "role": "switches"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-003",
+          "role": "switches"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-006",
+          "role": "switches"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "aux-contactor",
+        "slug": "aux-contactor",
+        "domain": "AU",
+        "systemIds": [
+          "VL-SYS-AU"
+        ],
+        "diagnosticScenarioIds": [
+          "aux-machine-single-trip",
+          "aux-common-loss",
+          "aux-contactor-chatter"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [
+          "relay-panels"
+        ],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": [
+          "защиты"
+        ]
+      }
+    },
+    {
+      "id": "VL-EQ-AU-005",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Воздуховоды и заслонки охлаждения",
+      "summary": "Распределяют поток мотор-вентиляторов по охлаждаемым группам оборудования.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Воздуховоды, форкамеры, жалюзи и заслонки проходят по машинному отделению к охлаждаемым группам оборудования; точная трассировка зависит от компоновки и последующих модернизаций конкретной секции."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Воздуховоды и заслонки охлаждения",
+        "ventilation-ducts",
+        "воздуховод",
+        "заслонка",
+        "тракт охлаждения"
+      ],
+      "sourceRefs": [
+        "VL-SRC-001",
+        "VL-SRC-006"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-AU-005",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-002",
+          "role": "fed_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-007",
+          "role": "monitored_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-003",
+          "role": "cools"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "cools"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-009",
+          "role": "cools"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": "ventilation-ducts",
+        "slug": "ventilation-ducts",
+        "domain": "AU",
+        "systemIds": [
+          "VL-SYS-AU"
+        ],
+        "diagnosticScenarioIds": [
+          "fan-low-airflow",
+          "motor-fan-failure",
+          "rectifier-overheat",
+          "rheostatic-resistor-overheat",
+          "ventilation-duct-damage"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "documented_plus_system_text",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-AU-006",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Электронасос масла тягового трансформатора",
+      "summary": "Обеспечивает циркуляцию масла в системе охлаждения тягового трансформатора.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Трансформаторный отсек"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Электронасос масла тягового трансформатора",
+        "oil-pump",
+        "4ТТ-63/10",
+        "маслонасос"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-001",
+        "VL-SRC-008"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-AU-006",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-004",
+          "role": "serves"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-004",
+          "role": "switched_by"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-005",
+          "role": "works_with"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "oil-pump",
+        "domain": "AU",
+        "systemIds": [
+          "VL-SYS-AU"
+        ],
+        "diagnosticScenarioIds": [
+          "aux-machine-single-trip",
+          "transformer-oil-signs"
+        ],
+        "schemeNodeIds": [
+          "oilPump"
+        ],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    },
+    {
+      "id": "VL-EQ-AU-007",
+      "type": "EQUIPMENT",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Устройство контроля вентиляции",
+      "summary": "Контролирует наличие требуемого воздушного потока в связанных вентиляционных трактах.",
+      "blocks": [
+        {
+          "title": "Расположение",
+          "lines": [
+            "Воздуховоды / охлаждаемые группы"
+          ]
+        }
+      ],
+      "searchTerms": [
+        "Устройство контроля вентиляции",
+        "air-flow-switch",
+        "УПВ-5",
+        "УПВ",
+        "контроль потока"
+      ],
+      "sourceRefs": [
+        "VL-SRC-006",
+        "VL-SRC-001"
+      ],
+      "links": [
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-EQ-AU-007",
+          "role": "technical-description"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-005",
+          "role": "monitors"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-002",
+          "role": "monitors"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-CT-003",
+          "role": "control_signal_to"
+        }
+      ],
+      "migrationRefs": {
+        "legacyId": null,
+        "slug": "air-flow-switch",
+        "domain": "AU",
+        "systemIds": [
+          "VL-SYS-AU"
+        ],
+        "diagnosticScenarioIds": [
+          "fan-low-airflow",
+          "motor-fan-failure"
+        ],
+        "schemeNodeIds": [],
+        "legacyHotspotIds": [],
+        "evidenceStatus": "BASE_CONFIRMED",
+        "relationCoverage": "system_text_only",
+        "featureRules": [],
+        "equipmentOverrides": [],
+        "unresolvedSystemConnections": []
+      }
+    }
+  ]
+}
