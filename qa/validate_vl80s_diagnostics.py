@@ -7,7 +7,9 @@ ROOT = Path(__file__).resolve().parents[1]
 MODEL_ROOT = ROOT / "content-packs/electric/vl80s"
 DIAG_ROOT = MODEL_ROOT / "diagnostics"
 INDEX = json.loads((DIAG_ROOT / "index.json").read_text(encoding="utf-8"))
-GRAPH = json.loads((DIAG_ROOT / "graph.json").read_text(encoding="utf-8"))
+RELATION_GRAPH = json.loads(
+    (DIAG_ROOT / "relation-graph.json").read_text(encoding="utf-8")
+)
 REPORT = json.loads((MODEL_ROOT / "migration/diagnostics-report.json").read_text(encoding="utf-8"))
 RUNTIME = json.loads((MODEL_ROOT / "runtime-index.json").read_text(encoding="utf-8"))
 
@@ -15,6 +17,10 @@ assert INDEX["modelId"] == "vl80s"
 assert INDEX["sourceSnapshot"]["commit"] == "3176d6ee228f0ed4b78371f45209e10c1c724eff"
 assert INDEX["sourceSnapshot"]["blobSha"] == "6ffdfdabf2f467dcdc4958768905f2b675ac0c26"
 assert INDEX["publicationPolicy"] == "ALL_CANDIDATE_UNTIL_FEATURE_RUNTIME_ACCEPTANCE"
+assert INDEX["runtimePayloadStatus"] == "RELATION_GRAPH_ONLY_NOT_EXECUTABLE"
+assert INDEX["interactiveRuntimeSource"] == "DiagnosticRepository.scenarios"
+assert INDEX["relationGraph"] == "electric/vl80s/diagnostics/relation-graph.json"
+assert not (DIAG_ROOT / "graph.json").exists()
 assert INDEX["goldenReferenceCandidate"] == "vl80s.diag.pantograph-no-rise"
 
 recommended_paths = INDEX["recommendedPacks"]
@@ -71,15 +77,19 @@ assert len(recommended_ids) == 44, len(recommended_ids)
 assert len(extended_ids) == 59, len(extended_ids)
 assert REPORT["scenarioCount"] == 103
 assert REPORT["edgeCount"] == 1181
+assert REPORT["relationGraphOnly"] is True
+assert REPORT["donorRuntimeBaselineScenarioCount"] == 93
+assert REPORT["catalogScenarioCount"] == 103
+assert REPORT["runtimeBaselineMetadataMismatch"] is True
 assert REPORT["recommendedCount"] == 44
 assert REPORT["supplementalOperationalCount"] == 59
 assert REPORT["publicationCandidateCount"] == 103
 assert REPORT["legacyGeneralVariantCount"] == 103
 
 assert len(aliases) == 103
-assert set(GRAPH["scenarioIdMap"].values()) == set(entries)
-assert set(GRAPH["scenarioIdMap"].keys()) == set(aliases)
-assert len(GRAPH["runtimePayload"]["edges"]) == 1181
+assert set(RELATION_GRAPH["scenarioIdMap"].values()) == set(entries)
+assert set(RELATION_GRAPH["scenarioIdMap"].keys()) == set(aliases)
+assert len(RELATION_GRAPH["runtimePayload"]["edges"]) == 1181
 
 candidate = entries["vl80s.diag.pantograph-no-rise"]
 assert candidate["diagnosticMeta"]["acceptanceGate"] == "GOLDEN_REFERENCE_PASS_NOT_PASSED"
@@ -151,5 +161,5 @@ print(
     len(entries),
     len(recommended_ids),
     len(extended_ids),
-    len(GRAPH["runtimePayload"]["edges"]),
+    len(RELATION_GRAPH["runtimePayload"]["edges"]),
 )
