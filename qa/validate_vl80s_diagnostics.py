@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Validation revision 2: acceptance reverse links are now part of the closed graph.
 import json
 from pathlib import Path
 
