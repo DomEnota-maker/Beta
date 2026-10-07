@@ -77,6 +77,9 @@ jobs:
       - name: Validate migrated VL80S equipment and technical data
         run: python3 qa/validate_vl80s_equipment_migration.py
 
+      - name: Validate VL80S profile catalog
+        run: python3 qa/validate_vl80s_profile_catalog.py
+
       - name: Show project boundaries
         run: gradle projects --console=plain
 
@@ -120,6 +123,9 @@ jobs:
           with zipfile.ZipFile(apk) as archive:
               names = archive.namelist()
               assert names.count("assets/electric/vl80s/runtime-index.json") == 1
+              profile_catalog = index.get("profileCatalog")
+              assert profile_catalog
+              assert names.count("assets/" + profile_catalog) == 1
               for pack in index["packs"]:
                   asset = "assets/" + pack
                   assert names.count(asset) == 1, (asset, names.count(asset))

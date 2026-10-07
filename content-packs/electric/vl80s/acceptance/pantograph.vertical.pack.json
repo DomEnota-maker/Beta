@@ -4,10 +4,14 @@
     "packId": "vl80s.acceptance.pantograph.vertical-001",
     "packVersion": "0.1.0",
     "family": "ELECTRIC",
-    "modelIds": ["vl80s"],
-    "variantIds": ["vl80s-general"],
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
     "locale": "ru-RU",
-    "entries": ["VL80-REQ-03"],
+    "entries": [
+      "VL80-REQ-03"
+    ],
     "requiresRuntime": "1.1.0",
     "sourceCatalogVersion": "test-3176d6ee-acceptance",
     "checksums": {}
@@ -16,10 +20,14 @@
     {
       "id": "VL80-REQ-03",
       "type": "ACCEPTANCE_ITEM",
-      "owner": {"kind": "MODEL", "modelId": "vl80s"},
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
       "applicability": {
-        "modelIds": ["vl80s"],
-        "variantIds": ["vl80s-general"]
+        "modelIds": [
+          "vl80s"
+        ]
       },
       "publicationStatus": "ACTIVE",
       "provenance": "MANUFACTURER",

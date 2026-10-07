@@ -26,5 +26,6 @@
     "electric/vl80s/technical-data/equipment/tr.pack.json",
     "electric/vl80s/acceptance/pantograph.vertical.pack.json",
     "electric/vl80s/diagnostics/recommended/pantograph-no-rise.candidate.pack.json"
-  ]
+  ],
+  "profileCatalog": "electric/vl80s/profile-catalog.json"
 }

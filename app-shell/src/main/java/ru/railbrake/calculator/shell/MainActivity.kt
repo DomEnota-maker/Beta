@@ -24,6 +24,7 @@ import ru.railbrake.calculator.navigation.featureDestination
 import ru.railbrake.calculator.runtime.ContentPackIndexJsonLoader
 import ru.railbrake.calculator.runtime.ContentPackJsonLoader
 import ru.railbrake.calculator.runtime.ContentRegistry
+import ru.railbrake.calculator.runtime.ModelProfileCatalogJsonLoader
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -120,6 +121,17 @@ class MainActivity : ComponentActivity() {
             "Unexpected model content index: ${index.modelId}"
         }
 
+        val profileCatalogPath = requireNotNull(index.profileCatalog) {
+            "VL80S profile catalog is not configured"
+        }
+        val profileJson = assets.open(profileCatalogPath)
+            .bufferedReader()
+            .use { it.readText() }
+        val profileCatalog = ModelProfileCatalogJsonLoader().parse(profileJson)
+        check(profileCatalog.modelId == ModelId("vl80s")) {
+            "Unexpected profile catalog: ${profileCatalog.modelId.value}"
+        }
+
         val installationIssues = index.packs.flatMap { path ->
             val json = assets.open(path).bufferedReader().use { it.readText() }
             registry.install(loader.parse(json))
@@ -136,7 +148,7 @@ class MainActivity : ComponentActivity() {
             context = RuntimeContext(
                 workingModelId = ModelId("vl80s"),
                 viewedModelId = ModelId("vl80s"),
-                activeVariantId = VariantId("vl80s-general"),
+                activeVariantId = profileCatalog.defaultVariantId,
             ),
         )
     }

@@ -13,28 +13,48 @@
       "modelId": "vl80s",
       "title": "ВЛ80С",
       "family": "ELECTRIC",
-      "variantIds": ["vl80s-general"],
+      "variantIds": [
+        "vl80s_unknown",
+        "vl80s_pre697",
+        "vl80s_697_1260",
+        "vl80s_1261_1405",
+        "vl80s_1406_2318",
+        "vl80s_2319_2348",
+        "vl80s_2349_2653",
+        "vl80s_2654plus",
+        "vl80s_modified_or_mixed"
+      ],
       "root": "content-packs/electric/vl80s"
     },
     {
       "modelId": "ermak",
       "title": "2ЭС5К/3ЭС5К «Ермак»",
       "family": "ELECTRIC",
-      "variantIds": ["2es5k", "3es5k"],
+      "variantIds": [
+        "2es5k",
+        "3es5k"
+      ],
       "root": "content-packs/electric/ermak"
     },
     {
       "modelId": "chme3-family",
       "title": "ЧМЭ3/ЧМЭ3Т/ЧМЭ3Э",
       "family": "DIESEL",
-      "variantIds": ["chme3", "chme3t", "chme3e"],
+      "variantIds": [
+        "chme3",
+        "chme3t",
+        "chme3e"
+      ],
       "root": "content-packs/diesel/chme3-family"
     },
     {
       "modelId": "tem2-family",
       "title": "ТЭМ2/ТЭМ2У",
       "family": "DIESEL",
-      "variantIds": ["tem2", "tem2u"],
+      "variantIds": [
+        "tem2",
+        "tem2u"
+      ],
       "root": "content-packs/diesel/tem2-family"
     }
   ],
