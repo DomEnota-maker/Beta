@@ -21,6 +21,7 @@ import ru.railbrake.calculator.link.LinkNavigationResult
 import ru.railbrake.calculator.link.LinkResolver
 import ru.railbrake.calculator.navigation.FeatureDestination
 import ru.railbrake.calculator.navigation.featureDestination
+import ru.railbrake.calculator.runtime.ContentPackIndexJsonLoader
 import ru.railbrake.calculator.runtime.ContentPackJsonLoader
 import ru.railbrake.calculator.runtime.ContentRegistry
 
@@ -111,14 +112,15 @@ class MainActivity : ComponentActivity() {
         val loader = ContentPackJsonLoader()
         val registry = ContentRegistry()
 
-        val paths = listOf(
-            "electric/vl80s/atlas/pantograph.vertical.pack.json",
-            "electric/vl80s/technical-data/pantograph.vertical.pack.json",
-            "electric/vl80s/acceptance/pantograph.vertical.pack.json",
-            "electric/vl80s/diagnostics/recommended/pantograph-no-rise.candidate.pack.json",
-        )
+        val indexJson = assets.open("electric/vl80s/runtime-index.json")
+            .bufferedReader()
+            .use { it.readText() }
+        val index = ContentPackIndexJsonLoader().parse(indexJson)
+        check(index.modelId == "vl80s") {
+            "Unexpected model content index: ${index.modelId}"
+        }
 
-        val installationIssues = paths.flatMap { path ->
+        val installationIssues = index.packs.flatMap { path ->
             val json = assets.open(path).bufferedReader().use { it.readText() }
             registry.install(loader.parse(json))
         }

@@ -99,13 +99,29 @@ jobs:
       - name: Assemble debug
         run: gradle :design-system:assembleDebug :feature-acceptance:assembleDebug :feature-atlas:assembleDebug :app-shell:assembleDebug --stacktrace --console=plain
 
-      - name: Verify canonical VL80S assets in APK
+      - name: Verify indexed VL80S assets in APK
         run: |
-          APK="app-shell/build/outputs/apk/debug/app-shell-debug.apk"
-          test -f "$APK"
-          for ASSET in             "assets/electric/vl80s/atlas/pantograph.vertical.pack.json"             "assets/electric/vl80s/technical-data/pantograph.vertical.pack.json"             "assets/electric/vl80s/acceptance/pantograph.vertical.pack.json"             "assets/electric/vl80s/diagnostics/recommended/pantograph-no-rise.candidate.pack.json"
-          do
-            test "$(unzip -l "$APK" | grep -F -c "$ASSET")" -eq 1
-          done
-          ! unzip -l "$APK" | grep -F "RailBrakeCalculator.zip"
-          ! unzip -l "$APK" | grep -F "assets/patch/"
+          python3 - <<'PY'
+          import json
+          import zipfile
+          from pathlib import Path
+
+          apk = Path("app-shell/build/outputs/apk/debug/app-shell-debug.apk")
+          assert apk.is_file(), apk
+
+          index_path = Path("content-packs/electric/vl80s/runtime-index.json")
+          index = json.loads(index_path.read_text(encoding="utf-8"))
+          assert index["modelId"] == "vl80s"
+          assert len(index["packs"]) == len(set(index["packs"]))
+
+          with zipfile.ZipFile(apk) as archive:
+              names = archive.namelist()
+              assert names.count("assets/electric/vl80s/runtime-index.json") == 1
+              for pack in index["packs"]:
+                  asset = "assets/" + pack
+                  assert names.count(asset) == 1, (asset, names.count(asset))
+              assert "RailBrakeCalculator.zip" not in names
+              assert not any(name.startswith("assets/patch/") for name in names)
+
+          print("VL80S_INDEXED_ASSETS_PASS", len(index["packs"]))
+          PY
