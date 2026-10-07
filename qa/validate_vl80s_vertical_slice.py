@@ -112,9 +112,20 @@ assert candidate["publicationStatus"] == "CANDIDATE"
 assert candidate["actionDisposition"] == "CONDITIONAL_ACTION"
 assert "GOLDEN REFERENCE PASS" in " ".join(candidate["details"])
 
-# Everything except the deliberately gated diagnostic candidate is active.
+# Deliberately gated content stays non-active. The diagnostic candidate is
+# always present; the fire-signal scheme appears after scheme migration and
+# remains CANDIDATE until its actual-equipment feature gate is implemented.
+expected_candidates = {
+    "vl80s.diag.pantograph-no-rise",
+}
+if "VL-SCH-EL-FIRE-SIGNAL" in entries:
+    expected_candidates.add("VL-SCH-EL-FIRE-SIGNAL")
+
+for candidate_id in expected_candidates:
+    assert entries[candidate_id]["publicationStatus"] == "CANDIDATE", candidate_id
+
 for entry_id, entry in entries.items():
-    if entry_id == "vl80s.diag.pantograph-no-rise":
+    if entry_id in expected_candidates:
         continue
     assert entry["publicationStatus"] == "ACTIVE", entry_id
 

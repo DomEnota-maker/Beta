@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Migration revision 2: keep profile-required fire signalling fail-closed.
 import json
 from collections import defaultdict
 from pathlib import Path
