@@ -63,8 +63,13 @@ for entry in all_entries.values():
     assert entry["type"] == "ACCEPTANCE_ITEM"
     assert entry["owner"] == {"kind": "MODEL", "modelId": "vl80s"}
     assert entry["publicationStatus"] == "ACTIVE"
-    assert all(link["type"] != "RELATED_SCENARIO" for link in entry.get("links", []))
     for link in entry.get("links", []):
+        if link["type"] == "RELATED_SCENARIO":
+            assert link["targetId"].startswith("vl80s.diag."), (
+                entry["id"],
+                link["targetId"],
+            )
+            continue
         if link["type"] == "EQUIPMENT":
             acceptance_links += 1
             equipment_id = link["targetId"]
@@ -93,6 +98,34 @@ assert "electric/vl80s/acceptance/pantograph.vertical.pack.json" not in runtime_
 assert runtime_index["featureIndexes"]["acceptance"] == (
     "electric/vl80s/acceptance/index.json"
 )
+
+# Once diagnostics are migrated, acceptance -> diagnostic links must resolve
+# to canonical runtime entries. Before that feature index exists, the
+# acceptance migration is still valid without those reverse links.
+if "diagnostics" in runtime_index.get("featureIndexes", {}):
+    runtime_entries = {}
+    runtime_aliases = {}
+    for relative in runtime_index["packs"]:
+        document = json.loads(
+            (ROOT / "content-packs" / relative).read_text(encoding="utf-8")
+        )
+        for runtime_entry in document.get("entries", []):
+            runtime_entries[runtime_entry["id"]] = runtime_entry
+            for alias in runtime_entry.get("aliases", []):
+                runtime_aliases[alias] = runtime_entry["id"]
+
+    for entry in all_entries.values():
+        for link in entry.get("links", []):
+            if link["type"] != "RELATED_SCENARIO":
+                continue
+            target = link["targetId"]
+            canonical = (
+                target
+                if target in runtime_entries
+                else runtime_aliases.get(target)
+            )
+            assert canonical is not None, (entry["id"], target)
+            assert runtime_entries[canonical]["type"] == "DIAGNOSTIC_SCENARIO"
 
 print(
     "VL80S_ACCEPTANCE_MIGRATION_PASS",
