@@ -1,0 +1,11 @@
+VL80S post-migration validation trigger
+
+Validated head before trigger:
+73c8262082d6746d912092da37e522053f2334ce
+
+Purpose:
+- run modular-bootstrap after workflow-generated migration commits;
+- validate 89 equipment + 89 technical-data entries;
+- validate 8 electrical + 8 pneumatic schemes;
+- validate profile/acceptance/diagnostics/runtime index;
+- assemble APK from canonical modular assets.
