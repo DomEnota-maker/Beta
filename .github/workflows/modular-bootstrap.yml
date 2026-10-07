@@ -83,6 +83,9 @@ jobs:
       - name: Validate migrated VL80S acceptance
         run: python3 qa/validate_vl80s_acceptance.py
 
+      - name: Validate migrated VL80S diagnostics
+        run: python3 qa/validate_vl80s_diagnostics.py
+
       - name: Validate migrated VL80S electrical and pneumatic schemes
         run: python3 qa/validate_vl80s_schemes.py
 
