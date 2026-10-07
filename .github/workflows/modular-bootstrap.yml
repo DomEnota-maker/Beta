@@ -1,0 +1,56 @@
+name: Modular architecture bootstrap
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - modular-rebuild
+    paths:
+      - 'settings.gradle.kts'
+      - 'build.gradle.kts'
+      - 'gradle.properties'
+      - 'app-shell/**'
+      - 'domain-contracts/**'
+      - 'content-runtime/**'
+      - 'source-policy/**'
+      - '.github/workflows/modular-bootstrap.yml'
+  pull_request:
+    paths:
+      - 'settings.gradle.kts'
+      - 'build.gradle.kts'
+      - 'gradle.properties'
+      - 'app-shell/**'
+      - 'domain-contracts/**'
+      - 'content-runtime/**'
+      - 'source-policy/**'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
+
+      - name: Show project boundaries
+        run: gradle projects --console=plain
+
+      - name: Contract and runtime tests
+        run: gradle :domain-contracts:test :content-runtime:test :source-policy:test --stacktrace --console=plain
+
+      - name: Android lint
+        run: gradle :app-shell:lintDebug --stacktrace --console=plain
+
+      - name: Assemble debug
+        run: gradle :app-shell:assembleDebug --stacktrace --console=plain
