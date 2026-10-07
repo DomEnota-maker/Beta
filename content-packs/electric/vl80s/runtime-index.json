@@ -50,7 +50,8 @@
     "electric/vl80s/diagnostics/extended/supplemental-operational/pneumatics.pack.json",
     "electric/vl80s/diagnostics/extended/supplemental-operational/running-gear.pack.json",
     "electric/vl80s/diagnostics/extended/supplemental-operational/traction.pack.json",
-    "electric/vl80s/diagnostics/extended/supplemental-operational/traffic-safety.pack.json"
+    "electric/vl80s/diagnostics/extended/supplemental-operational/traffic-safety.pack.json",
+    "electric/vl80s/technical-data/normal-values.pack.json"
   ],
   "profileCatalog": "electric/vl80s/profile-catalog.json",
   "featureIndexes": {

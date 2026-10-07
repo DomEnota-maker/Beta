@@ -1,0 +1,446 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "packId": "vl80s.technical-data.normal-values",
+    "packVersion": "0.1.0",
+    "family": "ELECTRIC",
+    "modelIds": [
+      "vl80s"
+    ],
+    "variantIds": [],
+    "locale": "ru-RU",
+    "entries": [
+      "VL-TD-NORM-CONTROL-VOLTAGE",
+      "VL-TD-NORM-CONTACT-NETWORK",
+      "VL-TD-NORM-GV-STATE",
+      "VL-TD-NORM-COOLING",
+      "VL-TD-NORM-PNEUMATIC",
+      "VL-TD-NORM-TEMPERATURE"
+    ],
+    "requiresRuntime": "1.2.0",
+    "sourceCatalogVersion": "test-3176d6ee-vl80s-normal-values",
+    "checksums": {}
+  },
+  "entries": [
+    {
+      "id": "VL-TD-NORM-CONTROL-VOLTAGE",
+      "aliases": [
+        "control-voltage"
+      ],
+      "type": "TECHNICAL_DATA",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Цепи управления",
+      "summary": "Номинально 50 В постоянного тока",
+      "blocks": [
+        {
+          "title": "Применимость",
+          "lines": [
+            "ВЛ80С с ТРПШ; фактическое напряжение и допустимые отклонения сверять по руководству конкретного исполнения."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "Руководство по эксплуатации ВЛ80С, описание цепей управления и ТРПШ."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "цепи управления",
+        "50 В",
+        "ТРПШ"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-001",
+          "role": "normal-parameter-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-002",
+          "role": "normal-parameter-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-002",
+          "role": "normal-parameter-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-001",
+          "role": "normal-parameter-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "sourceFile": "Vl80sNormalValues.kt",
+        "sourceId": "control-voltage",
+        "sourceBlobSha": "9aacbb1982e0143d6efc40e3579c47c63074b176"
+      }
+    },
+    {
+      "id": "VL-TD-NORM-CONTACT-NETWORK",
+      "aliases": [
+        "contact-network"
+      ],
+      "type": "TECHNICAL_DATA",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Род тока",
+      "summary": "Переменный ток промышленной частоты; номинальная сеть 25 кВ",
+      "blocks": [
+        {
+          "title": "Применимость",
+          "lines": [
+            "Справочная характеристика серии; не является разрешением приближаться к токоведущим частям."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "Техническая характеристика ВЛ80С."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "25 кВ",
+        "род тока",
+        "контактная сеть"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-002",
+          "role": "normal-parameter-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "normal-parameter-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-004",
+          "role": "normal-parameter-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-003",
+          "role": "normal-parameter-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "sourceFile": "Vl80sNormalValues.kt",
+        "sourceId": "contact-network",
+        "sourceBlobSha": "9aacbb1982e0143d6efc40e3579c47c63074b176"
+      }
+    },
+    {
+      "id": "VL-TD-NORM-GV-STATE",
+      "aliases": [
+        "gv-state"
+      ],
+      "type": "TECHNICAL_DATA",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Главный выключатель",
+      "summary": "Команда, индикация и фактическое состояние должны быть согласованы",
+      "blocks": [
+        {
+          "title": "Применимость",
+          "lines": [
+            "Конкретные лампы, реле и условия включения зависят от схемы секции."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "Принципиальная схема и руководство конкретного исполнения."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "ГВ",
+        "главный выключатель",
+        "состояние"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-HV-001",
+          "role": "normal-parameter-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PR-001",
+          "role": "normal-parameter-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "sourceFile": "Vl80sNormalValues.kt",
+        "sourceId": "gv-state",
+        "sourceBlobSha": "9aacbb1982e0143d6efc40e3579c47c63074b176"
+      }
+    },
+    {
+      "id": "VL-TD-NORM-COOLING",
+      "aliases": [
+        "cooling"
+      ],
+      "type": "TECHNICAL_DATA",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Охлаждение силового оборудования",
+      "summary": "До тяговой нагрузки должен быть подтверждён требуемый режим вентиляции",
+      "blocks": [
+        {
+          "title": "Применимость",
+          "lines": [
+            "Состав работающих вентиляторов и блокировок зависит от исполнения и режима."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "Руководство по эксплуатации ВЛ80С, вспомогательные цепи."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "охлаждение",
+        "вентиляция",
+        "силовое оборудование"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-002",
+          "role": "normal-parameter-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-003",
+          "role": "normal-parameter-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "normal-parameter-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-005",
+          "role": "normal-parameter-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "sourceFile": "Vl80sNormalValues.kt",
+        "sourceId": "cooling",
+        "sourceBlobSha": "9aacbb1982e0143d6efc40e3579c47c63074b176"
+      }
+    },
+    {
+      "id": "VL-TD-NORM-PNEUMATIC",
+      "aliases": [
+        "pneumatic"
+      ],
+      "type": "TECHNICAL_DATA",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Давления пневмосистемы",
+      "summary": "Сверять с манометрами, тормозными правилами и руководством конкретной секции",
+      "blocks": [
+        {
+          "title": "Применимость",
+          "lines": [
+            "Приложение сознательно не выдаёт единую уставку для разных приборов и модернизаций."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "Действующие правила тормозов и руководство по пневматическому оборудованию."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "давление",
+        "пневмосистема",
+        "манометры"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-003",
+          "role": "normal-parameter-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-PN-001",
+          "role": "normal-parameter-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-003",
+          "role": "normal-parameter-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-004",
+          "role": "normal-parameter-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-001",
+          "role": "normal-parameter-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-BR-002",
+          "role": "normal-parameter-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "sourceFile": "Vl80sNormalValues.kt",
+        "sourceId": "pneumatic",
+        "sourceBlobSha": "9aacbb1982e0143d6efc40e3579c47c63074b176"
+      }
+    },
+    {
+      "id": "VL-TD-NORM-TEMPERATURE",
+      "aliases": [
+        "temperature"
+      ],
+      "type": "TECHNICAL_DATA",
+      "owner": {
+        "kind": "MODEL",
+        "modelId": "vl80s"
+      },
+      "applicability": {
+        "modelIds": [
+          "vl80s"
+        ]
+      },
+      "publicationStatus": "ACTIVE",
+      "provenance": "UNKNOWN",
+      "sourceStatus": "UNKNOWN",
+      "actionDisposition": "INFORMATION_ONLY",
+      "title": "Нагрев оборудования",
+      "summary": "Дым, запах изоляции, изменение цвета и быстрый рост нагрева не являются нормой",
+      "blocks": [
+        {
+          "title": "Применимость",
+          "lines": [
+            "Численные пределы применяются только по паспорту конкретного узла и местной технологии контроля."
+          ]
+        },
+        {
+          "title": "Источник",
+          "lines": [
+            "Руководства по эксплуатации и ремонту соответствующего оборудования."
+          ]
+        }
+      ],
+      "searchTerms": [
+        "нагрев",
+        "температура",
+        "дым",
+        "запах изоляции"
+      ],
+      "sourceRefs": [],
+      "links": [
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-004",
+          "role": "normal-parameter-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-003",
+          "role": "normal-parameter-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-TR-006",
+          "role": "normal-parameter-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-AU-003",
+          "role": "normal-parameter-equipment"
+        },
+        {
+          "type": "EQUIPMENT",
+          "targetId": "VL-EQ-MC-002",
+          "role": "normal-parameter-equipment"
+        }
+      ],
+      "migrationRefs": {
+        "sourceFile": "Vl80sNormalValues.kt",
+        "sourceId": "temperature",
+        "sourceBlobSha": "9aacbb1982e0143d6efc40e3579c47c63074b176"
+      }
+    }
+  ]
+}

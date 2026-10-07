@@ -82,6 +82,9 @@ jobs:
       - name: Validate VL80S profile catalog
         run: python3 qa/validate_vl80s_profile_catalog.py
 
+      - name: Validate migrated VL80S normal values
+        run: python3 qa/validate_vl80s_normal_values.py
+
       - name: Validate migrated VL80S acceptance
         run: python3 qa/validate_vl80s_acceptance.py
 

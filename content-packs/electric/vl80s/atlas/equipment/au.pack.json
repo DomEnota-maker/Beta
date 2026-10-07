@@ -314,6 +314,11 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.traction-motor-overheat",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-COOLING",
+          "role": "normal-parameter"
         }
       ],
       "migrationRefs": {
@@ -481,6 +486,16 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.main-reservoir-leak",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-PNEUMATIC",
+          "role": "normal-parameter"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-TEMPERATURE",
+          "role": "normal-parameter"
         }
       ],
       "migrationRefs": {

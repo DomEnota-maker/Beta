@@ -119,6 +119,7 @@ fun FeatureDestination.displayTitle(): String = when (this) {
 
 private fun ContentLink.displayTitle(): String = when (role) {
     "technical-description" -> "Технические данные"
+    "normal-parameter" -> "Опорные параметры"
     "related-diagnostic" -> "Связанная диагностика"
     "primary-equipment",
     "related-equipment",

@@ -139,6 +139,11 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.main-reservoir-leak",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-PNEUMATIC",
+          "role": "normal-parameter"
         }
       ],
       "migrationRefs": {
@@ -265,6 +270,11 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.pantograph-slow-rise",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-CONTROL-VOLTAGE",
+          "role": "normal-parameter"
         }
       ],
       "migrationRefs": {

@@ -132,6 +132,16 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.transformer-protection",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-CONTACT-NETWORK",
+          "role": "normal-parameter"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-GV-STATE",
+          "role": "normal-parameter"
         }
       ],
       "migrationRefs": {
@@ -285,6 +295,11 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.smoke-fire-flashover",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-CONTACT-NETWORK",
+          "role": "normal-parameter"
         }
       ],
       "migrationRefs": {
@@ -399,6 +414,11 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.vvk-interlock-fault",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-CONTACT-NETWORK",
+          "role": "normal-parameter"
         }
       ],
       "migrationRefs": {

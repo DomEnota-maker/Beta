@@ -140,6 +140,11 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.uncommanded-braking",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-PNEUMATIC",
+          "role": "normal-parameter"
         }
       ],
       "migrationRefs": {
@@ -276,6 +281,11 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.wheel-dragging",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-PNEUMATIC",
+          "role": "normal-parameter"
         }
       ],
       "migrationRefs": {
@@ -433,6 +443,11 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.uncommanded-braking",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-PNEUMATIC",
+          "role": "normal-parameter"
         }
       ],
       "migrationRefs": {
@@ -577,6 +592,11 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.wheel-dragging",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-PNEUMATIC",
+          "role": "normal-parameter"
         }
       ],
       "migrationRefs": {

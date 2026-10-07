@@ -154,6 +154,11 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.vl80s-ekg-section-desync",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-CONTROL-VOLTAGE",
+          "role": "normal-parameter"
         }
       ],
       "migrationRefs": {
@@ -311,6 +316,11 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.traction-one-section-low",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-CONTROL-VOLTAGE",
+          "role": "normal-parameter"
         }
       ],
       "migrationRefs": {
@@ -451,6 +461,16 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.traction-one-section-low",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-COOLING",
+          "role": "normal-parameter"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-TEMPERATURE",
+          "role": "normal-parameter"
         }
       ],
       "migrationRefs": {
@@ -618,6 +638,16 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.transformer-protection",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-CONTACT-NETWORK",
+          "role": "normal-parameter"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-TEMPERATURE",
+          "role": "normal-parameter"
         }
       ],
       "migrationRefs": {
@@ -764,6 +794,11 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.rheostatic-brake",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-COOLING",
+          "role": "normal-parameter"
         }
       ],
       "migrationRefs": {
@@ -934,6 +969,16 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.traction-one-section-low",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-COOLING",
+          "role": "normal-parameter"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-TEMPERATURE",
+          "role": "normal-parameter"
         }
       ],
       "migrationRefs": {

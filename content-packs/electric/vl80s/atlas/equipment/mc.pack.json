@@ -254,6 +254,11 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.wheel-dragging",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-TEMPERATURE",
+          "role": "normal-parameter"
         }
       ],
       "migrationRefs": {

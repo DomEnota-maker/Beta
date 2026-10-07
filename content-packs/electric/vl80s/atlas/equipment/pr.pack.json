@@ -126,6 +126,16 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.traction-motor-flashover",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-CONTROL-VOLTAGE",
+          "role": "normal-parameter"
+        },
+        {
+          "type": "TECHNICAL_DATA",
+          "targetId": "VL-TD-NORM-GV-STATE",
+          "role": "normal-parameter"
         }
       ],
       "migrationRefs": {
