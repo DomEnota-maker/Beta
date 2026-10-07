@@ -1,0 +1,6194 @@
+{
+  "schemaVersion": 1,
+  "sourceSnapshot": {
+    "repository": "DomEnota-maker/Test-",
+    "commit": "3176d6ee228f0ed4b78371f45209e10c1c724eff",
+    "asset": "app/src/main/assets/technical/vl80s_diagnostics.json.gz",
+    "blobSha": "6ffdfdabf2f467dcdc4958768905f2b675ac0c26"
+  },
+  "scenarioCount": 103,
+  "rootKeys": [
+    "acceptanceHintCorrections",
+    "edges",
+    "generatedDate",
+    "integrationExceptions",
+    "policies",
+    "priorityCoverage",
+    "project",
+    "purpose",
+    "qnaNormalization",
+    "runtimeBaseline",
+    "scenarios",
+    "schemaVersion",
+    "sourceSnapshot",
+    "stage",
+    "status"
+  ],
+  "rootObjectKeys": {
+    "runtimeBaseline": [
+      "canonicalStage6Scenarios",
+      "dormantGranularCatalog",
+      "promotedFromDormantGranularCatalog",
+      "uiCurrentSource",
+      "visibleDiagnosticRepositoryScenarios"
+    ],
+    "sourceSnapshot": [
+      "DiagnosticCatalogRepository.kt",
+      "DiagnosticCompletionCatalog.kt",
+      "DiagnosticDeepening.kt",
+      "DiagnosticExpansion.kt",
+      "DiagnosticExpansionRepository.kt",
+      "DiagnosticExpansionRepository2.kt",
+      "DiagnosticExtendedCatalog.kt",
+      "DiagnosticRepository.kt",
+      "DiagnosticScreen.kt"
+    ],
+    "policies": [
+      "crosslinkKinds",
+      "safety",
+      "unknownExecution",
+      "variantResolutionOrder"
+    ],
+    "qnaNormalization": [
+      "legacyEquipmentIdsNormalized",
+      "questionCount",
+      "questionsWithEquipmentLink",
+      "questionsWithExplicitDiagnosticLink",
+      "unknownEquipmentIdsAfterNormalization"
+    ],
+    "priorityCoverage": [
+      "brakes",
+      "compressor",
+      "control_circuits",
+      "ekg",
+      "fire_emergency",
+      "gv",
+      "inter_section",
+      "protections",
+      "rectifier",
+      "rheostatic",
+      "running_gear",
+      "traction_motors",
+      "ventilation"
+    ]
+  },
+  "rootArrayCounts": {
+    "acceptanceHintCorrections": 7,
+    "scenarios": 103,
+    "edges": 1181,
+    "integrationExceptions": 2
+  },
+  "scenarioFieldPresence": {
+    "acceptance": 103,
+    "applicableVariantIds": 103,
+    "articleTargets": 103,
+    "category": 103,
+    "checkCount": 103,
+    "dangerCount": 103,
+    "electricalSchemes": 103,
+    "equipmentIds": 103,
+    "id": 103,
+    "linkProvenance": 103,
+    "note": 1,
+    "originId": 1,
+    "originLayer": 103,
+    "pneumaticViews": 103,
+    "qna": 103,
+    "questionCount": 103,
+    "relatedScenarioIds": 103,
+    "runtimeStatus": 103,
+    "severity": 103,
+    "sourceRefs": 1,
+    "summary": 103,
+    "systemIds": 103,
+    "title": 103
+  },
+  "scalarDistributions": {
+    "category": {
+      "Тяга": 18,
+      "Вспомогательные машины": 14,
+      "Высоковольтные цепи": 12,
+      "Тормоза": 12,
+      "Пневматика": 9,
+      "Цепи управления": 9,
+      "Ходовая часть": 8,
+      "Кабина и связь": 5,
+      "Безопасность движения": 4,
+      "Пожарная безопасность": 3,
+      "Электрическое торможение": 3,
+      "Аварийные ситуации": 2,
+      "Защиты": 2,
+      "Механическая часть": 1,
+      "Силовые цепи": 1
+    },
+    "linkProvenance": {
+      "STAGE2_REVERSE_INDEX": 70,
+      "STAGE6_SEMANTIC_BINDING": 19,
+      "SOURCE_REVIEW_2026-09-26": 5,
+      "SOURCE_REVIEW_2026-09-26_R2": 3,
+      "STAGE6_SYSTEM_ACCEPTANCE_BINDING": 3,
+      "BETA51_RESEARCH_INTEGRATION": 1,
+      "PROMOTED_TO_CLOSE_REAL_STAGE3_GAP": 1,
+      "RUNTIME_CANONICAL_ALIGNMENT_2026-09-25": 1
+    },
+    "originId": {
+      "ext-coupler-damage": 1
+    },
+    "originLayer": {
+      "DiagnosticExtendedCatalog.kt": 59,
+      "DiagnosticExpansion.kt": 16,
+      "DiagnosticCompletionCatalog.kt": 15,
+      "DiagnosticRepository.kt": 11,
+      "DiagnosticExpansionRepository.kt": 1,
+      "DiagnosticResearchIntegration.kt": 1
+    },
+    "runtimeStatus": {
+      "VISIBLE_CURRENT_DIAGNOSTIC_REPOSITORY": 102,
+      "PROMOTE_EXISTING_DORMANT_GRANULAR_CARD": 1
+    },
+    "severity": {
+      "RESTRICT_OPERATION": 77,
+      "STOP_AND_REPORT": 13,
+      "ATTENTION": 12,
+      "STOP_BOUNDARY_IN_EXISTING_CARD": 1
+    }
+  },
+  "arrayLengthStats": {
+    "applicableVariantIds": {
+      "min": 1,
+      "max": 3,
+      "total": 105,
+      "nonZero": 103
+    },
+    "articleTargets": {
+      "min": 0,
+      "max": 11,
+      "total": 306,
+      "nonZero": 91
+    },
+    "equipmentIds": {
+      "min": 0,
+      "max": 9,
+      "total": 245,
+      "nonZero": 91
+    },
+    "relatedScenarioIds": {
+      "min": 0,
+      "max": 7,
+      "total": 174,
+      "nonZero": 48
+    },
+    "sourceRefs": {
+      "min": 3,
+      "max": 3,
+      "total": 3,
+      "nonZero": 1
+    },
+    "systemIds": {
+      "min": 1,
+      "max": 4,
+      "total": 165,
+      "nonZero": 103
+    }
+  },
+  "objectFieldPresence": {
+    "acceptance": {
+      "direct": 103,
+      "viaEquipment": 103
+    },
+    "electricalSchemes": {
+      "explicit": 103,
+      "viaEquipment": 103
+    },
+    "pneumaticViews": {
+      "explicit": 103,
+      "viaEquipment": 103
+    },
+    "qna": {
+      "explicit": 103,
+      "viaEquipment": 103
+    }
+  },
+  "scenarios": [
+    {
+      "id": "alsn-code-loss",
+      "title": "Пропал или нестабилен код АЛСН",
+      "category": "Безопасность движения",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "alsn-epk",
+      "title": "Неисправность АЛСН, ЭПК или контроля бдительности",
+      "category": "Безопасность движения",
+      "severity": "ATTENTION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 3,
+        "systemIds": 1,
+        "articleTargets": 4
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "aux-common-loss",
+      "title": "Одновременно отключились вспомогательные машины",
+      "category": "Вспомогательные машины",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 5,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 1,
+        "articleTargets": 4
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "aux-contactor-chatter",
+      "title": "Дребезг контактора вспомогательной машины",
+      "category": "Вспомогательные машины",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "aux-machine-single-trip",
+      "title": "Повторно отключается одна вспомогательная машина",
+      "category": "Вспомогательные машины",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 5,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 1,
+        "articleTargets": 3
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "aux-machines",
+      "title": "Не запускается фазорасщепитель или вспомогательные машины",
+      "category": "Вспомогательные машины",
+      "severity": "ATTENTION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 1,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "battery-no-charge",
+      "title": "Аккумуляторная батарея не заряжается",
+      "category": "Цепи управления",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 1,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "battery-overcharge",
+      "title": "Повышенное напряжение или признаки перезаряда АКБ",
+      "category": "Цепи управления",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 1,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "brake-cylinder-imbalance",
+      "title": "Разное давление или действие тормозных цилиндров",
+      "category": "Тормоза",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 4,
+        "systemIds": 3,
+        "articleTargets": 4
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "brake-lock-state-mismatch",
+      "title": "Блокировка тормозов №367М не подтверждает состояние кабины",
+      "category": "Тормоза",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "brake-pipe-leak",
+      "title": "Повышенная утечка тормозной магистрали",
+      "category": "Тормоза",
+      "severity": "STOP_AND_REPORT",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 3,
+        "systemIds": 1,
+        "articleTargets": 3
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "brake-pipe-no-charge",
+      "title": "Тормозная магистраль не заряжается",
+      "category": "Тормоза",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 4,
+        "systemIds": 1,
+        "articleTargets": 4
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "brake-rigging-damage",
+      "title": "Повреждение тормозной рычажной передачи",
+      "category": "Тормоза",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "brakes-no-apply-release",
+      "title": "Тормоза не срабатывают, не отпускают или тележки работают неодинаково",
+      "category": "Пневматика",
+      "severity": "ATTENTION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 9,
+        "systemIds": 3,
+        "articleTargets": 9
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "cab-control-mismatch",
+      "title": "Органы управления и индикация кабины не согласованы",
+      "category": "Цепи управления",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "cab-heating-smell",
+      "title": "Запах или дым от оборудования кабины",
+      "category": "Кабина и связь",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 0,
+        "systemIds": 1,
+        "articleTargets": 0
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "compressor-long-run",
+      "title": "Компрессор работает непрерывно или слишком долго",
+      "category": "Вспомогательные машины",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 4,
+        "systemIds": 2,
+        "articleTargets": 5
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "compressor-no-start",
+      "title": "Компрессор не запускается или не отключается",
+      "category": "Пневматика",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 4,
+        "systemIds": 2,
+        "articleTargets": 5
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "compressor-overheat",
+      "title": "Перегрев или необычный шум компрессора",
+      "category": "Вспомогательные машины",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "compressor-pressure",
+      "title": "Компрессор не запускается или давление ГР растёт медленно",
+      "category": "Пневматика",
+      "severity": "ATTENTION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 7,
+        "systemIds": 3,
+        "articleTargets": 8
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "control-fuse-trip",
+      "title": "Повторно отключается автомат цепей управления",
+      "category": "Цепи управления",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 3,
+        "systemIds": 1,
+        "articleTargets": 4
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "control-voltage-low",
+      "title": "Понижено или пропадает напряжение цепей управления",
+      "category": "Цепи управления",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 3,
+        "systemIds": 1,
+        "articleTargets": 3
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "door-lock-fault",
+      "title": "Неисправна дверь или её фиксация",
+      "category": "Кабина и связь",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 0,
+        "systemIds": 1,
+        "articleTargets": 0
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "ekg-position-mismatch",
+      "title": "Положение ЭКГ не соответствует указателю",
+      "category": "Тяга",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 1,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 2,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "ekg-slow-transition",
+      "title": "ЭКГ медленно переходит между позициями",
+      "category": "Тяга",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 1,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 1,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "ekg-stuck",
+      "title": "ЭКГ не набирает, не сбрасывает или застрял между позициями",
+      "category": "Тяга",
+      "severity": "ATTENTION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 1,
+        "applicableVariantIds": 1,
+        "equipmentIds": 3,
+        "systemIds": 2,
+        "articleTargets": 3
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "epk-leak",
+      "title": "Утечка или нестабильная работа ЭПК",
+      "category": "Тормоза",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 2,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "equalizing-reservoir-mismatch",
+      "title": "Давление УР и ТМ изменяется несогласованно",
+      "category": "Тормоза",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 5,
+        "systemIds": 3,
+        "articleTargets": 5
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "ext-coupler-damage",
+      "title": "Повреждение автосцепки или ударно-тягового устройства",
+      "category": "Механическая часть",
+      "severity": "STOP_BOUNDARY_IN_EXISTING_CARD",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "note",
+        "originId",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "sourceRefs",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 1,
+        "applicableVariantIds": 1,
+        "equipmentIds": 0,
+        "systemIds": 1,
+        "articleTargets": 0,
+        "sourceRefs": 3
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "external-object-impact",
+      "title": "Удар постороннего предмета под локомотивом",
+      "category": "Ходовая часть",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "extinguisher-system-fault",
+      "title": "Не готова штатная система пожаротушения",
+      "category": "Пожарная безопасность",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "fan-low-airflow",
+      "title": "Недостаточный поток вентиляции",
+      "category": "Вспомогательные машины",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 3,
+        "systemIds": 1,
+        "articleTargets": 5
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "fan-vibration",
+      "title": "Сильная вибрация или стук вентилятора",
+      "category": "Вспомогательные машины",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 3
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "feed-line-leak",
+      "title": "Утечка питательной магистрали",
+      "category": "Пневматика",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 2,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "field-weakening-fault",
+      "title": "Не включается или отключается ослабление поля",
+      "category": "Тяга",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "fire-alarm-signal",
+      "title": "Сработала пожарная сигнализация, но очаг не обнаружен",
+      "category": "Аварийные ситуации",
+      "severity": "STOP_AND_REPORT",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "fire-loop-fault",
+      "title": "Неисправность шлейфа пожарной сигнализации",
+      "category": "Пожарная безопасность",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "gv-air-loss",
+      "title": "Падает давление в резервуаре ГВ",
+      "category": "Высоковольтные цепи",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 2,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "gv-no-close",
+      "title": "Главный выключатель не включается или отключается",
+      "category": "Высоковольтные цепи",
+      "severity": "ATTENTION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general",
+        "vl80s-937-1260",
+        "vl80s-later"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 3,
+        "equipmentIds": 5,
+        "systemIds": 3,
+        "articleTargets": 7
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "gv-no-open",
+      "title": "Главный выключатель не отключается штатной командой",
+      "category": "Высоковольтные цепи",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "handbrake-not-release",
+      "title": "Не отпущен или неисправен ручной тормоз",
+      "category": "Тормоза",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "headlight-fault",
+      "title": "Не работает прожектор или буферные фонари",
+      "category": "Кабина и связь",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "heater-fault",
+      "title": "Не работает отопление или появляется перегрев",
+      "category": "Вспомогательные машины",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 0,
+        "systemIds": 1,
+        "articleTargets": 0
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "independent-brake-no-apply",
+      "title": "Не действует вспомогательный тормоз локомотива",
+      "category": "Тормоза",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 5,
+        "systemIds": 2,
+        "articleTargets": 5
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "independent-brake-no-release",
+      "title": "Не отпускает вспомогательный тормоз",
+      "category": "Тормоза",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 3,
+        "systemIds": 1,
+        "articleTargets": 3
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "intersection-command-loss",
+      "title": "Пропадает отдельная команда между секциями",
+      "category": "Цепи управления",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 1,
+        "articleTargets": 3
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "machine-room-smoke",
+      "title": "Дым или запах в машинном отделении",
+      "category": "Пожарная безопасность",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 1,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "main-reservoir-leak",
+      "title": "Давление в главных резервуарах растёт медленно или быстро падает",
+      "category": "Пневматика",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 3,
+        "applicableVariantIds": 1,
+        "equipmentIds": 6,
+        "systemIds": 2,
+        "articleTargets": 7
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "main-reservoir-safety-valve",
+      "title": "Часто или продолжительно срабатывает предохранительный клапан ГР",
+      "category": "Пневматика",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "main-reservoir-slow-fill",
+      "title": "Главные резервуары наполняются слишком медленно",
+      "category": "Пневматика",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "mechanical-noise-heating",
+      "title": "Стук, вибрация, ненормальный шум или нагрев ходовой части",
+      "category": "Ходовая часть",
+      "severity": "STOP_AND_REPORT",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 5,
+        "systemIds": 3,
+        "articleTargets": 5
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "motor-fan-failure",
+      "title": "Не работает мотор-вентилятор или отсутствует охлаждение",
+      "category": "Вспомогательные машины",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 5,
+        "systemIds": 2,
+        "articleTargets": 8
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "pantograph-contact-arcing",
+      "title": "Повышенное искрение токоприёмника",
+      "category": "Высоковольтные цепи",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "pantograph-no-rise",
+      "title": "Токоприёмник не поднимается",
+      "category": "Высоковольтные цепи",
+      "severity": "ATTENTION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 5,
+        "systemIds": 2,
+        "articleTargets": 5
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "pantograph-slow-rise",
+      "title": "Токоприёмник поднимается медленно или не удерживает положение",
+      "category": "Высоковольтные цепи",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 2,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "pantograph-wrong-selection",
+      "title": "Не соответствует выбор токоприёмника",
+      "category": "Высоковольтные цепи",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "persistent-wheel-slip",
+      "title": "Устойчивое боксование или не работает противобоксовочная защита",
+      "category": "Тяга",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 5,
+        "systemIds": 3,
+        "articleTargets": 6
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "phase-splitter-no-start",
+      "title": "Фазорасщепитель не запускается или работает ненормально",
+      "category": "Вспомогательные машины",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "pneumatic-instrument-line-leak",
+      "title": "Утечка или засорение импульсной линии манометра",
+      "category": "Пневматика",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 1,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "pressure-gauge-mismatch",
+      "title": "Показания манометров противоречат работе системы",
+      "category": "Пневматика",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 2,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "protection-trip",
+      "title": "Сработала токовая, земляная или перегрузочная защита",
+      "category": "Защиты",
+      "severity": "ATTENTION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 8,
+        "systemIds": 3,
+        "articleTargets": 11
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "radio-communication-loss",
+      "title": "Нет поездной радиосвязи",
+      "category": "Кабина и связь",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 2,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "rectifier-group-fault",
+      "title": "Подозрение на неисправность выпрямительной установки",
+      "category": "Силовые цепи",
+      "severity": "STOP_AND_REPORT",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 3
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "rectifier-overheat",
+      "title": "Перегрев выпрямительной установки",
+      "category": "Тяга",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 3,
+        "systemIds": 2,
+        "articleTargets": 7
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "relay-panel-overheat",
+      "title": "Запах или нагрев на релейной панели",
+      "category": "Цепи управления",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "reverser-no-confirm",
+      "title": "Не подтверждается направление движения",
+      "category": "Тяга",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "rheostatic-brake",
+      "title": "Не собирается или срывается реостатное торможение",
+      "category": "Электрическое торможение",
+      "severity": "ATTENTION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 8,
+        "systemIds": 4,
+        "articleTargets": 11
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "rheostatic-resistor-overheat",
+      "title": "Перегрев тормозных резисторов или потеря их охлаждения",
+      "category": "Электрическое торможение",
+      "severity": "STOP_AND_REPORT",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 2,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "roof-insulation-signs",
+      "title": "Признаки пробоя крышевой изоляции",
+      "category": "Высоковольтные цепи",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 4,
+        "systemIds": 1,
+        "articleTargets": 4
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "sand-nozzle-blocked",
+      "title": "Песок не поступает к нужной колёсной паре",
+      "category": "Ходовая часть",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "sanding-failure",
+      "title": "Не подаётся песок или песочница работает постоянно",
+      "category": "Ходовая часть",
+      "severity": "ATTENTION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 3,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 2,
+        "articleTargets": 3
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "section-control-loss",
+      "title": "Нет управления одной секцией или нарушена межсекционная связь",
+      "category": "Цепи управления",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 5,
+        "applicableVariantIds": 1,
+        "equipmentIds": 3,
+        "systemIds": 1,
+        "articleTargets": 4
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "smoke-fire-flashover",
+      "title": "Дым, запах, дуга, пробой или пожар",
+      "category": "Аварийные ситуации",
+      "severity": "ATTENTION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 1,
+        "applicableVariantIds": 1,
+        "equipmentIds": 7,
+        "systemIds": 4,
+        "articleTargets": 8
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "speed-indication-fault",
+      "title": "Неисправна индикация скорости",
+      "category": "Безопасность движения",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "suspension-damage",
+      "title": "Признаки повреждения подвешивания или тележки",
+      "category": "Ходовая часть",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "traction-current-imbalance",
+      "title": "Асимметрия или ненормальный ток тяговых двигателей",
+      "category": "Тяга",
+      "severity": "STOP_AND_REPORT",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 6,
+        "applicableVariantIds": 1,
+        "equipmentIds": 6,
+        "systemIds": 1,
+        "articleTargets": 10
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "traction-current-surge",
+      "title": "Бросок тягового тока",
+      "category": "Тяга",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 2,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "traction-gear-noise",
+      "title": "Шум тяговой передачи",
+      "category": "Ходовая часть",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 2,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "traction-intermittent",
+      "title": "Тяга периодически пропадает",
+      "category": "Тяга",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 3,
+        "systemIds": 2,
+        "articleTargets": 6
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "traction-motor-flashover",
+      "title": "Признаки кругового огня или пробоя ТЭД",
+      "category": "Тяга",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 2,
+        "articleTargets": 3
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "traction-motor-overheat",
+      "title": "Признаки перегрева тягового двигателя",
+      "category": "Тяга",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 2,
+        "articleTargets": 4
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "traction-no-assemble",
+      "title": "Не собирается тяга или отсутствует тяга секции",
+      "category": "Тяга",
+      "severity": "ATTENTION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 1,
+        "applicableVariantIds": 1,
+        "equipmentIds": 5,
+        "systemIds": 1,
+        "articleTargets": 7
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "traction-one-section-low",
+      "title": "Снижена тяга одной секции",
+      "category": "Тяга",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 1,
+        "applicableVariantIds": 1,
+        "equipmentIds": 4,
+        "systemIds": 1,
+        "articleTargets": 8
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "transformer-oil-signs",
+      "title": "Следы масла или ненормальная работа трансформатора",
+      "category": "Высоковольтные цепи",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 3,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "transformer-protection",
+      "title": "Признаки неисправности тягового трансформатора или действие его защиты",
+      "category": "Высоковольтные цепи",
+      "severity": "STOP_AND_REPORT",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 4,
+        "systemIds": 3,
+        "articleTargets": 5
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "uncommanded-braking",
+      "title": "Самопроизвольное торможение или срабатывание экстренного торможения",
+      "category": "Тормоза",
+      "severity": "STOP_AND_REPORT",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 8,
+        "systemIds": 2,
+        "articleTargets": 9
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "ventilation-duct-damage",
+      "title": "Повреждён воздуховод или не действует заслонка охлаждения",
+      "category": "Вспомогательные машины",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "vigilance-control-fault",
+      "title": "Неисправность контроля бдительности",
+      "category": "Безопасность движения",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 1,
+        "articleTargets": 3
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "vvk-interlock-fault",
+      "title": "Не подтверждается блокировка ВВК",
+      "category": "Высоковольтные цепи",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "wheel-bearing-heat",
+      "title": "Нагрев буксы или подшипникового узла",
+      "category": "Ходовая часть",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 1,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "wheel-dragging",
+      "title": "Не отпускает тормоз, заторможена тележка или нагревается колесо",
+      "category": "Тормоза",
+      "severity": "STOP_AND_REPORT",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 7,
+        "systemIds": 2,
+        "articleTargets": 7
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "wheel-flat-impact",
+      "title": "Удары от ползуна или дефекта колеса",
+      "category": "Ходовая часть",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "wiper-fault",
+      "title": "Не работают стеклоочистители или омыватель",
+      "category": "Кабина и связь",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 0,
+        "applicableVariantIds": 1,
+        "equipmentIds": 1,
+        "systemIds": 1,
+        "articleTargets": 1
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "vl80s-ekg-section-desync",
+      "title": "Рассогласование позиций ЭКГ между секциями",
+      "category": "Тяга",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 7,
+        "applicableVariantIds": 1,
+        "equipmentIds": 2,
+        "systemIds": 2,
+        "articleTargets": 2
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "oil-pump-failure",
+      "title": "Отказ масляного насоса трансформатора",
+      "category": "Вспомогательные машины",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "applicableVariantIds": 1,
+        "relatedScenarioIds": 4,
+        "equipmentIds": 3,
+        "systemIds": 2,
+        "articleTargets": 4
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "substation-protection-roof",
+      "title": "Сработала защита подстанции: подозрение на крышевое оборудование",
+      "category": "Высоковольтные цепи",
+      "severity": "STOP_AND_REPORT",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 0,
+        "systemIds": 1,
+        "articleTargets": 0
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "rectifier-differential-trip",
+      "title": "ГВ отключился с сигналом БРД и ВУ-1 или ВУ-2",
+      "category": "Защиты",
+      "severity": "STOP_AND_REPORT",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 0,
+        "systemIds": 3,
+        "articleTargets": 0
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "ekg-drive-disconnected",
+      "title": "Привод ГП слышен, но вал и позиция не изменяются",
+      "category": "Тяга",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 0,
+        "systemIds": 2,
+        "articleTargets": 0
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "battery-no-voltage",
+      "title": "АКБ не даёт напряжения в цепи управления",
+      "category": "Цепи управления",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 0,
+        "systemIds": 1,
+        "articleTargets": 0
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "rheostatic-rpt-trip",
+      "title": "Отключились линейные контакторы в реостатном торможении: РПТ",
+      "category": "Электрическое торможение",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 0,
+        "systemIds": 4,
+        "articleTargets": 0
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "traction-overload-relay-trip",
+      "title": "Сработало реле перегрузки РП1–РП4 тягового двигателя",
+      "category": "Тяга",
+      "severity": "STOP_AND_REPORT",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 0,
+        "systemIds": 3,
+        "articleTargets": 0
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "traction-ground-relay-trip",
+      "title": "Сработало реле заземления РЗ тяговой цепи",
+      "category": "Тяга",
+      "severity": "STOP_AND_REPORT",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 0,
+        "systemIds": 3,
+        "articleTargets": 0
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    },
+    {
+      "id": "aux-relay-113-trip",
+      "title": "ГВ отключился со срабатыванием реле 113",
+      "category": "Вспомогательные машины",
+      "severity": "RESTRICT_OPERATION",
+      "profileId": null,
+      "applicableVariantIds": [
+        "vl80s-general"
+      ],
+      "informationConfidence": null,
+      "keys": [
+        "acceptance",
+        "applicableVariantIds",
+        "articleTargets",
+        "category",
+        "checkCount",
+        "dangerCount",
+        "electricalSchemes",
+        "equipmentIds",
+        "id",
+        "linkProvenance",
+        "originLayer",
+        "pneumaticViews",
+        "qna",
+        "questionCount",
+        "relatedScenarioIds",
+        "runtimeStatus",
+        "severity",
+        "summary",
+        "systemIds",
+        "title"
+      ],
+      "counts": {
+        "relatedScenarioIds": 4,
+        "applicableVariantIds": 1,
+        "equipmentIds": 0,
+        "systemIds": 1,
+        "articleTargets": 0
+      },
+      "objectKeys": {
+        "acceptance": [
+          "direct",
+          "viaEquipment"
+        ],
+        "electricalSchemes": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "pneumaticViews": [
+          "explicit",
+          "viaEquipment"
+        ],
+        "qna": [
+          "explicit",
+          "viaEquipment"
+        ]
+      }
+    }
+  ]
+}
