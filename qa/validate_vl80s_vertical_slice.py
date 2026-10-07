@@ -70,7 +70,7 @@ acceptance = entries["VL80-REQ-03"]
 candidate = entries["vl80s.diag.pantograph-no-rise"]
 
 assert pantograph["title"] == "Токоприёмник"
-assert valve245["title"] == "Клапан 245"
+assert valve245["title"] == "Клапан токоприёмника №245"
 assert acceptance["title"] == "Крышевое оборудование и токоприёмник"
 assert acceptance["summary"] == (
     "Осмотреть с земли крышевое оборудование и проверить токоприёмник "
