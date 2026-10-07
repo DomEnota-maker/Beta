@@ -33,6 +33,8 @@ dependencies {
     implementation(project(":domain-contracts"))
     implementation(project(":design-system"))
     implementation(project(":navigation-contracts"))
+    implementation(project(":content-runtime"))
+    implementation("com.google.code.gson:gson:2.11.0")
 
     implementation(platform("androidx.compose:compose-bom:2024.06.00"))
     implementation("androidx.compose.ui:ui")

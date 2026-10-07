@@ -53,6 +53,10 @@ fun AcceptanceItemScreen(
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 Text(
+                    text = "Пункт: ${entry.title}",
+                    style = MaterialTheme.typography.titleMedium,
+                )
+                Text(
                     text = "Статус: ${itemState.state.label}",
                     style = MaterialTheme.typography.titleMedium,
                 )
