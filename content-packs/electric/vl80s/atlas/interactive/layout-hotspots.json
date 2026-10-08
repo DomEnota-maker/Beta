@@ -308,5 +308,17 @@
       },
       "equipmentId": "VL-EQ-TR-005"
     }
-  ]
+  ],
+  "background": {
+    "assetPath": "electric/vl80s/atlas/interactive/layout-section1.png",
+    "status": "RECOVERED_FROM_VERIFIED_LEGACY_ARCHIVE",
+    "sha256": "e492898a621b626c8fb74dc2f554b1bc74165ba41add01e5aa43f4a132e75367",
+    "source": {
+      "repository": "DomEnota-maker/Beta",
+      "commit": "a3c93873bd128d4769d004098981235c169fd085",
+      "archive": "RailBrakeCalculator.zip",
+      "archiveBlobSha": "6c3c7edc1713c1c901a566fd8a81a2494ee4ac58",
+      "entry": "RailBrakeCalculator/app/src/main/res/drawable-nodpi/vl80s_layout_section1.png"
+    }
+  }
 }
