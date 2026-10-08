@@ -469,30 +469,57 @@ relation_graph_path.write_text(
 )
 
 index_path = DIAG_ROOT / "index.json"
+executable_flow_rel = "electric/vl80s/diagnostics/runtime/executable-flow.json"
+executable_flow_path = ROOT / "content-packs" / executable_flow_rel
+executable_runtime_available = False
+
+if executable_flow_path.exists():
+    executable_flow = json.loads(
+        executable_flow_path.read_text(encoding="utf-8")
+    )
+    if executable_flow.get("modelId") != "vl80s":
+        raise SystemExit("Executable diagnostic runtime has wrong modelId")
+    if (
+        executable_flow.get("sourceSnapshot", {}).get("commit")
+        != SOURCE_COMMIT
+    ):
+        raise SystemExit(
+            "Executable diagnostic runtime donor commit does not match catalog donor"
+        )
+    if executable_flow.get("scenarioCount") != len(scenarios):
+        raise SystemExit(
+            "Executable diagnostic runtime scenario count does not match catalog"
+        )
+    executable_runtime_available = True
+
+index_document = {
+    "schemaVersion": 1,
+    "modelId": "vl80s",
+    "sourceSnapshot": {
+        "repository": "DomEnota-maker/Test-",
+        "commit": SOURCE_COMMIT,
+        "asset": "app/src/main/assets/technical/vl80s_diagnostics.json.gz",
+        "blobSha": SOURCE_BLOB,
+    },
+    "recommendedPacks": recommended_paths,
+    "extendedCorpora": {
+        "SUPPLEMENTAL_OPERATIONAL": extended_paths,
+    },
+    "relationGraph": "electric/vl80s/diagnostics/relation-graph.json",
+    "runtimePayloadStatus": (
+        "EXECUTABLE_FLOW_AVAILABLE"
+        if executable_runtime_available
+        else "RELATION_GRAPH_ONLY_NOT_EXECUTABLE"
+    ),
+    "interactiveRuntimeSource": "DiagnosticRepository.scenarios",
+    "publicationPolicy": "ALL_CANDIDATE_UNTIL_FEATURE_RUNTIME_ACCEPTANCE",
+    "goldenReferenceCandidate": "vl80s.diag.pantograph-no-rise",
+}
+if executable_runtime_available:
+    index_document["executableFlow"] = executable_flow_rel
+
 index_path.write_text(
-    json.dumps(
-        {
-            "schemaVersion": 1,
-            "modelId": "vl80s",
-            "sourceSnapshot": {
-                "repository": "DomEnota-maker/Test-",
-                "commit": SOURCE_COMMIT,
-                "asset": "app/src/main/assets/technical/vl80s_diagnostics.json.gz",
-                "blobSha": SOURCE_BLOB,
-            },
-            "recommendedPacks": recommended_paths,
-            "extendedCorpora": {
-                "SUPPLEMENTAL_OPERATIONAL": extended_paths,
-            },
-            "relationGraph": "electric/vl80s/diagnostics/relation-graph.json",
-            "runtimePayloadStatus": "RELATION_GRAPH_ONLY_NOT_EXECUTABLE",
-            "interactiveRuntimeSource": "DiagnosticRepository.scenarios",
-            "publicationPolicy": "ALL_CANDIDATE_UNTIL_FEATURE_RUNTIME_ACCEPTANCE",
-            "goldenReferenceCandidate": "vl80s.diag.pantograph-no-rise",
-        },
-        ensure_ascii=False,
-        indent=2,
-    ) + "\n",
+    json.dumps(index_document, ensure_ascii=False, indent=2) + "\n",
     encoding="utf-8",
 )
 
