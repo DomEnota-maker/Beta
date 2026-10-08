@@ -187,12 +187,8 @@ class ExecutableDiagnosticFlowTest {
     fun loaderFailsClosedWhenUnknownResponseBranchIsMissing() {
         ExecutableDiagnosticFlowJsonLoader().parse(
             fixture.replace(
-                """                    "UNKNOWN": {
-                      "meaning": "Неизвестно",
-                      "nextQuestionKey": "q2",
-                      "candidateCauseIds": ["cause-b"]
-                    }""",
-                "",
+                "\"UNKNOWN\": {",
+                "\"REMOVED_UNKNOWN\": {",
             )
         )
     }
