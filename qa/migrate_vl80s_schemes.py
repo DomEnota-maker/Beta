@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Migration revision 2: keep profile-required fire signalling fail-closed.
+# Migration revision 3: preserve variant policy resolver runtime status.
 import json
 from collections import defaultdict
 from pathlib import Path
@@ -240,7 +240,7 @@ electrical_policy_path.write_text(
                 "asset": "vl80s_electrical_variants.json.gz",
                 "blobSha": "f9f7956f871cbb04d38b8315e1b902372d5f3f7b",
             },
-            "runtimeStatus": "PENDING_OVERLAY_ENGINE",
+            "runtimeStatus": "POLICY_RESOLVER_AVAILABLE",
             "policy": electrical_variants,
         },
         ensure_ascii=False,
@@ -260,7 +260,7 @@ pneumatic_policy_path.write_text(
                 "asset": "vl80s_pneumatic_variants.json.gz",
                 "blobSha": "3899e9e653f17c7b26e2c3d97a8852d4537a2537",
             },
-            "runtimeStatus": "PENDING_OVERLAY_ENGINE",
+            "runtimeStatus": "POLICY_RESOLVER_AVAILABLE",
             "policy": pneumatic_variants,
         },
         ensure_ascii=False,

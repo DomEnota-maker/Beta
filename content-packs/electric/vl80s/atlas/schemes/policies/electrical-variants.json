@@ -6,7 +6,7 @@
     "asset": "vl80s_electrical_variants.json.gz",
     "blobSha": "f9f7956f871cbb04d38b8315e1b902372d5f3f7b"
   },
-  "runtimeStatus": "PENDING_OVERLAY_ENGINE",
+  "runtimeStatus": "POLICY_RESOLVER_AVAILABLE",
   "policy": {
     "stage": 4,
     "version": "1.0-final",

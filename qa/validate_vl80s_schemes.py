@@ -128,7 +128,7 @@ policies = []
 for relative in scheme_index["variantPolicies"]:
     path = ROOT / "content-packs" / relative
     document = json.loads(path.read_text(encoding="utf-8"))
-    assert document["runtimeStatus"] == "PENDING_OVERLAY_ENGINE"
+    assert document["runtimeStatus"] == "POLICY_RESOLVER_AVAILABLE"
     policies.append(document)
 
 electrical_policy = next(

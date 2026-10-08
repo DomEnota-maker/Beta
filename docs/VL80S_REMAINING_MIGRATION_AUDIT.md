@@ -110,3 +110,12 @@ For every remaining source choose one of:
 - absorb into an already migrated canonical object;
 - superseded legacy presentation — do not migrate;
 - unresolved ownership — keep gated until explicitly classified.
+
+
+## Variant policy resolver update
+
+The shared `feature-atlas` now has a section-aware variant policy resolver for the migrated electrical and pneumatic policy documents.
+
+It resolves profile features and explicit equipment facts, selects applicable overlays, and fails closed for exact-detail rendering when the donor policy requires an actual/primary section drawing. The fire-signalization 2110/2210 conflict remains explicit-only and is never inferred from serial range.
+
+This closes the policy-resolution part of the scheme migration. It does **not** invent missing contact-level replacement fragments; exact graphical fragment substitution remains gated by actual source material.

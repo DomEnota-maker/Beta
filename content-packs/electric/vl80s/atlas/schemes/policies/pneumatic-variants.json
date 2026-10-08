@@ -6,7 +6,7 @@
     "asset": "vl80s_pneumatic_variants.json.gz",
     "blobSha": "3899e9e653f17c7b26e2c3d97a8852d4537a2537"
   },
-  "runtimeStatus": "PENDING_OVERLAY_ENGINE",
+  "runtimeStatus": "POLICY_RESOLVER_AVAILABLE",
   "policy": {
     "stage": 5,
     "version": "1.0",
