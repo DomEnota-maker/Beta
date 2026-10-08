@@ -1,0 +1,10 @@
+{
+  "sourceCommit": "3176d6ee228f0ed4b78371f45209e10c1c724eff",
+  "observationCount": 18,
+  "legacyEquipmentMappingCount": 46,
+  "canonicalEquipmentCount": 89,
+  "scenarioMappingCount": 103,
+  "unresolvedEquipment": {},
+  "unresolvedScenarios": {},
+  "output": "content-packs/electric/vl80s/diagnostics/observations/index.json"
+}

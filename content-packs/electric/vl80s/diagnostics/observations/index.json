@@ -1,0 +1,473 @@
+{
+  "schemaVersion": 1,
+  "modelId": "vl80s",
+  "sourceSnapshot": {
+    "repository": "DomEnota-maker/Test-",
+    "commit": "3176d6ee228f0ed4b78371f45209e10c1c724eff",
+    "source": "app/src/main/java/ru/railbrake/calculator/core/Vl80sObservationCatalog.kt",
+    "blobSha": "a5d337adfda22161cc31779a93fdc04e18f5ad31"
+  },
+  "semantics": {
+    "search": "case-insensitive substring over title + description + synonyms",
+    "searchOnly": true,
+    "actionAuthority": "NONE",
+    "equipmentOwnership": "canonical-equipment-only",
+    "scenarioAccess": "resolved-through-feature-diagnostics-access-policy"
+  },
+  "observationCount": 18,
+  "observations": [
+    {
+      "id": "vl80s.obs.air-leak",
+      "legacyId": "air-leak",
+      "title": "Сильное шипение воздуха",
+      "kind": "SOUND",
+      "description": "Слышен непрерывный выход воздуха или заметна потеря давления.",
+      "synonyms": [
+        "шипит",
+        "утечка воздуха",
+        "свист"
+      ],
+      "scenarioIds": [
+        "vl80s.diag.main-reservoir-leak",
+        "vl80s.diag.brake-pipe-leak",
+        "vl80s.diag.compressor-pressure"
+      ],
+      "equipmentIds": [
+        "VL-EQ-PN-001",
+        "VL-EQ-BR-003",
+        "VL-EQ-AU-003"
+      ],
+      "confidence": "REQUIRES_VARIANT_CHECK",
+      "variantNote": "Обозначение лампы и её логика зависят от фактически установленной схемы/комплекса."
+    },
+    {
+      "id": "vl80s.obs.alsn-lamp",
+      "legacyId": "alsn-lamp",
+      "title": "АЛСН/ЭПК: неожиданная индикация или срабатывание",
+      "kind": "SIGNAL_LAMP",
+      "description": "Показание локомотивной сигнализации изменилось либо ЭПК дал тормозное воздействие.",
+      "synonyms": [
+        "эпк",
+        "бдительность",
+        "коды",
+        "локомотивный светофор"
+      ],
+      "scenarioIds": [
+        "vl80s.diag.alsn-epk",
+        "vl80s.diag.uncommanded-braking"
+      ],
+      "equipmentIds": [
+        "VL-EQ-SF-001",
+        "VL-EQ-SF-002"
+      ],
+      "confidence": "REQUIRES_VARIANT_CHECK",
+      "variantNote": "Обозначение лампы и её логика зависят от фактически установленной схемы/комплекса."
+    },
+    {
+      "id": "vl80s.obs.aux-not-start",
+      "legacyId": "aux-not-start",
+      "title": "Не запускаются вспомогательные машины",
+      "kind": "BEHAVIOUR",
+      "description": "Не запускается один или несколько приводов собственных нужд.",
+      "synonyms": [
+        "вспомогательные",
+        "вентиляторы",
+        "фр",
+        "фазорасщепитель"
+      ],
+      "scenarioIds": [
+        "vl80s.diag.aux-machines",
+        "vl80s.diag.aux-common-loss",
+        "vl80s.diag.phase-splitter-no-start",
+        "vl80s.diag.motor-fan-failure"
+      ],
+      "equipmentIds": [
+        "VL-EQ-AU-001",
+        "VL-EQ-AU-002"
+      ],
+      "confidence": "REQUIRES_VARIANT_CHECK",
+      "variantNote": "Обозначение лампы и её логика зависят от фактически установленной схемы/комплекса."
+    },
+    {
+      "id": "vl80s.obs.compressor-continuous",
+      "legacyId": "compressor-continuous",
+      "title": "Компрессор работает постоянно",
+      "kind": "BEHAVIOUR",
+      "description": "Компрессор не отключается по верхнему давлению либо не успевает компенсировать расход.",
+      "synonyms": [
+        "компрессор не отключается",
+        "часто включается",
+        "кт-6",
+        "клапан сбрасывает"
+      ],
+      "scenarioIds": [
+        "vl80s.diag.compressor-long-run",
+        "vl80s.diag.main-reservoir-safety-valve",
+        "vl80s.diag.compressor-no-start",
+        "vl80s.diag.main-reservoir-leak",
+        "vl80s.diag.brake-pipe-leak"
+      ],
+      "equipmentIds": [
+        "VL-EQ-AU-003",
+        "VL-EQ-PN-003",
+        "VL-EQ-PN-005"
+      ],
+      "confidence": "REQUIRES_VARIANT_CHECK",
+      "variantNote": "Обозначение лампы и её логика зависят от фактически установленной схемы/комплекса."
+    },
+    {
+      "id": "vl80s.obs.current-imbalance",
+      "legacyId": "current-imbalance",
+      "title": "Разный ток групп ТЭД",
+      "kind": "INSTRUMENT",
+      "description": "Токи секций или групп заметно различаются при одинаковом режиме.",
+      "synonyms": [
+        "асимметрия тока",
+        "амперметр",
+        "одна группа"
+      ],
+      "scenarioIds": [
+        "vl80s.diag.traction-current-imbalance",
+        "vl80s.diag.persistent-wheel-slip",
+        "vl80s.diag.rectifier-group-fault"
+      ],
+      "equipmentIds": [
+        "VL-EQ-TR-006",
+        "VL-EQ-TR-003",
+        "VL-EQ-TR-001"
+      ],
+      "confidence": "REQUIRES_VARIANT_CHECK",
+      "variantNote": "Обозначение лампы и её логика зависят от фактически установленной схемы/комплекса."
+    },
+    {
+      "id": "vl80s.obs.ekg-no-step",
+      "legacyId": "ekg-no-step",
+      "title": "ЭКГ не идёт / застряла на позиции",
+      "kind": "BEHAVIOUR",
+      "description": "Позиции не набираются, не подтверждаются либо переход сопровождается защитой.",
+      "synonyms": [
+        "экг",
+        "не набирает позиции",
+        "застряла"
+      ],
+      "scenarioIds": [
+        "vl80s.diag.ekg-stuck",
+        "vl80s.diag.traction-no-assemble",
+        "vl80s.diag.traction-current-imbalance"
+      ],
+      "equipmentIds": [
+        "VL-EQ-TR-001",
+        "VL-EQ-TR-002"
+      ],
+      "confidence": "REQUIRES_VARIANT_CHECK",
+      "variantNote": "Обозначение лампы и её логика зависят от фактически установленной схемы/комплекса."
+    },
+    {
+      "id": "vl80s.obs.fan-no-flow",
+      "legacyId": "fan-no-flow",
+      "title": "Нет потока вентиляции",
+      "kind": "BEHAVIOUR",
+      "description": "Двигатель вентилятора не запускается или вращается без подтверждённого потока.",
+      "synonyms": [
+        "мв",
+        "вентилятор",
+        "охлаждение",
+        "слабый поток",
+        "воздуховод"
+      ],
+      "scenarioIds": [
+        "vl80s.diag.fan-low-airflow",
+        "vl80s.diag.ventilation-duct-damage",
+        "vl80s.diag.motor-fan-failure",
+        "vl80s.diag.phase-splitter-no-start",
+        "vl80s.diag.rheostatic-brake"
+      ],
+      "equipmentIds": [
+        "VL-EQ-AU-002",
+        "VL-EQ-AU-005",
+        "VL-EQ-AU-001"
+      ],
+      "confidence": "REQUIRES_VARIANT_CHECK",
+      "variantNote": "Обозначение лампы и её логика зависят от фактически установленной схемы/комплекса."
+    },
+    {
+      "id": "vl80s.obs.gv-lamp",
+      "legacyId": "gv-lamp",
+      "title": "ГВ не включился / отключился",
+      "kind": "SIGNAL_LAMP",
+      "description": "Команда на главный выключатель не подтверждается или ГВ отключился после включения.",
+      "synonyms": [
+        "главник",
+        "выбило гв",
+        "гв отвалился",
+        "не держит гв"
+      ],
+      "scenarioIds": [
+        "vl80s.diag.gv-no-close",
+        "vl80s.diag.protection-trip",
+        "vl80s.diag.transformer-protection"
+      ],
+      "equipmentIds": [
+        "VL-EQ-HV-001",
+        "VL-EQ-TR-004"
+      ],
+      "confidence": "REQUIRES_VARIANT_CHECK",
+      "variantNote": "Обозначение лампы и её логика зависят от фактически установленной схемы/комплекса."
+    },
+    {
+      "id": "vl80s.obs.hot-wheel",
+      "legacyId": "hot-wheel",
+      "title": "Нагрев колеса, буксы или тормоза",
+      "kind": "SMELL_OR_HEAT",
+      "description": "Есть запах, дым, сигнал контроля или визуальный признак перегрева ходовой части.",
+      "synonyms": [
+        "горячая букса",
+        "нагрев",
+        "колесо",
+        "тормоз греется"
+      ],
+      "scenarioIds": [
+        "vl80s.diag.mechanical-noise-heating",
+        "vl80s.diag.wheel-dragging"
+      ],
+      "equipmentIds": [
+        "VL-EQ-MC-002",
+        "VL-EQ-BR-004",
+        "VL-EQ-BR-006"
+      ],
+      "confidence": "REQUIRES_VARIANT_CHECK",
+      "variantNote": "Обозначение лампы и её логика зависят от фактически установленной схемы/комплекса."
+    },
+    {
+      "id": "vl80s.obs.noise",
+      "legacyId": "noise",
+      "title": "Ненормальный стук или вибрация",
+      "kind": "SOUND",
+      "description": "Новый шум связан со скоростью, тягой или торможением.",
+      "synonyms": [
+        "стук",
+        "вибрация",
+        "гул",
+        "скрежет"
+      ],
+      "scenarioIds": [
+        "vl80s.diag.mechanical-noise-heating",
+        "vl80s.diag.wheel-dragging",
+        "vl80s.diag.motor-fan-failure"
+      ],
+      "equipmentIds": [
+        "VL-EQ-MC-002",
+        "VL-EQ-TR-007",
+        "VL-EQ-AU-002"
+      ],
+      "confidence": "REQUIRES_VARIANT_CHECK",
+      "variantNote": "Обозначение лампы и её логика зависят от фактически установленной схемы/комплекса."
+    },
+    {
+      "id": "vl80s.obs.pantograph",
+      "legacyId": "pantograph",
+      "title": "Токоприёмник не поднимается",
+      "kind": "BEHAVIOUR",
+      "description": "Выбранный токоприёмник не поднимается либо сразу опускается.",
+      "synonyms": [
+        "пантограф",
+        "рога",
+        "не поднимается"
+      ],
+      "scenarioIds": [
+        "vl80s.diag.pantograph-no-rise",
+        "vl80s.diag.control-voltage-low",
+        "vl80s.diag.compressor-pressure"
+      ],
+      "equipmentIds": [
+        "VL-EQ-HV-002",
+        "VL-EQ-PN-002"
+      ],
+      "confidence": "REQUIRES_VARIANT_CHECK",
+      "variantNote": "Обозначение лампы и её логика зависят от фактически установленной схемы/комплекса."
+    },
+    {
+      "id": "vl80s.obs.pressure-main-low",
+      "legacyId": "pressure-main-low",
+      "title": "Не растёт давление главных резервуаров",
+      "kind": "INSTRUMENT",
+      "description": "При работе компрессоров запас воздуха не набирается или быстро теряется.",
+      "synonyms": [
+        "гр",
+        "главные резервуары",
+        "давление не растет",
+        "компрессор"
+      ],
+      "scenarioIds": [
+        "vl80s.diag.compressor-no-start",
+        "vl80s.diag.main-reservoir-leak",
+        "vl80s.diag.compressor-pressure"
+      ],
+      "equipmentIds": [
+        "VL-EQ-AU-003",
+        "VL-EQ-PN-001"
+      ],
+      "confidence": "REQUIRES_VARIANT_CHECK",
+      "variantNote": "Обозначение лампы и её логика зависят от фактически установленной схемы/комплекса."
+    },
+    {
+      "id": "vl80s.obs.pressure-tm-drop",
+      "legacyId": "pressure-tm-drop",
+      "title": "Падает давление тормозной магистрали",
+      "kind": "INSTRUMENT",
+      "description": "Давление ТМ падает без ожидаемой команды либо не удаётся зарядить магистраль.",
+      "synonyms": [
+        "тм падает",
+        "утечка тм",
+        "магистраль",
+        "тм не заряжается"
+      ],
+      "scenarioIds": [
+        "vl80s.diag.brake-pipe-leak",
+        "vl80s.diag.brake-pipe-no-charge",
+        "vl80s.diag.equalizing-reservoir-mismatch",
+        "vl80s.diag.uncommanded-braking",
+        "vl80s.diag.brakes-no-apply-release"
+      ],
+      "equipmentIds": [
+        "VL-EQ-BR-001",
+        "VL-EQ-BR-007",
+        "VL-EQ-BR-003",
+        "VL-EQ-SF-002"
+      ],
+      "confidence": "REQUIRES_VARIANT_CHECK",
+      "variantNote": "Обозначение лампы и её логика зависят от фактически установленной схемы/комплекса."
+    },
+    {
+      "id": "vl80s.obs.rp-lamp",
+      "legacyId": "rp-lamp",
+      "title": "Сработала защита / РП",
+      "kind": "SIGNAL_LAMP",
+      "description": "Появился признак защитного отключения; точное реле обязательно записывают по фактической схеме.",
+      "synonyms": [
+        "рп",
+        "реле перегрузки",
+        "защита",
+        "выбило"
+      ],
+      "scenarioIds": [
+        "vl80s.diag.protection-trip",
+        "vl80s.diag.transformer-protection",
+        "vl80s.diag.rectifier-group-fault"
+      ],
+      "equipmentIds": [
+        "VL-EQ-PR-001",
+        "VL-EQ-TR-002"
+      ],
+      "confidence": "REQUIRES_VARIANT_CHECK",
+      "variantNote": "Обозначение лампы и её логика зависят от фактически установленной схемы/комплекса."
+    },
+    {
+      "id": "vl80s.obs.slip",
+      "legacyId": "slip",
+      "title": "Боксование",
+      "kind": "BEHAVIOUR",
+      "description": "Боксование повторяется или защита работает без очевидной причины.",
+      "synonyms": [
+        "бокс",
+        "буксование",
+        "песок"
+      ],
+      "scenarioIds": [
+        "vl80s.diag.persistent-wheel-slip",
+        "vl80s.diag.sanding-failure",
+        "vl80s.diag.traction-current-imbalance"
+      ],
+      "equipmentIds": [
+        "VL-EQ-PR-002",
+        "VL-EQ-MC-001",
+        "VL-EQ-TR-006"
+      ],
+      "confidence": "REQUIRES_VARIANT_CHECK",
+      "variantNote": "Обозначение лампы и её логика зависят от фактически установленной схемы/комплекса."
+    },
+    {
+      "id": "vl80s.obs.smoke",
+      "legacyId": "smoke",
+      "title": "Дым, запах горелой изоляции или дуга",
+      "kind": "SMELL_OR_HEAT",
+      "description": "Любой такой признак переводит работу в аварийный режим до выяснения причины.",
+      "synonyms": [
+        "дым",
+        "горелое",
+        "озон",
+        "дуга",
+        "искрит",
+        "резисторы"
+      ],
+      "scenarioIds": [
+        "vl80s.diag.smoke-fire-flashover",
+        "vl80s.diag.rheostatic-resistor-overheat",
+        "vl80s.diag.fire-alarm-signal",
+        "vl80s.diag.transformer-protection",
+        "vl80s.diag.protection-trip"
+      ],
+      "equipmentIds": [
+        "VL-EQ-FR-001",
+        "VL-EQ-TR-009",
+        "VL-EQ-TR-004",
+        "VL-EQ-HV-003"
+      ],
+      "confidence": "REQUIRES_VARIANT_CHECK",
+      "variantNote": "Обозначение лампы и её логика зависят от фактически установленной схемы/комплекса."
+    },
+    {
+      "id": "vl80s.obs.tc-not-release",
+      "legacyId": "tc-not-release",
+      "title": "Сохраняется давление ТЦ / не отпускает тормоз",
+      "kind": "INSTRUMENT",
+      "description": "После штатного отпуска давление цилиндров или тормозной эффект сохраняются.",
+      "synonyms": [
+        "тц",
+        "колодки",
+        "юз",
+        "не отпускает"
+      ],
+      "scenarioIds": [
+        "vl80s.diag.wheel-dragging",
+        "vl80s.diag.independent-brake-no-release",
+        "vl80s.diag.brake-cylinder-imbalance",
+        "vl80s.diag.brakes-no-apply-release",
+        "vl80s.diag.uncommanded-braking"
+      ],
+      "equipmentIds": [
+        "VL-EQ-BR-004",
+        "VL-EQ-BR-002",
+        "VL-EQ-BR-005",
+        "VL-EQ-BR-006"
+      ],
+      "confidence": "REQUIRES_VARIANT_CHECK",
+      "variantNote": "Обозначение лампы и её логика зависят от фактически установленной схемы/комплекса."
+    },
+    {
+      "id": "vl80s.obs.td-lamp",
+      "legacyId": "td-lamp",
+      "title": "Нет тяги группы ТД",
+      "kind": "SIGNAL_LAMP",
+      "description": "Не подтверждается включение тяговой группы либо отсутствует её ток.",
+      "synonyms": [
+        "тд",
+        "нет тока",
+        "тяга секции",
+        "линейный контактор"
+      ],
+      "scenarioIds": [
+        "vl80s.diag.traction-no-assemble",
+        "vl80s.diag.traction-current-imbalance",
+        "vl80s.diag.rectifier-group-fault"
+      ],
+      "equipmentIds": [
+        "VL-EQ-TR-002",
+        "VL-EQ-TR-003",
+        "VL-EQ-TR-006"
+      ],
+      "confidence": "REQUIRES_VARIANT_CHECK",
+      "variantNote": "Обозначение лампы и её логика зависят от фактически установленной схемы/комплекса."
+    }
+  ]
+}
