@@ -6,10 +6,16 @@ ROOT = Path(__file__).resolve().parents[1]
 PACK = ROOT / "content-packs/electric/vl80s/safety/fire-safety.pack.json"
 INDEX = ROOT / "content-packs/electric/vl80s/safety/index.json"
 RUNTIME_INDEX = ROOT / "content-packs/electric/vl80s/runtime-index.json"
+FIRE_DIAGNOSTICS = (
+    ROOT
+    / "content-packs/electric/vl80s/diagnostics/extended/"
+      "supplemental-operational/fire-safety.pack.json"
+)
 
 pack = json.loads(PACK.read_text(encoding="utf-8"))
 index = json.loads(INDEX.read_text(encoding="utf-8"))
 runtime = json.loads(RUNTIME_INDEX.read_text(encoding="utf-8"))
+fire_diagnostics = json.loads(FIRE_DIAGNOSTICS.read_text(encoding="utf-8"))
 
 assert pack["manifest"]["modelIds"] == ["vl80s"]
 assert pack["manifest"]["variantIds"] == []
@@ -61,5 +67,23 @@ assert index["entryIds"] == ["vl80s.safety.fire"]
 
 assert "electric/vl80s/safety/fire-safety.pack.json" in runtime["packs"]
 assert runtime["featureIndexes"]["safety"] == "electric/vl80s/safety/index.json"
+
+fire_entries = fire_diagnostics["entries"]
+assert {item["id"] for item in fire_entries} == {
+    "vl80s.diag.extinguisher-system-fault",
+    "vl80s.diag.fire-loop-fault",
+    "vl80s.diag.machine-room-smoke",
+}
+for item in fire_entries:
+    safety_links = [
+        link
+        for link in item.get("links", [])
+        if link.get("type") == "SAFETY"
+    ]
+    assert safety_links == [{
+        "type": "SAFETY",
+        "targetId": "vl80s.safety.fire",
+        "role": "related-model-safety",
+    }], item["id"]
 
 print("VL80S_MODEL_SAFETY_PASS")

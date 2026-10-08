@@ -10,6 +10,8 @@ DIAG_ROOT = MODEL_ROOT / "diagnostics"
 EQUIPMENT_ROOT = MODEL_ROOT / "atlas/equipment"
 ACCEPTANCE_ROOT = MODEL_ROOT / "acceptance"
 SCHEME_ROOT = MODEL_ROOT / "atlas/schemes"
+SAFETY_ROOT = MODEL_ROOT / "safety"
+FIRE_SAFETY_TARGET = "vl80s.safety.fire"
 
 SOURCE_COMMIT = "3176d6ee228f0ed4b78371f45209e10c1c724eff"
 SOURCE_BLOB = "6ffdfdabf2f467dcdc4958768905f2b675ac0c26"
@@ -257,6 +259,22 @@ for raw in scenarios:
             "role": "related-scheme",
         })
         reverse_scheme[scheme_id].add(canonical_id)
+
+    if category == "Пожарная безопасность":
+        safety_pack = SAFETY_ROOT / "fire-safety.pack.json"
+        if not safety_pack.is_file():
+            raise SystemExit("VL80S model-owned fire safety pack is missing")
+        safety_document = json.loads(safety_pack.read_text(encoding="utf-8"))
+        safety_ids = {item.get("id") for item in safety_document.get("entries", [])}
+        if FIRE_SAFETY_TARGET not in safety_ids:
+            raise SystemExit(
+                f"VL80S fire safety target is missing: {FIRE_SAFETY_TARGET}"
+            )
+        links.append({
+            "type": "SAFETY",
+            "targetId": FIRE_SAFETY_TARGET,
+            "role": "related-model-safety",
+        })
 
     aliases = [legacy_id]
     source_refs = source_ids(raw.get("sourceRefs"))

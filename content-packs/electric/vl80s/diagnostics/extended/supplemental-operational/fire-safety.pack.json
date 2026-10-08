@@ -76,6 +76,11 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-FIRE-SIGNAL",
           "role": "related-scheme"
+        },
+        {
+          "type": "SAFETY",
+          "targetId": "vl80s.safety.fire",
+          "role": "related-model-safety"
         }
       ],
       "diagnosticMeta": {
@@ -185,6 +190,11 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-FIRE-SIGNAL",
           "role": "related-scheme"
+        },
+        {
+          "type": "SAFETY",
+          "targetId": "vl80s.safety.fire",
+          "role": "related-model-safety"
         }
       ],
       "diagnosticMeta": {
@@ -309,6 +319,11 @@
           "type": "ATLAS_SCHEME",
           "targetId": "VL-SCH-EL-FIRE-SIGNAL",
           "role": "related-scheme"
+        },
+        {
+          "type": "SAFETY",
+          "targetId": "vl80s.safety.fire",
+          "role": "related-model-safety"
         }
       ],
       "diagnosticMeta": {
