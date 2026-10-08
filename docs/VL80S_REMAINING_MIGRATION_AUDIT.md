@@ -2,151 +2,93 @@
 
 Pinned donor: `DomEnota-maker/Test-` @ `3176d6ee228f0ed4b78371f45209e10c1c724eff`.
 
-This audit records what remains after the canonical VL80S equipment, technical-data, acceptance, scheme and diagnostic-catalog migrations.
+This audit records the current modular migration state of VL80S and only the work that remains materially open.
 
-## Already migrated into canonical modular ownership
+## Canonical modular content already migrated
 
-- 89 equipment objects in Atlas packs.
-- 89 corresponding equipment technical-data entries.
-- section-aware VL80S physical profile catalog.
-- 8 electrical and 8 pneumatic schemes.
-- 81 acceptance items and 8 acceptance routes.
-- 103 diagnostic catalog entries:
+### Equipment and technical data
+
+- 89 canonical equipment objects in model-owned Atlas packs.
+- 89 corresponding Technical Data entries.
+- 11 equipment domains: AU / BR / CB / CT / FR / HV / MC / PN / PR / SF / TR.
+- generated legacy `vl80-detail-*` articles are intentionally superseded and are not migrated as a second catalog.
+
+### Model profiles and applicability
+
+- section-aware VL80S physical profile catalog with 9 buckets;
+- profile selection is separate from the old broad `vl80s-general` donor applicability tag;
+- unknown, modified and mixed sections remain fail-closed where exact section data is required.
+
+### Acceptance
+
+- 81 canonical acceptance items;
+- 8 acceptance routes;
+- shared `feature-acceptance` owns state, note persistence and route behavior;
+- locomotive content owns the item/route data only.
+
+### Diagnostics
+
+- 103 canonical diagnostic cards:
   - 44 recommended;
   - 59 extended / `SUPPLEMENTAL_OPERATIONAL`.
-- Stage6 diagnostic cross-feature overlay as `relation-graph.json`.
-- six reference/normal-value records from `Vl80sNormalValues.kt`.
-- shared feature boundaries for Atlas, Acceptance and Diagnostics.
+- 1,181 Stage6 cross-feature relation edges preserved in `relation-graph.json`.
+- actual enriched `DiagnosticRepository.scenarios` runtime exported from the pinned donor:
+  - 103 executable scenarios;
+  - 318 questions;
+  - 954 strict YES/NO/UNKNOWN response edges.
+- executable runtime validates question keys, targets, candidate-cause IDs and all three response branches fail-closed.
+- model-specific observation index migrated:
+  - 18 observations;
+  - all links resolve against 103 canonical scenarios and 89 canonical equipment objects;
+  - observation search has no action authority.
+- diagnostic regeneration now preserves both `executableFlow` and `observationIndex`.
+- regeneration was revalidated from the pinned donor without producing a generated-content diff.
 
-## Diagnostics: still not migrated as executable flow
+All 103 diagnostic catalog entries remain `CANDIDATE`. Executable runtime availability does not itself grant publication status.
 
-The 1,181 Stage6 edges are relationship metadata, not the interactive YES/NO/UNKNOWN decision flow.
+The structural candidate `vl80s.diag.pantograph-no-rise` remains gated until its independent GOLDEN REFERENCE acceptance actually passes.
 
-The donor itself says that Stage6 does not replace Stage1–5 source-of-truth data and identifies `DiagnosticRepository.scenarios` as the interactive UI source.
+### Schemes and interactive Atlas data
 
-Therefore all 103 migrated diagnostic cards remain `CANDIDATE`.
+- 8 electrical scheme entries;
+- 8 pneumatic scheme entries;
+- 79 equipment objects linked to schemes;
+- section-aware electrical/pneumatic variant policies;
+- shared `feature-atlas` variant policy resolver:
+  - selects only applicable overlays/rules;
+  - refuses exact section claims when donor policy requires an actual section drawing;
+  - fire-signalization serial conflict remains explicit-only and is never inferred automatically.
+- exact contact-level replacement fragments are **not invented** where primary section drawings are unavailable.
 
-Remaining work:
+### Top-view Atlas
 
-1. export the actual enriched `DiagnosticRepository.scenarios` runtime from the pinned donor;
-2. preserve question keys, YES/NO/UNKNOWN routing, candidate causes, checks and safety boundaries;
-3. compare the exported runtime against the 103 canonical catalog cards;
-4. introduce executable-flow validation in `feature-diagnostics`;
-5. activate only accepted scenarios;
-6. keep `vl80s.diag.pantograph-no-rise` gated until its independent GOLDEN REFERENCE acceptance passes.
+- 15 model-owned normalized hotspots migrated;
+- 4 hotspots have exact canonical equipment targets;
+- aggregate VVK/BSA/cab zones remain presentation hotspots rather than invented equipment entities.
+- original background resource was recovered from a verified historical Beta archive without restoring the legacy ZIP build:
+  - source commit: `a3c93873bd128d4769d004098981235c169fd085`;
+  - archive: `RailBrakeCalculator.zip`;
+  - archive blob SHA: `6c3c7edc1713c1c901a566fd8a81a2494ee4ac58`;
+  - archive entry: `RailBrakeCalculator/app/src/main/res/drawable-nodpi/vl80s_layout_section1.png`;
+  - canonical output: `content-packs/electric/vl80s/atlas/interactive/layout-section1.png`;
+  - SHA-256: `e492898a621b626c8fb74dc2f554b1bc74165ba41add01e5aa43f4a132e75367`.
+- background provenance/hash are part of the Atlas layout contract.
+- clickable shared-Atlas UI is wired and validated: the recovered image is rendered with normalized hotspot overlays, exact equipment hotspots emit typed canonical targets, aggregate zones remain informational, and Back returns from an equipment card to the layout.
 
-## Variant overlays
+### Stepwise pneumatic flows
 
-Electrical and pneumatic variant policy assets are migrated, but the overlay engine is not yet treated as implemented.
+Four legacy learning modes are canonical model-owned data:
 
-Do not claim section-specific rendered schemes until the runtime applies the policy and passes validation.
+- charging — 4 steps;
+- service braking — 7 steps;
+- release — 4 steps;
+- auxiliary braking — 4 steps.
 
-## Legacy KnowledgeRepository material
+Step text and route coordinates remain explicitly training/presentation material, not exact pipe geometry and not action authority.
 
-### `vl80-layout`
+### Electrical functional flows
 
-Unique value: interactive top-view equipment layout.
-
-Status: preserve concept, do not migrate as a generic Knowledge article.
-
-The current Test source references `R.drawable.vl80s_layout_section1`, but that resource is not present in the pinned Test Git tree. Recover the actual image/resource from a verified historical source before rebuilding the clickable layout.
-
-Hotspot behavior should ultimately resolve to canonical equipment IDs instead of generating duplicate `vl80-detail-*` articles.
-
-### `vl80-pneumatic-groups`
-
-Mostly overlaps canonical pneumatic equipment and scheme data.
-
-Do not create a second equipment catalog. Any useful explanatory text should be absorbed into model technical data or scheme presentation.
-
-### `vl80-service-brake-route`
-
-Unique value: seven-step educational air route.
-
-This matches the desired step-through pneumatic experience and should be migrated as an Atlas/pneumatic flow, not as a Knowledge article.
-
-### `vl80-pneumatic-simulator`
-
-Legacy presentation of four pneumatic modes.
-
-Do not copy its old UI. Compare its four learning flows against the new pneumatic scheme/state packs and preserve only information that is not already represented.
-
-### `vl80-electrical-simulator`
-
-Legacy functional electrical trainer.
-
-Do not copy its old UI or duplicate its data. The new electrical scheme packs + shared Atlas feature are the target implementation.
-
-### `vl80-fire-safety`
-
-Contains model-specific operational fire-safety material and is not duplicated by the generic equipment catalog.
-
-Ownership still requires an explicit architecture decision: keep a model-specific safe-content representation linked from VL80S, while avoiding a second independent implementation of the common Safety feature.
-
-Do not silently move this article into global Common content or into Technical Data.
-
-### generated `vl80-detail-*`
-
-These are legacy generated equipment detail articles.
-
-Do not migrate them. Canonical Atlas/Technical Data equipment cards replace them.
-
-## Vl80sObservationCatalog
-
-EquipmentReference entries overlap the new 89-object canonical equipment catalog and must not be migrated as a second catalog.
-
-The observation layer itself remains useful: “what I see / hear / smell / measure” search phrases can become a model-specific diagnostic observation index used by Diagnostics and Assistant.
-
-Before migration, map every old observation equipment token to a unique canonical equipment ID and every legacy scenario ID to its canonical `vl80s.diag.*` ID.
-
-## Migration rule
-
-No remaining legacy VL80S class is copied merely because it exists.
-
-For every remaining source choose one of:
-
-- canonical data migration;
-- feature/runtime migration;
-- absorb into an already migrated canonical object;
-- superseded legacy presentation — do not migrate;
-- unresolved ownership — keep gated until explicitly classified.
-
-
-## Variant policy resolver update
-
-The shared `feature-atlas` now has a section-aware variant policy resolver for the migrated electrical and pneumatic policy documents.
-
-It resolves profile features and explicit equipment facts, selects applicable overlays, and fails closed for exact-detail rendering when the donor policy requires an actual/primary section drawing. The fire-signalization 2110/2210 conflict remains explicit-only and is never inferred from serial range.
-
-This closes the policy-resolution part of the scheme migration. It does **not** invent missing contact-level replacement fragments; exact graphical fragment substitution remains gated by actual source material.
-
-
-## VL80S top-view atlas migration
-
-The legacy `vl80LayoutHotspots` content from the pinned Test snapshot is now represented as model-owned presentation data under `atlas/interactive/layout-hotspots.json`.
-
-- 15 normalized training-reference hotspots are preserved.
-- Exact canonical equipment links are added only where the legacy hotspot ID matches migrated equipment unambiguously.
-- Aggregate zones such as VVK/BSA/cab areas remain layout hotspots and are not invented as equipment entities.
-- The shared `feature-atlas` owns hit-testing and typed equipment navigation.
-
-
-## VL80S stepwise pneumatic migration
-
-The legacy VL80S pneumatic trainer is now represented as model-owned presentation data instead of hardcoded UI state.
-
-- Four legacy modes are preserved: charging, service braking, release and auxiliary braking.
-- Step counts are preserved exactly as 4 / 7 / 4 / 4.
-- Step text comes from the pinned `KnowledgeRepository.kt` donor.
-- Route coordinates come from the pinned `KnowledgeBaseScreen.kt` donor.
-- Coordinates are explicitly presentation overlays, not exact pipe geometry.
-- The asset has no action authority and remains a training/functional flow.
-- The shared `feature-atlas` owns loading and step navigation.
-
-
-## VL80S electrical functional-flow migration
-
-The five legacy VL80S electrical trainer scenarios are now model-owned data instead of hardcoded Compose state:
+Five legacy functional trainer scenarios are canonical model-owned data:
 
 - Тяга — 5 steps;
 - Подъём ТП — 6 steps;
@@ -154,21 +96,90 @@ The five legacy VL80S electrical trainer scenarios are now model-owned data inst
 - Реостатный тормоз — 5 steps;
 - Защита — 4 steps.
 
-The migration preserves 50 node instances, 48 functional edges and 24 steps from the pinned Test source. Only exact legacy-id matches are linked to canonical equipment; unmatched legacy nodes remain virtual functional nodes.
+The migration preserves 50 node instances, 48 functional edges and 24 steps. Rendering authority belongs to the shared design system.
 
-Legacy per-scenario colors are retained only as migration metadata. Rendering style authority belongs to the shared design system.
+### Normal/reference values
 
+Six VL80S reference/normal-value records from the donor `Vl80sNormalValues.kt` are migrated.
 
-## VL80S model-owned safety migration
+### Model-owned fire safety
 
-The legacy `vl80-fire-safety` article is no longer an unresolved ownership case.
+The legacy `vl80-fire-safety` article has resolved ownership:
 
-Architecture decision:
+- data is owned by the VL80S model block;
+- rendering is owned by shared `feature-safety`;
+- it is not duplicated into Common;
+- three VL80S fire-related diagnostic scenarios link to the model safety card;
+- the donor source note was checked only to a 2025 revision, so current 2026 source status is deliberately not promoted to CURRENT;
+- the migrated card is information-only and has no action authority.
 
-- the fire-safety content remains owned by the VL80S model package;
-- rendering is delegated to the shared `feature-safety` module;
-- the content is not copied into global Common safety;
-- the shared Safety feature does not depend on VL80S;
-- source/action authority remains fail-closed until the cited document status is independently verified.
+## Deliberately not duplicated
 
-The migrated entry is information-only and preserves the pinned donor wording and source note. It does not claim that the 2025 donor verification is sufficient to establish current 2026 normative status.
+The following donor concepts are superseded presentations rather than separate new stores:
+
+- `vl80-pneumatic-groups` → canonical pneumatic equipment / schemes / Technical Data;
+- `vl80-pneumatic-simulator` → canonical stepwise pneumatic flow data;
+- `vl80-electrical-simulator` → canonical electrical functional-flow data;
+- `vl80-detail-*` → canonical equipment + Technical Data cards;
+- legacy EquipmentReference observations → canonical 89-object equipment catalog.
+
+## Material work still open
+
+### 1. Diagnostic publication / acceptance
+
+This is the main remaining safety gate.
+
+Runtime completeness and publication acceptance are separate concerns.
+
+Before changing an individual scenario from `CANDIDATE` to `ACTIVE`:
+
+1. its applicability/profile assumptions must be accepted;
+2. source and safety review must be complete for the intended layer;
+3. all branches must pass semantic acceptance, not only navigation smoke;
+4. the extended/restricted policy must remain independent from recommended diagnostics;
+5. `vl80s.diag.pantograph-no-rise` requires the separate GOLDEN REFERENCE gate.
+
+Until then the runtime may be loaded/tested but normal user execution remains fail-closed.
+
+### 2. Shared feature UI integration
+
+Data/runtime ownership is largely migrated, but shared UI still needs to be wired for the complete model experience:
+
+- expose pneumatic stepwise flows through shared `feature-atlas` UI;
+- expose electrical functional flows through shared `feature-atlas` UI;
+- move diagnostic catalog/search/interactive-question presentation into shared `feature-diagnostics` UI without bypassing publication/access policy;
+- keep Acceptance presentation in shared `feature-acceptance`.
+
+No model-specific UI implementation should be introduced to finish these screens.
+
+### 3. Exact section-specific graphical fragments
+
+Variant policy resolution is implemented, but some donor policies explicitly require a primary/actual section drawing for exact contact-level or equipment-layout claims.
+
+Those exact graphical fragments remain gated. They must be added only from verified source drawings; no generated or inferred fragment may silently become authoritative.
+
+### 4. Final VL80S integration acceptance
+
+After the shared feature screens above are wired, run a model-level acceptance that verifies:
+
+- runtime-index loads every intended VL80S pack exactly once;
+- no legacy ZIP/patch path is used;
+- cross-feature links resolve within VL80S or to true Common content only;
+- direct cross-model links are absent;
+- working-model state is not mutated by viewing/navigation;
+- recommended and extended diagnostics remain separated;
+- candidate diagnostics cannot be executed through normal published navigation;
+- Atlas top-view/background/hotspots/flows all load from canonical model assets;
+- Acceptance, Atlas, Diagnostics, Technical Data and model Safety use shared feature/design-system implementations.
+
+## Migration rule
+
+No remaining legacy VL80S class or asset is copied merely because it exists.
+
+For every remaining source choose exactly one:
+
+- canonical data migration;
+- shared feature/runtime migration;
+- absorb into an already migrated canonical object;
+- superseded legacy presentation — do not migrate;
+- unresolved source/acceptance gate — keep fail-closed until explicitly resolved.
