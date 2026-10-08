@@ -3,6 +3,7 @@ package ru.railbrake.calculator.shell
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -11,6 +12,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import ru.railbrake.calculator.acceptance.AcceptanceItemScreen
+import ru.railbrake.calculator.atlas.AtlasFeatureIndexJsonLoader
+import ru.railbrake.calculator.atlas.AtlasLayoutJsonLoader
+import ru.railbrake.calculator.atlas.AtlasLayoutMap
+import ru.railbrake.calculator.atlas.AtlasLayoutScreen
 import ru.railbrake.calculator.designsystem.RailContentEntryScreen
 import ru.railbrake.calculator.domain.CanonicalId
 import ru.railbrake.calculator.domain.ContentLink
@@ -42,8 +47,27 @@ class MainActivity : ComponentActivity() {
                     return@MaterialTheme
                 }
 
+                var showAtlasLayout by remember { mutableStateOf(true) }
                 var currentId by remember { mutableStateOf(CanonicalId("VL-EQ-HV-002")) }
                 var notice by remember { mutableStateOf<String?>(null) }
+
+                if (showAtlasLayout) {
+                    AtlasLayoutScreen(
+                        layout = loaded.atlasLayout,
+                        modelTitle = "ВЛ80С",
+                        onEquipmentTarget = { target ->
+                            currentId = target.id
+                            notice = null
+                            showAtlasLayout = false
+                        },
+                    )
+                    return@MaterialTheme
+                }
+
+                BackHandler {
+                    notice = null
+                    showAtlasLayout = true
+                }
 
                 val entry = loaded.registry.find(currentId)
                 if (entry == null) {
@@ -140,6 +164,26 @@ class MainActivity : ComponentActivity() {
             "Unexpected profile catalog: ${profileCatalog.modelId.value}"
         }
 
+        val atlasIndexPath = requireNotNull(index.featureIndexes["atlas"]) {
+            "VL80S atlas feature index is not configured"
+        }
+        val atlasIndexJson = assets.open(atlasIndexPath)
+            .bufferedReader()
+            .use { it.readText() }
+        val atlasIndex = AtlasFeatureIndexJsonLoader().parse(atlasIndexJson)
+        check(atlasIndex.modelId == "vl80s") {
+            "Unexpected Atlas index model: ${atlasIndex.modelId}"
+        }
+        val layoutPath = atlasIndex.layoutMaps.firstOrNull()
+            ?: error("VL80S atlas layout is not configured")
+        val atlasLayoutJson = assets.open(layoutPath)
+            .bufferedReader()
+            .use { it.readText() }
+        val atlasLayout = AtlasLayoutJsonLoader().parse(atlasLayoutJson)
+        check(atlasLayout.modelId == "vl80s") {
+            "Unexpected Atlas layout model: ${atlasLayout.modelId}"
+        }
+
         val installationIssues = index.packs.flatMap { path ->
             val json = assets.open(path).bufferedReader().use { it.readText() }
             registry.install(loader.parse(json))
@@ -153,6 +197,7 @@ class MainActivity : ComponentActivity() {
         return Vl80sVerticalSlice(
             registry = registry,
             linkResolver = LinkResolver(registry),
+            atlasLayout = atlasLayout,
             context = RuntimeContext(
                 workingModelId = ModelId("vl80s"),
                 viewedModelId = ModelId("vl80s"),
@@ -165,5 +210,6 @@ class MainActivity : ComponentActivity() {
 private data class Vl80sVerticalSlice(
     val registry: ContentRegistry,
     val linkResolver: LinkResolver,
+    val atlasLayout: AtlasLayoutMap,
     val context: RuntimeContext,
 )

@@ -19,12 +19,26 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.14"
+    }
 }
 
 dependencies {
     implementation(project(":domain-contracts"))
     implementation(project(":content-runtime"))
+    implementation(project(":design-system"))
     implementation("com.google.code.gson:gson:2.11.0")
+
+    implementation(platform("androidx.compose:compose-bom:2024.06.00"))
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.foundation:foundation")
+    implementation("androidx.compose.material3:material3")
 
     testImplementation("junit:junit:4.13.2")
 }

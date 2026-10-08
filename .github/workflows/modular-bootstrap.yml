@@ -193,6 +193,16 @@ jobs:
                               layout_asset,
                               names.count(layout_asset),
                           )
+                          layout_document = json.loads(
+                              archive.read(layout_asset).decode("utf-8")
+                          )
+                          background = layout_document.get("background")
+                          if background:
+                              background_asset = "assets/" + background["assetPath"]
+                              assert names.count(background_asset) == 1, (
+                                  background_asset,
+                                  names.count(background_asset),
+                              )
                       for flow_path in atlas_index.get("stepwiseFlows", []):
                           flow_asset = "assets/" + flow_path
                           assert names.count(flow_asset) == 1, (
