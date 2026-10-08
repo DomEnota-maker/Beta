@@ -20,6 +20,9 @@ scheme_index = json.loads(SCHEME_INDEX_PATH.read_text(encoding="utf-8"))
 assert scheme_index["modelId"] == "vl80s"
 assert len(scheme_index["schemePacks"]) == 2
 assert len(scheme_index["variantPolicies"]) == 2
+assert scheme_index["layoutMaps"] == [
+    "electric/vl80s/atlas/interactive/layout-hotspots.json"
+]
 
 runtime_entries = {}
 for relative in runtime_index["packs"]:

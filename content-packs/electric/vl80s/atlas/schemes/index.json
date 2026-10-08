@@ -8,5 +8,8 @@
   "variantPolicies": [
     "electric/vl80s/atlas/schemes/policies/electrical-variants.json",
     "electric/vl80s/atlas/schemes/policies/pneumatic-variants.json"
+  ],
+  "layoutMaps": [
+    "electric/vl80s/atlas/interactive/layout-hotspots.json"
   ]
 }

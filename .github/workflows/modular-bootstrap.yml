@@ -112,6 +112,9 @@ jobs:
       - name: Validate migrated VL80S electrical and pneumatic schemes
         run: python3 qa/validate_vl80s_schemes.py
 
+      - name: Validate migrated VL80S layout hotspots
+        run: python3 qa/validate_vl80s_layout.py
+
       - name: Show project boundaries
         run: gradle projects --console=plain
 
@@ -167,6 +170,17 @@ jobs:
                       feature_index,
                       names.count(feature_asset),
                   )
+
+                  if feature_name == "atlas":
+                      atlas_index = json.loads(
+                          archive.read(feature_asset).decode("utf-8")
+                      )
+                      for layout_path in atlas_index.get("layoutMaps", []):
+                          layout_asset = "assets/" + layout_path
+                          assert names.count(layout_asset) == 1, (
+                              layout_asset,
+                              names.count(layout_asset),
+                          )
 
                   if feature_name == "diagnostics":
                       diagnostic_index = json.loads(

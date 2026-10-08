@@ -119,3 +119,13 @@ The shared `feature-atlas` now has a section-aware variant policy resolver for t
 It resolves profile features and explicit equipment facts, selects applicable overlays, and fails closed for exact-detail rendering when the donor policy requires an actual/primary section drawing. The fire-signalization 2110/2210 conflict remains explicit-only and is never inferred from serial range.
 
 This closes the policy-resolution part of the scheme migration. It does **not** invent missing contact-level replacement fragments; exact graphical fragment substitution remains gated by actual source material.
+
+
+## VL80S top-view atlas migration
+
+The legacy `vl80LayoutHotspots` content from the pinned Test snapshot is now represented as model-owned presentation data under `atlas/interactive/layout-hotspots.json`.
+
+- 15 normalized training-reference hotspots are preserved.
+- Exact canonical equipment links are added only where the legacy hotspot ID matches migrated equipment unambiguously.
+- Aggregate zones such as VVK/BSA/cab areas remain layout hotspots and are not invented as equipment entities.
+- The shared `feature-atlas` owns hit-testing and typed equipment navigation.

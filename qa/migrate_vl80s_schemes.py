@@ -285,6 +285,9 @@ scheme_index_path.write_text(
             "modelId": "vl80s",
             "schemePacks": scheme_pack_paths,
             "variantPolicies": policy_paths,
+            "layoutMaps": [
+                "electric/vl80s/atlas/interactive/layout-hotspots.json"
+            ],
         },
         ensure_ascii=False,
         indent=2,
