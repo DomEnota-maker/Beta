@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Migration revision 4: preserve executable-runtime and observation-index metadata.
 import json
 from collections import defaultdict
 from pathlib import Path
