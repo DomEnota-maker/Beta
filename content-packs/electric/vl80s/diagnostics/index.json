@@ -37,9 +37,8 @@
     ]
   },
   "relationGraph": "electric/vl80s/diagnostics/relation-graph.json",
-  "runtimePayloadStatus": "EXECUTABLE_FLOW_AVAILABLE",
+  "runtimePayloadStatus": "RELATION_GRAPH_ONLY_NOT_EXECUTABLE",
   "interactiveRuntimeSource": "DiagnosticRepository.scenarios",
   "publicationPolicy": "ALL_CANDIDATE_UNTIL_FEATURE_RUNTIME_ACCEPTANCE",
-  "goldenReferenceCandidate": "vl80s.diag.pantograph-no-rise",
-  "executableFlow": "electric/vl80s/diagnostics/runtime/executable-flow.json"
+  "goldenReferenceCandidate": "vl80s.diag.pantograph-no-rise"
 }
