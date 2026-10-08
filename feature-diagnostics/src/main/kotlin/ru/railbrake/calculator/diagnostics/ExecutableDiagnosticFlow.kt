@@ -182,6 +182,11 @@ class ExecutableDiagnosticFlowJsonLoader(
         val scenarios = raw.scenarios.orEmpty().map { scenario ->
             val questions = scenario.questions.orEmpty().map { question ->
                 val rawResponses = question.responses.orEmpty()
+                val expectedResponses =
+                    ExecutableDiagnosticResponse.entries.map { it.name }.toSet()
+                require(rawResponses.keys == expectedResponses) {
+                    "question ${question.key} in ${scenario.id} must contain exactly YES/NO/UNKNOWN"
+                }
                 val responses = ExecutableDiagnosticResponse.entries.associateWith { response ->
                     val branch = rawResponses[response.name]
                         ?: throw IllegalArgumentException(
