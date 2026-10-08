@@ -901,11 +901,6 @@
         },
         {
           "type": "RELATED_SCENARIO",
-          "targetId": "vl80s.diag.oil-pump-failure",
-          "role": "related-diagnostic"
-        },
-        {
-          "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.phase-splitter-no-start",
           "role": "related-diagnostic"
         },
@@ -962,6 +957,11 @@
         {
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.ventilation-duct-damage",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.oil-pump-failure",
           "role": "related-diagnostic"
         }
       ],
