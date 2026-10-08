@@ -1,0 +1,67 @@
+name: Recover VL80S layout resource
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - modular-rebuild
+    paths:
+      - 'qa/recover_vl80s_layout_resource.py'
+      - 'feature-atlas/src/main/java/ru/railbrake/calculator/atlas/AtlasLayoutMap.kt'
+      - 'feature-atlas/src/test/java/ru/railbrake/calculator/atlas/AtlasLayoutMapTest.kt'
+      - '.github/workflows/vl80s-layout-resource-recovery.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
+
+      - name: Verify legacy archive object
+        shell: bash
+        run: |
+          set -euo pipefail
+          LEGACY_COMMIT="a3c93873bd128d4769d004098981235c169fd085"
+          EXPECTED_BLOB="6c3c7edc1713c1c901a566fd8a81a2494ee4ac58"
+          ACTUAL_BLOB="$(git rev-parse "$LEGACY_COMMIT:RailBrakeCalculator.zip")"
+          test "$ACTUAL_BLOB" = "$EXPECTED_BLOB"
+          mkdir -p build
+          git show "$LEGACY_COMMIT:RailBrakeCalculator.zip" > build/vl80s-layout-legacy.zip
+
+      - name: Recover canonical top-view background
+        run: python3 qa/recover_vl80s_layout_resource.py build/vl80s-layout-legacy.zip
+
+      - name: Validate layout contract
+        run: python3 qa/validate_vl80s_layout.py
+
+      - name: Validate Atlas loader
+        run: gradle :feature-atlas:testDebugUnitTest --stacktrace --console=plain
+
+      - name: Commit recovered resource
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add             content-packs/electric/vl80s/atlas/interactive/layout-hotspots.json             content-packs/electric/vl80s/atlas/interactive/layout-section1.*
+          if git diff --cached --quiet; then
+            echo "Recovered resource already matches canonical tree."
+            exit 0
+          fi
+          git commit -m "feat: recover VL80S top-view background"
+          git push origin HEAD:modular-rebuild

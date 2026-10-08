@@ -42,6 +42,52 @@ class AtlasLayoutMapTest {
     }
 
     @Test
+    fun loaderPreservesRecoveredBackgroundMetadata() {
+        val json = """
+            {
+              "schemaVersion": 1,
+              "modelId": "vl80s",
+              "id": "vl80s.layout.top-view",
+              "title": "ВЛ80С",
+              "summary": "Учебная схема",
+              "semantics": {
+                "spatialClaim": "TRAINING_REFERENCE_NOT_EXACT_MOUNTING"
+              },
+              "background": {
+                "assetPath": "electric/vl80s/atlas/interactive/layout-section1.png",
+                "status": "RECOVERED_FROM_VERIFIED_LEGACY_ARCHIVE",
+                "sha256": "abc",
+                "source": {
+                  "repository": "DomEnota-maker/Beta",
+                  "commit": "legacy",
+                  "archive": "RailBrakeCalculator.zip",
+                  "archiveBlobSha": "blob",
+                  "entry": "app/src/main/res/drawable/vl80s_layout_section1.png"
+                }
+              },
+              "hotspotCount": 0,
+              "canonicalEquipmentLinkCount": 0,
+              "hotspots": []
+            }
+        """.trimIndent()
+
+        val layout = AtlasLayoutJsonLoader().parse(json)
+
+        assertEquals(
+            "electric/vl80s/atlas/interactive/layout-section1.png",
+            layout.background?.assetPath,
+        )
+        assertEquals(
+            "RECOVERED_FROM_VERIFIED_LEGACY_ARCHIVE",
+            layout.background?.status,
+        )
+        assertEquals(
+            "app/src/main/res/drawable/vl80s_layout_section1.png",
+            layout.background?.sourceEntry,
+        )
+    }
+
+    @Test
     fun canonicalEquipmentHotspotProducesTypedTarget() {
         val hotspot = AtlasLayoutHotspot(
             id = "transformer",

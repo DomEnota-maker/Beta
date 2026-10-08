@@ -38,12 +38,24 @@ data class AtlasLayoutHotspot(
         equipmentId?.let { ContentTarget(it, ContentType.EQUIPMENT) }
 }
 
+data class AtlasLayoutBackground(
+    val assetPath: String,
+    val status: String,
+    val sha256: String,
+    val sourceRepository: String,
+    val sourceCommit: String,
+    val sourceArchive: String,
+    val sourceArchiveBlobSha: String,
+    val sourceEntry: String,
+)
+
 data class AtlasLayoutMap(
     val id: String,
     val modelId: String,
     val title: String,
     val summary: String,
     val spatialClaim: String,
+    val background: AtlasLayoutBackground? = null,
     val hotspots: List<AtlasLayoutHotspot>,
 ) {
     fun hitTest(x: Float, y: Float): AtlasLayoutHotspot? =
@@ -79,6 +91,7 @@ class AtlasLayoutJsonLoader {
                 raw.semantics?.spatialClaim,
                 "layout.semantics.spatialClaim",
             ),
+            background = raw.background?.toDomain(),
             hotspots = hotspots,
         )
     }
@@ -92,11 +105,58 @@ private data class JsonLayoutDocument(
     val hotspotCount: Int = -1,
     val canonicalEquipmentLinkCount: Int = -1,
     val semantics: JsonLayoutSemantics? = null,
+    val background: JsonLayoutBackground? = null,
     val hotspots: List<JsonHotspot>? = null,
 )
 
 private data class JsonLayoutSemantics(
     val spatialClaim: String? = null,
+)
+
+private data class JsonLayoutBackground(
+    val assetPath: String? = null,
+    val status: String? = null,
+    val sha256: String? = null,
+    val source: JsonLayoutBackgroundSource? = null,
+) {
+    fun toDomain(): AtlasLayoutBackground {
+        val sourceValue = requireNotNull(source) {
+            "layout.background.source is missing"
+        }
+        return AtlasLayoutBackground(
+            assetPath = requireLayoutText(assetPath, "layout.background.assetPath"),
+            status = requireLayoutText(status, "layout.background.status"),
+            sha256 = requireLayoutText(sha256, "layout.background.sha256"),
+            sourceRepository = requireLayoutText(
+                sourceValue.repository,
+                "layout.background.source.repository",
+            ),
+            sourceCommit = requireLayoutText(
+                sourceValue.commit,
+                "layout.background.source.commit",
+            ),
+            sourceArchive = requireLayoutText(
+                sourceValue.archive,
+                "layout.background.source.archive",
+            ),
+            sourceArchiveBlobSha = requireLayoutText(
+                sourceValue.archiveBlobSha,
+                "layout.background.source.archiveBlobSha",
+            ),
+            sourceEntry = requireLayoutText(
+                sourceValue.entry,
+                "layout.background.source.entry",
+            ),
+        )
+    }
+}
+
+private data class JsonLayoutBackgroundSource(
+    val repository: String? = null,
+    val commit: String? = null,
+    val archive: String? = null,
+    val archiveBlobSha: String? = null,
+    val entry: String? = null,
 )
 
 private data class JsonHotspot(

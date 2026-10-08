@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import hashlib
 import json
 from pathlib import Path
 
@@ -20,6 +21,20 @@ assert document["sourceSnapshot"] == {
 assert document["semantics"]["coordinateSpace"] == "NORMALIZED_0_1"
 assert document["semantics"]["spatialClaim"] == "TRAINING_REFERENCE_NOT_EXACT_MOUNTING"
 assert document["semantics"]["canonicalLinkRule"] == "EXACT_LEGACY_ID_MATCH_ONLY"
+
+background = document.get("background")
+if background is not None:
+    assert background["status"] == "RECOVERED_FROM_VERIFIED_LEGACY_ARCHIVE"
+    asset_path = ROOT / "content-packs" / background["assetPath"]
+    assert asset_path.is_file(), asset_path
+    actual_sha256 = hashlib.sha256(asset_path.read_bytes()).hexdigest()
+    assert actual_sha256 == background["sha256"]
+    source = background["source"]
+    assert source["repository"] == "DomEnota-maker/Beta"
+    assert source["commit"] == "a3c93873bd128d4769d004098981235c169fd085"
+    assert source["archive"] == "RailBrakeCalculator.zip"
+    assert source["archiveBlobSha"] == "6c3c7edc1713c1c901a566fd8a81a2494ee4ac58"
+    assert "vl80s_layout_section1" in source["entry"].lower()
 
 hotspots = document["hotspots"]
 assert document["hotspotCount"] == 15
