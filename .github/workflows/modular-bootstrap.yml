@@ -25,6 +25,7 @@ on:
       - 'content-schema/**'
       - 'content-packs/**'
       - 'qa/**'
+      - 'qa-tools/**'
       - '.github/workflows/modular-bootstrap.yml'
   pull_request:
     paths:
@@ -47,6 +48,7 @@ on:
       - 'content-schema/**'
       - 'content-packs/**'
       - 'qa/**'
+      - 'qa-tools/**'
 
 permissions:
   contents: read
@@ -97,6 +99,14 @@ jobs:
             python3 qa/validate_vl80s_diagnostic_runtime.py
           else
             echo "Executable diagnostic runtime is not generated yet."
+          fi
+
+      - name: Validate VL80S observation index when present
+        run: |
+          if test -f content-packs/electric/vl80s/diagnostics/observations/index.json; then
+            python3 qa/validate_vl80s_observations.py
+          else
+            echo "VL80S observation index is not generated yet."
           fi
 
       - name: Validate migrated VL80S electrical and pneumatic schemes
@@ -180,6 +190,21 @@ jobs:
                           assert flow["scenarioCount"] == 103
                           assert flow["questionCount"] == 318
                           assert flow["responseEdgeCount"] == 954
+
+                      observation_path = diagnostic_index.get("observationIndex")
+                      if observation_path:
+                          observation_asset = "assets/" + observation_path
+                          assert names.count(observation_asset) == 1, (
+                              observation_asset,
+                              names.count(observation_asset),
+                          )
+                          observation_index = json.loads(
+                              archive.read(observation_asset).decode("utf-8")
+                          )
+                          assert observation_index["modelId"] == "vl80s"
+                          assert observation_index["observationCount"] > 0
+                          assert observation_index["semantics"]["searchOnly"] is True
+                          assert observation_index["semantics"]["actionAuthority"] == "NONE"
 
               for pack in index["packs"]:
                   asset = "assets/" + pack

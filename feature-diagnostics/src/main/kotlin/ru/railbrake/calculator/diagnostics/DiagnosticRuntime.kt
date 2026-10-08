@@ -18,6 +18,7 @@ data class DiagnosticFeatureIndex(
     val extendedCorpora: Map<ExtendedDiagnosticClass, List<String>>,
     val relationGraph: String?,
     val executableFlow: String?,
+    val observationIndex: String?,
     val runtimePayloadStatus: String,
     val interactiveRuntimeSource: String?,
     val publicationPolicy: String,
@@ -72,6 +73,7 @@ class DiagnosticFeatureIndexJsonLoader {
             extendedCorpora = extended,
             relationGraph = raw.relationGraph?.takeIf(String::isNotBlank),
             executableFlow = raw.executableFlow?.takeIf(String::isNotBlank),
+            observationIndex = raw.observationIndex?.takeIf(String::isNotBlank),
             runtimePayloadStatus = requireText(
                 raw.runtimePayloadStatus,
                 "index.runtimePayloadStatus",
@@ -207,6 +209,7 @@ private data class JsonIndex(
     val extendedCorpora: Map<String, List<String>?>? = null,
     val relationGraph: String? = null,
     val executableFlow: String? = null,
+    val observationIndex: String? = null,
     val runtimePayloadStatus: String? = null,
     val interactiveRuntimeSource: String? = null,
     val publicationPolicy: String? = null,

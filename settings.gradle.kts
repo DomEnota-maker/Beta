@@ -36,3 +36,8 @@ include(
 include(":qa-vl80s-diagnostic-export")
 project(":qa-vl80s-diagnostic-export").projectDir =
     file("qa-tools/vl80s-diagnostic-export")
+
+
+include(":qa-vl80s-observation-export")
+project(":qa-vl80s-observation-export").projectDir =
+    file("qa-tools/vl80s-observation-export")
