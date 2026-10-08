@@ -94,7 +94,10 @@ assert len(recommended_ids) == 44, len(recommended_ids)
 assert len(extended_ids) == 59, len(extended_ids)
 assert REPORT["scenarioCount"] == 103
 assert REPORT["edgeCount"] == 1181
-assert REPORT["relationGraphOnly"] is True
+expected_relation_graph_only = (
+    INDEX["runtimePayloadStatus"] != "EXECUTABLE_FLOW_AVAILABLE"
+)
+assert REPORT["relationGraphOnly"] is expected_relation_graph_only
 assert REPORT["donorRuntimeBaselineScenarioCount"] == 93
 assert REPORT["catalogScenarioCount"] == 103
 assert REPORT["runtimeBaselineMetadataMismatch"] is True
