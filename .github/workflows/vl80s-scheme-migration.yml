@@ -44,6 +44,10 @@ jobs:
         run: |
           git add content-packs/electric/vl80s
           git diff --cached --check
+          if git diff --cached --quiet; then
+            echo "No generated VL80S scheme changes."
+            exit 0
+          fi
           git config user.name "DomEnota-maker"
           git config user.email "dk3093706@gmail.com"
           git commit -m "feat: migrate VL80S electrical and pneumatic schemes"

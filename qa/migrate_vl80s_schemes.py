@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Migration revision 3: preserve variant policy resolver runtime status.
+# Migration revision 4: preserve diagnostic reverse links from canonical relation graph.
 import json
 from collections import defaultdict
 from pathlib import Path
@@ -9,6 +9,7 @@ DONOR = ROOT / "build/vl80s-donor"
 MODEL_ROOT = ROOT / "content-packs/electric/vl80s"
 SCHEME_ROOT = MODEL_ROOT / "atlas/schemes"
 EQUIPMENT_ROOT = MODEL_ROOT / "atlas/equipment"
+DIAGNOSTIC_GRAPH = MODEL_ROOT / "diagnostics/relation-graph.json"
 
 electrical = json.loads((DONOR / "vl80s_electrical.json").read_text(encoding="utf-8"))
 pneumatic = json.loads((DONOR / "vl80s_pneumatic.json").read_text(encoding="utf-8"))
@@ -156,6 +157,40 @@ def combined_pack(pack_id, variant_ids, entries, schemes):
         "schemes": schemes,
     }
 
+def attach_diagnostic_reverse_links(entries):
+    graph = json.loads(DIAGNOSTIC_GRAPH.read_text(encoding="utf-8"))
+    scenario_id_map = graph.get("scenarioIdMap", {})
+    scheme_edges = [
+        edge
+        for edge in graph.get("runtimePayload", {}).get("edges", [])
+        if edge.get("type") in {
+            "electrical_scheme_to_diagnostic",
+            "electrical_scheme_to_diagnostic_candidate",
+            "pneumatic_view_to_diagnostic",
+            "pneumatic_view_to_diagnostic_candidate",
+        }
+    ]
+
+    by_id = {entry["id"]: entry for entry in entries}
+    for edge in scheme_edges:
+        target = by_id.get(edge.get("from"))
+        if target is None:
+            continue
+        legacy_diagnostic_id = edge.get("to")
+        canonical_diagnostic_id = scenario_id_map.get(legacy_diagnostic_id)
+        if not canonical_diagnostic_id:
+            raise SystemExit(
+                f"Missing canonical diagnostic mapping for {legacy_diagnostic_id}"
+            )
+        reverse = {
+            "type": "RELATED_SCENARIO",
+            "targetId": canonical_diagnostic_id,
+            "role": "related-diagnostic",
+        }
+        if reverse not in target["links"]:
+            target["links"].append(reverse)
+
+
 SCHEME_ROOT.mkdir(parents=True, exist_ok=True)
 
 electrical_entries = []
@@ -183,6 +218,8 @@ electrical_variant_ids = sorted({
     for entry in electrical_entries
     for profile_id in entry.get("applicability", {}).get("variantIds", [])
 })
+attach_diagnostic_reverse_links(electrical_entries)
+
 electrical_path = SCHEME_ROOT / "electrical.pack.json"
 electrical_path.write_text(
     json.dumps(
@@ -210,6 +247,8 @@ for raw in pneumatic["views"]:
     pneumatic_graphs.append(
         normalized_scheme(raw, physical_profiles, "edges", normalize_pneumatic_edge)
     )
+
+attach_diagnostic_reverse_links(pneumatic_entries)
 
 pneumatic_path = SCHEME_ROOT / "pneumatic.pack.json"
 pneumatic_path.write_text(
