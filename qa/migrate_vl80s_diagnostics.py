@@ -536,6 +536,23 @@ index_document = {
 if executable_runtime_available:
     index_document["executableFlow"] = executable_flow_rel
 
+observation_index_rel = "electric/vl80s/diagnostics/observations/index.json"
+observation_index_path = ROOT / "content-packs" / observation_index_rel
+if observation_index_path.exists():
+    observation_index = json.loads(
+        observation_index_path.read_text(encoding="utf-8")
+    )
+    if observation_index.get("modelId") != "vl80s":
+        raise SystemExit("Diagnostic observation index has wrong modelId")
+    if (
+        observation_index.get("sourceSnapshot", {}).get("commit")
+        != SOURCE_COMMIT
+    ):
+        raise SystemExit(
+            "Diagnostic observation index donor commit does not match catalog donor"
+        )
+    index_document["observationIndex"] = observation_index_rel
+
 index_path.write_text(
     json.dumps(index_document, ensure_ascii=False, indent=2) + "\n",
     encoding="utf-8",
@@ -566,7 +583,7 @@ report = {
     "sourceCommit": SOURCE_COMMIT,
     "scenarioCount": len(scenarios),
     "edgeCount": len(edges),
-    "relationGraphOnly": True,
+    "relationGraphOnly": not executable_runtime_available,
     "donorRuntimeBaselineScenarioCount": (
         root.get("runtimeBaseline", {}).get("canonicalStage6Scenarios")
     ),
