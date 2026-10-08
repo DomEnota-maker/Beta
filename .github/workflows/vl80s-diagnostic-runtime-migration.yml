@@ -1,0 +1,73 @@
+name: Migrate VL80S executable diagnostics
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - modular-rebuild
+    paths:
+      - 'qa/export_vl80s_donor.py'
+      - 'qa/finalize_vl80s_diagnostic_runtime.py'
+      - 'qa/validate_vl80s_diagnostic_runtime.py'
+      - 'qa-tools/vl80s-diagnostic-export/**'
+      - '.github/workflows/vl80s-diagnostic-runtime-migration.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
+
+      - name: Ensure branch has not moved
+        run: |
+          git fetch origin modular-rebuild
+          test "$(git rev-parse origin/modular-rebuild)" = "$GITHUB_SHA"
+
+      - name: Export verified pinned donor
+        run: python3 qa/export_vl80s_donor.py
+
+      - name: Export effective DiagnosticRepository runtime
+        run: gradle :qa-vl80s-diagnostic-export:run --stacktrace --console=plain
+
+      - name: Finalize diagnostics feature index
+        run: python3 qa/finalize_vl80s_diagnostic_runtime.py
+
+      - name: Validate executable diagnostic runtime
+        run: |
+          python3 qa/validate_vl80s_diagnostic_runtime.py
+          gradle :feature-diagnostics:test --stacktrace --console=plain
+          git diff --check
+
+      - name: Commit generated runtime
+        run: |
+          git add             content-packs/electric/vl80s/diagnostics/runtime/executable-flow.json             content-packs/electric/vl80s/diagnostics/index.json
+          git diff --cached --check
+          git config user.name "DomEnota-maker"
+          git config user.email "dk3093706@gmail.com"
+          git commit -m "feat: migrate VL80S executable diagnostic runtime"
+
+      - name: Push only if branch is still ours
+        run: |
+          git fetch origin modular-rebuild
+          remote_head="$(git rev-parse origin/modular-rebuild)"
+          if [ "$remote_head" != "$GITHUB_SHA" ]; then
+            echo "modular-rebuild moved to $remote_head; refusing non-fast-forward push."
+            exit 1
+          fi
+          git push origin HEAD:modular-rebuild

@@ -91,6 +91,14 @@ jobs:
       - name: Validate migrated VL80S diagnostics
         run: python3 qa/validate_vl80s_diagnostics.py
 
+      - name: Validate VL80S executable diagnostic runtime when present
+        run: |
+          if test -f content-packs/electric/vl80s/diagnostics/runtime/executable-flow.json; then
+            python3 qa/validate_vl80s_diagnostic_runtime.py
+          else
+            echo "Executable diagnostic runtime is not generated yet."
+          fi
+
       - name: Validate migrated VL80S electrical and pneumatic schemes
         run: python3 qa/validate_vl80s_schemes.py
 

@@ -120,6 +120,39 @@ class DiagnosticRuntimeTest {
     }
 
     @Test
+    fun executableRuntimeIndexRequiresFlowPath() {
+        val executable = indexJson
+            .replace(
+                "\"runtimePayloadStatus\": \"RELATION_GRAPH_ONLY_NOT_EXECUTABLE\"",
+                "\"runtimePayloadStatus\": \"EXECUTABLE_FLOW_AVAILABLE\""
+            )
+            .replace(
+                "\"relationGraph\": \"relation-graph.json\",",
+                "\"relationGraph\": \"relation-graph.json\",\n          \"executableFlow\": \"runtime/executable-flow.json\","
+            )
+
+        val index = DiagnosticFeatureIndexJsonLoader().parse(executable)
+        assertEquals(
+            "runtime/executable-flow.json",
+            index.executableFlow,
+        )
+        assertEquals(
+            DiagnosticRuntimeAvailability.EXECUTABLE_FLOW_AVAILABLE,
+            index.runtimeAvailability,
+        )
+    }
+
+    @Test(expected = IllegalArgumentException::class)
+    fun executableRuntimeIndexFailsClosedWithoutFlowPath() {
+        DiagnosticFeatureIndexJsonLoader().parse(
+            indexJson.replace(
+                "\"runtimePayloadStatus\": \"RELATION_GRAPH_ONLY_NOT_EXECUTABLE\"",
+                "\"runtimePayloadStatus\": \"EXECUTABLE_FLOW_AVAILABLE\""
+            )
+        )
+    }
+
+    @Test
     fun onlyActiveScenarioWithRealRuntimeCanExecute() {
         val decision = DiagnosticAccessPolicy.evaluate(
             descriptor = DiagnosticDescriptor(

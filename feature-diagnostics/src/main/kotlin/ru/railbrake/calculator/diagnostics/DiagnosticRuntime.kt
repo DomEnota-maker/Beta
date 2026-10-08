@@ -17,6 +17,7 @@ data class DiagnosticFeatureIndex(
     val recommendedPacks: List<String>,
     val extendedCorpora: Map<ExtendedDiagnosticClass, List<String>>,
     val relationGraph: String?,
+    val executableFlow: String?,
     val runtimePayloadStatus: String,
     val interactiveRuntimeSource: String?,
     val publicationPolicy: String,
@@ -33,6 +34,11 @@ data class DiagnosticFeatureIndex(
         )
         require(runtimePayloadStatus.isNotBlank())
         require(publicationPolicy.isNotBlank())
+        if (runtimePayloadStatus == "EXECUTABLE_FLOW_AVAILABLE") {
+            require(!executableFlow.isNullOrBlank()) {
+                "executableFlow is required when executable runtime is available"
+            }
+        }
     }
 
     val runtimeAvailability: DiagnosticRuntimeAvailability
@@ -65,6 +71,7 @@ class DiagnosticFeatureIndexJsonLoader {
             recommendedPacks = raw.recommendedPacks.orEmpty(),
             extendedCorpora = extended,
             relationGraph = raw.relationGraph?.takeIf(String::isNotBlank),
+            executableFlow = raw.executableFlow?.takeIf(String::isNotBlank),
             runtimePayloadStatus = requireText(
                 raw.runtimePayloadStatus,
                 "index.runtimePayloadStatus",
@@ -199,6 +206,7 @@ private data class JsonIndex(
     val recommendedPacks: List<String>? = null,
     val extendedCorpora: Map<String, List<String>?>? = null,
     val relationGraph: String? = null,
+    val executableFlow: String? = null,
     val runtimePayloadStatus: String? = null,
     val interactiveRuntimeSource: String? = null,
     val publicationPolicy: String? = null,
