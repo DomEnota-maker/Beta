@@ -17,9 +17,26 @@ assert INDEX["modelId"] == "vl80s"
 assert INDEX["sourceSnapshot"]["commit"] == "3176d6ee228f0ed4b78371f45209e10c1c724eff"
 assert INDEX["sourceSnapshot"]["blobSha"] == "6ffdfdabf2f467dcdc4958768905f2b675ac0c26"
 assert INDEX["publicationPolicy"] == "ALL_CANDIDATE_UNTIL_FEATURE_RUNTIME_ACCEPTANCE"
-assert INDEX["runtimePayloadStatus"] == "RELATION_GRAPH_ONLY_NOT_EXECUTABLE"
+assert INDEX["runtimePayloadStatus"] in {
+    "RELATION_GRAPH_ONLY_NOT_EXECUTABLE",
+    "EXECUTABLE_FLOW_AVAILABLE",
+}
 assert INDEX["interactiveRuntimeSource"] == "DiagnosticRepository.scenarios"
 assert INDEX["relationGraph"] == "electric/vl80s/diagnostics/relation-graph.json"
+
+if INDEX["runtimePayloadStatus"] == "EXECUTABLE_FLOW_AVAILABLE":
+    executable_rel = INDEX.get("executableFlow")
+    assert executable_rel == "electric/vl80s/diagnostics/runtime/executable-flow.json"
+    executable_path = ROOT / "content-packs" / executable_rel
+    assert executable_path.is_file()
+    executable = json.loads(executable_path.read_text(encoding="utf-8"))
+    assert executable["modelId"] == "vl80s"
+    assert executable["sourceSnapshot"]["commit"] == (
+        "3176d6ee228f0ed4b78371f45209e10c1c724eff"
+    )
+    assert executable["scenarioCount"] == 103
+else:
+    assert not INDEX.get("executableFlow")
 assert not (DIAG_ROOT / "graph.json").exists()
 assert INDEX["goldenReferenceCandidate"] == "vl80s.diag.pantograph-no-rise"
 
