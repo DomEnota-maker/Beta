@@ -19,3 +19,8 @@ dependencies {
 application {
     mainClass.set("ru.railbrake.calculator.export.Vl80sDiagnosticRuntimeExporterKt")
 }
+
+
+tasks.named<JavaExec>("run") {
+    workingDir(rootProject.projectDir)
+}
