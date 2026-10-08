@@ -23,6 +23,9 @@ assert len(scheme_index["variantPolicies"]) == 2
 assert scheme_index["layoutMaps"] == [
     "electric/vl80s/atlas/interactive/layout-hotspots.json"
 ]
+assert scheme_index["stepwiseFlows"] == [
+    "electric/vl80s/atlas/interactive/pneumatic-flows.json"
+]
 
 runtime_entries = {}
 for relative in runtime_index["packs"]:

@@ -129,3 +129,16 @@ The legacy `vl80LayoutHotspots` content from the pinned Test snapshot is now rep
 - Exact canonical equipment links are added only where the legacy hotspot ID matches migrated equipment unambiguously.
 - Aggregate zones such as VVK/BSA/cab areas remain layout hotspots and are not invented as equipment entities.
 - The shared `feature-atlas` owns hit-testing and typed equipment navigation.
+
+
+## VL80S stepwise pneumatic migration
+
+The legacy VL80S pneumatic trainer is now represented as model-owned presentation data instead of hardcoded UI state.
+
+- Four legacy modes are preserved: charging, service braking, release and auxiliary braking.
+- Step counts are preserved exactly as 4 / 7 / 4 / 4.
+- Step text comes from the pinned `KnowledgeRepository.kt` donor.
+- Route coordinates come from the pinned `KnowledgeBaseScreen.kt` donor.
+- Coordinates are explicitly presentation overlays, not exact pipe geometry.
+- The asset has no action authority and remains a training/functional flow.
+- The shared `feature-atlas` owns loading and step navigation.

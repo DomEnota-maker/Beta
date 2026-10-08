@@ -351,6 +351,9 @@ scheme_index_path.write_text(
             "layoutMaps": [
                 "electric/vl80s/atlas/interactive/layout-hotspots.json"
             ],
+            "stepwiseFlows": [
+                "electric/vl80s/atlas/interactive/pneumatic-flows.json"
+            ],
         },
         ensure_ascii=False,
         indent=2,
