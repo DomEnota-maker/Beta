@@ -142,3 +142,18 @@ The legacy VL80S pneumatic trainer is now represented as model-owned presentatio
 - Coordinates are explicitly presentation overlays, not exact pipe geometry.
 - The asset has no action authority and remains a training/functional flow.
 - The shared `feature-atlas` owns loading and step navigation.
+
+
+## VL80S electrical functional-flow migration
+
+The five legacy VL80S electrical trainer scenarios are now model-owned data instead of hardcoded Compose state:
+
+- Тяга — 5 steps;
+- Подъём ТП — 6 steps;
+- Вспомогательные — 4 steps;
+- Реостатный тормоз — 5 steps;
+- Защита — 4 steps.
+
+The migration preserves 50 node instances, 48 functional edges and 24 steps from the pinned Test source. Only exact legacy-id matches are linked to canonical equipment; unmatched legacy nodes remain virtual functional nodes.
+
+Legacy per-scenario colors are retained only as migration metadata. Rendering style authority belongs to the shared design system.

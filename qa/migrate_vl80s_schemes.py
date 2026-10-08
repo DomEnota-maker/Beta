@@ -354,6 +354,9 @@ scheme_index_path.write_text(
             "stepwiseFlows": [
                 "electric/vl80s/atlas/interactive/pneumatic-flows.json"
             ],
+            "functionalFlows": [
+                "electric/vl80s/atlas/interactive/electrical-functional-flows.json"
+            ],
         },
         ensure_ascii=False,
         indent=2,

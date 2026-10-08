@@ -118,6 +118,9 @@ jobs:
       - name: Validate migrated VL80S pneumatic stepwise flows
         run: python3 qa/validate_vl80s_pneumatic_flows.py
 
+      - name: Validate migrated VL80S electrical functional flows
+        run: python3 qa/validate_vl80s_electrical_functional_flows.py
+
       - name: Show project boundaries
         run: gradle projects --console=plain
 
@@ -185,6 +188,12 @@ jobs:
                               names.count(layout_asset),
                           )
                       for flow_path in atlas_index.get("stepwiseFlows", []):
+                          flow_asset = "assets/" + flow_path
+                          assert names.count(flow_asset) == 1, (
+                              flow_asset,
+                              names.count(flow_asset),
+                          )
+                      for flow_path in atlas_index.get("functionalFlows", []):
                           flow_asset = "assets/" + flow_path
                           assert names.count(flow_asset) == 1, (
                               flow_asset,

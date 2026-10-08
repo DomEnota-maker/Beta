@@ -26,6 +26,9 @@ assert scheme_index["layoutMaps"] == [
 assert scheme_index["stepwiseFlows"] == [
     "electric/vl80s/atlas/interactive/pneumatic-flows.json"
 ]
+assert scheme_index["functionalFlows"] == [
+    "electric/vl80s/atlas/interactive/electrical-functional-flows.json"
+]
 
 runtime_entries = {}
 for relative in runtime_index["packs"]:
