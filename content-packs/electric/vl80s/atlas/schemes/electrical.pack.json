@@ -545,12 +545,12 @@
         },
         {
           "type": "RELATED_SCENARIO",
-          "targetId": "vl80s.diag.vl80s-ekg-section-desync",
+          "targetId": "vl80s.diag.traction-gear-noise",
           "role": "related-diagnostic"
         },
         {
           "type": "RELATED_SCENARIO",
-          "targetId": "vl80s.diag.traction-gear-noise",
+          "targetId": "vl80s.diag.vl80s-ekg-section-desync",
           "role": "related-diagnostic"
         }
       ],
@@ -743,12 +743,12 @@
         },
         {
           "type": "RELATED_SCENARIO",
-          "targetId": "vl80s.diag.vl80s-ekg-section-desync",
+          "targetId": "vl80s.diag.ekg-slow-transition",
           "role": "related-diagnostic"
         },
         {
           "type": "RELATED_SCENARIO",
-          "targetId": "vl80s.diag.ekg-slow-transition",
+          "targetId": "vl80s.diag.vl80s-ekg-section-desync",
           "role": "related-diagnostic"
         }
       ],
