@@ -262,6 +262,11 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.vvk-interlock-fault",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.vl80s-ekg-section-desync",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -537,6 +542,16 @@
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.transformer-protection",
           "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.vl80s-ekg-section-desync",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.traction-gear-noise",
+          "role": "related-diagnostic"
         }
       ],
       "migrationRefs": {
@@ -724,6 +739,16 @@
         {
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.transformer-protection",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.vl80s-ekg-section-desync",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.ekg-slow-transition",
           "role": "related-diagnostic"
         }
       ],
@@ -1321,6 +1346,11 @@
         {
           "type": "RELATED_SCENARIO",
           "targetId": "vl80s.diag.uncommanded-braking",
+          "role": "related-diagnostic"
+        },
+        {
+          "type": "RELATED_SCENARIO",
+          "targetId": "vl80s.diag.vl80s-ekg-section-desync",
           "role": "related-diagnostic"
         }
       ],

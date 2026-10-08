@@ -190,6 +190,30 @@ def attach_diagnostic_reverse_links(entries):
         if reverse not in target["links"]:
             target["links"].append(reverse)
 
+    # Runtime/completion scenarios may have canonical scheme links that are
+    # newer than the Stage6 relation graph. Merge those links as the second
+    # canonical source so generator ordering cannot erase them.
+    diagnostic_root = MODEL_ROOT / "diagnostics"
+    for path in sorted(diagnostic_root.rglob("*.pack.json")):
+        document = json.loads(path.read_text(encoding="utf-8"))
+        for diagnostic in document.get("entries", []):
+            if diagnostic.get("type") != "DIAGNOSTIC_SCENARIO":
+                continue
+            diagnostic_id = diagnostic.get("id")
+            for link in diagnostic.get("links", []):
+                if link.get("type") != "ATLAS_SCHEME":
+                    continue
+                target = by_id.get(link.get("targetId"))
+                if target is None:
+                    continue
+                reverse = {
+                    "type": "RELATED_SCENARIO",
+                    "targetId": diagnostic_id,
+                    "role": "related-diagnostic",
+                }
+                if reverse not in target["links"]:
+                    target["links"].append(reverse)
+
 
 SCHEME_ROOT.mkdir(parents=True, exist_ok=True)
 
