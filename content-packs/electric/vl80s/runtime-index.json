@@ -29,6 +29,7 @@
     "electric/vl80s/acceptance/required.pack.json",
     "electric/vl80s/acceptance/items.pack.json",
     "electric/vl80s/technical-data/normal-values.pack.json",
+    "electric/vl80s/safety/fire-safety.pack.json",
     "electric/vl80s/diagnostics/recommended/auxiliary.pack.json",
     "electric/vl80s/diagnostics/recommended/brakes.pack.json",
     "electric/vl80s/diagnostics/recommended/control.pack.json",
@@ -51,8 +52,7 @@
     "electric/vl80s/diagnostics/extended/supplemental-operational/pneumatics.pack.json",
     "electric/vl80s/diagnostics/extended/supplemental-operational/running-gear.pack.json",
     "electric/vl80s/diagnostics/extended/supplemental-operational/traction.pack.json",
-    "electric/vl80s/diagnostics/extended/supplemental-operational/traffic-safety.pack.json",
-    "electric/vl80s/safety/fire-safety.pack.json"
+    "electric/vl80s/diagnostics/extended/supplemental-operational/traffic-safety.pack.json"
   ],
   "profileCatalog": "electric/vl80s/profile-catalog.json",
   "featureIndexes": {

@@ -41,6 +41,5 @@
   "interactiveRuntimeSource": "DiagnosticRepository.scenarios",
   "publicationPolicy": "ALL_CANDIDATE_UNTIL_FEATURE_RUNTIME_ACCEPTANCE",
   "goldenReferenceCandidate": "vl80s.diag.pantograph-no-rise",
-  "executableFlow": "electric/vl80s/diagnostics/runtime/executable-flow.json",
-  "observationIndex": "electric/vl80s/diagnostics/observations/index.json"
+  "executableFlow": "electric/vl80s/diagnostics/runtime/executable-flow.json"
 }
