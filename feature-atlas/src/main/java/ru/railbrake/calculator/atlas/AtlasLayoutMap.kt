@@ -71,11 +71,11 @@ class AtlasLayoutJsonLoader {
         }
 
         return AtlasLayoutMap(
-            id = requireText(raw.id, "layout.id"),
-            modelId = requireText(raw.modelId, "layout.modelId"),
-            title = requireText(raw.title, "layout.title"),
-            summary = requireText(raw.summary, "layout.summary"),
-            spatialClaim = requireText(
+            id = requireLayoutText(raw.id, "layout.id"),
+            modelId = requireLayoutText(raw.modelId, "layout.modelId"),
+            title = requireLayoutText(raw.title, "layout.title"),
+            summary = requireLayoutText(raw.summary, "layout.summary"),
+            spatialClaim = requireLayoutText(
                 raw.semantics?.spatialClaim,
                 "layout.semantics.spatialClaim",
             ),
@@ -109,10 +109,10 @@ private data class JsonHotspot(
     val equipmentId: String? = null,
 ) {
     fun toDomain() = AtlasLayoutHotspot(
-        id = requireText(id, "hotspot.id"),
-        title = requireText(title, "hotspot.title"),
-        subtitle = requireText(subtitle, "hotspot.subtitle"),
-        details = requireText(details, "hotspot.details"),
+        id = requireLayoutText(id, "hotspot.id"),
+        title = requireLayoutText(title, "hotspot.title"),
+        subtitle = requireLayoutText(subtitle, "hotspot.subtitle"),
+        details = requireLayoutText(details, "hotspot.details"),
         learnMore = learnMore.orEmpty(),
         bounds = requireNotNull(bounds) { "hotspot.bounds is missing" }.toDomain(),
         equipmentId = equipmentId
@@ -128,4 +128,10 @@ private data class JsonBounds(
     val bottom: Float = -1f,
 ) {
     fun toDomain() = NormalizedBounds(left, top, right, bottom)
+}
+
+
+private fun requireLayoutText(value: String?, field: String): String {
+    require(!value.isNullOrBlank()) { "$field must not be blank" }
+    return value
 }
