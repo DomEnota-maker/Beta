@@ -151,11 +151,36 @@ jobs:
               assert names.count("assets/" + profile_catalog) == 1
               for feature_name, feature_index in index.get("featureIndexes", {}).items():
                   assert feature_name
-                  assert names.count("assets/" + feature_index) == 1, (
+                  feature_asset = "assets/" + feature_index
+                  assert names.count(feature_asset) == 1, (
                       feature_name,
                       feature_index,
-                      names.count("assets/" + feature_index),
+                      names.count(feature_asset),
                   )
+
+                  if feature_name == "diagnostics":
+                      diagnostic_index = json.loads(
+                          archive.read(feature_asset).decode("utf-8")
+                      )
+                      if (
+                          diagnostic_index.get("runtimePayloadStatus")
+                          == "EXECUTABLE_FLOW_AVAILABLE"
+                      ):
+                          flow_path = diagnostic_index.get("executableFlow")
+                          assert flow_path
+                          flow_asset = "assets/" + flow_path
+                          assert names.count(flow_asset) == 1, (
+                              flow_asset,
+                              names.count(flow_asset),
+                          )
+                          flow = json.loads(
+                              archive.read(flow_asset).decode("utf-8")
+                          )
+                          assert flow["modelId"] == "vl80s"
+                          assert flow["scenarioCount"] == 103
+                          assert flow["questionCount"] == 318
+                          assert flow["responseEdgeCount"] == 954
+
               for pack in index["packs"]:
                   asset = "assets/" + pack
                   assert names.count(asset) == 1, (asset, names.count(asset))

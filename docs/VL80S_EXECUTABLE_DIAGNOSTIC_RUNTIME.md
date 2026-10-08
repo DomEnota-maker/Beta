@@ -22,3 +22,19 @@ For every question, YES / NO / UNKNOWN edges are exported through the donor's ow
 The generator maps donor scenario IDs to canonical `vl80s.diag.*` IDs only through the already migrated Stage6 scenario map. Missing mappings fail the migration.
 
 Generating an executable flow does **not** activate a diagnostic card. Catalog publication status remains `CANDIDATE` until feature/runtime acceptance is completed. The independent `vl80s.diag.pantograph-no-rise` golden-reference gate remains mandatory.
+
+
+## New modular execution engine
+
+`feature-diagnostics` owns the executable JSON loader and pure decision engine.
+
+The engine:
+
+- resolves scenarios only by canonical `vl80s.diag.*` ID;
+- treats YES, NO and UNKNOWN as equal first-class responses;
+- follows only exported effective edges;
+- accumulates exported candidate-cause scoring;
+- fails closed on missing branches, unknown question targets, unknown cause IDs, duplicate keys or unknown related scenarios;
+- does not change catalog publication status.
+
+Executable runtime availability and scenario publication remain separate gates. A `CANDIDATE` scenario cannot execute through normal application access even when its flow is technically loadable.
