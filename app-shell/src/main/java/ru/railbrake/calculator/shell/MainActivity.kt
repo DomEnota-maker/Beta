@@ -25,6 +25,7 @@ import ru.railbrake.calculator.runtime.ContentPackIndexJsonLoader
 import ru.railbrake.calculator.runtime.ContentPackJsonLoader
 import ru.railbrake.calculator.runtime.ContentRegistry
 import ru.railbrake.calculator.runtime.ModelProfileCatalogJsonLoader
+import ru.railbrake.calculator.safety.SafetyContentScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -91,6 +92,13 @@ class MainActivity : ComponentActivity() {
 
                 when (entry.type.featureDestination()) {
                     FeatureDestination.ACCEPTANCE -> AcceptanceItemScreen(
+                        entry = entry,
+                        modelTitle = "ВЛ80С",
+                        notice = notice,
+                        onLink = handleLink,
+                    )
+
+                    FeatureDestination.SAFETY -> SafetyContentScreen(
                         entry = entry,
                         modelTitle = "ВЛ80С",
                         notice = notice,

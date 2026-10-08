@@ -157,3 +157,18 @@ The five legacy VL80S electrical trainer scenarios are now model-owned data inst
 The migration preserves 50 node instances, 48 functional edges and 24 steps from the pinned Test source. Only exact legacy-id matches are linked to canonical equipment; unmatched legacy nodes remain virtual functional nodes.
 
 Legacy per-scenario colors are retained only as migration metadata. Rendering style authority belongs to the shared design system.
+
+
+## VL80S model-owned safety migration
+
+The legacy `vl80-fire-safety` article is no longer an unresolved ownership case.
+
+Architecture decision:
+
+- the fire-safety content remains owned by the VL80S model package;
+- rendering is delegated to the shared `feature-safety` module;
+- the content is not copied into global Common safety;
+- the shared Safety feature does not depend on VL80S;
+- source/action authority remains fail-closed until the cited document status is independently verified.
+
+The migrated entry is information-only and preserves the pinned donor wording and source note. It does not claim that the 2025 donor verification is sufficient to establish current 2026 normative status.

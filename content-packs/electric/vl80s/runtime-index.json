@@ -51,12 +51,14 @@
     "electric/vl80s/diagnostics/extended/supplemental-operational/pneumatics.pack.json",
     "electric/vl80s/diagnostics/extended/supplemental-operational/running-gear.pack.json",
     "electric/vl80s/diagnostics/extended/supplemental-operational/traction.pack.json",
-    "electric/vl80s/diagnostics/extended/supplemental-operational/traffic-safety.pack.json"
+    "electric/vl80s/diagnostics/extended/supplemental-operational/traffic-safety.pack.json",
+    "electric/vl80s/safety/fire-safety.pack.json"
   ],
   "profileCatalog": "electric/vl80s/profile-catalog.json",
   "featureIndexes": {
     "atlas": "electric/vl80s/atlas/schemes/index.json",
     "acceptance": "electric/vl80s/acceptance/index.json",
-    "diagnostics": "electric/vl80s/diagnostics/index.json"
+    "diagnostics": "electric/vl80s/diagnostics/index.json",
+    "safety": "electric/vl80s/safety/index.json"
   }
 }

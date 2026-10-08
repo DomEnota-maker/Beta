@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "modelId": "vl80s",
+  "feature": "safety",
+  "ownership": "MODEL_CONTENT_SHARED_FEATURE",
+  "packs": [
+    "electric/vl80s/safety/fire-safety.pack.json"
+  ],
+  "entryIds": [
+    "vl80s.safety.fire"
+  ],
+  "actionAuthority": "NONE",
+  "sourceStatusPolicy": "FAIL_CLOSED_UNTIL_VERIFIED"
+}

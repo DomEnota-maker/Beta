@@ -17,6 +17,7 @@ on:
       - 'feature-calculations/**'
       - 'feature-diagnostics/**'
       - 'feature-history/**'
+      - 'feature-safety/**'
       - 'domain-contracts/**'
       - 'content-runtime/**'
       - 'navigation-contracts/**'
@@ -40,6 +41,7 @@ on:
       - 'feature-calculations/**'
       - 'feature-diagnostics/**'
       - 'feature-history/**'
+      - 'feature-safety/**'
       - 'domain-contracts/**'
       - 'content-runtime/**'
       - 'navigation-contracts/**'
@@ -121,6 +123,9 @@ jobs:
       - name: Validate migrated VL80S electrical functional flows
         run: python3 qa/validate_vl80s_electrical_functional_flows.py
 
+      - name: Validate VL80S model-owned safety content
+        run: python3 qa/validate_vl80s_safety.py
+
       - name: Show project boundaries
         run: gradle projects --console=plain
 
@@ -139,13 +144,14 @@ jobs:
           :feature-calculations:test
           :feature-diagnostics:test
           :feature-history:test
+          :feature-safety:testDebugUnitTest
           --stacktrace --console=plain
 
       - name: Android lint
-        run: gradle :design-system:lintDebug :feature-acceptance:lintDebug :feature-atlas:lintDebug :app-shell:lintDebug --stacktrace --console=plain
+        run: gradle :design-system:lintDebug :feature-acceptance:lintDebug :feature-atlas:lintDebug :feature-safety:lintDebug :app-shell:lintDebug --stacktrace --console=plain
 
       - name: Assemble debug
-        run: gradle :design-system:assembleDebug :feature-acceptance:assembleDebug :feature-atlas:assembleDebug :app-shell:assembleDebug --stacktrace --console=plain
+        run: gradle :design-system:assembleDebug :feature-acceptance:assembleDebug :feature-atlas:assembleDebug :feature-safety:assembleDebug :app-shell:assembleDebug --stacktrace --console=plain
 
       - name: Verify indexed VL80S assets in APK
         run: |

@@ -25,6 +25,7 @@ include(
     ":feature-calculations",
     ":feature-diagnostics",
     ":feature-history",
+    ":feature-safety",
     ":domain-contracts",
     ":content-runtime",
     ":navigation-contracts",

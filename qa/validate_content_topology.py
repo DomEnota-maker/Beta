@@ -23,6 +23,9 @@ assert model_sections == {
     "TECHNICAL_DATA": "technical-data",
 }
 
+optional_model_sections = catalog.get("optionalModelSections", {})
+assert optional_model_sections == {"SAFETY": "safety"}
+
 diagnostics = catalog["diagnostics"]
 assert diagnostics["recommended"] == "diagnostics/recommended"
 assert set(diagnostics["extended"]) == {
@@ -65,5 +68,16 @@ for model in models:
     required_dirs.extend(root / relative for relative in diagnostics["extended"].values())
     for path in required_dirs:
         assert path.is_dir(), f"missing model content boundary: {path.relative_to(ROOT)}"
+
+    # Optional model-owned sections are allowed without forcing an empty
+    # directory into every locomotive package. If present, they must stay
+    # under that model root.
+    for relative in optional_model_sections.values():
+        optional_path = root / relative
+        if optional_path.exists():
+            assert optional_path.is_dir(), optional_path
+
+vl80s_safety = ROOT / "content-packs/electric/vl80s/safety"
+assert vl80s_safety.is_dir(), "VL80S model-owned safety section is missing"
 
 print("CONTENT_TOPOLOGY_PASS")
