@@ -365,6 +365,24 @@ object ExecutableDiagnosticEngine {
         return result(scenario, updated)
     }
 
+    /** Recreate scores and branch position from validated answer history. */
+    fun previous(
+        scenario: ExecutableDiagnosticScenario,
+        state: ExecutableDiagnosticState,
+    ): ExecutableDiagnosticState {
+        require(state.scenarioId == scenario.id)
+        if (state.answers.isEmpty()) return state
+
+        var replay = start(scenario)
+        state.answers.dropLast(1).forEach { record ->
+            require(replay.currentQuestionKey == record.questionKey) {
+                "diagnostic answer history does not follow the scenario graph"
+            }
+            replay = answer(scenario, replay, record.response).state
+        }
+        return replay
+    }
+
     fun result(
         scenario: ExecutableDiagnosticScenario,
         state: ExecutableDiagnosticState,
