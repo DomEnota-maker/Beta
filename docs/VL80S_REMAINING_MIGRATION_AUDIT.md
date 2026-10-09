@@ -143,12 +143,35 @@ Until then the runtime may be loaded/tested but normal user execution remains fa
 
 ### 2. Shared feature UI integration
 
-Data/runtime ownership is largely migrated, but shared UI still needs to be wired for the complete model experience:
+Data/runtime ownership is largely migrated. On 2026-10-09, the shared
+`feature-atlas` received a first accessible, text-first learning-flow UI,
+wired from the existing VL80S Atlas layout by the app shell:
 
-- expose pneumatic stepwise flows through shared `feature-atlas` UI;
-- expose electrical functional flows through shared `feature-atlas` UI;
-- move diagnostic catalog/search/interactive-question presentation into shared `feature-diagnostics` UI without bypassing publication/access policy;
-- keep Acceptance presentation in shared `feature-acceptance`.
+- all four pneumatic modes can be selected, stepped, reversed and reset;
+- all five electrical functional scenarios can be selected, stepped, reversed and reset;
+- electrical active functional edges and node information are displayed by human-readable titles;
+- only a node with a canonical equipment target can open the model's equipment card;
+- the app loads both source JSON documents from the Atlas feature index and
+  refuses cross-model or action-authoritative flow payloads;
+- model content does not supply a private VL80S UI implementation.
+
+This is **not** a claim of finished graphical integration. The pneumatic
+background raster matching the legacy route-coordinate space is not in the
+canonical model pack, so the interface currently presents textual steps
+rather than misleading free-floating route traces. Electrical functional
+edges are also presented as readable links rather than contact-level wiring.
+
+Remaining:
+
+- restore or verify an appropriate pneumatic scheme underlay before drawing
+  migrated step-route coordinates, or retain a clearly labelled text-first
+  training view if no trustworthy underlay is available;
+- complete shared design-system-controlled graphical presentation of
+  functional electrical nodes/edges, without inventing mounting geometry;
+- move diagnostic catalog/search/interactive-question presentation into shared
+  `feature-diagnostics` UI without bypassing publication/access policy;
+- keep Acceptance presentation in shared `feature-acceptance` and verify
+  cross-feature navigation and return behavior during final acceptance.
 
 No model-specific UI implementation should be introduced to finish these screens.
 
