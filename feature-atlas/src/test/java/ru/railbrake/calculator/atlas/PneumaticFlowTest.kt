@@ -170,4 +170,66 @@ class PneumaticFlowTest {
         assertEquals(10, parsed.background?.width)
         assertEquals(1, parsed.modes.single().steps.size)
     }
+
+    @Test
+    fun hotspotsUseSourceBoundsAndChooseSmallestOverlap() {
+        val bounds = PneumaticComponentBounds(0.1f, 0.1f, 0.8f, 0.8f)
+        val innerBounds = PneumaticComponentBounds(0.2f, 0.2f, 0.3f, 0.3f)
+        fun spot(id: String, region: PneumaticComponentBounds) =
+            PneumaticFlowComponent(
+                id = id,
+                title = id,
+                details = "Source text",
+                bounds = region,
+                principle = "",
+                faultSigns = "",
+                checks = "",
+            )
+        val doc = PneumaticFlowDocument(
+            id = "test",
+            modelId = "vl80s",
+            title = "Test",
+            canvasWidth = 30f,
+            canvasHeight = 30f,
+            coordinateClaim = "TRAINING",
+            actionAuthority = "NONE",
+            disclaimer = "Training",
+            modes = listOf(mode),
+            components = listOf(spot("large", bounds), spot("small", innerBounds)),
+        )
+        assertEquals("small", doc.componentAt(0.25f, 0.25f)?.id)
+        assertEquals("large", doc.componentAt(0.5f, 0.5f)?.id)
+        assertEquals(null, doc.componentAt(0.95f, 0.95f))
+    }
+
+    @Test(expected = IllegalArgumentException::class)
+    fun boundsCannotExtendOutsideSourceImage() {
+        PneumaticComponentBounds(-0.01f, 0f, 1f, 1f)
+    }
+
+    @Test(expected = IllegalArgumentException::class)
+    fun hotspotIdsMustBeUnique() {
+        val spot = PneumaticFlowComponent(
+            id = "one",
+            title = "One",
+            details = "Text",
+            bounds = PneumaticComponentBounds(0f, 0f, 1f, 1f),
+            principle = "",
+            faultSigns = "",
+            checks = "",
+        )
+        PneumaticFlowDocument(
+            id = "test",
+            modelId = "vl80s",
+            title = "Test",
+            canvasWidth = 30f,
+            canvasHeight = 30f,
+            coordinateClaim = "TRAINING",
+            actionAuthority = "NONE",
+            disclaimer = "Training",
+            modes = listOf(mode),
+            components = listOf(spot, spot),
+        )
+    }
+
 }
