@@ -188,8 +188,8 @@ as canonical model-owned pneumatic-flow data. They are pinned to
 and blob `0f18989087a7f4f2efcbdd46bdf05b1065d8f54c` in
 `KnowledgeBaseScreen.kt`. The shared Atlas renderer now supports
 image-region tapping, deterministic resolution of overlapping regions,
-a horizontally scrollable accessible apparatus picker, and human-readable
-apparatus detail cards. All explanations are explicitly donor training
+a horizontally scrollable accessible apparatus picker, and immediately
+accessible scrollable apparatus detail dialogs. All explanations are explicitly donor training
 content, NOT accepted operational instructions, and no guessed canonical
 equipment mapping is used.
 
