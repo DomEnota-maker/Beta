@@ -27,7 +27,20 @@
       "height": 573
     },
     "coordinateClaim": "LEGACY_PRESENTATION_OVERLAY_NOT_EXACT_PIPE_GEOMETRY",
-    "disclaimer": "Тренажёр помогает проследить базовую пневматическую логику ВЛ80С и не заменяет полную схему или документацию конкретного исполнения."
+    "disclaimer": "Тренажёр помогает проследить базовую пневматическую логику ВЛ80С и не заменяет полную схему или документацию конкретного исполнения.",
+    "background": {
+      "assetPath": "electric/vl80s/atlas/interactive/pneumatic-scheme.jpg",
+      "sha256": "e40ed2cfba42e24b38701af59f31f5870a880822b78a46d4cafeeebb8fd14176",
+      "width": 1181,
+      "height": 573,
+      "source": {
+        "repository": "DomEnota-maker/Beta",
+        "commit": "a3c93873bd128d4769d004098981235c169fd085",
+        "archive": "RailBrakeCalculator.zip",
+        "archiveBlobSha": "6c3c7edc1713c1c901a566fd8a81a2494ee4ac58",
+        "entry": "RailBrakeCalculator/app/src/main/res/drawable-nodpi/vl80s_pneumatic_scheme.jpg"
+      }
+    }
   },
   "modeCount": 4,
   "modes": [
