@@ -9,6 +9,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
@@ -90,36 +91,44 @@ fun AtlasPneumaticFlowScreen(
                 }
             }
             selectedComponent?.let { component ->
-                Card(modifier = Modifier.fillMaxWidth()) {
-                    Column(
-                        modifier = Modifier.padding(16.dp),
-                        verticalArrangement = Arrangement.spacedBy(8.dp),
-                    ) {
-                        Text(component.title, style = MaterialTheme.typography.titleMedium)
-                        Text(component.details)
-                        component.principle.takeIf(String::isNotBlank)?.let {
-                            Text("Как работает", style = MaterialTheme.typography.titleSmall)
-                            Text(it)
+                AlertDialog(
+                    onDismissRequest = { selectedComponentId = null },
+                    title = { Text(component.title) },
+                    text = {
+                        Column(
+                            modifier = Modifier.verticalScroll(rememberScrollState()),
+                            verticalArrangement = Arrangement.spacedBy(8.dp),
+                        ) {
+                            Text(component.details)
+                            component.principle.takeIf(String::isNotBlank)?.let {
+                                Text("Как работает", style = MaterialTheme.typography.titleSmall)
+                                Text(it)
+                            }
+                            component.faultSigns.takeIf(String::isNotBlank)?.let {
+                                Text("Возможные признаки неисправности", style = MaterialTheme.typography.titleSmall)
+                                Text(it)
+                            }
+                            component.checks.takeIf(String::isNotBlank)?.let {
+                                Text(
+                                    "Что проверяли в исходном тренажёре",
+                                    style = MaterialTheme.typography.titleSmall,
+                                )
+                                Text(it)
+                            }
+                            Text(
+                                "Материал исходного учебного прототипа. " +
+                                    "Любые действия должны соответствовать актуальной " +
+                                    "документации и требованиям безопасности.",
+                                style = MaterialTheme.typography.bodySmall,
+                            )
                         }
-                        component.faultSigns.takeIf(String::isNotBlank)?.let {
-                            Text("Возможные признаки неисправности", style = MaterialTheme.typography.titleSmall)
-                            Text(it)
-                        }
-                        component.checks.takeIf(String::isNotBlank)?.let {
-                            Text("Что проверяли в исходном тренажёре", style = MaterialTheme.typography.titleSmall)
-                            Text(it)
-                        }
-                        Text(
-                            "Справочный материал перенесён из учебного прототипа. " +
-                                "Допустимые действия определяются только актуальной " +
-                                "документацией и требованиями безопасности.",
-                            style = MaterialTheme.typography.bodySmall,
-                        )
+                    },
+                    confirmButton = {
                         TextButton(onClick = { selectedComponentId = null }) {
-                            Text("Закрыть описание")
+                            Text("Закрыть")
                         }
-                    }
-                }
+                    },
+                )
             }
 
             Card(modifier = Modifier.fillMaxWidth()) {
