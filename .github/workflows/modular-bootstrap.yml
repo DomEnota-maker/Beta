@@ -156,6 +156,7 @@ jobs:
       - name: Verify indexed VL80S assets in APK
         run: |
           python3 - <<'PY'
+          import hashlib
           import json
           import zipfile
           from pathlib import Path
@@ -209,6 +210,19 @@ jobs:
                               flow_asset,
                               names.count(flow_asset),
                           )
+                          flow_document = json.loads(
+                              archive.read(flow_asset).decode("utf-8")
+                          )
+                          background = flow_document.get("semantics", {}).get("background")
+                          if background:
+                              image_asset = "assets/" + background["assetPath"]
+                              assert names.count(image_asset) == 1, (
+                                  image_asset,
+                                  names.count(image_asset),
+                              )
+                              assert hashlib.sha256(
+                                  archive.read(image_asset)
+                              ).hexdigest() == background["sha256"]
                       for flow_path in atlas_index.get("functionalFlows", []):
                           flow_asset = "assets/" + flow_path
                           assert names.count(flow_asset) == 1, (
