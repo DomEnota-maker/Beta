@@ -142,16 +142,16 @@ jobs:
           :feature-acceptance:testDebugUnitTest
           :feature-atlas:testDebugUnitTest
           :feature-calculations:test
-          :feature-diagnostics:test
+          :feature-diagnostics:testDebugUnitTest
           :feature-history:test
           :feature-safety:testDebugUnitTest
           --stacktrace --console=plain
 
       - name: Android lint
-        run: gradle :design-system:lintDebug :feature-acceptance:lintDebug :feature-atlas:lintDebug :feature-safety:lintDebug :app-shell:lintDebug --stacktrace --console=plain
+        run: gradle :design-system:lintDebug :feature-acceptance:lintDebug :feature-atlas:lintDebug :feature-diagnostics:lintDebug :feature-safety:lintDebug :app-shell:lintDebug --stacktrace --console=plain
 
       - name: Assemble debug
-        run: gradle :design-system:assembleDebug :feature-acceptance:assembleDebug :feature-atlas:assembleDebug :feature-safety:assembleDebug :app-shell:assembleDebug --stacktrace --console=plain
+        run: gradle :design-system:assembleDebug :feature-acceptance:assembleDebug :feature-atlas:assembleDebug :feature-diagnostics:assembleDebug :feature-safety:assembleDebug :app-shell:assembleDebug --stacktrace --console=plain
 
       - name: Verify indexed VL80S assets in APK
         run: |
