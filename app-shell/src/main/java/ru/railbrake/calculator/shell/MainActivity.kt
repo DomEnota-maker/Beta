@@ -12,6 +12,12 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import ru.railbrake.calculator.acceptance.AcceptanceItemScreen
+import ru.railbrake.calculator.atlas.AtlasElectricalFlowScreen
+import ru.railbrake.calculator.atlas.AtlasPneumaticFlowScreen
+import ru.railbrake.calculator.atlas.ElectricalFunctionalFlowDocument
+import ru.railbrake.calculator.atlas.ElectricalFunctionalFlowJsonLoader
+import ru.railbrake.calculator.atlas.PneumaticFlowDocument
+import ru.railbrake.calculator.atlas.PneumaticFlowJsonLoader
 import ru.railbrake.calculator.atlas.AtlasFeatureIndexJsonLoader
 import ru.railbrake.calculator.atlas.AtlasLayoutJsonLoader
 import ru.railbrake.calculator.atlas.AtlasLayoutMap
@@ -47,26 +53,59 @@ class MainActivity : ComponentActivity() {
                     return@MaterialTheme
                 }
 
-                var showAtlasLayout by remember { mutableStateOf(true) }
+                var currentScreen by remember { mutableStateOf(Vl80sScreen.LAYOUT) }
+                var returnFromEntry by remember { mutableStateOf(Vl80sScreen.LAYOUT) }
                 var currentId by remember { mutableStateOf(CanonicalId("VL-EQ-HV-002")) }
                 var notice by remember { mutableStateOf<String?>(null) }
 
-                if (showAtlasLayout) {
-                    AtlasLayoutScreen(
-                        layout = loaded.atlasLayout,
-                        modelTitle = "ВЛ80С",
-                        onEquipmentTarget = { target ->
-                            currentId = target.id
-                            notice = null
-                            showAtlasLayout = false
-                        },
-                    )
+                if (currentScreen != Vl80sScreen.ENTRY) {
+                    BackHandler(enabled = currentScreen != Vl80sScreen.LAYOUT) {
+                        currentScreen = Vl80sScreen.LAYOUT
+                    }
+                    when (currentScreen) {
+                        Vl80sScreen.LAYOUT -> AtlasLayoutScreen(
+                            layout = loaded.atlasLayout,
+                            modelTitle = "ВЛ80С",
+                            onEquipmentTarget = { target ->
+                                currentId = target.id
+                                notice = null
+                                returnFromEntry = Vl80sScreen.LAYOUT
+                                currentScreen = Vl80sScreen.ENTRY
+                            },
+                            onPneumaticFlow = {
+                                currentScreen = Vl80sScreen.PNEUMATIC
+                            },
+                            onElectricalFlow = {
+                                currentScreen = Vl80sScreen.ELECTRICAL
+                            },
+                        )
+
+                        Vl80sScreen.PNEUMATIC -> AtlasPneumaticFlowScreen(
+                            document = loaded.pneumaticFlow,
+                            modelTitle = "ВЛ80С",
+                            onBack = { currentScreen = Vl80sScreen.LAYOUT },
+                        )
+
+                        Vl80sScreen.ELECTRICAL -> AtlasElectricalFlowScreen(
+                            document = loaded.electricalFlow,
+                            modelTitle = "ВЛ80С",
+                            onBack = { currentScreen = Vl80sScreen.LAYOUT },
+                            onEquipmentTarget = { target ->
+                                currentId = target.id
+                                notice = null
+                                returnFromEntry = Vl80sScreen.ELECTRICAL
+                                currentScreen = Vl80sScreen.ENTRY
+                            },
+                        )
+
+                        Vl80sScreen.ENTRY -> Unit
+                    }
                     return@MaterialTheme
                 }
 
                 BackHandler {
                     notice = null
-                    showAtlasLayout = true
+                    currentScreen = returnFromEntry
                 }
 
                 val entry = loaded.registry.find(currentId)
@@ -184,9 +223,45 @@ class MainActivity : ComponentActivity() {
             "Unexpected Atlas layout model: ${atlasLayout.modelId}"
         }
 
+        val pneumaticFlow = atlasIndex.stepwiseFlows.map { path ->
+            val json = assets.open(path).bufferedReader().use { it.readText() }
+            PneumaticFlowJsonLoader().parse(json)
+        }.single()
+        check(pneumaticFlow.modelId == index.modelId) {
+            "Atlas pneumatic flow belongs to another model"
+        }
+        check(pneumaticFlow.actionAuthority == "NONE") {
+            "Atlas pneumatic flow unexpectedly claims operational authority"
+        }
+
+        val electricalFlow = atlasIndex.functionalFlows.map { path ->
+            val json = assets.open(path).bufferedReader().use { it.readText() }
+            ElectricalFunctionalFlowJsonLoader().parse(json)
+        }.single()
+        check(electricalFlow.modelId == index.modelId) {
+            "Atlas electrical flow belongs to another model"
+        }
+        check(electricalFlow.actionAuthority == "NONE") {
+            "Atlas electrical flow unexpectedly claims operational authority"
+        }
+
         val installationIssues = index.packs.flatMap { path ->
             val json = assets.open(path).bufferedReader().use { it.readText() }
             registry.install(loader.parse(json))
+        }
+
+        check(
+            electricalFlow.scenarios
+                .flatMap { it.nodes }
+                .mapNotNull { it.equipmentTarget() }
+                .all { target ->
+                    registry.find(target.id)?.let { entry ->
+                        entry.type == target.expectedType &&
+                            entry.modelId == ModelId(index.modelId)
+                    } == true
+                }
+        ) {
+            "Electrical training flow contains unresolved model equipment"
         }
 
         val graphIssues = registry.validateGlobalLinks()
@@ -198,6 +273,8 @@ class MainActivity : ComponentActivity() {
             registry = registry,
             linkResolver = LinkResolver(registry),
             atlasLayout = atlasLayout,
+            pneumaticFlow = pneumaticFlow,
+            electricalFlow = electricalFlow,
             context = RuntimeContext(
                 workingModelId = ModelId("vl80s"),
                 viewedModelId = ModelId("vl80s"),
@@ -211,5 +288,14 @@ private data class Vl80sVerticalSlice(
     val registry: ContentRegistry,
     val linkResolver: LinkResolver,
     val atlasLayout: AtlasLayoutMap,
+    val pneumaticFlow: PneumaticFlowDocument,
+    val electricalFlow: ElectricalFunctionalFlowDocument,
     val context: RuntimeContext,
 )
+
+private enum class Vl80sScreen {
+    LAYOUT,
+    PNEUMATIC,
+    ELECTRICAL,
+    ENTRY,
+}
