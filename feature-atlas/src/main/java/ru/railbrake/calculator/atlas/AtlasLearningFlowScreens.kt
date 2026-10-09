@@ -61,6 +61,11 @@ fun AtlasPneumaticFlowScreen(
             Text(mode.start, style = MaterialTheme.typography.bodyMedium)
             mode.note?.let { Text(it, style = MaterialTheme.typography.bodySmall) }
 
+            AtlasPneumaticDiagram(
+                document = document,
+                session = session,
+            )
+
             Card(modifier = Modifier.fillMaxWidth()) {
                 Column(
                     modifier = Modifier.padding(16.dp),
@@ -73,9 +78,8 @@ fun AtlasPneumaticFlowScreen(
                     Text(session.currentStep.title, style = MaterialTheme.typography.titleMedium)
                     Text(session.currentStep.description)
                     Text(
-                        text = "Условных участков маршрута: " +
-                            session.currentStep.segments.size +
-                            ". Графическая подложка пневмосхемы пока не подключена.",
+                        text = "Условных участков на этом шаге: " +
+                            session.currentStep.segments.size,
                         style = MaterialTheme.typography.bodySmall,
                     )
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
