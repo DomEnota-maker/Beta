@@ -25,6 +25,7 @@ import ru.railbrake.calculator.atlas.AtlasLayoutScreen
 import ru.railbrake.calculator.designsystem.RailContentEntryScreen
 import ru.railbrake.calculator.domain.CanonicalId
 import ru.railbrake.calculator.domain.ContentLink
+import ru.railbrake.calculator.domain.ContentOwner
 import ru.railbrake.calculator.domain.ModelId
 import ru.railbrake.calculator.domain.RuntimeContext
 import ru.railbrake.calculator.domain.VariantId
@@ -257,7 +258,7 @@ class MainActivity : ComponentActivity() {
                 .all { target ->
                     registry.find(target.id)?.let { entry ->
                         entry.type == target.expectedType &&
-                            entry.modelId == ModelId(index.modelId)
+                            entry.owner == ContentOwner.Model(ModelId(index.modelId))
                     } == true
                 }
         ) {
