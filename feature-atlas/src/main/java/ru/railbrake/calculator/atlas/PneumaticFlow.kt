@@ -33,6 +33,46 @@ data class PneumaticFlowMode(
     val steps: List<PneumaticFlowStep>,
 )
 
+/** Normalized rectangular regions on the pinned legacy training raster. */
+data class PneumaticComponentBounds(
+    val left: Float,
+    val top: Float,
+    val right: Float,
+    val bottom: Float,
+) {
+    init {
+        require(left in 0f..1f && right in 0f..1f)
+        require(top in 0f..1f && bottom in 0f..1f)
+        require(left < right && top < bottom) {
+            "pneumatic component region must have nonzero area"
+        }
+    }
+
+    val area: Float get() = (right - left) * (bottom - top)
+
+    fun contains(x: Float, y: Float): Boolean =
+        x in left..right && y in top..bottom
+}
+
+data class PneumaticFlowComponent(
+    val id: String,
+    val title: String,
+    val details: String,
+    val bounds: PneumaticComponentBounds,
+    val principle: String,
+    val faultSigns: String,
+    val checks: String,
+) {
+    init {
+        require(id.isNotBlank() && title.isNotBlank() && details.isNotBlank())
+    }
+}
+
+/** Deterministic hit-testing: smallest overlapping region wins, no nearest guess. */
+fun PneumaticFlowDocument.componentAt(x: Float, y: Float): PneumaticFlowComponent? =
+    components.filter { it.bounds.contains(x, y) }
+        .minWithOrNull(compareBy<PneumaticFlowComponent>({ it.bounds.area }, { it.id }))
+
 /**
  * The underlay must be recovered from a verifiable source and aligned to
  * the educational overlay's original coordinate space.
@@ -72,6 +112,7 @@ data class PneumaticFlowDocument(
     val disclaimer: String,
     val modes: List<PneumaticFlowMode>,
     val background: PneumaticFlowBackground? = null,
+    val components: List<PneumaticFlowComponent> = emptyList(),
 ) {
     init {
         require(canvasWidth > 0f && canvasHeight > 0f)
@@ -82,6 +123,7 @@ data class PneumaticFlowDocument(
         ) { "pneumatic background is not aligned to the flow coordinate space" }
         require(modes.isNotEmpty())
         require(modes.map { it.id }.distinct().size == modes.size)
+        require(components.map { it.id }.distinct().size == components.size)
         require(modes.all { it.steps.isNotEmpty() })
         require(
             modes
@@ -138,6 +180,7 @@ class PneumaticFlowJsonLoader {
             ),
             modes = modes,
             background = raw.semantics?.background?.toDomain(),
+            components = raw.components.orEmpty().map { it.toDomain() },
         )
     }
 }
@@ -176,7 +219,37 @@ private data class JsonPneumaticFlowDocument(
     val modeCount: Int = -1,
     val semantics: JsonPneumaticFlowSemantics? = null,
     val modes: List<JsonPneumaticMode>? = null,
+    val components: List<JsonPneumaticComponent>? = null,
 )
+
+private data class JsonPneumaticComponent(
+    val id: String? = null,
+    val title: String? = null,
+    val details: String? = null,
+    val bounds: JsonPneumaticComponentBounds? = null,
+    val principle: String? = null,
+    val faultSigns: String? = null,
+    val checks: String? = null,
+) {
+    fun toDomain() = PneumaticFlowComponent(
+        id = requirePneumaticText(id, "component.id"),
+        title = requirePneumaticText(title, "component.title"),
+        details = requirePneumaticText(details, "component.details"),
+        bounds = requireNotNull(bounds) { "component.bounds is required" }.toDomain(),
+        principle = principle.orEmpty(),
+        faultSigns = faultSigns.orEmpty(),
+        checks = checks.orEmpty(),
+    )
+}
+
+private data class JsonPneumaticComponentBounds(
+    val left: Float = -1f,
+    val top: Float = -1f,
+    val right: Float = -1f,
+    val bottom: Float = -1f,
+) {
+    fun toDomain() = PneumaticComponentBounds(left, top, right, bottom)
+}
 
 private data class JsonPneumaticFlowSemantics(
     val actionAuthority: String? = null,
