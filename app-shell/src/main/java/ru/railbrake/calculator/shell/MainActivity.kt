@@ -23,6 +23,10 @@ import ru.railbrake.calculator.atlas.AtlasLayoutJsonLoader
 import ru.railbrake.calculator.atlas.AtlasLayoutMap
 import ru.railbrake.calculator.atlas.AtlasLayoutScreen
 import ru.railbrake.calculator.designsystem.RailContentEntryScreen
+import ru.railbrake.calculator.diagnostics.DiagnosticCatalogScreen
+import ru.railbrake.calculator.diagnostics.DiagnosticFeatureIndexJsonLoader
+import ru.railbrake.calculator.diagnostics.ExecutableDiagnosticFlowJsonLoader
+import ru.railbrake.calculator.diagnostics.PublishedDiagnosticCatalog
 import ru.railbrake.calculator.domain.CanonicalId
 import ru.railbrake.calculator.domain.ContentLink
 import ru.railbrake.calculator.domain.ContentOwner
@@ -79,6 +83,9 @@ class MainActivity : ComponentActivity() {
                             onElectricalFlow = {
                                 currentScreen = Vl80sScreen.ELECTRICAL
                             },
+                            onDiagnosticsCatalog = {
+                                currentScreen = Vl80sScreen.DIAGNOSTICS
+                            },
                         )
 
                         Vl80sScreen.PNEUMATIC -> AtlasPneumaticFlowScreen(
@@ -97,6 +104,12 @@ class MainActivity : ComponentActivity() {
                                 returnFromEntry = Vl80sScreen.ELECTRICAL
                                 currentScreen = Vl80sScreen.ENTRY
                             },
+                        )
+
+                        Vl80sScreen.DIAGNOSTICS -> DiagnosticCatalogScreen(
+                            catalog = loaded.diagnosticCatalog,
+                            modelTitle = "ВЛ80С",
+                            onBack = { currentScreen = Vl80sScreen.LAYOUT },
                         )
 
                         Vl80sScreen.ENTRY -> Unit
@@ -270,17 +283,43 @@ class MainActivity : ComponentActivity() {
             "VL80S vertical slice validation failed: ${installationIssues + graphIssues}"
         }
 
+        val context = RuntimeContext(
+            workingModelId = ModelId("vl80s"),
+            viewedModelId = ModelId("vl80s"),
+            activeVariantId = profileCatalog.defaultVariantId,
+        )
+        val diagnosticsIndexPath = requireNotNull(index.featureIndexes["diagnostics"]) {
+            "VL80S diagnostics feature index is not configured"
+        }
+        val diagnosticsIndexJson = assets.open(diagnosticsIndexPath)
+            .bufferedReader()
+            .use { it.readText() }
+        val diagnosticsIndex = DiagnosticFeatureIndexJsonLoader().parse(diagnosticsIndexJson)
+        check(diagnosticsIndex.modelId == index.modelId) {
+            "Diagnostics index belongs to another model"
+        }
+        val diagnosticRuntimeJson = assets.open(diagnosticsIndex.executableFlow)
+            .bufferedReader()
+            .use { it.readText() }
+        val diagnosticRuntime = ExecutableDiagnosticFlowJsonLoader()
+            .parse(diagnosticRuntimeJson)
+        check(diagnosticRuntime.modelId == index.modelId) {
+            "Diagnostic graph belongs to another model"
+        }
+        val diagnosticCatalog = PublishedDiagnosticCatalog(
+            runtime = diagnosticRuntime,
+            registry = registry,
+            context = context,
+        )
+
         return Vl80sVerticalSlice(
             registry = registry,
             linkResolver = LinkResolver(registry),
             atlasLayout = atlasLayout,
             pneumaticFlow = pneumaticFlow,
             electricalFlow = electricalFlow,
-            context = RuntimeContext(
-                workingModelId = ModelId("vl80s"),
-                viewedModelId = ModelId("vl80s"),
-                activeVariantId = profileCatalog.defaultVariantId,
-            ),
+            diagnosticCatalog = diagnosticCatalog,
+            context = context,
         )
     }
 }
@@ -291,6 +330,7 @@ private data class Vl80sVerticalSlice(
     val atlasLayout: AtlasLayoutMap,
     val pneumaticFlow: PneumaticFlowDocument,
     val electricalFlow: ElectricalFunctionalFlowDocument,
+    val diagnosticCatalog: PublishedDiagnosticCatalog,
     val context: RuntimeContext,
 )
 
@@ -298,5 +338,6 @@ private enum class Vl80sScreen {
     LAYOUT,
     PNEUMATIC,
     ELECTRICAL,
+    DIAGNOSTICS,
     ENTRY,
 }
