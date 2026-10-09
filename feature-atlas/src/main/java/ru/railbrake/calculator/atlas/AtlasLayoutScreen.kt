@@ -43,6 +43,8 @@ fun AtlasLayoutScreen(
     layout: AtlasLayoutMap,
     modelTitle: String,
     onEquipmentTarget: (ContentTarget) -> Unit,
+    onPneumaticFlow: (() -> Unit)? = null,
+    onElectricalFlow: (() -> Unit)? = null,
 ) {
     var selectedId by remember(layout.id) { mutableStateOf<String?>(null) }
     var expanded by remember(selectedId) { mutableStateOf(false) }
@@ -63,6 +65,19 @@ fun AtlasLayoutScreen(
                 text = layout.summary,
                 style = MaterialTheme.typography.bodyMedium,
             )
+
+            if (onPneumaticFlow != null) {
+                Button(
+                    onClick = onPneumaticFlow,
+                    modifier = Modifier.fillMaxWidth(),
+                ) { Text("Пошаговая пневматика") }
+            }
+            if (onElectricalFlow != null) {
+                Button(
+                    onClick = onElectricalFlow,
+                    modifier = Modifier.fillMaxWidth(),
+                ) { Text("Функциональные электрические цепи") }
+            }
 
             if (image == null) {
                 Text(
