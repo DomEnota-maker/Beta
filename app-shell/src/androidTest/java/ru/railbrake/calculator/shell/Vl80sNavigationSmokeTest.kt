@@ -1,0 +1,64 @@
+package ru.railbrake.calculator.shell
+
+import androidx.compose.ui.test.assertExists
+import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performScrollTo
+import androidx.compose.ui.test.performTextInput
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import org.junit.Rule
+import org.junit.Test
+import org.junit.runner.RunWith
+
+/**
+ * Real Android smoke checks for the modular, source-pinned VL80S preview.
+ * The diagnostic catalog intentionally has no accepted scenarios yet.
+ */
+@RunWith(AndroidJUnit4::class)
+class Vl80sNavigationSmokeTest {
+    @get:Rule
+    val compose = createAndroidComposeRule<MainActivity>()
+
+    @Test
+    fun atlasTrainingRoutesNavigateAndReturnWithoutPublishingCandidates() {
+        compose.onNodeWithText("Пошаговая пневматика").assertIsDisplayed().performClick()
+        compose.onNodeWithText("Шаг 1 из 4").assertExists()
+
+        compose.onNodeWithText("Служебное").performScrollTo().performClick()
+        compose.onNodeWithText("Шаг 1 из 7").assertExists()
+
+        compose.onNodeWithText("← В Атлас").performScrollTo().performClick()
+        compose.onNodeWithText("Функциональные электрические цепи")
+            .assertIsDisplayed().performClick()
+        compose.onNodeWithText("Шаг 1 из 5").assertExists()
+        compose.onNodeWithText("← В Атлас").performScrollTo().performClick()
+
+        compose.onNodeWithText("Диагностика · только принятые сценарии")
+            .assertIsDisplayed().performClick()
+        compose.onNodeWithText(
+            "Доступных опубликованных сценариев по этому запросу нет.",
+            substring = true,
+        ).assertExists()
+        compose.onNodeWithText("Поиск по названию, признакам и системе")
+            .performTextInput("Токоприёмник не поднимается")
+        compose.onNodeWithText(
+            "Доступных опубликованных сценариев по этому запросу нет.",
+            substring = true,
+        ).assertExists()
+
+        compose.onNodeWithText("← Назад").performClick()
+        compose.onNodeWithText("Пошаговая пневматика").assertExists()
+    }
+
+    @Test
+    fun pneumaticApparatusDescriptionsOpenAndDismiss() {
+        compose.onNodeWithText("Пошаговая пневматика").performClick()
+        compose.onNodeWithText("Главные резервуары РС1–РС3")
+            .performScrollTo().performClick()
+        compose.onNodeWithText("Что проверяли в исходном тренажёре").assertExists()
+        compose.onNodeWithText("Закрыть").performClick()
+        compose.onNodeWithText("Шаг 1 из 4").assertExists()
+    }
+}
