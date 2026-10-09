@@ -211,6 +211,23 @@ enough to open a scenario. Search covers only approved scenarios.
 until independent publication acceptance is completed. This is intentional,
 not missing data. Golden reference status is not silently promoted.
 
+#### Pixel emulator smoke coverage
+
+An Android Compose instrumentation smoke suite now exists at
+`app-shell/src/androidTest/java/ru/railbrake/calculator/shell/Vl80sNavigationSmokeTest.kt`,
+executed by `.github/workflows/vl80s-android-ui-smoke.yml` on Pixel API 34.
+It tests:
+
+- navigation into the shared pneumatic and electrical training routes;
+- mode switching, step-count resets, and return to the common Atlas;
+- opening/dismissing source-pinned pneumatic instrument explanations;
+- the diagnostic catalog staying empty for unpublished candidate scenarios,
+  including search for the still-gated pantograph example.
+
+This is device smoke coverage, NOT a source/safety acceptance of diagnostics
+or a substitute for manual inspection of route drawing and touch regions.
+The workflow is kept separate from basic module lint/build validations.
+
 Remaining shared UI and acceptance work:
 
 - independently review donor pneumatic texts against current approved
@@ -220,8 +237,6 @@ Remaining shared UI and acceptance work:
   scrolling for new interactive diagrams and diagnostics;
 - complete separate semantic, source and safety acceptance of diagnostic
   scenarios and publish only those that genuinely pass.
-
-No model-specific UI implementation is introduced to complete these screens.
 
 No model-specific UI implementation is introduced to complete these screens.
 
