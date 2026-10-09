@@ -7,6 +7,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
@@ -36,6 +38,8 @@ fun AtlasPneumaticFlowScreen(
     var session by remember(document.id, mode.id) {
         mutableStateOf(PneumaticFlowSession(mode))
     }
+    var selectedComponentId by remember(document.id) { mutableStateOf<String?>(null) }
+    val selectedComponent = document.components.firstOrNull { it.id == selectedComponentId }
 
     RailFeatureScaffold(
         template = RailFeatureTemplate.ATLAS,
@@ -64,7 +68,59 @@ fun AtlasPneumaticFlowScreen(
             AtlasPneumaticDiagram(
                 document = document,
                 session = session,
+                selectedComponentId = selectedComponentId,
+                onComponentSelected = { selectedComponentId = it },
             )
+            if (document.components.isNotEmpty()) {
+                Text(
+                    "Оборудование на схеме · выберите прибор",
+                    style = MaterialTheme.typography.titleSmall,
+                )
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    items(document.components, key = { it.id }) { component ->
+                        OutlinedButton(
+                            onClick = { selectedComponentId = component.id },
+                        ) {
+                            Text(
+                                (if (selectedComponentId == component.id) "● " else "") +
+                                    component.title,
+                            )
+                        }
+                    }
+                }
+            }
+            selectedComponent?.let { component ->
+                Card(modifier = Modifier.fillMaxWidth()) {
+                    Column(
+                        modifier = Modifier.padding(16.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp),
+                    ) {
+                        Text(component.title, style = MaterialTheme.typography.titleMedium)
+                        Text(component.details)
+                        component.principle.takeIf(String::isNotBlank)?.let {
+                            Text("Как работает", style = MaterialTheme.typography.titleSmall)
+                            Text(it)
+                        }
+                        component.faultSigns.takeIf(String::isNotBlank)?.let {
+                            Text("Возможные признаки неисправности", style = MaterialTheme.typography.titleSmall)
+                            Text(it)
+                        }
+                        component.checks.takeIf(String::isNotBlank)?.let {
+                            Text("Что проверяли в исходном тренажёре", style = MaterialTheme.typography.titleSmall)
+                            Text(it)
+                        }
+                        Text(
+                            "Справочный материал перенесён из учебного прототипа. " +
+                                "Допустимые действия определяются только актуальной " +
+                                "документацией и требованиями безопасности.",
+                            style = MaterialTheme.typography.bodySmall,
+                        )
+                        TextButton(onClick = { selectedComponentId = null }) {
+                            Text("Закрыть описание")
+                        }
+                    }
+                }
+            }
 
             Card(modifier = Modifier.fillMaxWidth()) {
                 Column(
