@@ -178,15 +178,50 @@ pipework, mounting or permission to operate. Electrical positions come
 from the donor's functional training layout; the pneumatic overlay is
 matched to the donor's original JPEG rather than inferred.
 
-Remaining shared UI work:
+#### Clickable pneumatic apparatus
 
-- port and validate optional clickable pneumatic instrument explanations
-  from the pinned donor, preserving canonical-equipment targeting rules;
-- migrate diagnostic catalog/search/interactive-question presentation into
-  the shared `feature-diagnostics` UI without bypassing publication/access policy;
+The 10 donor training-image regions and their seven legacy fields
+(title, short description, normalized left/top/right/bottom rectangle,
+working principle, possible failure signs and training checks) now live
+as canonical model-owned pneumatic-flow data. They are pinned to
+`DomEnota-maker/Test-` @ `3176d6ee228f0ed4b78371f45209e10c1c724eff`
+and blob `0f18989087a7f4f2efcbdd46bdf05b1065d8f54c` in
+`KnowledgeBaseScreen.kt`. The shared Atlas renderer now supports
+image-region tapping, deterministic resolution of overlapping regions,
+a horizontally scrollable accessible apparatus picker, and human-readable
+apparatus detail cards. All explanations are explicitly donor training
+content, NOT accepted operational instructions, and no guessed canonical
+equipment mapping is used.
+
+#### Shared diagnostics with strict publication gate
+
+The `feature-diagnostics` module now owns both its verified executable
+graph engine and a shared Compose catalog/step-by-step Yes/No/Unknown UI.
+The app shell loads the model's diagnostic feature index and executable
+runtime and provides a navigation callback from the interim Atlas layout.
+
+The catalog uses `ContentRegistry.resolve` and checks the runtime's
+model ownership before exposing or opening ANY scenario. This checks
+publication status, current model, variant applicability and allowed
+information layers. The raw executable runtime being present is never
+enough to open a scenario. Search covers only approved scenarios.
+
+**Current expected end-user behavior:** all 103 VL80S diagnostics remain
+`CANDIDATE`, so the new diagnostic catalog must show no openable scenarios
+until independent publication acceptance is completed. This is intentional,
+not missing data. Golden reference status is not silently promoted.
+
+Remaining shared UI and acceptance work:
+
+- independently review donor pneumatic texts against current approved
+  operating documentation before relying on any reported checks;
 - keep Acceptance presentation in shared `feature-acceptance`;
-- complete actual device/emulator interaction and cross-feature navigation
-  acceptance of the new visual screens, not just unit/CI structural checks.
+- verify actual device/emulator interaction, navigation and responsive
+  scrolling for new interactive diagrams and diagnostics;
+- complete separate semantic, source and safety acceptance of diagnostic
+  scenarios and publish only those that genuinely pass.
+
+No model-specific UI implementation is introduced to complete these screens.
 
 No model-specific UI implementation is introduced to complete these screens.
 
