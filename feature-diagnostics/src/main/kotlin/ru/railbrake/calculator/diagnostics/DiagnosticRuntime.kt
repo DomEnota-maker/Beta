@@ -35,6 +35,15 @@ data class DiagnosticFeatureIndex(
         )
         require(runtimePayloadStatus.isNotBlank())
         require(publicationPolicy.isNotBlank())
+        val assetPaths = recommendedPacks +
+            extendedCorpora.values.flatten() +
+            listOfNotNull(relationGraph, executableFlow, observationIndex)
+        require(
+            assetPaths.all { path ->
+                path.isNotBlank() && !path.startsWith("/") &&
+                    !path.contains("..") && !path.contains('\\')
+            }
+        ) { "diagnostics index has an invalid asset path" }
         if (runtimePayloadStatus == "EXECUTABLE_FLOW_AVAILABLE") {
             require(!executableFlow.isNullOrBlank()) {
                 "executableFlow is required when executable runtime is available"
