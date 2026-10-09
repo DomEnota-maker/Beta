@@ -40,6 +40,7 @@ assert semantics["coordinateSpace"] == {"width": 1181, "height": 573}
 assert semantics["coordinateClaim"] == "LEGACY_PRESENTATION_OVERLAY_NOT_EXACT_PIPE_GEOMETRY"
 
 background = semantics.get("background")
+assert background is not None, "verified pneumatic background is mandatory" 
 if background is not None:
     assert background["assetPath"] == "electric/vl80s/atlas/interactive/pneumatic-scheme.jpg"
     assert background["width"] == 1181
