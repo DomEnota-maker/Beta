@@ -143,37 +143,52 @@ Until then the runtime may be loaded/tested but normal user execution remains fa
 
 ### 2. Shared feature UI integration
 
-Data/runtime ownership is largely migrated. On 2026-10-09, the shared
-`feature-atlas` received a first accessible, text-first learning-flow UI,
-wired from the existing VL80S Atlas layout by the app shell:
+On 2026-10-09, shared `feature-atlas` learning screens were wired into
+`app-shell` and extended with graphical functional presentation:
 
-- all four pneumatic modes can be selected, stepped, reversed and reset;
-- all five electrical functional scenarios can be selected, stepped, reversed and reset;
-- electrical active functional edges and node information are displayed by human-readable titles;
-- only a node with a canonical equipment target can open the model's equipment card;
-- the app loads both source JSON documents from the Atlas feature index and
-  refuses cross-model or action-authoritative flow payloads;
-- model content does not supply a private VL80S UI implementation.
+- four pneumatic training modes support selecting a mode and stepping
+  forward/back/reset; route segments accumulate up to the selected step;
+- five electrical functional scenarios support the same navigation;
+  the shared renderer draws nodes, functional edges and active states from
+  model-owned scenario coordinates without introducing VL80S-specific UI;
+- electrical equipment nodes open detailed information and, only where an
+  exact canonical equipment target exists, navigate to its Atlas card;
+- the app loads these flows from the canonical Atlas feature index and
+  rejects cross-model or action-authoritative flow payloads.
 
-This is **not** a claim of finished graphical integration. The pneumatic
-background raster matching the legacy route-coordinate space is not in the
-canonical model pack, so the interface currently presents textual steps
-rather than misleading free-floating route traces. Electrical functional
-edges are also presented as readable links rather than contact-level wiring.
+#### Source-pinned pneumatic image recovery
 
-Remaining:
+The exact source raster used by the legacy step routes was located and
+recovered from the verified historical Beta archive, NOT approximated:
 
-- restore or verify an appropriate pneumatic scheme underlay before drawing
-  migrated step-route coordinates, or retain a clearly labelled text-first
-  training view if no trustworthy underlay is available;
-- complete shared design-system-controlled graphical presentation of
-  functional electrical nodes/edges, without inventing mounting geometry;
-- move diagnostic catalog/search/interactive-question presentation into shared
-  `feature-diagnostics` UI without bypassing publication/access policy;
-- keep Acceptance presentation in shared `feature-acceptance` and verify
-  cross-feature navigation and return behavior during final acceptance.
+- source commit: `a3c93873bd128d4769d004098981235c169fd085`;
+- archive blob SHA: `6c3c7edc1713c1c901a566fd8a81a2494ee4ac58`;
+- source entry: `RailBrakeCalculator/app/src/main/res/drawable-nodpi/vl80s_pneumatic_scheme.jpg`;
+- canonical asset: `content-packs/electric/vl80s/atlas/interactive/pneumatic-scheme.jpg`;
+- JPEG source size: 84,607 bytes; source dimensions: 1181 × 573 pixels;
+- SHA-256: `e40ed2cfba42e24b38701af59f31f5870a880822b78a46d4cafeeebb8fd14176`.
 
-No model-specific UI implementation should be introduced to finish these screens.
+The pneumatic flow's source provenance and matching coordinates are checked
+fail-closed by the domain loader and migration validation. When its verified
+raster is missing or fails runtime dimension checks, routes are NOT drawn on
+an invented image: the UI falls back to readable steps.
+
+Both graphical schemes are **functional/educational**, not exact wiring,
+pipework, mounting or permission to operate. Electrical positions come
+from the donor's functional training layout; the pneumatic overlay is
+matched to the donor's original JPEG rather than inferred.
+
+Remaining shared UI work:
+
+- port and validate optional clickable pneumatic instrument explanations
+  from the pinned donor, preserving canonical-equipment targeting rules;
+- migrate diagnostic catalog/search/interactive-question presentation into
+  the shared `feature-diagnostics` UI without bypassing publication/access policy;
+- keep Acceptance presentation in shared `feature-acceptance`;
+- complete actual device/emulator interaction and cross-feature navigation
+  acceptance of the new visual screens, not just unit/CI structural checks.
+
+No model-specific UI implementation is introduced to complete these screens.
 
 ### 3. Exact section-specific graphical fragments
 
