@@ -8,6 +8,9 @@ class DiagnosticFeatureIndexTest {
         {
           "schemaVersion": 1,
           "modelId": "vl80s",
+          "recommendedPacks": ["electric/vl80s/diagnostics/recommended/test.pack.json"],
+          "extendedCorpora": {},
+          "runtimePayloadStatus": "EXECUTABLE_FLOW_AVAILABLE",
           "publicationPolicy": "ALL_CANDIDATE_UNTIL_FEATURE_RUNTIME_ACCEPTANCE",
           "executableFlow": "electric/vl80s/diagnostics/runtime/executable-flow.json"
         }
