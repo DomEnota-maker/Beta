@@ -33,6 +33,34 @@ data class PneumaticFlowMode(
     val steps: List<PneumaticFlowStep>,
 )
 
+/**
+ * The underlay must be recovered from a verifiable source and aligned to
+ * the educational overlay's original coordinate space.
+ */
+data class PneumaticFlowBackground(
+    val assetPath: String,
+    val sha256: String,
+    val width: Int,
+    val height: Int,
+    val sourceRepository: String,
+    val sourceCommit: String,
+    val sourceArchive: String,
+    val sourceArchiveBlobSha: String,
+    val sourceEntry: String,
+) {
+    init {
+        require(assetPath.isNotBlank() && !assetPath.startsWith("/") &&
+            ".." !in assetPath) { "invalid pneumatic background path" }
+        require(sha256.matches(Regex("[0-9a-f]{64}"))) {
+            "invalid pneumatic background sha256"
+        }
+        require(width > 0 && height > 0)
+        require(sourceRepository.isNotBlank() && sourceCommit.isNotBlank())
+        require(sourceArchive.isNotBlank() && sourceArchiveBlobSha.isNotBlank())
+        require(sourceEntry.isNotBlank())
+    }
+}
+
 data class PneumaticFlowDocument(
     val id: String,
     val modelId: String,
@@ -43,9 +71,15 @@ data class PneumaticFlowDocument(
     val actionAuthority: String,
     val disclaimer: String,
     val modes: List<PneumaticFlowMode>,
+    val background: PneumaticFlowBackground? = null,
 ) {
     init {
         require(canvasWidth > 0f && canvasHeight > 0f)
+        require(
+            background == null ||
+                (background.width.toFloat() == canvasWidth &&
+                    background.height.toFloat() == canvasHeight)
+        ) { "pneumatic background is not aligned to the flow coordinate space" }
         require(modes.isNotEmpty())
         require(modes.map { it.id }.distinct().size == modes.size)
         require(modes.all { it.steps.isNotEmpty() })
@@ -103,6 +137,7 @@ class PneumaticFlowJsonLoader {
                 "flow.semantics.disclaimer",
             ),
             modes = modes,
+            background = raw.semantics?.background?.toDomain(),
         )
     }
 }
@@ -148,6 +183,40 @@ private data class JsonPneumaticFlowSemantics(
     val coordinateSpace: JsonPneumaticCoordinateSpace? = null,
     val coordinateClaim: String? = null,
     val disclaimer: String? = null,
+    val background: JsonPneumaticBackground? = null,
+)
+
+private data class JsonPneumaticBackground(
+    val assetPath: String? = null,
+    val sha256: String? = null,
+    val width: Int = -1,
+    val height: Int = -1,
+    val source: JsonPneumaticSource? = null,
+) {
+    fun toDomain(): PneumaticFlowBackground {
+        val provenance = requireNotNull(source) {
+            "pneumatic background provenance is required"
+        }
+        return PneumaticFlowBackground(
+            assetPath = requirePneumaticText(assetPath, "background.assetPath"),
+            sha256 = requirePneumaticText(sha256, "background.sha256"),
+            width = width,
+            height = height,
+            sourceRepository = requirePneumaticText(provenance.repository, "background.source.repository"),
+            sourceCommit = requirePneumaticText(provenance.commit, "background.source.commit"),
+            sourceArchive = requirePneumaticText(provenance.archive, "background.source.archive"),
+            sourceArchiveBlobSha = requirePneumaticText(provenance.archiveBlobSha, "background.source.archiveBlobSha"),
+            sourceEntry = requirePneumaticText(provenance.entry, "background.source.entry"),
+        )
+    }
+}
+
+private data class JsonPneumaticSource(
+    val repository: String? = null,
+    val commit: String? = null,
+    val archive: String? = null,
+    val archiveBlobSha: String? = null,
+    val entry: String? = null,
 )
 
 private data class JsonPneumaticCoordinateSpace(
