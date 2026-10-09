@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
+import hashlib
 import json
 from pathlib import Path
+
+from jpeg_dimensions import jpeg_dimensions
 
 ROOT = Path(__file__).resolve().parents[1]
 MODEL = ROOT / "content-packs/electric/vl80s"
@@ -35,6 +38,28 @@ assert semantics["purpose"] == "TRAINING_FUNCTIONAL_FLOW"
 assert semantics["actionAuthority"] == "NONE"
 assert semantics["coordinateSpace"] == {"width": 1181, "height": 573}
 assert semantics["coordinateClaim"] == "LEGACY_PRESENTATION_OVERLAY_NOT_EXACT_PIPE_GEOMETRY"
+
+background = semantics.get("background")
+if background is not None:
+    assert background["assetPath"] == "electric/vl80s/atlas/interactive/pneumatic-scheme.jpg"
+    assert background["width"] == 1181
+    assert background["height"] == 573
+    assert background["source"] == {
+        "repository": "DomEnota-maker/Beta",
+        "commit": "a3c93873bd128d4769d004098981235c169fd085",
+        "archive": "RailBrakeCalculator.zip",
+        "archiveBlobSha": "6c3c7edc1713c1c901a566fd8a81a2494ee4ac58",
+        "entry": (
+            "RailBrakeCalculator/app/src/main/res/drawable-nodpi/"
+            "vl80s_pneumatic_scheme.jpg"
+        ),
+    }
+    image_path = ROOT / "content-packs" / background["assetPath"]
+    assert image_path.is_file(), image_path
+    payload = image_path.read_bytes()
+    assert len(payload) == 67881
+    assert hashlib.sha256(payload).hexdigest() == background["sha256"]
+    assert jpeg_dimensions(payload) == (1181, 573)
 
 expected_steps = {
     "CHARGING": 4,
