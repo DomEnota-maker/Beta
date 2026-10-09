@@ -57,7 +57,7 @@ if background is not None:
     image_path = ROOT / "content-packs" / background["assetPath"]
     assert image_path.is_file(), image_path
     payload = image_path.read_bytes()
-    assert len(payload) == 67881
+    assert len(payload) == 84607
     assert hashlib.sha256(payload).hexdigest() == background["sha256"]
     assert jpeg_dimensions(payload) == (1181, 573)
 
