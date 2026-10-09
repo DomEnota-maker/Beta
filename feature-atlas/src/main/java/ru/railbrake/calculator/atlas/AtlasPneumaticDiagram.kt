@@ -1,9 +1,11 @@
 package ru.railbrake.calculator.atlas
 
 import android.graphics.BitmapFactory
+import java.security.MessageDigest
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -20,11 +22,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
@@ -35,14 +39,24 @@ import kotlin.math.sqrt
 fun AtlasPneumaticDiagram(
     document: PneumaticFlowDocument,
     session: PneumaticFlowSession,
+    selectedComponentId: String?,
+    onComponentSelected: (String?) -> Unit,
 ) {
     val background = document.background
     val context = LocalContext.current
     val image: ImageBitmap? = remember(background, context) {
         background?.let { source ->
             runCatching {
-                val bitmap = context.assets.open(source.assetPath).use { stream ->
-                    BitmapFactory.decodeStream(stream)
+                val bytes = context.assets.open(source.assetPath).use { stream ->
+                    stream.readBytes()
+                }
+                val digest = MessageDigest.getInstance("SHA-256")
+                    .digest(bytes)
+                    .joinToString("") { "%02x".format(it) }
+                val bitmap = if (digest == source.sha256) {
+                    BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
+                } else {
+                    null
                 }
                 if (bitmap != null &&
                     bitmap.width == source.width &&
@@ -67,6 +81,8 @@ fun AtlasPneumaticDiagram(
     val mainRouteColor = MaterialTheme.colorScheme.primary
     val releaseColor = MaterialTheme.colorScheme.tertiary
     val controlColor = MaterialTheme.colorScheme.secondary
+    val selectedOutline = MaterialTheme.colorScheme.error
+    val neutralOutline = MaterialTheme.colorScheme.outline
     val visibleSegments = session.mode.steps
         .take(session.stepIndex + 1)
         .flatMap { it.segments }
@@ -94,7 +110,17 @@ fun AtlasPneumaticDiagram(
                     modifier = Modifier.matchParentSize(),
                     contentScale = ContentScale.FillBounds,
                 )
-                Canvas(modifier = Modifier.matchParentSize()) {
+                Canvas(
+                    modifier = Modifier
+                        .matchParentSize()
+                        .pointerInput(document.components) {
+                            detectTapGestures { offset ->
+                                val x = offset.x / size.width
+                                val y = offset.y / size.height
+                                onComponentSelected(document.componentAt(x, y)?.id)
+                            }
+                        },
+                ) {
                     visibleSegments.forEach { segment ->
                         val color = when (segment.kind) {
                             PneumaticRouteKind.FLOW -> mainRouteColor
@@ -145,12 +171,28 @@ fun AtlasPneumaticDiagram(
                             drawLine(color, tip, right, strokeWidth = 3.dp.toPx())
                         }
                     }
+                    document.components.forEach { component ->
+                        val selected = component.id == selectedComponentId
+                        drawRect(
+                            color = if (selected) selectedOutline else neutralOutline.copy(alpha = 0.65f),
+                            topLeft = Offset(
+                                component.bounds.left * size.width,
+                                component.bounds.top * size.height,
+                            ),
+                            size = Size(
+                                (component.bounds.right - component.bounds.left) * size.width,
+                                (component.bounds.bottom - component.bounds.top) * size.height,
+                            ),
+                            style = Stroke(width = (if (selected) 3.dp else 1.5.dp).toPx()),
+                        )
+                    }
                 }
             }
         }
         Text(
             text = "Сплошная линия — поток воздуха; пунктир — разрядка " +
-                "или управляющее давление. Отображаются участки до выбранного шага.",
+                "или управляющее давление. Отображаются участки до выбранного шага. " +
+                "Нажмите на выделенную область прибора для пояснений.",
             style = MaterialTheme.typography.bodySmall,
         )
     }
