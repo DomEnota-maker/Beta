@@ -31,6 +31,13 @@ assert document["sourceSnapshots"] == [
         "blobSha": "0f18989087a7f4f2efcbdd46bdf05b1065d8f54c",
         "role": "route-coordinates",
     },
+    {
+        "repository": "DomEnota-maker/Test-",
+        "commit": "3176d6ee228f0ed4b78371f45209e10c1c724eff",
+        "source": "app/src/main/java/ru/railbrake/calculator/ui/KnowledgeBaseScreen.kt",
+        "blobSha": "0f18989087a7f4f2efcbdd46bdf05b1065d8f54c",
+        "role": "equipment-hotspots",
+    },
 ]
 
 semantics = document["semantics"]
@@ -40,7 +47,7 @@ assert semantics["coordinateSpace"] == {"width": 1181, "height": 573}
 assert semantics["coordinateClaim"] == "LEGACY_PRESENTATION_OVERLAY_NOT_EXACT_PIPE_GEOMETRY"
 
 background = semantics.get("background")
-assert background is not None, "verified pneumatic background is mandatory" 
+assert background is not None, "verified pneumatic background is mandatory"
 if background is not None:
     assert background["assetPath"] == "electric/vl80s/atlas/interactive/pneumatic-scheme.jpg"
     assert background["width"] == 1181
@@ -61,6 +68,31 @@ if background is not None:
     assert len(payload) == 84607
     assert hashlib.sha256(payload).hexdigest() == background["sha256"]
     assert jpeg_dimensions(payload) == (1181, 573)
+
+expected_component_titles = [
+    "Главные резервуары РС1–РС3",
+    "Компрессор КТ-6Эл",
+    "Кран машиниста №395",
+    "КВТ №254",
+    "Воздухораспределитель №483",
+    "Питательная магистраль",
+    "Импульсная магистраль",
+    "Тормозная магистраль",
+    "Реле давления №304",
+    "Тормозные цилиндры",
+]
+components = document.get("components")
+assert components is not None, "source-pinned hotspots are mandatory"
+assert [item["title"] for item in components] == expected_component_titles
+assert [item["id"] for item in components] == [
+    f"legacy-pneumatic-{index:02}" for index in range(1, 11)
+]
+for component in components:
+    for field in ["title", "details", "principle", "faultSigns", "checks"]:
+        assert component[field].strip(), (component["id"], field)
+    bounds = component["bounds"]
+    assert 0 <= bounds["left"] < bounds["right"] <= 1
+    assert 0 <= bounds["top"] < bounds["bottom"] <= 1
 
 expected_steps = {
     "CHARGING": 4,
