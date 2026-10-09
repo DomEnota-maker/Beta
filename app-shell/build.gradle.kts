@@ -48,6 +48,7 @@ dependencies {
     implementation(project(":design-system"))
     implementation(project(":feature-acceptance"))
     implementation(project(":feature-atlas"))
+    implementation(project(":feature-diagnostics"))
     implementation(project(":feature-safety"))
     implementation(project(":domain-contracts"))
     implementation(project(":content-runtime"))
