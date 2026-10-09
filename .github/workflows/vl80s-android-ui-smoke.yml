@@ -1,0 +1,79 @@
+name: VL80S Android UI smoke
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - modular-rebuild
+    paths:
+      - "app-shell/src/main/**"
+      - "app-shell/src/androidTest/**"
+      - "app-shell/build.gradle.kts"
+      - "feature-atlas/src/main/**"
+      - "feature-diagnostics/src/main/**"
+      - "content-packs/electric/vl80s/atlas/**"
+      - "content-packs/electric/vl80s/diagnostics/**"
+      - ".github/workflows/vl80s-android-ui-smoke.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vl80s-android-ui-smoke-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  emulator-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.7"
+
+      - name: Enable KVM acceleration when available
+        run: |
+          if test -e /dev/kvm; then
+            sudo chmod 666 /dev/kvm
+          else
+            echo "KVM unavailable; emulator runner will use software acceleration."
+          fi
+
+      - name: Run VL80S navigation and publication-gate checks on Pixel API 34
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          profile: pixel_5
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          script: gradle :app-shell:connectedDebugAndroidTest --stacktrace --console=plain
+
+      - name: Capture emulator diagnostics on failure
+        if: failure()
+        shell: bash
+        run: |
+          mkdir -p build/emulator-smoke
+          adb logcat -d -t 3000 > build/emulator-smoke/logcat.txt || true
+          adb shell screencap -p /sdcard/railbrake-smoke.png || true
+          adb pull /sdcard/railbrake-smoke.png build/emulator-smoke/screen.png || true
+
+      - name: Upload failure report only
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vl80s-emulator-smoke-failure
+          retention-days: 1
+          if-no-files-found: ignore
+          path: |
+            build/emulator-smoke/**
+            app-shell/build/outputs/androidTest-results/**
+            app-shell/build/reports/androidTests/**
