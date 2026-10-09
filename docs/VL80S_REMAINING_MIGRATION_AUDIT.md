@@ -180,7 +180,7 @@ matched to the donor's original JPEG rather than inferred.
 
 #### Clickable pneumatic apparatus
 
-The 10 donor training-image regions and their seven legacy fields
+The 10 donor training-image regions and their original descriptive fields
 (title, short description, normalized left/top/right/bottom rectangle,
 working principle, possible failure signs and training checks) now live
 as canonical model-owned pneumatic-flow data. They are pinned to
