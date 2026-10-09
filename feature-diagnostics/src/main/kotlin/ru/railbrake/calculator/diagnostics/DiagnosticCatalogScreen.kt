@@ -171,6 +171,17 @@ fun DiagnosticCatalogScreen(
                             )
                         }
                     }
+                    if (result.state.answers.isNotEmpty()) {
+                        OutlinedButton(
+                            onClick = {
+                                state = ExecutableDiagnosticEngine.previous(
+                                    selected,
+                                    requireNotNull(state),
+                                )
+                            },
+                            modifier = Modifier.fillMaxWidth(),
+                        ) { Text("← Исправить предыдущий ответ") }
+                    }
                     OutlinedButton(
                         onClick = { state = ExecutableDiagnosticEngine.start(selected) },
                         modifier = Modifier.fillMaxWidth(),
