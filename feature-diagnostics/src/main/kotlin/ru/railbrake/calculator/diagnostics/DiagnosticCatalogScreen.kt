@@ -1,5 +1,6 @@
 package ru.railbrake.calculator.diagnostics
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -38,6 +39,7 @@ fun DiagnosticCatalogScreen(
     var query by remember(catalog) { mutableStateOf("") }
     var selectedId by remember(catalog) { mutableStateOf<String?>(null) }
     val selected = selectedId?.let(catalog::open)
+    BackHandler(enabled = selectedId != null) { selectedId = null }
     var state by remember(selected?.id) {
         mutableStateOf(selected?.let(ExecutableDiagnosticEngine::start))
     }
