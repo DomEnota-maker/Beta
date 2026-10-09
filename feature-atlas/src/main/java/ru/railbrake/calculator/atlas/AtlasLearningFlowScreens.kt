@@ -145,6 +145,11 @@ fun AtlasElectricalFlowScreen(
                 }
             }
             Text(scenario.summary, style = MaterialTheme.typography.bodyMedium)
+            AtlasElectricalDiagram(
+                session = session,
+                selectedNodeId = selectedNodeId,
+                onNodeSelected = { selectedNodeId = it },
+            )
 
             Card(modifier = Modifier.fillMaxWidth()) {
                 Column(
