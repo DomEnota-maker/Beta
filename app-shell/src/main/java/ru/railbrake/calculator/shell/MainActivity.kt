@@ -298,7 +298,17 @@ class MainActivity : ComponentActivity() {
         check(diagnosticsIndex.modelId == index.modelId) {
             "Diagnostics index belongs to another model"
         }
-        val diagnosticRuntimeJson = assets.open(diagnosticsIndex.executableFlow)
+        check(diagnosticsIndex.runtimeAvailability ==
+            ru.railbrake.calculator.diagnostics.DiagnosticRuntimeAvailability.EXECUTABLE_FLOW_AVAILABLE) {
+            "Executable diagnostic runtime is required for the preview shell"
+        }
+        val executableFlowPath = requireNotNull(diagnosticsIndex.executableFlow) {
+            "Diagnostics runtime asset path is missing"
+        }
+        check(!executableFlowPath.startsWith("/") && ".." !in executableFlowPath) {
+            "Invalid diagnostic runtime asset path"
+        }
+        val diagnosticRuntimeJson = assets.open(executableFlowPath)
             .bufferedReader()
             .use { it.readText() }
         val diagnosticRuntime = ExecutableDiagnosticFlowJsonLoader()
