@@ -89,4 +89,85 @@ class PneumaticFlowTest {
             )
         )
     }
+
+    @Test(expected = IllegalArgumentException::class)
+    fun backgroundCannotClaimUnalignedCoordinateSpace() {
+        PneumaticFlowDocument(
+            id = "test",
+            modelId = "vl80s",
+            title = "Test",
+            canvasWidth = 30f,
+            canvasHeight = 30f,
+            coordinateClaim = "TRAINING",
+            actionAuthority = "NONE",
+            disclaimer = "Training",
+            modes = listOf(mode),
+            background = PneumaticFlowBackground(
+                assetPath = "electric/vl80s/atlas/interactive/underlay.jpg",
+                sha256 = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                width = 29,
+                height = 30,
+                sourceRepository = "verified/repository",
+                sourceCommit = "source-commit",
+                sourceArchive = "archive.zip",
+                sourceArchiveBlobSha = "blob",
+                sourceEntry = "source/underlay.jpg",
+            ),
+        )
+    }
+
+    @Test
+    fun loaderAcceptsProvenanceOnlyWhenBackgroundAligned() {
+        val json = """
+            {
+              "id":"test.flow",
+              "modelId":"vl80s",
+              "title":"Test",
+              "modeCount":1,
+              "semantics":{
+                "actionAuthority":"NONE",
+                "coordinateClaim":"TRAINING_PRESENTATION",
+                "disclaimer":"No operational authority",
+                "coordinateSpace":{"width":10,"height":10},
+                "background":{
+                  "assetPath":"electric/vl80s/atlas/interactive/underlay.jpg",
+                  "sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                  "width":10,
+                  "height":10,
+                  "source":{
+                    "repository":"verified/repository",
+                    "commit":"source-commit",
+                    "archive":"archive.zip",
+                    "archiveBlobSha":"blob",
+                    "entry":"source/underlay.jpg"
+                  }
+                }
+              },
+              "modes":[
+                {
+                  "id":"TEST",
+                  "title":"test",
+                  "summary":"summary",
+                  "start":"start",
+                  "steps":[
+                    {
+                      "title":"step",
+                      "description":"description",
+                      "segments":[
+                        {
+                          "kind":"FLOW",
+                          "points":[{"x":0,"y":0},{"x":10,"y":10}]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+        """.trimIndent()
+        val parsed = PneumaticFlowJsonLoader().parse(json)
+        assertEquals("source/underlay.jpg", parsed.background?.sourceEntry)
+        assertEquals(10, parsed.background?.width)
+        assertEquals(1, parsed.modes.single().steps.size)
+    }
 }
