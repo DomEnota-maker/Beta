@@ -4,6 +4,23 @@ import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
+import ru.railbrake.calculator.domain.ActionDisposition
+import ru.railbrake.calculator.domain.Applicability
+import ru.railbrake.calculator.domain.CanonicalId
+import ru.railbrake.calculator.domain.ContentEntry
+import ru.railbrake.calculator.domain.ContentLayer
+import ru.railbrake.calculator.domain.ContentOwner
+import ru.railbrake.calculator.domain.ContentPackManifest
+import ru.railbrake.calculator.domain.ContentType
+import ru.railbrake.calculator.domain.ModelId
+import ru.railbrake.calculator.domain.PackId
+import ru.railbrake.calculator.domain.ProvenanceClass
+import ru.railbrake.calculator.domain.PublicationStatus
+import ru.railbrake.calculator.domain.RuntimeContext
+import ru.railbrake.calculator.domain.SourceStatus
+import ru.railbrake.calculator.domain.VariantId
+import ru.railbrake.calculator.runtime.ContentPack
+import ru.railbrake.calculator.runtime.ContentRegistry
 
 class ExecutableDiagnosticFlowTest {
     private val fixture = """
@@ -228,4 +245,106 @@ class ExecutableDiagnosticFlowTest {
         assertNull(result.nextQuestion)
         assertTrue(result.state.answers.isEmpty())
     }
+
+    private fun registryFor(
+        status: PublicationStatus,
+        layer: ContentLayer = ContentLayer.STANDARD,
+    ): ContentRegistry {
+        val id = CanonicalId("vl80s.diag.one")
+        val entry = ContentEntry(
+            id = id,
+            type = ContentType.DIAGNOSTIC_SCENARIO,
+            owner = ContentOwner.Model(ModelId("vl80s")),
+            applicability = Applicability(
+                modelIds = setOf(ModelId("vl80s")),
+                variantIds = setOf(VariantId("vl80s.first")),
+            ),
+            layer = layer,
+            publicationStatus = status,
+            provenance = ProvenanceClass.HISTORICAL_TRAINING,
+            sourceStatus = SourceStatus.ARCHIVED,
+            actionDisposition = ActionDisposition.INFORMATION_ONLY,
+            title = "Первый сценарий",
+        )
+        val manifest = ContentPackManifest(
+            schemaVersion = 1,
+            packId = PackId("vl80s.test"),
+            packVersion = "1",
+            family = "electric",
+            modelIds = setOf(ModelId("vl80s")),
+            variantIds = emptySet(),
+            locale = "ru",
+            entries = setOf(id),
+            requiresRuntime = "test",
+            sourceCatalogVersion = "test",
+            checksums = emptyMap(),
+        )
+        return ContentRegistry().also { registry ->
+            assertTrue(registry.install(ContentPack(manifest, listOf(entry))).isEmpty())
+        }
+    }
+
+    @Test
+    fun catalogDoesNotExposeCandidateOrAbsentDonorScenarios() {
+        val runtime = ExecutableDiagnosticFlowJsonLoader().parse(fixture)
+        val registry = registryFor(PublicationStatus.CANDIDATE)
+        val context = RuntimeContext(
+            viewedModelId = ModelId("vl80s"),
+            activeVariantId = VariantId("vl80s.first"),
+        )
+        val catalog = PublishedDiagnosticCatalog(runtime, registry, context)
+        assertTrue(catalog.search("").isEmpty())
+        assertNull(catalog.open("vl80s.diag.one"))
+        assertNull(catalog.open("vl80s.diag.two"))
+    }
+
+    @Test
+    fun catalogSearchShowsOnlyPublishedAndVariantApplicableScenarios() {
+        val runtime = ExecutableDiagnosticFlowJsonLoader().parse(fixture)
+        val registry = registryFor(PublicationStatus.ACTIVE)
+        val context = RuntimeContext(
+            viewedModelId = ModelId("vl80s"),
+            activeVariantId = VariantId("vl80s.first"),
+        )
+        val catalog = PublishedDiagnosticCatalog(runtime, registry, context)
+        assertEquals(listOf("vl80s.diag.one"), catalog.search("первый").map { it.id })
+        assertEquals(listOf("vl80s.diag.one"), catalog.search("ТЕСТ").map { it.id })
+        assertNull(catalog.open("vl80s.diag.two"))
+        assertTrue(
+            PublishedDiagnosticCatalog(
+                runtime,
+                registry,
+                context.copy(activeVariantId = VariantId("vl80s.unknown")),
+            ).search("").isEmpty(),
+        )
+        assertTrue(
+            PublishedDiagnosticCatalog(
+                runtime,
+                registry,
+                context.copy(viewedModelId = ModelId("ermak")),
+            ).search("").isEmpty(),
+        )
+    }
+
+    @Test
+    fun publishedRestrictedScenarioStillNeedsLayerPermission() {
+        val runtime = ExecutableDiagnosticFlowJsonLoader().parse(fixture)
+        val registry = registryFor(PublicationStatus.ACTIVE, ContentLayer.RESTRICTED)
+        val context = RuntimeContext(
+            viewedModelId = ModelId("vl80s"),
+            activeVariantId = VariantId("vl80s.first"),
+        )
+        assertTrue(
+            PublishedDiagnosticCatalog(runtime, registry, context).search("").isEmpty()
+        )
+        assertEquals(
+            1,
+            PublishedDiagnosticCatalog(
+                runtime,
+                registry,
+                context.copy(allowedLayers = setOf(ContentLayer.RESTRICTED)),
+            ).search("").size,
+        )
+    }
+
 }
