@@ -231,6 +231,31 @@ class ExecutableDiagnosticFlowTest {
     }
 
     @Test
+    fun previousAnswerReplaysGraphAndRemovesDiscardedCauseScores() {
+        val scenario = requireNotNull(
+            ExecutableDiagnosticFlowJsonLoader().parse(fixture).scenario("vl80s.diag.one")
+        )
+        val started = ExecutableDiagnosticEngine.start(scenario)
+        val first = ExecutableDiagnosticEngine.answer(
+            scenario,
+            started,
+            ExecutableDiagnosticResponse.YES,
+        ).state
+        val finished = ExecutableDiagnosticEngine.answer(
+            scenario,
+            first,
+            ExecutableDiagnosticResponse.NO,
+        ).state
+        assertEquals(2, finished.answers.size)
+        val back = ExecutableDiagnosticEngine.previous(scenario, finished)
+        assertEquals(first, back)
+        assertEquals("q2", back.currentQuestionKey)
+        assertEquals(1, back.candidateScores["cause-a"])
+        assertEquals(started, ExecutableDiagnosticEngine.previous(scenario, back))
+        assertEquals(started, ExecutableDiagnosticEngine.previous(scenario, started))
+    }
+
+    @Test
     fun answeringCompletedScenarioIsStableNoOpResult() {
         val runtime = ExecutableDiagnosticFlowJsonLoader().parse(fixture)
         val scenario = requireNotNull(runtime.scenario("vl80s.diag.two"))
