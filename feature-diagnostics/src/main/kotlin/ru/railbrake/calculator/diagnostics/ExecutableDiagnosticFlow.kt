@@ -172,9 +172,8 @@ data class ExecutableDiagnosticRuntime(
     fun scenario(id: String): ExecutableDiagnosticScenario? = scenariosById[id]
 }
 
-class ExecutableDiagnosticFlowJsonLoader(
-    private val gson: Gson = Gson(),
-) {
+class ExecutableDiagnosticFlowJsonLoader {
+    private val gson = Gson()
     fun parse(json: String): ExecutableDiagnosticRuntime {
         val raw = gson.fromJson(json, JsonRuntime::class.java)
             ?: error("executable diagnostic runtime is empty")
