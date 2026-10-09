@@ -31,7 +31,7 @@ with zipfile.ZipFile(ARCHIVE) as archive:
 
 if not payload.startswith(b"\xff\xd8"):
     raise SystemExit("Recovered pneumatic image is not JPEG")
-if len(payload) != 67881:
+if len(payload) != 84607:
     raise SystemExit(f"Recovered JPEG size differs from pinned archive: {len(payload)}")
 if jpeg_dimensions(payload) != (1181, 573):
     raise SystemExit(
