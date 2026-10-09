@@ -45,6 +45,7 @@ fun AtlasLayoutScreen(
     onEquipmentTarget: (ContentTarget) -> Unit,
     onPneumaticFlow: (() -> Unit)? = null,
     onElectricalFlow: (() -> Unit)? = null,
+    onDiagnosticsCatalog: (() -> Unit)? = null,
 ) {
     var selectedId by remember(layout.id) { mutableStateOf<String?>(null) }
     var expanded by remember(selectedId) { mutableStateOf(false) }
@@ -77,6 +78,12 @@ fun AtlasLayoutScreen(
                     onClick = onElectricalFlow,
                     modifier = Modifier.fillMaxWidth(),
                 ) { Text("Функциональные электрические цепи") }
+            }
+            if (onDiagnosticsCatalog != null) {
+                Button(
+                    onClick = onDiagnosticsCatalog,
+                    modifier = Modifier.fillMaxWidth(),
+                ) { Text("Диагностика · только принятые сценарии") }
             }
 
             if (image == null) {
