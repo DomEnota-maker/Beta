@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -96,7 +97,11 @@ fun AtlasPneumaticFlowScreen(
                     title = { Text(component.title) },
                     text = {
                         Column(
-                            modifier = Modifier.verticalScroll(rememberScrollState()),
+                            // Keep dialog actions visible even for long donor descriptions
+                            // on compact devices; the information body scrolls independently.
+                            modifier = Modifier
+                                .heightIn(max = 300.dp)
+                                .verticalScroll(rememberScrollState()),
                             verticalArrangement = Arrangement.spacedBy(8.dp),
                         ) {
                             Text(component.details)
