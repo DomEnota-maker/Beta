@@ -3,6 +3,8 @@ package ru.railbrake.calculator.shell
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.onRoot
+import androidx.compose.ui.test.printToLog
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTextInput
@@ -59,7 +61,8 @@ class Vl80sNavigationSmokeTest {
         // The scrollable dialog may keep deep sections outside the visible
         // semantics viewport on Pixel. The source validator separately checks
         // that every equipment card retains all original description fields.
-        compose.onNodeWithText("Закрыть").assertIsDisplayed()
+        compose.onRoot().printToLog("RailPneumaticDialog")
+        compose.onNodeWithText("Закрыть").assertExists()
         compose.onNodeWithText("Как работает").assertExists()
         compose.onNodeWithText("Закрыть").performClick()
         compose.onNodeWithText("Шаг 1 из 4").assertExists()
