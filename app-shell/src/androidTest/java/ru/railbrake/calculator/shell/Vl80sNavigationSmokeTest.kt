@@ -3,8 +3,6 @@ package ru.railbrake.calculator.shell
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import androidx.compose.ui.test.onRoot
-import androidx.compose.ui.test.printToLog
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTextInput
@@ -56,13 +54,13 @@ class Vl80sNavigationSmokeTest {
     @Test
     fun pneumaticApparatusDescriptionsOpenAndDismiss() {
         compose.onNodeWithText("Пошаговая пневматика").performClick()
+        // The picker is inside a nested horizontal LazyRow. Scrolling its
+        // child doesn't scroll the enclosing vertical Atlas page: bring the
+        // following step card into view first, then click the actual button.
+        compose.onNodeWithText("Шаг 1 из 4").performScrollTo()
         compose.onNodeWithText("Главные резервуары РС1–РС3")
-            .performScrollTo().performClick()
-        // The scrollable dialog may keep deep sections outside the visible
-        // semantics viewport on Pixel. The source validator separately checks
-        // that every equipment card retains all original description fields.
-        compose.onRoot().printToLog("RailPneumaticDialog")
-        compose.onNodeWithText("Закрыть").assertExists()
+            .assertIsDisplayed().performClick()
+        compose.onNodeWithText("Закрыть").assertIsDisplayed()
         compose.onNodeWithText("Как работает").assertExists()
         compose.onNodeWithText("Закрыть").performClick()
         compose.onNodeWithText("Шаг 1 из 4").assertExists()
