@@ -38,6 +38,9 @@ jobs:
         with:
           gradle-version: "8.7"
 
+      - name: Compile UI instrumentation before provisioning emulator
+        run: gradle :app-shell:compileDebugAndroidTestKotlin --stacktrace --console=plain
+
       - name: Enable KVM acceleration when available
         run: |
           if test -e /dev/kvm; then
@@ -62,9 +65,9 @@ jobs:
         shell: bash
         run: |
           mkdir -p build/emulator-smoke
-          adb logcat -d -t 3000 > build/emulator-smoke/logcat.txt || true
-          adb shell screencap -p /sdcard/railbrake-smoke.png || true
-          adb pull /sdcard/railbrake-smoke.png build/emulator-smoke/screen.png || true
+          timeout 10s adb logcat -d -t 3000 > build/emulator-smoke/logcat.txt || true
+          timeout 10s adb shell screencap -p /sdcard/railbrake-smoke.png || true
+          timeout 10s adb pull /sdcard/railbrake-smoke.png build/emulator-smoke/screen.png || true
 
       - name: Upload failure report only
         if: failure()
